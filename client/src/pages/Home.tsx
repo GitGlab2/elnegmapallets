@@ -1,180 +1,193 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { ArrowLeft, CheckCircle2, Truck, ShieldCheck, Phone, Package, Users, Globe2 } from "lucide-react";
+import { ArrowLeft, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 
-// Import other sections
+// Import sections in slide order
 import About from "./About";
 import Products from "./Products";
 import Features from "./Features";
+import Operations from "./Operations";
 import Clients from "./Clients";
-import Contact from "./Contact";
 import Gallery from "./Gallery";
+import Pricing from "./Pricing";
+import { CertificationsList, QualityCertImage, InternationalStandardsImage } from "./Certifications";
+import Commitments from "./Commitments";
+import Achievements from "./Achievements";
+import FutureVision from "./FutureVision";
+import Contact from "./Contact";
 
 export default function Home() {
-  const stats = [
-    { icon: <Users className="w-8 h-8" />, value: "99%", label: "نسبة رضا العملاء" },
-    { icon: <Globe2 className="w-8 h-8" />, value: "27", label: "محافظة نغطيها" },
-    { icon: <Truck className="w-8 h-8" />, value: "47", label: "شبكة توريد شهرية" },
-    { icon: <Package className="w-8 h-8" />, value: "+360k", label: "بالتة سنوياً" },
-  ];
-
   return (
-    <div className="flex flex-col gap-24 pb-20">
-      {/* Hero Section */}
-      <section id="home" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-background pt-10 scroll-mt-24">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="/images/hero-warehouse.png" 
-            alt="مستودع شركة النجمة" 
-            className="w-full h-full object-cover opacity-40"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+    <div className="flex flex-col gap-10 pb-20 bg-[#181b24] text-white">
+      
+      {/* Slide 1: Hero Section (Theme Brown background) */}
+      <section id="home" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#59331f] pt-10 scroll-mt-24">
+        
+        {/* Background Wave Decorations matching slide 1 */}
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
+          <svg className="w-full h-full text-accent" viewBox="0 0 400 720" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,100 Q50,150 0,200 T0,300 T0,400 T0,500 T0,600" fill="none" stroke="currentColor" strokeWidth="1"></path>
+            <path d="M-20,120 Q30,170 -20,220 T-20,320 T-20,420" fill="none" stroke="currentColor" strokeWidth="1"></path>
+          </svg>
         </div>
 
         <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          
+          {/* Content Panel (Right on desktop) */}
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="flex flex-col gap-6 text-right"
+            className="flex flex-col gap-6 text-right order-2 lg:order-1"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 w-fit">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-sm font-bold text-primary">الشركة رقم 1 في مصر</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 border border-accent/30 w-fit justify-start">
+              <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+              <span className="text-sm font-bold text-accent">الشركة رقم 1 في مصر</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight text-foreground">
-              نصنع <span className="text-primary">الجودة</span><br />
-              ونضمن <span className="text-secondary">الوصول</span>
+            <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight text-white">
+              <span className="text-accent text-3xl md:text-4xl block font-medium mb-2">شركة</span>
+              النجمة لتصنيع البالتات الخشبية
             </h1>
             
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
-              شركة النجمة لتصنيع الباليات الخشبية. خبرة 18 عاماً في تقديم حلول النقل والتخزين بأعلى المواصفات العالمية.
+            <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-xl">
+              البروفايل التعريفي | خبرة 18 عاماً في تصنيع البالتات عالية الجودة للتصدير والسوق المحلي بأعلى المواصفات العالمية.
             </p>
             
             <div className="flex flex-wrap gap-4 mt-4">
               <a href="#products">
-                <Button size="lg" className="text-lg px-8 py-6 font-bold shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all">
+                <Button size="lg" className="text-lg px-8 py-6 font-bold shadow-xl shadow-secondary/20 hover:shadow-secondary/40 transition-all bg-secondary hover:bg-secondary/90">
                   استكشف منتجاتنا
                   <ArrowLeft className="mr-2 w-5 h-5" />
                 </Button>
               </a>
               <a href="#contact">
-                <Button variant="outline" size="lg" className="text-lg px-8 py-6 font-bold border-2 hover:bg-muted transition-all">
+                <Button variant="outline" size="lg" className="text-lg px-8 py-6 font-bold border-2 border-white/20 hover:bg-white/10 transition-all text-white bg-transparent">
                   تواصل معنا
                 </Button>
               </a>
             </div>
 
-            <div className="flex items-center gap-6 mt-8 pt-8 border-t border-border/50">
-              <div className="flex -space-x-4 space-x-reverse">
-                {[1,2,3,4].map((i) => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-background bg-muted flex items-center justify-center text-xs font-bold text-muted-foreground">
-                    {i}
-                  </div>
-                ))}
-              </div>
+            <div className="flex items-center gap-6 mt-8 pt-8 border-t border-white/10 justify-start">
               <div className="flex flex-col">
-                <span className="font-bold text-foreground">+500 عميل</span>
-                <span className="text-sm text-muted-foreground">يثقون في منتجاتنا</span>
+                <span className="font-black text-2xl text-accent">+500 عميل</span>
+                <span className="text-sm text-white/70 mt-0.5">يثقون في متانة منتجاتنا وتوريداتنا</span>
               </div>
             </div>
           </motion.div>
 
+          {/* Hero Pallet Image (Left on desktop) */}
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="hidden lg:block relative z-10"
+            className="relative z-10 order-1 lg:order-2"
           >
-            <div className="relative w-full max-w-2xl mx-auto group">
-              {/* Glowing background aura */}
-              <div className="absolute -inset-1.5 bg-gradient-to-r from-primary via-purple-600 to-secondary rounded-[32px] blur-xl opacity-25 group-hover:opacity-45 transition duration-1000 group-hover:duration-300" />
+            <div className="relative w-full max-w-lg mx-auto group">
+              {/* Glowing Aura */}
+              <div className="absolute -inset-1.5 bg-gradient-to-r from-secondary to-accent rounded-[20px] blur-xl opacity-30 group-hover:opacity-45 transition duration-1000 group-hover:duration-300" />
               
               <img 
                 src="/images/pallet-hero-detail.png" 
-                alt="تفاصيل الباليات" 
-                className="relative rounded-[28px] w-full h-[450px] lg:h-[580px] object-cover shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+                alt="تفاصيل الباليات خشبية" 
+                className="relative styled-image w-full h-[380px] lg:h-[480px] object-cover shadow-2xl"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = '/images/products-image.jpg';
+                }}
               />
             </div>
-            
-            {/* Decorative Elements */}
-            <div className="absolute -top-10 -left-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl -z-10" />
-            <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-secondary/20 rounded-full blur-3xl -z-10" />
           </motion.div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="container">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {stats.map((stat, index) => (
-            <Card key={index} className="border-none shadow-lg bg-card/50 backdrop-blur hover:bg-card transition-colors group">
-              <CardContent className="p-6 flex flex-col items-center text-center gap-4">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
-                </div>
-                <div>
-                  <h3 className="text-4xl font-black text-foreground mb-1">{stat.value}</h3>
-                  <p className="text-sm font-medium text-muted-foreground">{stat.label}</p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="scroll-mt-24">
+      {/* Slide 2 & 3: About Section (من نحن + رسالتنا ورؤيتنا) */}
+      <section id="about-section" className="scroll-mt-24">
         <About />
       </section>
 
-      {/* Products Section */}
-      <section id="products" className="scroll-mt-24">
+      {/* Slide 4: Products Section (منتجاتنا وخدماتنا) */}
+      <section id="products-section" className="scroll-mt-24">
         <Products />
       </section>
 
-      {/* Gallery Section */}
-      <section id="gallery" className="scroll-mt-24">
-        <Gallery />
-      </section>
-
-      {/* Features Section */}
-      <section id="features" className="scroll-mt-24">
+      {/* Slide 5: Features Section (مزايانا التنافسية) */}
+      <section id="features-section" className="scroll-mt-24">
         <Features />
       </section>
 
-      {/* Clients Section */}
-      <section id="clients" className="scroll-mt-24">
+      {/* Slide 6: Operations Section (العمليات والجودة) */}
+      <section id="operations-section" className="scroll-mt-24">
+        <Operations />
+      </section>
+
+      {/* Slide 7: Clients Section (عملاؤنا الكرام) */}
+      <section id="clients-section" className="scroll-mt-24">
         <Clients />
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="scroll-mt-24">
+      {/* Slide 8 & 8b: Gallery Section (شحنات وتوريدات العملاء) */}
+      <section id="gallery-section" className="scroll-mt-24">
+        <Gallery />
+      </section>
+
+      {/* Slide 9: Pricing Section (أنظمة الأسعار والعروض) */}
+      <section id="pricing-section" className="scroll-mt-24">
+        <Pricing />
+      </section>
+
+      {/* Slide 10: Certifications List Section (الشهادات والمعايير) */}
+      <section id="certifications-section" className="scroll-mt-24">
+        <CertificationsList />
+      </section>
+
+      {/* Slide 11: Quality Certification Image Section */}
+      <section id="quality-cert-section" className="scroll-mt-24">
+        <QualityCertImage />
+      </section>
+
+      {/* Slide 12: Commitments Section (ضمان الالتزامات) */}
+      <section id="commitments-section" className="scroll-mt-24">
+        <Commitments />
+      </section>
+
+      {/* Slide 13: Achievements Section (الإنجازات والإحصاءات) */}
+      <section id="achievements-section" className="scroll-mt-24">
+        <Achievements />
+      </section>
+
+      {/* Slide 14: International Standards Image Section */}
+      <section id="international-standards-section" className="scroll-mt-24">
+        <InternationalStandardsImage />
+      </section>
+
+      {/* Slide 15: Future Vision Section (الرؤية المستقبلية والتوسعات) */}
+      <section id="future-vision-section" className="scroll-mt-24">
+        <FutureVision />
+      </section>
+
+      {/* Slide 16: Contact Section (تواصل معنا) */}
+      <section id="contact-section" className="scroll-mt-24">
         <Contact />
       </section>
 
-      {/* CTA Section */}
+      {/* Bottom Call to Action banner */}
       <section className="container">
-        <div className="relative rounded-3xl overflow-hidden bg-primary text-primary-foreground px-6 py-16 md:p-20 text-center">
+        <div className="relative rounded-3xl overflow-hidden bg-[#59331f] text-white px-6 py-16 md:p-20 text-center border border-border/40">
           <div className="absolute inset-0 bg-[url('/images/logistics-truck.png')] bg-cover bg-center opacity-10 mix-blend-overlay" />
           <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center gap-8">
-            <h2 className="text-3xl md:text-5xl font-black">جاهز لطلب كميتك؟</h2>
+            <h2 className="text-3xl md:text-5xl font-black text-accent">جاهز لطلب كميتك؟</h2>
             <p className="text-lg opacity-90 leading-relaxed">
-              احصل على عرض سعر خاص للكميات الكبيرة، واستفد من خدمات التوريد السريع والشحن المجاني.
+              احصل على عرض سعر خاص ومزايا إضافية للكميات، واستفد من خدمات التوريد والشحن المجاني.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
               <a href="tel:01080012261" className="w-full sm:w-auto">
-                <Button size="lg" variant="secondary" className="w-full text-lg font-bold h-14 px-8">
+                <Button size="lg" className="w-full text-lg font-bold h-14 px-8 bg-secondary hover:bg-secondary/90 text-white">
                   <Phone className="ml-2 w-5 h-5" />
                   01080012261
                 </Button>
               </a>
               <a href="#contact" className="w-full sm:w-auto">
-                <Button size="lg" variant="outline" className="w-full text-lg font-bold h-14 px-8 bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                <Button size="lg" variant="outline" className="w-full text-lg font-bold h-14 px-8 bg-transparent border-white/40 hover:bg-white/10 text-white">
                   تواصل معنا
                 </Button>
               </a>
@@ -182,6 +195,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
     </div>
   );
 }

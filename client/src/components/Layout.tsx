@@ -9,12 +9,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
 
   const navItems = [
-    { name: "من نحن", path: "#about" },
-    { name: "المنتجات", path: "#products" },
-    { name: "معرض الصور", path: "#gallery" },
-    { name: "المزايا", path: "#features" },
-    { name: "العملاء", path: "#clients" },
-    { name: "تواصل معنا", path: "#contact" },
+    { name: "من نحن", path: "#about-section" },
+    { name: "المنتجات", path: "#products-section" },
+    { name: "المزايا", path: "#features-section" },
+    { name: "معرض الصور", path: "#gallery-section" },
+    { name: "الأسعار", path: "#pricing-section" },
+    { name: "الشهادات", path: "#certifications-section" },
+    { name: "تواصل معنا", path: "#contact-section" },
   ];
 
   return (

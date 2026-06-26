@@ -43,106 +43,55 @@
 }
 
 :root {
-  /* Tech & Logistics Theme - Light Mode */
-  /* Primary: Navy Blue */
-  --primary: oklch(0.35 0.1 260); 
-  --primary-foreground: oklch(0.98 0 0);
+  /* El Negma Presentation Colors */
+  --primary: #59331f;           /* Theme Brown */
+  --primary-foreground: #ffffff;
   
-  /* Secondary: Electric Purple */
-  --secondary: oklch(0.6 0.2 290);
-  --secondary-foreground: oklch(0.98 0 0);
+  --secondary: #b165fb;         /* Accent Purple */
+  --secondary-foreground: #ffffff;
   
-  /* Accent: Safety Orange/Gold for industrial feel */
-  --accent: oklch(0.75 0.18 60);
-  --accent-foreground: oklch(0.2 0.05 260);
+  --accent: #d4a976;            /* Accent Gold */
+  --accent-foreground: #181b24;
   
-  --background: oklch(0.98 0.01 260);
-  --foreground: oklch(0.2 0.05 260);
+  --background: #181b24;        /* Dark Slate */
+  --foreground: #ffffff;
   
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.05 260);
+  --card: #181b24;              /* Dark Card */
+  --card-foreground: #ffffff;
   
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0.05 260);
+  --popover: #181b24;
+  --popover-foreground: #ffffff;
   
-  --muted: oklch(0.95 0.02 260);
-  --muted-foreground: oklch(0.5 0.05 260);
+  --muted: #202430;             /* Muted Slate */
+  --muted-foreground: #a0aec0;
   
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
+  --border: rgba(177, 101, 251, 0.3); /* Purple tinted border */
+  --input: #202430;
+  --ring: #b165fb;
   
-  --border: oklch(0.9 0.02 260);
-  --input: oklch(0.9 0.02 260);
-  --ring: oklch(0.6 0.2 290);
+  --radius: 12px;
   
-  --radius: 0.5rem;
-  
-  /* Chart colors for data visualization */
-  --chart-1: oklch(0.6 0.2 290); /* Purple */
-  --chart-2: oklch(0.35 0.1 260); /* Navy */
-  --chart-3: oklch(0.75 0.18 60); /* Orange */
-  --chart-4: oklch(0.5 0.15 280); /* Violet */
-  --chart-5: oklch(0.4 0.1 250); /* Blue */
-  
-  --sidebar: oklch(0.98 0.01 260);
-  --sidebar-foreground: oklch(0.2 0.05 260);
-  --sidebar-primary: oklch(0.35 0.1 260);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.95 0.02 260);
-  --sidebar-accent-foreground: oklch(0.2 0.05 260);
-  --sidebar-border: oklch(0.9 0.02 260);
-  --sidebar-ring: oklch(0.6 0.2 290);
+  --chart-1: #b165fb;
+  --chart-2: #59331f;
+  --chart-3: #d4a976;
+  --chart-4: #9050db;
+  --chart-5: #a0aec0;
 }
 
 .dark {
-  /* Tech & Logistics Theme - Dark Mode */
-  /* Primary: Lighter Navy/Blue for dark mode visibility */
-  --primary: oklch(0.6 0.15 260);
-  --primary-foreground: oklch(0.1 0.05 260);
-  
-  /* Secondary: Bright Electric Purple */
-  --secondary: oklch(0.65 0.25 290);
-  --secondary-foreground: oklch(0.98 0 0);
-  
-  /* Accent: Bright Safety Orange */
-  --accent: oklch(0.75 0.18 60);
-  --accent-foreground: oklch(0.1 0.05 260);
-  
-  /* Background: Deep Charcoal/Navy */
-  --background: oklch(0.15 0.05 260);
-  --foreground: oklch(0.95 0.02 260);
-  
-  --card: oklch(0.2 0.05 260);
-  --card-foreground: oklch(0.95 0.02 260);
-  
-  --popover: oklch(0.2 0.05 260);
-  --popover-foreground: oklch(0.95 0.02 260);
-  
-  --muted: oklch(0.25 0.05 260);
-  --muted-foreground: oklch(0.7 0.05 260);
-  
-  --destructive: oklch(0.6 0.2 25);
-  --destructive-foreground: oklch(0.98 0 0);
-  
-  --border: oklch(0.3 0.05 260);
-  --input: oklch(0.3 0.05 260);
-  --ring: oklch(0.6 0.2 290);
-  
-  /* Chart colors adjusted for dark mode */
-  --chart-1: oklch(0.65 0.25 290); /* Bright Purple */
-  --chart-2: oklch(0.6 0.15 260); /* Bright Blue */
-  --chart-3: oklch(0.75 0.18 60); /* Bright Orange */
-  --chart-4: oklch(0.7 0.15 280); /* Bright Violet */
-  --chart-5: oklch(0.5 0.1 250); /* Blue */
-  
-  --sidebar: oklch(0.15 0.05 260);
-  --sidebar-foreground: oklch(0.95 0.02 260);
-  --sidebar-primary: oklch(0.6 0.15 260);
-  --sidebar-primary-foreground: oklch(0.1 0.05 260);
-  --sidebar-accent: oklch(0.25 0.05 260);
-  --sidebar-accent-foreground: oklch(0.95 0.02 260);
-  --sidebar-border: oklch(0.3 0.05 260);
-  --sidebar-ring: oklch(0.6 0.2 290);
+  --primary: #59331f;
+  --primary-foreground: #ffffff;
+  --secondary: #b165fb;
+  --secondary-foreground: #ffffff;
+  --accent: #d4a976;
+  --accent-foreground: #181b24;
+  --background: #181b24;
+  --foreground: #ffffff;
+  --card: #181b24;
+  --card-foreground: #ffffff;
+  --muted: #202430;
+  --muted-foreground: #a0aec0;
+  --border: rgba(177, 101, 251, 0.3);
 }
 
 @layer base {
@@ -206,4 +155,18 @@
       max-width: 1280px; /* Standard content width */
     }
   }
+}
+
+/* El Negma Presentation Style Images */
+.styled-image {
+  border: 4px solid #b165fb !important;
+  border-radius: 15px !important;
+  box-shadow: 0 8px 30px rgba(177, 101, 251, 0.25), 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.3s ease !important;
+  background-color: #0f1116;
+}
+
+.styled-image:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 12px 40px rgba(177, 101, 251, 0.35), 0 6px 20px rgba(0, 0, 0, 0.4) !important;
 }
