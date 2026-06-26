@@ -1,140 +1,100 @@
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Package, Ruler, Weight, Check, ArrowLeft } from "lucide-react";
-import { Link } from "wouter";
+import { Card, CardContent } from "@/components/ui/card";
+import { Ruler, Weight, Package, DraftingCompass, Settings, Box } from "lucide-react";
 
 export default function Products() {
-  const products = [
-    {
-      title: "بالتة شرق أوسط (120 × 100)",
-      desc: "الخيار الأمثل للاستخدام المحلي والإقليمي، مصممة لتحمل الأوزان الثقيلة.",
-      specs: [
-        { label: "الأبعاد", value: "120 × 100 سم", icon: <Ruler className="w-4 h-4" /> },
-        { label: "الحمولة", value: "1250 كجم", icon: <Weight className="w-4 h-4" /> },
-        { label: "الاستخدام", value: "محلي وإقليمي", icon: <Package className="w-4 h-4" /> },
-      ],
-      features: ["متوافقة مع المعايير المحلية", "قوة تحمل عالية", "مثالية للتخزين"],
-      image: "/images/product-pallet-detail.png"
-    },
-    {
-      title: "بالتة يورو (120 × 80)",
-      desc: "مطابقة لمواصفات الاتحاد الأوروبي، الخيار الأول للتصدير للأسواق العالمية.",
-      specs: [
-        { label: "الأبعاد", value: "120 × 80 سم", icon: <Ruler className="w-4 h-4" /> },
-        { label: "الحمولة", value: "1500 كجم", icon: <Weight className="w-4 h-4" /> },
-        { label: "الاستخدام", value: "تصدير (EU)", icon: <Package className="w-4 h-4" /> },
-      ],
-      features: ["مطابقة لمواصفات EPAL", "معالجة حرارية HT", "سهولة التداول"],
-      image: "/images/products-image.jpg"
-    },
-    {
-      title: "تصميمات مخصصة",
-      desc: "نصمم وننفذ بالتات بمواصفات خاصة تناسب احتياجات منتجك وطبيعة تخزينه.",
-      specs: [
-        { label: "الأبعاد", value: "حسب الطلب", icon: <Ruler className="w-4 h-4" /> },
-        { label: "الحمولة", value: "متغيرة", icon: <Weight className="w-4 h-4" /> },
-        { label: "الاستخدام", value: "خاص", icon: <Package className="w-4 h-4" /> },
-      ],
-      features: ["مرونة كاملة في التصميم", "استشارات فنية مجانية", "عينات قبل التنفيذ"],
-      image: "/images/factory-image.jpg"
-    }
-  ];
-
   return (
-    <div className="flex flex-col gap-20 pb-20 pt-10">
-      {/* Header */}
-      <section className="container text-center max-w-4xl">
-        <Badge variant="outline" className="mb-4 px-4 py-1 text-base border-primary/30 text-primary bg-primary/5">
-          منتجاتنا
-        </Badge>
-        <h1 className="text-4xl md:text-6xl font-black mb-6 text-foreground">
-          حلول خشبية <span className="text-primary">متكاملة</span>
-        </h1>
-        <p className="text-xl text-muted-foreground leading-relaxed">
-          نقدم مجموعة متكاملة من الباليات الخشبية المصنعة وفقًا للمواصفات العالمية والمحلية، مع مرونة في التصنيع حسب متطلبات العملاء.
-        </p>
-      </section>
-
-      {/* Products Grid */}
-      <section className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {products.map((product, index) => (
-            <Card key={index} className="flex flex-col overflow-hidden border-border shadow-lg hover:shadow-2xl transition-all duration-300 group h-full">
-              <div className="relative h-64 overflow-hidden">
-                <img 
-                  src={product.image} 
-                  alt={product.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80" />
-                <div className="absolute bottom-0 right-0 p-6 text-white">
-                  <h3 className="text-2xl font-bold mb-2">{product.title}</h3>
-                  <p className="text-sm opacity-90 line-clamp-2">{product.desc}</p>
-                </div>
-              </div>
-              
-              <CardContent className="flex-1 p-6">
-                <div className="grid grid-cols-3 gap-4 mb-6">
-                  {product.specs.map((spec, i) => (
-                    <div key={i} className="flex flex-col items-center text-center p-2 bg-muted/50 rounded-lg">
-                      <div className="text-primary mb-1">{spec.icon}</div>
-                      <span className="text-[10px] text-muted-foreground font-bold">{spec.label}</span>
-                      <span className="text-xs font-bold text-foreground">{spec.value}</span>
-                    </div>
-                  ))}
-                </div>
-                
-                <div className="space-y-3">
-                  {product.features.map((feature, i) => (
-                    <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center text-green-600 shrink-0">
-                        <Check className="w-3 h-3" />
-                      </div>
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-              
-              <CardFooter className="p-6 pt-0 mt-auto">
-                <Link href="/contact" className="w-full">
-                  <Button className="w-full font-bold group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    اطلب عرض سعر
-                    <ArrowLeft className="w-4 h-4 mr-2" />
-                  </Button>
-                </Link>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* Quality Section */}
-      <section className="bg-muted/30 py-20">
-        <div className="container">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl font-black mb-4 text-foreground">معايير الجودة</h2>
-            <p className="text-lg text-muted-foreground">
-              نلتزم بأعلى معايير الجودة في عمليات التصنيع والإنتاج لضمان منتج نهائي يليق بعملائنا.
-            </p>
+    <div className="container py-12">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch rounded-3xl overflow-hidden border border-border shadow-xl bg-card">
+        
+        {/* Left Side: Dark Presentation Card (Grid span 5) */}
+        <div className="lg:col-span-5 bg-slate-950 text-white p-8 flex flex-col justify-center items-center relative overflow-hidden min-h-[450px]">
+          {/* Decorative Linear SVG Lines in background */}
+          <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
+            <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <path d="M-100 100 L500 500 M-100 130 L500 530 M-100 160 L500 560" stroke="#B165FB" strokeWidth="2" fill="none" />
+              <path d="M-100 400 L500 0 M-100 430 L500 30 M-100 460 L500 60" stroke="#d4a976" strokeWidth="2" fill="none" />
+            </svg>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { title: "معالجة حرارية", desc: "معتمدة للصادرات العالمية (HT)" },
-              { title: "فحص دقيق", desc: "لكل منتج قبل التسليم" },
-              { title: "نظام لوجستي", desc: "لضمان توصيل سريع وآمن" },
-              { title: "صيانة دورية", desc: "للمعدات لضمان استمرارية الإنتاج" }
-            ].map((item, i) => (
-              <div key={i} className="bg-background p-6 rounded-xl border border-border shadow-sm text-center">
-                <h3 className="font-bold text-lg mb-2 text-primary">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.desc}</p>
-              </div>
-            ))}
+          {/* Floating White Presentation Card */}
+          <div className="relative z-10 w-full max-w-md bg-white rounded-2xl p-6 shadow-2xl flex flex-col items-center gap-6 border border-border hover:scale-105 transition-transform duration-300">
+            <img 
+              src="/images/products-image.jpg" 
+              alt="منتجات شركة النجمة" 
+              className="rounded-xl w-full h-72 lg:h-80 object-cover shadow-md"
+            />
+            <div className="w-full text-right flex justify-between items-center border-t border-border pt-4">
+              <span className="text-xs text-muted-foreground font-bold dir-ltr">Contact: 01080012261</span>
+              <span className="text-lg font-black text-slate-900">El Negma</span>
+            </div>
           </div>
         </div>
-      </section>
+
+        {/* Right Side: White Content Section (Grid span 7) */}
+        <div className="lg:col-span-7 p-8 md:p-12 flex flex-col justify-center text-right">
+          {/* Title with left border */}
+          <div className="flex items-stretch gap-4 mb-6">
+            <div className="w-1.5 bg-secondary rounded-full" />
+            <h2 className="text-4xl md:text-5xl font-black text-foreground leading-tight">
+              منتجاتنا<br />وخدماتنا
+            </h2>
+          </div>
+
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            نقدم مجموعة متكاملة من البالتات الخشبية المصنعة وفقًا للمواصفات العالمية والمحلية، مع مرونة في التصنيع حسب متطلبات العملاء لمختلف الصناعات والاستخدامات.
+          </p>
+
+          {/* List items */}
+          <div className="flex flex-col gap-6">
+            
+            {/* Item 1 */}
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-border pb-4 hover:bg-muted/10 transition-colors p-2 rounded-lg">
+              <div className="text-secondary font-black text-xl font-['Cairo'] whitespace-nowrap order-last md:order-first">120 × 100</div>
+              <div className="text-muted-foreground text-sm md:text-base flex-1 text-right order-2">
+                بالتة شرق أوسط - حمولة 1250 كجم - متوافقة مع المعايير المحلية والإقليمية
+              </div>
+              <div className="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary shrink-0 order-first md:order-last">
+                <Package className="w-5 h-5" />
+              </div>
+            </div>
+
+            {/* Item 2 */}
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-border pb-4 hover:bg-muted/10 transition-colors p-2 rounded-lg">
+              <div className="text-secondary font-black text-xl font-['Cairo'] whitespace-nowrap order-last md:order-first">120 × 80</div>
+              <div className="text-muted-foreground text-sm md:text-base flex-1 text-right order-2">
+                بالتة يورو - حمولة 1500 كجم - مطابقة لمواصفات الاتحاد الأوروبي للتصدير
+              </div>
+              <div className="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary shrink-0 order-first md:order-last">
+                <Box className="w-5 h-5" />
+              </div>
+            </div>
+
+            {/* Item 3 */}
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-border pb-4 hover:bg-muted/10 transition-colors p-2 rounded-lg">
+              <div className="text-secondary font-bold text-sm md:text-base whitespace-nowrap order-last md:order-first">تصميمات مخصصة</div>
+              <div className="text-muted-foreground text-sm md:text-base flex-1 text-right order-2">
+                نوفر جميع الأحجام والمواصفات حسب الاحتياجات الخاصة لكل مشروع
+              </div>
+              <div className="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary shrink-0 order-first md:order-last">
+                <DraftingCompass className="w-5 h-5" />
+              </div>
+            </div>
+
+            {/* Item 4 */}
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 hover:bg-muted/10 transition-colors p-2 rounded-lg">
+              <div className="text-secondary font-bold text-sm md:text-base whitespace-nowrap order-last md:order-first">تصنيع حسب الطلب</div>
+              <div className="text-muted-foreground text-sm md:text-base flex-1 text-right order-2">
+                مرونة كاملة في التصميم والإنتاج لضمان الملاءمة المثالية للاستخدام المطلوب
+              </div>
+              <div className="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary shrink-0 order-first md:order-last">
+                <Settings className="w-5 h-5" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
     </div>
   );
 }

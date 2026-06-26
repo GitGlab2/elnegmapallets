@@ -1,129 +1,102 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Badge } from "@/components/ui/badge";
-import { Phone, Mail, MapPin, Facebook, Globe, MessageCircle } from "lucide-react";
+import { Phone, MapPin, Facebook, MessageCircle } from "lucide-react";
 
 export default function Contact() {
   return (
-    <div className="flex flex-col gap-20 pb-20 pt-10">
-      {/* Header */}
-      <section className="container text-center max-w-4xl">
-        <Badge variant="outline" className="mb-4 px-4 py-1 text-base border-primary/30 text-primary bg-primary/5">
-          تواصل معنا
-        </Badge>
-        <h1 className="text-4xl md:text-6xl font-black mb-6 text-foreground">
-          نحن هنا <span className="text-primary">لخدمتك</span>
-        </h1>
-        <p className="text-xl text-muted-foreground leading-relaxed">
-          فريقنا جاهز للرد على استفساراتكم وتلبية طلباتكم على مدار الساعة.
-        </p>
-      </section>
-
-      <section className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <div className="flex flex-col gap-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Card className="bg-primary text-primary-foreground border-none shadow-lg">
-                <CardContent className="p-6 flex flex-col items-center text-center gap-4 pt-8">
-                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
-                    <Phone className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="text-sm opacity-80 mb-1">اتصل بنا</p>
-                    <a href="tel:01080012261" className="text-xl font-bold block hover:underline dir-ltr">01080012261</a>
-                    <a href="tel:01030325150" className="text-xl font-bold block hover:underline dir-ltr mt-1">01030325150</a>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-secondary text-secondary-foreground border-none shadow-lg">
-                <CardContent className="p-6 flex flex-col items-center text-center gap-4 pt-8">
-                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
-                    <MessageCircle className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="text-sm opacity-80 mb-1">واتساب</p>
-                    <p className="text-xl font-bold">تواصل عبر واتساب</p>
-                    <p className="text-sm opacity-80 mt-1">متاح 24/7</p>
-                  </div>
-                </CardContent>
-              </Card>
+    <div className="container py-12 flex flex-col gap-12">
+      
+      {/* Centered Split Contact Card */}
+      <div className="max-w-4xl mx-auto w-full rounded-3xl overflow-hidden border border-border shadow-xl bg-card">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          
+          {/* Right Side (First Half): Branding & Info (Dark Side) */}
+          <div className="bg-slate-950 text-white p-8 md:p-12 flex flex-col justify-center relative overflow-hidden min-h-[350px]">
+            {/* Decorative SVG lines */}
+            <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
+              <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <path d="M-100 250 L500 650" stroke="#B165FB" strokeWidth="2" fill="none" />
+                <path d="M-100 350 L500 750" stroke="#d4a976" strokeWidth="2" fill="none" />
+              </svg>
             </div>
-
-            <div className="space-y-6">
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border shadow-sm">
-                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-foreground">
-                  <Globe className="w-6 h-6" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">الموقع الإلكتروني</p>
-                  <a href="https://www.elnegmapallets.com" target="_blank" rel="noreferrer" className="text-lg font-bold hover:text-primary transition-colors">
-                    www.elnegmapallets.com
-                  </a>
-                </div>
+            
+            <div className="relative z-10 text-right flex flex-col gap-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/20 border border-primary/30 w-fit">
+                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                <span className="text-xs font-bold text-primary">تواصل مباشر وسريع</span>
               </div>
+              <h2 className="text-3xl md:text-4xl font-black leading-tight text-white">
+                يسعدنا الرد على<br />استفساراتكم وطلباتكم
+              </h2>
+              <p className="text-sm opacity-80 leading-relaxed mt-2">
+                تواصل معنا مباشرة عبر الهاتف أو الواتساب للحصول على عروض أسعار فورية وتفاصيل تصنيع وتوريد البالتات الخشبية.
+              </p>
+            </div>
+          </div>
 
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border shadow-sm">
-                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-foreground">
-                  <Facebook className="w-6 h-6" />
+          {/* Left Side (Second Half): Contact Links (Light Side) */}
+          <div className="p-8 md:p-12 flex flex-col justify-center">
+            <div className="flex flex-col gap-6 text-right w-full">
+              {/* Phone */}
+              <a href="tel:01080012261" className="flex items-center gap-4 p-4 rounded-2xl bg-muted/40 border border-border hover:bg-muted hover:border-primary/30 transition-all group">
+                <div className="flex flex-col text-right flex-1">
+                  <span className="text-xs text-muted-foreground font-bold">اتصل بنا مباشرة</span>
+                  <span className="text-lg font-black text-foreground dir-ltr mt-0.5 group-hover:text-primary transition-colors">01080012261</span>
                 </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">فيسبوك</p>
-                  <a href="https://facebook.com/negma.wood" target="_blank" rel="noreferrer" className="text-lg font-bold hover:text-primary transition-colors">
-                    facebook.com/negma.wood
-                  </a>
+                <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary shrink-0 group-hover:scale-105 transition-transform">
+                  <Phone className="w-6 h-6" />
                 </div>
-              </div>
+              </a>
 
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border shadow-sm">
-                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-foreground">
+              {/* WhatsApp */}
+              <a href="https://wa.me/201080012261" target="_blank" rel="noreferrer" className="flex items-center gap-4 p-4 rounded-2xl bg-muted/40 border border-border hover:bg-muted hover:border-green-500/30 transition-all group">
+                <div className="flex flex-col text-right flex-1">
+                  <span className="text-xs text-muted-foreground font-bold">محادثة واتساب مباشرة</span>
+                  <span className="text-lg font-black text-foreground mt-0.5 group-hover:text-green-500 transition-colors">تواصل عبر واتساب</span>
+                  <span className="text-xs text-muted-foreground mt-0.5">الرد خلال دقائق - متاح 24/7</span>
+                </div>
+                <div className="w-12 h-12 bg-green-500/10 rounded-2xl flex items-center justify-center text-green-500 shrink-0 group-hover:scale-105 transition-transform">
+                  <MessageCircle className="w-6 h-6" />
+                </div>
+              </a>
+
+              {/* Address */}
+              <a href="https://www.google.com/maps?cid=16821078517981758662" target="_blank" rel="noreferrer" className="flex items-center gap-4 p-4 rounded-2xl bg-muted/40 border border-border hover:bg-muted hover:border-secondary/30 transition-all group">
+                <div className="flex flex-col text-right flex-1">
+                  <span className="text-xs text-muted-foreground font-bold">الموقع الجغرافي</span>
+                  <span className="text-lg font-black text-foreground mt-0.5 group-hover:text-secondary transition-colors">بني سويف - بياض العرب</span>
+                  <span className="text-xs text-muted-foreground mt-0.5">المنطقة الصناعية (بجوار علوم إدارية)</span>
+                </div>
+                <div className="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary shrink-0 group-hover:scale-105 transition-transform">
                   <MapPin className="w-6 h-6" />
                 </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">العنوان</p>
-                  <p className="text-lg font-bold">المنطقة الصناعية بني سويف</p>
-                </div>
+              </a>
+
+              {/* Social Links */}
+              <div className="flex justify-center gap-4 border-t border-border pt-4 mt-2">
+                <a href="https://facebook.com/negma.wood" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-xl bg-muted/40 border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all">
+                  <Facebook className="w-5 h-5" />
+                </a>
               </div>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <Card className="border-border shadow-xl">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-6">أرسل لنا رسالة</h3>
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">الاسم</label>
-                    <Input placeholder="الاسم بالكامل" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">رقم الهاتف</label>
-                    <Input placeholder="01xxxxxxxxx" className="text-right" dir="ltr" />
-                  </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">البريد الإلكتروني</label>
-                  <Input type="email" placeholder="email@example.com" className="text-right" dir="ltr" />
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">الرسالة</label>
-                  <Textarea placeholder="كيف يمكننا مساعدتك؟" className="min-h-[150px]" />
-                </div>
-
-                <Button type="submit" className="w-full text-lg font-bold py-6">
-                  إرسال الرسالة
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
         </div>
-      </section>
+      </div>
+
+      {/* Interactive Google Map Embed */}
+      <div className="rounded-3xl overflow-hidden border border-border shadow-xl h-[350px] md:h-[450px] relative w-full">
+        <iframe
+          src="https://maps.google.com/maps?cid=16821078517981758662&output=embed"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen={true}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="موقع مصنع النجمة على خريطة جوجل"
+          className="absolute inset-0 w-full h-full"
+        />
+      </div>
+
     </div>
   );
 }
