@@ -43,7 +43,7 @@ export default function Gallery() {
                   <img 
                     src={item.src} 
                     alt={item.title} 
-                    className="styled-image w-full h-80 md:h-[380px] object-cover transition-transform duration-500 group-hover:scale-102"
+                    className="styled-image w-full h-80 md:h-[380px] object-contain transition-transform duration-500 group-hover:scale-102"
                   />
                 </div>
                 <div className="pr-2">
@@ -85,7 +85,7 @@ export default function Gallery() {
                   <img 
                     src={item.src} 
                     alt={item.title} 
-                    className="styled-image w-full h-80 md:h-[380px] object-cover transition-transform duration-500 group-hover:scale-102"
+                    className="styled-image w-full h-80 md:h-[380px] object-contain transition-transform duration-500 group-hover:scale-102"
                   />
                 </div>
                 <div className="pr-2">

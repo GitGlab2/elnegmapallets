@@ -97,7 +97,7 @@ export default function Home() {
               <img 
                 src="/images/products-image.jpg" 
                 alt="تفاصيل الباليات خشبية" 
-                className="relative styled-image w-full h-[380px] lg:h-[480px] object-cover shadow-2xl"
+                className="relative styled-image w-full h-[380px] lg:h-[480px] object-contain shadow-2xl"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = '/images/sectors-preview.jpg';
                 }}

@@ -20,7 +20,7 @@ export default function About() {
               <img 
                 src="/images/factory-image.jpg" 
                 alt="مصنع شركة النجمة للبالتات الخشبية" 
-                className="styled-image w-full h-80 object-cover"
+                className="styled-image w-full h-80 object-contain"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
                 }}

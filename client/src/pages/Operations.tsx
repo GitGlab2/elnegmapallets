@@ -50,7 +50,7 @@ export default function Operations() {
               <img 
                 src="/images/team-image.jpg" 
                 alt="العمليات والجودة مصنع النجمة" 
-                className="relative z-10 rounded-[18px] w-full h-80 object-cover border-2 border-background"
+                className="relative z-10 rounded-[18px] w-full h-80 object-contain border-2 border-background bg-[#ffffff]"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
                 }}

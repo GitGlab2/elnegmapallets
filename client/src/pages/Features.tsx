@@ -20,10 +20,6 @@ export default function Features() {
       icon: <BadgeAlert className="w-5 h-5 text-secondary shrink-0" />
     },
     {
-      title: "كاش باك على السحب السنوي وخصومات تصل إلى 3%",
-      icon: <Percent className="w-5 h-5 text-secondary shrink-0" />
-    },
-    {
       title: "معالجة حرارية (HT) معتمدة للتصدير العالمي - نقدمها مجاناً للكميات الكبيرة",
       icon: <Flame className="w-5 h-5 text-secondary shrink-0" />
     }
@@ -56,7 +52,7 @@ export default function Features() {
               <img 
                 src="/images/advantages-1.jpg" 
                 alt="مزايا شركة النجمة التنافسية" 
-                className="styled-image w-full h-80 object-cover"
+                className="styled-image w-full h-80 object-contain"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
                 }}

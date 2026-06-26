@@ -50,7 +50,7 @@ export default function Products() {
             <img 
               src="/images/products-image.jpg" 
               alt="بالتات خشبية للتصدير" 
-              className="styled-image w-full h-[350px] object-cover"
+              className="styled-image w-full h-[350px] object-contain"
               onError={(e) => {
                 (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
               }}
