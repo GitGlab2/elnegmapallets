@@ -207,7 +207,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               © {new Date().getFullYear()} شركة النجمة لتصنيع الباليات الخشبية. جميع الحقوق محفوظة.
             </p>
             <p className="text-xs text-muted-foreground">
-              تم التطوير بواسطة Manus
+              تم التطوير بواسطة{" "}
+              <a 
+                href="https://xfai.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-primary transition-colors underline"
+              >
+                XFAI
+              </a>
             </p>
           </div>
         </div>

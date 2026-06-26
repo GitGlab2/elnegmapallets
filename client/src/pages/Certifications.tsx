@@ -85,35 +85,30 @@ export function CertificationsList() {
 
 export function QualityCertImage() {
   return (
-    <div className="w-full py-8 md:py-12 bg-[#181b24]" id="quality-certification">
-      <div className="w-full flex flex-col items-center gap-6 text-center">
-        
-        <div className="container relative z-10 flex flex-col items-center gap-3 px-4">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-1 bg-secondary rounded-full animate-pulse" />
-            <h3 className="text-xl md:text-2xl font-black text-white">شهادات جودة وتوريدات المصنع</h3>
-            <div className="w-12 h-1 bg-secondary rounded-full animate-pulse" />
-          </div>
+    <div className="container py-12" id="quality-certification">
+      <div className="rounded-3xl border border-border shadow-2xl bg-[#181b24] p-8 md:p-12 flex flex-col items-center gap-8 text-center">
+        <div className="flex items-center gap-3">
+          <div className="w-12 h-1 bg-secondary rounded-full" />
+          <h3 className="text-2xl md:text-3xl font-black text-white">شهادة التبخير الحراري المعتمدة</h3>
+          <div className="w-12 h-1 bg-secondary rounded-full" />
         </div>
-
-        {/* Full-width Image Display with absolutely no cropping or container limits */}
+        
         <motion.div 
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="w-full z-10 relative"
+          transition={{ duration: 0.5 }}
+          className="w-full max-w-2xl"
         >
           <img 
             src="/images/quality-certification.jpg" 
-            alt="نحافظ على أعلى معايير الجودة من أجلكم" 
-            className="w-full h-auto object-contain block mx-auto cursor-zoom-in"
+            alt="شهادات جودة شركة النجمة" 
+            className="styled-image w-full max-h-[500px] object-contain mx-auto"
             onError={(e) => {
               (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
             }}
           />
         </motion.div>
-
       </div>
     </div>
   );

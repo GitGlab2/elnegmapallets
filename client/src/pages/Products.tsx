@@ -48,7 +48,7 @@ export default function Products() {
 
           <div className="relative z-10 w-full max-w-md">
             <img 
-              src="/images/products-image.jpg" 
+              src="/images/3.jpg" 
               alt="بالتات خشبية للتصدير" 
               className="styled-image w-full h-[350px] object-contain"
               onError={(e) => {

@@ -9,6 +9,7 @@ import Features from "./Features";
 import Operations from "./Operations";
 import OperationsVideo from "./OperationsVideo";
 import AdvantagesSlide from "./AdvantagesSlide";
+import TeamImageSlide from "./TeamImageSlide";
 import Clients from "./Clients";
 import Gallery from "./Gallery";
 import Pricing from "./Pricing";
@@ -126,6 +127,11 @@ export default function Home() {
       {/* Slide 6: Operations Section (العمليات والجودة) */}
       <section id="operations-section" className="scroll-mt-24">
         <Operations />
+      </section>
+
+      {/* Slide 6.2: Team Image Slide (Full Width) */}
+      <section id="team-image-section" className="scroll-mt-24">
+        <TeamImageSlide />
       </section>
 
       {/* Slide 6.5: Operations Video Section */}
