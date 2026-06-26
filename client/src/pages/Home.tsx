@@ -7,6 +7,8 @@ import About from "./About";
 import Products from "./Products";
 import Features from "./Features";
 import Operations from "./Operations";
+import OperationsVideo from "./OperationsVideo";
+import AdvantagesSlide from "./AdvantagesSlide";
 import Clients from "./Clients";
 import Gallery from "./Gallery";
 import Pricing from "./Pricing";
@@ -20,8 +22,13 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-10 pb-20 bg-[#181b24] text-white">
       
+      {/* Slide 1.5: Advantages Image Slide (First Section) */}
+      <section id="home" className="scroll-mt-24">
+        <AdvantagesSlide />
+      </section>
+
       {/* Slide 1: Hero Section (Theme Brown background) */}
-      <section id="home" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#59331f] pt-10 scroll-mt-24">
+      <section id="hero-section" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#59331f] pt-10 scroll-mt-24">
         
         {/* Background Wave Decorations matching slide 1 */}
         <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
@@ -51,7 +58,7 @@ export default function Home() {
             </h1>
             
             <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-xl">
-              البروفايل التعريفي | خبرة 18 عاماً في تصنيع البالتات عالية الجودة للتصدير والسوق المحلي بأعلى المواصفات العالمية.
+              الموقع الرسمي | خبرة 18 عاماً في تصنيع البالتات عالية الجودة للتصدير والسوق المحلي بأعلى المواصفات العالمية.
             </p>
             
             <div className="flex flex-wrap gap-4 mt-4">
@@ -88,17 +95,18 @@ export default function Home() {
               <div className="absolute -inset-1.5 bg-gradient-to-r from-secondary to-accent rounded-[20px] blur-xl opacity-30 group-hover:opacity-45 transition duration-1000 group-hover:duration-300" />
               
               <img 
-                src="/images/pallet-hero-detail.png" 
+                src="/images/products-image.jpg" 
                 alt="تفاصيل الباليات خشبية" 
                 className="relative styled-image w-full h-[380px] lg:h-[480px] object-cover shadow-2xl"
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = '/images/products-image.jpg';
+                  (e.target as HTMLImageElement).src = '/images/sectors-preview.jpg';
                 }}
               />
             </div>
           </motion.div>
         </div>
       </section>
+
 
       {/* Slide 2 & 3: About Section (من نحن + رسالتنا ورؤيتنا) */}
       <section id="about-section" className="scroll-mt-24">
@@ -118,6 +126,11 @@ export default function Home() {
       {/* Slide 6: Operations Section (العمليات والجودة) */}
       <section id="operations-section" className="scroll-mt-24">
         <Operations />
+      </section>
+
+      {/* Slide 6.5: Operations Video Section */}
+      <section id="operations-video-section" className="scroll-mt-24">
+        <OperationsVideo />
       </section>
 
       {/* Slide 7: Clients Section (عملاؤنا الكرام) */}

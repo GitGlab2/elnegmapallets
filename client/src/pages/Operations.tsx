@@ -43,16 +43,17 @@ export default function Operations() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-6 flex items-center justify-center order-2 lg:order-1"
           >
-            <div className="relative w-full max-w-md p-4 aspect-video lg:aspect-square">
+            <div className="relative w-full max-w-md p-4">
               {/* Outer frame */}
               <div className="absolute inset-0 border-[6px] border-secondary/60 rounded-[25px] shadow-[0_15px_40px_rgba(177,101,251,0.3)] bg-gradient-to-br from-secondary/10 to-transparent pointer-events-none" />
               
-              <iframe 
-                src="https://www.youtube.com/embed/upOSxwWufyI" 
-                title="العمليات والجودة في مصنع النجمة"
-                className="relative z-10 rounded-[18px] w-full h-full min-h-[260px] lg:min-h-[320px] border-2 border-background"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
+              <img 
+                src="/images/team-image.jpg" 
+                alt="العمليات والجودة مصنع النجمة" 
+                className="relative z-10 rounded-[18px] w-full h-80 object-cover border-2 border-background"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
+                }}
               />
             </div>
           </motion.div>
