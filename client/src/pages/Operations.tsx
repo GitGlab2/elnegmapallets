@@ -22,8 +22,8 @@ export default function Operations() {
   ];
 
   return (
-    <div className="container py-12" id="operations">
-      <div className="relative min-h-[500px] rounded-3xl overflow-hidden border border-border shadow-2xl bg-[#181b24] p-8 md:p-16 flex items-center">
+    <div className="container py-8 md:py-12" id="operations">
+      <div className="relative min-h-0 lg:min-h-[500px] rounded-2xl md:rounded-3xl overflow-hidden border border-border shadow-2xl bg-[#181b24] p-4 md:p-8 lg:p-16 flex items-center">
         
         {/* Wave Decoration in background */}
         <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
@@ -39,28 +39,30 @@ export default function Operations() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="w-full max-w-4xl flex flex-col items-center gap-6"
+            className="w-full max-w-4xl flex flex-col items-center gap-4 md:gap-6"
           >
-            <div className="flex items-stretch gap-4 justify-center">
-              <div className="w-1.5 bg-secondary rounded-full" />
-              <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
+            <div className="flex items-stretch gap-3 md:gap-4 justify-center">
+              <div className="w-1 md:w-1.5 bg-secondary rounded-full" />
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-white leading-tight">
                 العمليات والجودة
               </h2>
-              <div className="w-1.5 bg-secondary rounded-full" />
+              <div className="w-1 md:w-1.5 bg-secondary rounded-full" />
             </div>
 
-            <p className="text-base md:text-lg text-white/80 leading-relaxed max-w-3xl">
+            <p className="text-sm md:text-lg text-white/80 leading-relaxed max-w-3xl px-2">
               نلتزم في شركة النجمة بأعلى معايير الجودة في عمليات التصنيع والإنتاج. تضمن منشآتنا الحديثة والمجهزة بأحدث المعدات استمرارية الإنتاج بكفاءة عالية وبمعدل <span className="text-secondary font-black">360 ألف بالتة سنوياً</span> لتلبية احتياجات عملائنا من القطاعات المختلفة.
             </p>
 
             {/* List in 2 columns on desktop, 1 on mobile */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mt-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full mt-4 md:mt-6">
               {operations.map((op, index) => (
-                <div key={index} className="flex items-center gap-4 text-right p-4 rounded-2xl bg-[#202430]/40 border border-border/40 hover:border-secondary transition-all justify-start">
-                  <div className="shrink-0 w-12 h-12 rounded-full bg-secondary flex items-center justify-center shadow-lg shadow-secondary/20">
-                    {op.icon}
+                <div key={index} className="flex items-center gap-3 md:gap-4 text-right p-3 md:p-4 rounded-xl md:rounded-2xl bg-[#202430]/40 border border-border/40 hover:border-secondary transition-all justify-start">
+                  <div className="shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-secondary flex items-center justify-center shadow-lg shadow-secondary/20">
+                    <div className="[&>svg]:w-4 [&>svg]:h-4 md:[&>svg]:w-5 md:[&>svg]:h-5">
+                      {op.icon}
+                    </div>
                   </div>
-                  <span className="text-base md:text-lg text-white/95 font-bold">
+                  <span className="text-sm md:text-lg text-white/95 font-bold">
                     {op.title}
                   </span>
                 </div>

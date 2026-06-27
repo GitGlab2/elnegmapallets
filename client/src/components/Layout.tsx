@@ -1,39 +1,12 @@
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, Facebook, MapPin, ZoomIn } from "lucide-react";
-import { useState, useEffect } from "react";
+import { Menu, X, Phone, Facebook, MapPin } from "lucide-react";
+import { useState } from "react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [location] = useLocation();
-  const [lightboxImg, setLightboxImg] = useState<{ src: string; alt: string } | null>(null);
-
-  useEffect(() => {
-    const handleImageClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (target.tagName === 'IMG' && target.closest('main')) {
-        const imgTarget = target as HTMLImageElement;
-        setLightboxImg({
-          src: imgTarget.src,
-          alt: imgTarget.alt || "صورة من مصنع النجمة"
-        });
-      }
-    };
-    document.addEventListener('click', handleImageClick);
-    return () => document.removeEventListener('click', handleImageClick);
-  }, []);
-
-  useEffect(() => {
-    if (lightboxImg) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [lightboxImg]);
 
   const navItems = [
     { name: "من نحن", path: "#about-section" },
@@ -220,37 +193,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </footer>
-
-      {/* Global Lightbox Modal */}
-      {lightboxImg && (
-        <div 
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 md:p-8 animate-in fade-in duration-200 cursor-zoom-out"
-          onClick={() => setLightboxImg(null)}
-        >
-          <button 
-            className="absolute top-4 right-4 z-[110] p-3 text-white hover:text-primary bg-black/50 hover:bg-black/80 rounded-full transition-colors"
-            onClick={() => setLightboxImg(null)}
-            aria-label="إغلاق المعاينة"
-          >
-            <X className="w-8 h-8" />
-          </button>
-          <div 
-            className="relative max-w-7xl max-h-[90vh] flex items-center justify-center animate-in zoom-in-95 duration-200"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img 
-              src={lightboxImg.src} 
-              alt={lightboxImg.alt} 
-              className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border border-white/10"
-            />
-            {lightboxImg.alt && (
-              <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded text-center text-sm md:text-base font-bold">
-                {lightboxImg.alt}
-              </div>
-            )}
-          </div>
-        </div>
-      )}
     </div>
   );
 }

@@ -29,7 +29,7 @@ export default function Home() {
       </section>
 
       {/* Slide 1: Hero Section (Theme Brown background) */}
-      <section id="hero-section" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#59331f] pt-10 scroll-mt-24">
+      <section id="hero-section" className="relative min-h-[70vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#59331f] pt-6 md:pt-10 scroll-mt-24">
         
         {/* Background Wave Decorations matching slide 1 */}
         <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
@@ -53,32 +53,32 @@ export default function Home() {
               <span className="text-sm font-bold text-accent">الشركة رقم 1 في مصر</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight text-white">
-              <span className="text-accent text-3xl md:text-4xl block font-medium mb-2">شركة</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black leading-tight tracking-tight text-white">
+              <span className="text-accent text-xl sm:text-2xl md:text-3xl lg:text-4xl block font-medium mb-1 md:mb-2">شركة</span>
               النجمة لتصنيع البالتات الخشبية
             </h1>
             
-            <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-xl">
+            <p className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-xl">
               الموقع الرسمي | خبرة 18 عاماً في تصنيع البالتات عالية الجودة للتصدير والسوق المحلي بأعلى المواصفات العالمية.
             </p>
             
             <div className="flex flex-wrap gap-4 mt-4">
               <a href="#products">
-                <Button size="lg" className="text-lg px-8 py-6 font-bold shadow-xl shadow-secondary/20 hover:shadow-secondary/40 transition-all bg-secondary hover:bg-secondary/90">
+                <Button size="lg" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-6 font-bold shadow-xl shadow-secondary/20 hover:shadow-secondary/40 transition-all bg-secondary hover:bg-secondary/90">
                   استكشف منتجاتنا
                   <ArrowLeft className="mr-2 w-5 h-5" />
                 </Button>
               </a>
               <a href="#contact">
-                <Button variant="outline" size="lg" className="text-lg px-8 py-6 font-bold border-2 border-white/20 hover:bg-white/10 transition-all text-white bg-transparent">
+                <Button variant="outline" size="lg" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-6 font-bold border-2 border-white/20 hover:bg-white/10 transition-all text-white bg-transparent">
                   تواصل معنا
                 </Button>
               </a>
             </div>
 
-            <div className="flex items-center gap-6 mt-8 pt-8 border-t border-white/10 justify-start">
+            <div className="flex items-center gap-6 mt-6 md:mt-8 pt-6 md:pt-8 border-t border-white/10 justify-start">
               <div className="flex flex-col">
-                <span className="font-black text-2xl text-accent">+500 عميل</span>
+                <span className="font-black text-xl md:text-2xl text-accent">+500 عميل</span>
                 <span className="text-sm text-white/70 mt-0.5">يثقون في متانة منتجاتنا وتوريداتنا</span>
               </div>
             </div>
@@ -98,7 +98,7 @@ export default function Home() {
               <img 
                 src="/images/products-image.jpg" 
                 alt="تفاصيل الباليات خشبية" 
-                className="relative styled-image w-full h-[380px] lg:h-[480px] object-contain shadow-2xl"
+                className="relative styled-image w-full h-[280px] sm:h-[350px] lg:h-[480px] object-contain shadow-2xl"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = '/images/sectors-preview.jpg';
                 }}
@@ -191,11 +191,11 @@ export default function Home() {
 
       {/* Bottom Call to Action banner */}
       <section className="container">
-        <div className="relative rounded-3xl overflow-hidden bg-[#59331f] text-white px-6 py-16 md:p-20 text-center border border-border/40">
+          <div className="relative rounded-2xl md:rounded-3xl overflow-hidden bg-[#59331f] text-white px-4 py-10 md:p-20 text-center border border-border/40">
           <div className="absolute inset-0 bg-[url('/images/logistics-truck.png')] bg-cover bg-center opacity-10 mix-blend-overlay" />
-          <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center gap-8">
-            <h2 className="text-3xl md:text-5xl font-black text-accent">جاهز لطلب كميتك؟</h2>
-            <p className="text-lg opacity-90 leading-relaxed">
+          <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center gap-6 md:gap-8">
+            <h2 className="text-2xl md:text-3xl lg:text-5xl font-black text-accent">جاهز لطلب كميتك؟</h2>
+            <p className="text-sm md:text-lg opacity-90 leading-relaxed">
               احصل على عرض سعر خاص ومزايا إضافية للكميات، واستفد من خدمات التوريد والشحن المجاني.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">

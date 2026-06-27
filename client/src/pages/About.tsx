@@ -5,8 +5,8 @@ export default function About() {
     <div className="flex flex-col gap-16">
       
       {/* Slide 2: من نحن - نبذة عن الشركة */}
-      <div className="container py-12" id="about-us">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center rounded-3xl overflow-hidden border border-border shadow-2xl bg-[#181b24] p-8 md:p-16">
+      <div className="container py-8 md:py-12" id="about-us">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-center rounded-2xl md:rounded-3xl overflow-hidden border border-border shadow-2xl bg-[#181b24] p-4 md:p-8 lg:p-16">
           
           {/* Left Side: Image (Grid span 5) */}
           <motion.div 
@@ -20,7 +20,7 @@ export default function About() {
               <img 
                 src="/images/factory-image.jpg" 
                 alt="مصنع شركة النجمة للبالتات الخشبية" 
-                className="styled-image w-full h-80 object-contain"
+                className="styled-image w-full h-60 md:h-80 object-contain"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
                 }}
@@ -38,16 +38,16 @@ export default function About() {
           >
             <div className="flex items-stretch gap-4 mb-6 justify-start">
               <div className="w-1.5 bg-secondary rounded-full" />
-              <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight">
                 من نحن - نبذة عن الشركة
               </h2>
             </div>
 
-            <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-6">
+            <p className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed mb-4 md:mb-6">
               شركة النجمة لتصنيع البالتات الخشبية هي شركة مصرية رائدة تتمتع بخبرة تزيد عن 18 عامًا في مجال تصنيع البالتات الخشبية بجميع أنواعها وأشكالها. نحن متخصصون في توفير حلول البالتات الخشبية عالية الجودة لكبرى الشركات والمصانع داخل مصر وخارجها.
             </p>
             
-            <p className="text-lg md:text-xl text-white/80 leading-relaxed">
+            <p className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed">
               تمكنا عبر سنوات الخبرة من بناء سمعة قوية كأفضل مورد للبالتات في السوق المصري، حيث نلتزم بأعلى معايير الجودة ودقة المواصفات والتسليم في المواعيد المحددة. تتنوع منتجاتنا لتلبية احتياجات مختلف القطاعات الصناعية بما في ذلك الأسمنت، السيراميك، الكيماويات، الإلكترونيات، والعديد من المجالات الأخرى.
             </p>
           </motion.div>
@@ -56,8 +56,8 @@ export default function About() {
       </div>
 
       {/* Slide 3: رسالتنا ورؤيتنا */}
-      <div className="container py-12" id="vision-mission">
-        <div className="relative min-h-[500px] rounded-3xl overflow-hidden border border-border shadow-2xl bg-[#181b24] p-8 md:p-16 flex items-center">
+      <div className="container py-8 md:py-12" id="vision-mission">
+        <div className="relative min-h-[350px] md:min-h-[500px] rounded-2xl md:rounded-3xl overflow-hidden border border-border shadow-2xl bg-[#181b24] p-4 md:p-8 lg:p-16 flex items-center">
           
           {/* Wave Decoration in background */}
           <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
@@ -78,15 +78,15 @@ export default function About() {
               className="lg:col-span-7 text-right flex flex-col gap-8 order-2 lg:order-1"
             >
               <div>
-                <h4 className="font-bold text-secondary text-2xl mb-3">رسالتنا</h4>
-                <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+                <h4 className="font-bold text-secondary text-xl md:text-2xl mb-2 md:mb-3">رسالتنا</h4>
+                <p className="text-base md:text-lg lg:text-xl text-white/90 leading-relaxed">
                   تقديم بالتة خشبية مصرية بمواصفة عالمية، تلبي احتياجات السوق المحلي والعالمي بأعلى معايير الجودة.
                 </p>
               </div>
 
               <div>
-                <h4 className="font-bold text-secondary text-2xl mb-3">رؤيتنا</h4>
-                <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+                <h4 className="font-bold text-secondary text-xl md:text-2xl mb-2 md:mb-3">رؤيتنا</h4>
+                <p className="text-base md:text-lg lg:text-xl text-white/90 leading-relaxed">
                   الريادة في حلول النقل والتخزين والصادرات الخشبية بالسوقين المحلي والدولي، وأن نكون الاختيار الأول للمصانع والشركات الكبرى.
                 </p>
               </div>
@@ -105,8 +105,8 @@ export default function About() {
               transition={{ duration: 0.6 }}
               className="lg:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-right justify-center order-1 lg:order-3"
             >
-              <span className="text-white/80 text-3xl font-black mb-1">شركة</span>
-              <span className="text-white text-6xl md:text-7xl font-black tracking-wider">النجمة</span>
+              <span className="text-white/80 text-xl md:text-3xl font-black mb-1">شركة</span>
+              <span className="text-white text-4xl md:text-6xl lg:text-7xl font-black tracking-wider">النجمة</span>
             </motion.div>
 
           </div>

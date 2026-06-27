@@ -24,7 +24,7 @@ export default function TeamImageSlide() {
           <img 
             src="/images/team-image.jpg" 
             alt="فريق عمل شركة النجمة للبالتات الخشبية" 
-            className="w-full h-auto object-contain block mx-auto cursor-zoom-in"
+            className="w-full h-auto object-contain block mx-auto"
             onError={(e) => {
               (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
             }}

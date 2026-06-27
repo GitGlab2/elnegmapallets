@@ -21,8 +21,8 @@ export function CertificationsList() {
   ];
 
   return (
-    <div className="container py-12" id="certifications">
-      <div className="relative min-h-[500px] rounded-3xl overflow-hidden border border-border shadow-2xl bg-[#181b24] p-8 md:p-16 flex items-center">
+    <div className="container py-8 md:py-12" id="certifications">
+      <div className="relative min-h-0 lg:min-h-[500px] rounded-2xl md:rounded-3xl overflow-hidden border border-border shadow-2xl bg-[#181b24] p-4 md:p-8 lg:p-16 flex items-center">
         
         {/* Wave Decoration */}
         <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
@@ -31,7 +31,7 @@ export function CertificationsList() {
           </svg>
         </div>
 
-        <div className="relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-center">
           
           {/* Left Side: Certifications List (Grid span 8) - Order 2 on mobile */}
           <motion.div 
@@ -39,16 +39,18 @@ export function CertificationsList() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-8 flex flex-col gap-6 text-right order-2 lg:order-1"
+            className="lg:col-span-8 flex flex-col gap-4 md:gap-6 text-right order-2 lg:order-1"
           >
             {certifications.map((cert, index) => (
-              <div key={index} className="flex gap-4 p-4 rounded-2xl bg-[#202430]/40 border border-border/40 hover:border-secondary transition-all">
-                <div className="shrink-0 mt-1 p-2 rounded-xl bg-secondary/10">
-                  {cert.icon}
+              <div key={index} className="flex gap-3 md:gap-4 p-3 md:p-4 rounded-xl md:rounded-2xl bg-[#202430]/40 border border-border/40 hover:border-secondary transition-all">
+                <div className="shrink-0 mt-1 p-1.5 md:p-2 rounded-lg md:rounded-xl bg-secondary/10">
+                  <div className="[&>svg]:w-4 [&>svg]:h-4 md:[&>svg]:w-5 md:[&>svg]:h-5">
+                    {cert.icon}
+                  </div>
                 </div>
                 <div>
-                  <h4 className="font-bold text-white text-lg mb-1">{cert.title}</h4>
-                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{cert.desc}</p>
+                  <h4 className="font-bold text-white text-base md:text-lg mb-0.5 md:mb-1">{cert.title}</h4>
+                  <p className="text-xs md:text-base text-muted-foreground leading-relaxed">{cert.desc}</p>
                 </div>
               </div>
             ))}
@@ -60,17 +62,17 @@ export function CertificationsList() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-4 flex flex-col items-center lg:items-end text-center lg:text-right justify-center gap-6 order-1 lg:order-2"
+            className="lg:col-span-4 flex flex-col items-center lg:items-end text-center lg:text-right justify-center gap-4 md:gap-6 order-1 lg:order-2"
           >
             {/* HT Approved Badge */}
-            <div className="flex flex-col items-center justify-center w-24 h-24 rounded-full border-4 border-secondary bg-secondary/10 shadow-[0_0_25px_rgba(177,101,251,0.3)] animate-pulse">
-              <span className="text-secondary font-black text-2xl tracking-wider">HT</span>
-              <span className="text-white text-xs font-bold mt-0.5">معتمد</span>
+            <div className="flex flex-col items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-secondary bg-secondary/10 shadow-[0_0_25px_rgba(177,101,251,0.3)] animate-pulse">
+              <span className="text-secondary font-black text-xl md:text-2xl tracking-wider">HT</span>
+              <span className="text-white text-[10px] md:text-xs font-bold mt-0.5">معتمد</span>
             </div>
 
-            <div className="flex items-stretch gap-4 justify-start">
-              <div className="w-1.5 bg-secondary rounded-full" />
-              <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
+            <div className="flex items-stretch gap-3 md:gap-4 justify-start">
+              <div className="w-1 md:w-1.5 bg-secondary rounded-full" />
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-white leading-tight">
                 الشهادات والمعايير
               </h2>
             </div>
@@ -85,12 +87,12 @@ export function CertificationsList() {
 
 export function QualityCertImage() {
   return (
-    <div className="container py-12" id="quality-certification">
-      <div className="rounded-3xl border border-border shadow-2xl bg-[#181b24] p-8 md:p-12 flex flex-col items-center gap-8 text-center">
-        <div className="flex items-center gap-3">
-          <div className="w-12 h-1 bg-secondary rounded-full" />
-          <h3 className="text-2xl md:text-3xl font-black text-white">شهادة التبخير الحراري المعتمدة</h3>
-          <div className="w-12 h-1 bg-secondary rounded-full" />
+    <div className="container py-8 md:py-12" id="quality-certification">
+      <div className="rounded-2xl md:rounded-3xl border border-border shadow-2xl bg-[#181b24] p-4 md:p-8 lg:p-12 flex flex-col items-center gap-6 md:gap-8 text-center">
+        <div className="flex items-center gap-2 md:gap-3">
+          <div className="w-8 md:w-12 h-1 bg-secondary rounded-full" />
+          <h3 className="text-lg sm:text-xl md:text-3xl font-black text-white">شهادة التبخير الحراري المعتمدة</h3>
+          <div className="w-8 md:w-12 h-1 bg-secondary rounded-full" />
         </div>
         
         <motion.div 
@@ -103,7 +105,7 @@ export function QualityCertImage() {
           <img 
             src="/images/quality-certification.jpg" 
             alt="شهادات جودة شركة النجمة" 
-            className="styled-image w-full max-h-[500px] object-contain mx-auto"
+            className="styled-image w-full max-h-[300px] md:max-h-[500px] object-contain mx-auto"
             onError={(e) => {
               (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
             }}
@@ -116,12 +118,12 @@ export function QualityCertImage() {
 
 export function InternationalStandardsImage() {
   return (
-    <div className="container py-12" id="international-standards">
-      <div className="rounded-3xl border border-border shadow-2xl bg-[#181b24] p-8 md:p-12 flex flex-col items-center gap-8 text-center">
-        <div className="flex items-center gap-3">
-          <div className="w-12 h-1 bg-secondary rounded-full" />
-          <h3 className="text-2xl md:text-3xl font-black text-white">المعايير الدولية للأمان والتصدير</h3>
-          <div className="w-12 h-1 bg-secondary rounded-full" />
+    <div className="container py-8 md:py-12" id="international-standards">
+      <div className="rounded-2xl md:rounded-3xl border border-border shadow-2xl bg-[#181b24] p-4 md:p-8 lg:p-12 flex flex-col items-center gap-6 md:gap-8 text-center">
+        <div className="flex items-center gap-2 md:gap-3">
+          <div className="w-8 md:w-12 h-1 bg-secondary rounded-full" />
+          <h3 className="text-lg sm:text-xl md:text-3xl font-black text-white">المعايير الدولية للأمان والتصدير</h3>
+          <div className="w-8 md:w-12 h-1 bg-secondary rounded-full" />
         </div>
         
         <motion.div 
@@ -134,7 +136,7 @@ export function InternationalStandardsImage() {
           <img 
             src="/images/international-standards.jpg" 
             alt="المعايير الدولية لشركة النجمة" 
-            className="styled-image w-full max-h-[500px] object-contain mx-auto"
+            className="styled-image w-full max-h-[300px] md:max-h-[500px] object-contain mx-auto"
             onError={(e) => {
               (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
             }}

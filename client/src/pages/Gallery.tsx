@@ -15,21 +15,21 @@ export default function Gallery() {
     <div className="flex flex-col gap-16">
       
       {/* Slide 8: شحنات وتوريدات العملاء - الجزء الأول */}
-      <div className="container py-12" id="gallery-part-1">
-        <div className="rounded-3xl border border-border shadow-2xl bg-[#181b24] p-8 md:p-12 flex flex-col gap-8">
+      <div className="container py-8 md:py-12" id="gallery-part-1">
+        <div className="rounded-2xl md:rounded-3xl border border-border shadow-2xl bg-[#181b24] p-4 md:p-12 flex flex-col gap-6 md:gap-8">
           {/* Header */}
-          <div className="flex items-stretch gap-4 border-b border-border/40 pb-6 text-right">
-            <div className="w-1.5 bg-secondary rounded-full" />
+          <div className="flex items-stretch gap-3 md:gap-4 border-b border-border/40 pb-4 md:pb-6 text-right">
+            <div className="w-1 md:w-1.5 bg-secondary rounded-full" />
             <div>
-              <span className="text-xs font-bold text-secondary uppercase tracking-wider">الصور الميدانية</span>
-              <h2 className="text-3xl md:text-4xl font-black text-white mt-1 leading-tight">
+              <span className="text-[10px] md:text-xs font-bold text-secondary uppercase tracking-wider">الصور الميدانية</span>
+              <h2 className="text-xl sm:text-2xl md:text-4xl font-black text-white mt-1 leading-tight">
                 معرض شحنات وتوريدات العملاء - الجزء الأول
               </h2>
             </div>
           </div>
 
           {/* Two Images Side-by-Side */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {slide8Items.map((item, index) => (
               <motion.div 
                 key={index} 
@@ -37,18 +37,18 @@ export default function Gallery() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex flex-col gap-4 text-right group"
+                className="flex flex-col gap-3 md:gap-4 text-right group"
               >
-                <div className="overflow-hidden rounded-2xl">
+                <div className="overflow-hidden rounded-xl md:rounded-2xl">
                   <img 
                     src={item.src} 
                     alt={item.title} 
-                    className="styled-image w-full h-80 md:h-[380px] object-contain transition-transform duration-500 group-hover:scale-102"
+                    className="styled-image w-full h-56 sm:h-80 md:h-[380px] object-cover transition-transform duration-500 md:group-hover:scale-102"
                   />
                 </div>
-                <div className="pr-2">
-                  <h4 className="font-bold text-xl text-white group-hover:text-secondary transition-colors">{item.title}</h4>
-                  <p className="text-sm md:text-base text-muted-foreground mt-1 leading-relaxed">{item.desc}</p>
+                <div className="pr-1 md:pr-2">
+                  <h4 className="font-bold text-lg md:text-xl text-white md:group-hover:text-secondary transition-colors">{item.title}</h4>
+                  <p className="text-xs md:text-base text-muted-foreground mt-0.5 md:mt-1 leading-relaxed">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -57,21 +57,21 @@ export default function Gallery() {
       </div>
 
       {/* Slide 8b: شحنات وتوريدات العملاء - الجزء الثاني */}
-      <div className="container py-12" id="gallery-part-2">
-        <div className="rounded-3xl border border-border shadow-2xl bg-[#181b24] p-8 md:p-12 flex flex-col gap-8">
+      <div className="container py-8 md:py-12" id="gallery-part-2">
+        <div className="rounded-2xl md:rounded-3xl border border-border shadow-2xl bg-[#181b24] p-4 md:p-12 flex flex-col gap-6 md:gap-8">
           {/* Header */}
-          <div className="flex items-stretch gap-4 border-b border-border/40 pb-6 text-right">
-            <div className="w-1.5 bg-secondary rounded-full" />
+          <div className="flex items-stretch gap-3 md:gap-4 border-b border-border/40 pb-4 md:pb-6 text-right">
+            <div className="w-1 md:w-1.5 bg-secondary rounded-full" />
             <div>
-              <span className="text-xs font-bold text-secondary uppercase tracking-wider">الصور الميدانية</span>
-              <h2 className="text-3xl md:text-4xl font-black text-white mt-1 leading-tight">
+              <span className="text-[10px] md:text-xs font-bold text-secondary uppercase tracking-wider">الصور الميدانية</span>
+              <h2 className="text-xl sm:text-2xl md:text-4xl font-black text-white mt-1 leading-tight">
                 معرض شحنات وتوريدات العملاء - الجزء الثاني
               </h2>
             </div>
           </div>
 
           {/* Two Images Side-by-Side */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {slide8bItems.map((item, index) => (
               <motion.div 
                 key={index} 
@@ -79,18 +79,18 @@ export default function Gallery() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex flex-col gap-4 text-right group"
+                className="flex flex-col gap-3 md:gap-4 text-right group"
               >
-                <div className="overflow-hidden rounded-2xl">
+                <div className="overflow-hidden rounded-xl md:rounded-2xl">
                   <img 
                     src={item.src} 
                     alt={item.title} 
-                    className="styled-image w-full h-80 md:h-[380px] object-contain transition-transform duration-500 group-hover:scale-102"
+                    className="styled-image w-full h-56 sm:h-80 md:h-[380px] object-cover transition-transform duration-500 md:group-hover:scale-102"
                   />
                 </div>
-                <div className="pr-2">
-                  <h4 className="font-bold text-xl text-white group-hover:text-secondary transition-colors">{item.title}</h4>
-                  <p className="text-sm md:text-base text-muted-foreground mt-1 leading-relaxed">{item.desc}</p>
+                <div className="pr-1 md:pr-2">
+                  <h4 className="font-bold text-lg md:text-xl text-white md:group-hover:text-secondary transition-colors">{item.title}</h4>
+                  <p className="text-xs md:text-base text-muted-foreground mt-0.5 md:mt-1 leading-relaxed">{item.desc}</p>
                 </div>
               </motion.div>
             ))}

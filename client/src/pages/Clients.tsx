@@ -36,8 +36,8 @@ export default function Clients() {
   ];
 
   return (
-    <div className="container py-12" id="clients">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch rounded-3xl overflow-hidden border border-border shadow-2xl min-h-[680px]">
+    <div className="container py-8 md:py-12" id="clients">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch rounded-2xl md:rounded-3xl overflow-hidden border border-border shadow-2xl min-h-0 lg:min-h-[680px]">
         
         {/* Right Section (Dark Background, Logos Grid) - Grid span 6 */}
         <motion.div 
@@ -45,7 +45,7 @@ export default function Clients() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="lg:col-span-6 bg-[#181b24] p-8 md:p-12 flex flex-col justify-center items-center relative overflow-hidden order-1 lg:order-2"
+          className="lg:col-span-6 bg-[#181b24] p-6 md:p-12 flex flex-col justify-center items-center relative overflow-hidden order-1 lg:order-2"
         >
           {/* Wave Decoration */}
           <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
@@ -55,17 +55,17 @@ export default function Clients() {
             </svg>
           </div>
 
-          <div className="relative z-10 w-full max-w-md bg-white p-4 rounded-2xl shadow-xl flex flex-col items-center">
+          <div className="relative z-10 w-full max-w-sm md:max-w-md bg-white p-3 md:p-4 rounded-2xl shadow-xl flex flex-col items-center">
             <img 
               src="/images/clients-logos-grid.jpg" 
               alt="شعارات عملاء شركة النجمة الكرام" 
-              className="w-full h-[320px] object-contain rounded-lg"
+              className="w-full h-[200px] md:h-[320px] object-contain rounded-lg"
               onError={(e) => {
                 (e.target as HTMLImageElement).src = '/images/sectors-preview.jpg';
               }}
             />
-            <div className="mt-4 text-center">
-              <span className="font-bold text-[#181b24] text-lg">نفتخر بثقة عملائنا الكرام</span>
+            <div className="mt-3 md:mt-4 text-center">
+              <span className="font-bold text-[#181b24] text-sm md:text-lg">نفتخر بثقة عملائنا الكرام</span>
             </div>
           </div>
         </motion.div>
@@ -76,29 +76,29 @@ export default function Clients() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="lg:col-span-6 bg-white p-8 md:p-12 flex flex-col justify-center text-right order-2 lg:order-1"
+          className="lg:col-span-6 bg-white p-6 md:p-12 flex flex-col justify-center text-right order-2 lg:order-1"
         >
-          <div className="flex items-stretch gap-4 mb-6 justify-start">
-            <div className="w-2 bg-secondary rounded-full" />
-            <h2 className="text-4xl md:text-5xl font-black text-[#181b24] leading-tight">
+          <div className="flex items-stretch gap-3 md:gap-4 mb-4 md:mb-6 justify-start">
+            <div className="w-1.5 md:w-2 bg-secondary rounded-full" />
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-[#181b24] leading-tight">
               عملاؤنا الكرام
             </h2>
           </div>
 
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6">
+          <p className="text-sm md:text-lg text-gray-600 leading-relaxed mb-6">
             نتشرف بخدمة نخبة متميزة من الشركات الرائدة في قطاعات التصدير الزراعي، الصناعات الغذائية، الإلكترونيات، السيراميك، الكابلات، الأدوية وغيرها. شراكتنا معهم تمتد لسنوات من الثقة والتميز.
           </p>
 
           {/* Grid of 6 sectors */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
             {sectors.map((sec, index) => (
-              <div key={index} className="flex gap-3 text-right justify-start p-2 rounded-xl hover:bg-gray-50 transition-colors">
-                <div className="shrink-0 mt-1 p-1.5 rounded-lg bg-secondary/10">
+              <div key={index} className="flex gap-2.5 md:gap-3 text-right justify-start p-2 rounded-xl hover:bg-gray-50 transition-colors">
+                <div className="shrink-0 mt-1 p-1 md:p-1.5 rounded-lg bg-secondary/10">
                   {sec.icon}
                 </div>
                 <div className="flex flex-col gap-0.5">
-                  <h4 className="font-bold text-sm text-[#181b24]">{sec.title}</h4>
-                  <p className="text-xs text-gray-500 leading-relaxed">{sec.desc}</p>
+                  <h4 className="font-bold text-xs md:text-sm text-[#181b24]">{sec.title}</h4>
+                  <p className="text-[10px] md:text-xs text-gray-500 leading-relaxed">{sec.desc}</p>
                 </div>
               </div>
             ))}

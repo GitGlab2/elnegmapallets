@@ -16,7 +16,7 @@ export default function AdvantagesSlide() {
           <img 
             src="/images/pallet-hero-detail.png" 
             alt="شركة النجمة لتصنيع البالتات الخشبية" 
-            className="w-full h-auto object-contain block mx-auto cursor-zoom-in"
+            className="w-full h-auto object-contain block mx-auto"
             onError={(e) => {
               (e.target as HTMLImageElement).src = '/images/sectors-preview.jpg';
             }}
