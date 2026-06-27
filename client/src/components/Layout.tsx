@@ -62,10 +62,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <img 
                   src="/images/company-logo.jpg" 
                   alt="شعار شركة النجمة" 
-                  className="w-12 h-12 object-cover rounded-lg border border-border shadow-md"
+                  className="w-12 h-12 object-cover rounded-lg border border-border shadow-md bg-white"
                 />
                 <div className="flex flex-col">
-                  <span className="font-black text-xl leading-none text-primary">شركة النجمة</span>
+                  <span className="font-black text-xl leading-none text-white">شركة النجمة</span>
                   <span className="text-xs text-muted-foreground font-medium mt-1">لتصنيع الباليات الخشبية</span>
                 </div>
               </div>
@@ -139,9 +139,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <img 
                   src="/images/company-logo.jpg" 
                   alt="شعار شركة النجمة" 
-                  className="w-10 h-10 object-cover rounded-md border border-border shadow-sm"
+                  className="w-10 h-10 object-cover rounded-md border border-border shadow-sm bg-white"
                 />
-                <span className="font-black text-lg text-primary">شركة النجمة</span>
+                <span className="font-black text-lg text-white">شركة النجمة</span>
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed mb-6">
                 الشركة رقم 1 في مصر لتصنيع الباليات الخشبية. خبرة تزيد عن 18 عامًا في خدمة كبرى الشركات والمصانع.
