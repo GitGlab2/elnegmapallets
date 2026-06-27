@@ -42,9 +42,9 @@ export function CertificationsList() {
             className="lg:col-span-8 flex flex-col gap-4 md:gap-6 text-right order-2 lg:order-1"
           >
             {certifications.map((cert, index) => (
-              <div key={index} className="flex gap-3 md:gap-4 p-3 md:p-4 rounded-xl md:rounded-2xl bg-[#202430]/40 border border-border/40 hover:border-secondary transition-all">
-                <div className="shrink-0 mt-1 p-1.5 md:p-2 rounded-lg md:rounded-xl bg-secondary/10">
-                  <div className="[&>svg]:w-4 [&>svg]:h-4 md:[&>svg]:w-5 md:[&>svg]:h-5">
+              <div key={index} className="flex items-start gap-3 md:gap-4 p-3 md:p-4 rounded-xl md:rounded-2xl bg-[#202430]/40 border border-border/40 hover:border-secondary transition-all">
+                <div className="shrink-0 mt-1 p-1.5 md:p-2 rounded-lg md:rounded-xl bg-secondary/10 flex items-center justify-center">
+                  <div className="[&>svg]:w-4 [&>svg]:h-4 md:[&>svg]:w-5 md:[&>svg]:h-5 flex items-center justify-center">
                     {cert.icon}
                   </div>
                 </div>

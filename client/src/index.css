@@ -170,3 +170,12 @@
   transform: translateY(-3px) !important;
   box-shadow: 0 12px 40px rgba(177, 101, 251, 0.35), 0 6px 20px rgba(0, 0, 0, 0.4) !important;
 }
+
+/* Hide scrollbars but keep functionality */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

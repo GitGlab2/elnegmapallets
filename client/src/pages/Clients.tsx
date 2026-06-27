@@ -92,8 +92,8 @@ export default function Clients() {
           {/* Grid of 6 sectors */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
             {sectors.map((sec, index) => (
-              <div key={index} className="flex gap-2.5 md:gap-3 text-right justify-start p-2 rounded-xl hover:bg-gray-50 transition-colors">
-                <div className="shrink-0 mt-1 p-1 md:p-1.5 rounded-lg bg-secondary/10">
+              <div key={index} className="flex items-start gap-2.5 md:gap-3 text-right justify-start p-2 rounded-xl hover:bg-gray-50 transition-colors">
+                <div className="shrink-0 mt-1 p-1.5 rounded-lg bg-secondary/10 flex items-center justify-center">
                   {sec.icon}
                 </div>
                 <div className="flex flex-col gap-0.5">
