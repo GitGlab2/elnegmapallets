@@ -10,8 +10,8 @@ export default function About() {
           
           {/* Left Side: Image (Grid span 5) */}
           <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-5 flex items-center justify-center relative overflow-hidden"
@@ -30,8 +30,8 @@ export default function About() {
 
           {/* Right Side: Content (Grid span 7) */}
           <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-7 flex flex-col justify-center text-right"
@@ -71,8 +71,8 @@ export default function About() {
             
             {/* Left Side: Mission & Vision Content (Grid span 7) */}
             <motion.div 
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className="lg:col-span-7 text-right flex flex-col gap-8 order-2 lg:order-1"
@@ -99,8 +99,8 @@ export default function About() {
 
             {/* Right Side: Large Text Logo (Grid span 4) */}
             <motion.div 
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className="lg:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-right justify-center order-1 lg:order-3"

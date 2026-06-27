@@ -37,8 +37,8 @@ export default function Pricing() {
           
           {/* Left Side: Discount Chart & Interactive Calculator (Grid span 6) - Order 2 on mobile */}
           <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-6 flex flex-col gap-4 md:gap-6 order-2 lg:order-1"
@@ -114,8 +114,8 @@ export default function Pricing() {
 
           {/* Right Side: Title & Description (Grid span 6) - Order 1 on mobile */}
           <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-6 flex flex-col justify-center text-right order-1 lg:order-2"

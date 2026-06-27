@@ -31,8 +31,8 @@ export default function Products() {
         
         {/* Right Section (Dark Background, Images) - Grid span 6 */}
         <motion.div 
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="lg:col-span-6 bg-[#181b24] p-6 md:p-12 flex flex-col justify-center items-center relative overflow-hidden order-1 lg:order-2"
@@ -60,8 +60,8 @@ export default function Products() {
 
         {/* Left Section (White Background, Text) - Grid span 6 */}
         <motion.div 
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="lg:col-span-6 bg-white p-6 md:p-16 flex flex-col justify-center text-right order-2 lg:order-1"

@@ -35,8 +35,8 @@ export function CertificationsList() {
           
           {/* Left Side: Certifications List (Grid span 8) - Order 2 on mobile */}
           <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-8 flex flex-col gap-4 md:gap-6 text-right order-2 lg:order-1"
@@ -58,8 +58,8 @@ export function CertificationsList() {
 
           {/* Right Side: Title & HT Badge (Grid span 4) - Order 1 on mobile */}
           <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-4 flex flex-col items-center lg:items-end text-center lg:text-right justify-center gap-4 md:gap-6 order-1 lg:order-2"

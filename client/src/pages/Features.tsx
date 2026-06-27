@@ -42,8 +42,8 @@ export default function Features() {
           
           {/* Left Side: Image (Grid span 6) - Order 2 on mobile, 1 on desktop */}
           <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-6 flex items-center justify-center order-2 lg:order-1"
@@ -62,8 +62,8 @@ export default function Features() {
 
           {/* Right Side: Content (Grid span 6) - Order 1 on mobile, 2 on desktop */}
           <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-6 flex flex-col justify-center text-right order-1 lg:order-2"
