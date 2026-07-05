@@ -1,7 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, Facebook, MapPin } from "lucide-react";
+import { Menu, X, Phone, Facebook, MapPin, Mail } from "lucide-react";
 import { useState } from "react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -159,6 +159,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <div className="flex flex-col gap-1">
                     <a href="tel:01080012261" className="text-sm text-muted-foreground hover:text-primary transition-colors dir-ltr text-right">01080012261</a>
                   </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Mail className="w-5 h-5 text-primary mt-0.5" />
+                  <a href="mailto:info@elnegmapallets.com" className="text-sm text-muted-foreground hover:text-primary transition-colors break-all">
+                    info@elnegmapallets.com
+                  </a>
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-primary mt-0.5" />

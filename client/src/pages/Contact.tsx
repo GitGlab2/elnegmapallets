@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Phone, MapPin, Facebook, MessageCircle } from "lucide-react";
+import { Phone, MapPin, Facebook, MessageCircle, Mail } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -64,6 +64,16 @@ export default function Contact() {
                 </a>
 
 
+                {/* Email Link */}
+                <a href="mailto:info@elnegmapallets.com" className="flex items-center gap-4 p-4 rounded-2xl bg-[#202430]/40 border border-border/40 hover:border-secondary hover:bg-[#202430]/80 transition-all group justify-start">
+                  <div className="shrink-0 w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white shadow-lg shadow-secondary/10 group-hover:scale-105 transition-transform">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  <div className="flex flex-col text-right">
+                    <span className="text-xs text-muted-foreground">البريد الإلكتروني الرسمي</span>
+                    <span className="text-base font-bold text-white mt-0.5">info@elnegmapallets.com</span>
+                  </div>
+                </a>
 
                 {/* Address Link */}
                 <a href="https://www.google.com/maps?cid=16821078517981758662" target="_blank" rel="noreferrer" className="flex items-center gap-4 p-4 rounded-2xl bg-[#202430]/40 border border-border/40 hover:border-secondary hover:bg-[#202430]/80 transition-all group justify-start">
