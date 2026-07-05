@@ -17,14 +17,17 @@ export default function About() {
             className="lg:col-span-5 flex items-center justify-center relative overflow-hidden"
           >
             <div className="relative w-full max-w-md">
-              <img 
-                src="/images/factory-image.jpg" 
-                alt="مصنع شركة النجمة للبالتات الخشبية" 
-                className="styled-image w-full h-60 md:h-80 object-contain"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
-                }}
-              />
+              <picture>
+                <source srcSet="/images/factory-image.webp" type="image/webp" />
+                <img 
+                  src="/images/factory-image.jpg" 
+                  alt="مصنع شركة النجمة للبالتات الخشبية" 
+                  width={800}
+                  height={600}
+                  loading="lazy"
+                  className="styled-image w-full h-60 md:h-80 object-contain"
+                />
+              </picture>
             </div>
           </motion.div>
 

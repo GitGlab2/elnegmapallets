@@ -56,14 +56,17 @@ export default function Clients() {
           </div>
 
           <div className="relative z-10 w-full max-w-sm md:max-w-md bg-white p-3 md:p-4 rounded-2xl shadow-xl flex flex-col items-center">
-            <img 
-              src="/images/clients-logos-grid.jpg" 
-              alt="شعارات عملاء شركة النجمة الكرام" 
-              className="w-full h-[200px] md:h-[320px] object-contain rounded-lg"
-              onError={(e) => {
-                (e.target as HTMLImageElement).src = '/images/sectors-preview.jpg';
-              }}
-            />
+            <picture>
+              <source srcSet="/images/clients-logos-grid.webp" type="image/webp" />
+              <img 
+                src="/images/clients-logos-grid.jpg" 
+                alt="شعارات عملاء شركة النجمة الكرام" 
+                width={800}
+                height={600}
+                loading="lazy"
+                className="w-full h-[200px] md:h-[320px] object-contain rounded-lg"
+              />
+            </picture>
             <div className="mt-3 md:mt-4 text-center">
               <span className="font-bold text-[#181b24] text-sm md:text-lg">نفتخر بثقة عملائنا الكرام</span>
             </div>

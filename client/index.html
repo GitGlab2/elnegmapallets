@@ -26,6 +26,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="/images/company-logo.jpg" />
     
+    <!-- Preload LCP Image for faster first paint -->
+    <link rel="preload" as="image" type="image/webp" href="/images/pallet-hero-detail.webp" fetchpriority="high" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -56,10 +59,6 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
   </body>
 
 </html>

@@ -21,14 +21,17 @@ export default function TeamImageSlide() {
           transition={{ duration: 0.6 }}
           className="w-full z-10 relative"
         >
-          <img 
-            src="/images/team-image.jpg" 
-            alt="فريق عمل شركة النجمة للبالتات الخشبية" 
-            className="w-full h-auto object-contain block mx-auto"
-            onError={(e) => {
-              (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
-            }}
-          />
+          <picture>
+            <source srcSet="/images/team-image.webp" type="image/webp" />
+            <img 
+              src="/images/team-image.jpg" 
+              alt="فريق عمل شركة النجمة للبالتات الخشبية" 
+              width={1920}
+              height={600}
+              loading="lazy"
+              className="w-full h-auto object-contain block mx-auto"
+            />
+          </picture>
         </motion.div>
 
         <div className="container px-4">

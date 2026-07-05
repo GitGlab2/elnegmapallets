@@ -13,18 +13,23 @@ export default function AdvantagesSlide() {
           transition={{ duration: 0.6 }}
           className="w-full z-10 relative"
         >
-          <img 
-            src="/images/pallet-hero-detail.png" 
-            alt="شركة النجمة لتصنيع البالتات الخشبية" 
-            className="w-full h-auto object-contain block mx-auto"
-            onError={(e) => {
-              (e.target as HTMLImageElement).src = '/images/sectors-preview.jpg';
-            }}
-          />
+          <picture>
+            <source srcSet="/images/pallet-hero-detail.webp" type="image/webp" />
+            <img 
+              src="/images/pallet-hero-detail.png" 
+              alt="شركة النجمة لتصنيع البالتات الخشبية" 
+              width={1920}
+              height={600}
+              fetchPriority="high"
+              className="w-full h-auto object-contain block mx-auto"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = '/images/sectors-preview.jpg';
+              }}
+            />
+          </picture>
         </motion.div>
 
       </div>
     </div>
   );
 }
-

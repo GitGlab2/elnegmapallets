@@ -102,14 +102,17 @@ export function QualityCertImage() {
           transition={{ duration: 0.5 }}
           className="w-full max-w-2xl"
         >
-          <img 
-            src="/images/quality-certification.jpg" 
-            alt="شهادات جودة شركة النجمة" 
-            className="styled-image w-full max-h-[300px] md:max-h-[500px] object-contain mx-auto"
-            onError={(e) => {
-              (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
-            }}
-          />
+          <picture>
+            <source srcSet="/images/quality-certification.webp" type="image/webp" />
+            <img 
+              src="/images/quality-certification.jpg" 
+              alt="شهادات جودة شركة النجمة" 
+              width={1000}
+              height={700}
+              loading="lazy"
+              className="styled-image w-full max-h-[300px] md:max-h-[500px] object-contain mx-auto"
+            />
+          </picture>
         </motion.div>
       </div>
     </div>
@@ -133,14 +136,17 @@ export function InternationalStandardsImage() {
           transition={{ duration: 0.5 }}
           className="w-full max-w-2xl"
         >
-          <img 
-            src="/images/international-standards.jpg" 
-            alt="المعايير الدولية لشركة النجمة" 
-            className="styled-image w-full max-h-[300px] md:max-h-[500px] object-contain mx-auto"
-            onError={(e) => {
-              (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
-            }}
-          />
+          <picture>
+            <source srcSet="/images/international-standards.webp" type="image/webp" />
+            <img 
+              src="/images/international-standards.jpg" 
+              alt="المعايير الدولية لشركة النجمة" 
+              width={1000}
+              height={700}
+              loading="lazy"
+              className="styled-image w-full max-h-[300px] md:max-h-[500px] object-contain mx-auto"
+            />
+          </picture>
         </motion.div>
       </div>
     </div>
