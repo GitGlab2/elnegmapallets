@@ -14,7 +14,8 @@ export default function AdvantagesSlide() {
           className="w-full z-10 relative"
         >
           <picture>
-            <source srcSet="/images/pallet-hero-detail.webp" type="image/webp" />
+            <source media="(max-width: 768px)" srcSet="/images/pallet-hero-detail-mobile.webp" type="image/webp" />
+            <source media="(min-width: 769px)" srcSet="/images/pallet-hero-detail.webp" type="image/webp" />
             <img 
               src="/images/pallet-hero-detail.png" 
               alt="شركة النجمة لتصنيع البالتات الخشبية" 

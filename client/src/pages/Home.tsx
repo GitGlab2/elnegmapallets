@@ -108,7 +108,8 @@ export default function Home() {
               <div className="absolute -inset-1.5 bg-gradient-to-r from-secondary to-accent rounded-[20px] blur-xl opacity-30 group-hover:opacity-45 transition duration-1000 group-hover:duration-300" />
               
               <picture>
-                <source srcSet="/images/products-image.webp" type="image/webp" />
+                <source media="(max-width: 768px)" srcSet="/images/products-image-mobile.webp" type="image/webp" />
+                <source media="(min-width: 769px)" srcSet="/images/products-image.webp" type="image/webp" />
                 <img 
                   src="/images/products-image.jpg" 
                   alt="تفاصيل الباليات خشبية" 

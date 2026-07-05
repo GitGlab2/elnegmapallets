@@ -53,7 +53,7 @@ export default function Contact() {
                 </a>
 
                 {/* WhatsApp Link */}
-                <a href="https://wa.me/201080012261" target="_blank" rel="noreferrer" className="flex items-center gap-4 p-4 rounded-2xl bg-[#202430]/40 border border-border/40 hover:border-secondary hover:bg-[#202430]/80 transition-all group justify-start">
+                <a href="https://wa.me/201080012261" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-4 p-4 rounded-2xl bg-[#202430]/40 border border-border/40 hover:border-secondary hover:bg-[#202430]/80 transition-all group justify-start">
                   <div className="shrink-0 w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white shadow-lg shadow-secondary/10 group-hover:scale-105 transition-transform">
                     <MessageCircle className="w-5 h-5" />
                   </div>
@@ -76,7 +76,7 @@ export default function Contact() {
                 </a>
 
                 {/* Address Link */}
-                <a href="https://www.google.com/maps?cid=16821078517981758662" target="_blank" rel="noreferrer" className="flex items-center gap-4 p-4 rounded-2xl bg-[#202430]/40 border border-border/40 hover:border-secondary hover:bg-[#202430]/80 transition-all group justify-start">
+                <a href="https://www.google.com/maps?cid=16821078517981758662" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-4 p-4 rounded-2xl bg-[#202430]/40 border border-border/40 hover:border-secondary hover:bg-[#202430]/80 transition-all group justify-start">
                   <div className="shrink-0 w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white shadow-lg shadow-secondary/10 group-hover:scale-105 transition-transform">
                     <MapPin className="w-5 h-5" />
                   </div>
@@ -87,7 +87,7 @@ export default function Contact() {
                 </a>
 
                 {/* Facebook Link */}
-                <a href="https://facebook.com/negma.wood" target="_blank" rel="noreferrer" className="flex items-center gap-4 p-4 rounded-2xl bg-[#202430]/40 border border-border/40 hover:border-secondary hover:bg-[#202430]/80 transition-all group justify-start sm:col-span-2">
+                <a href="https://facebook.com/negma.wood" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-4 p-4 rounded-2xl bg-[#202430]/40 border border-border/40 hover:border-secondary hover:bg-[#202430]/80 transition-all group justify-start sm:col-span-2">
                   <div className="shrink-0 w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white shadow-lg shadow-secondary/10 group-hover:scale-105 transition-transform">
                     <Facebook className="w-5 h-5" />
                   </div>

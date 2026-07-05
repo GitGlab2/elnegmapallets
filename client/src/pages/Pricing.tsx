@@ -1,25 +1,43 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
+interface DiscountDetails {
+  discount: number;
+  benefit: string;
+}
+
+/**
+ * Pure function to calculate discount and benefits based on requested monthly quantity
+ * Conforms to clean code principles (easily testable and predictable)
+ */
+function getDiscountDetails(quantity: number): DiscountDetails {
+  if (quantity >= 7000) {
+    return {
+      discount: 3,
+      benefit: "شحن مجاني + معالجة HT مجانية للتصدير"
+    };
+  }
+  if (quantity >= 5000) {
+    return {
+      discount: 2,
+      benefit: "شحن مجاني + أولوية توريد خلال 24 ساعة"
+    };
+  }
+  if (quantity >= 3000) {
+    return {
+      discount: 1,
+      benefit: "شحن مجاني للكميات"
+    };
+  }
+  return {
+    discount: 0,
+    benefit: "توصيل سريع طبقاً للمواصفة"
+  };
+}
+
 export default function Pricing() {
   const [quantity, setQuantity] = useState(5000);
-  
-  let discount = 0;
-  let benefit = "خصم خاص للكميات";
-  
-  if (quantity >= 7000) {
-    discount = 3;
-    benefit = "شحن مجاني + معالجة HT مجانية للتصدير";
-  } else if (quantity >= 5000) {
-    discount = 2;
-    benefit = "شحن مجاني + أولوية توريد خلال 24 ساعة";
-  } else if (quantity >= 3000) {
-    discount = 1;
-    benefit = "شحن مجاني للكميات";
-  } else {
-    discount = 0;
-    benefit = "توصيل سريع طبقاً للمواصفة";
-  }
+  const { discount, benefit } = getDiscountDetails(quantity);
 
   return (
     <div className="container py-8 md:py-12" id="pricing">

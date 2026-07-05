@@ -1,25 +1,32 @@
 import { motion } from "framer-motion";
 import { Flame, ShieldCheck, Truck, Settings } from "lucide-react";
 
+interface OperationItem {
+  title: string;
+  icon: React.ReactNode;
+}
+
+const OPERATIONS_LIST: OperationItem[] = [
+  {
+    title: "معالجة حرارية (HT) معتمدة للصادرات العالمية",
+    icon: <Flame className="w-5 h-5 text-white" />
+  },
+  {
+    title: "فحص دقيق لكل منتج قبل التسليم",
+    icon: <ShieldCheck className="w-5 h-5 text-white" />
+  },
+  {
+    title: "نظام لوجستي متكامل لضمان توصيل سريع وآمن",
+    icon: <Truck className="w-5 h-5 text-white" />
+  },
+  {
+    title: "صيانة دورية للمعدات لضمان استمرارية الإنتاج",
+    icon: <Settings className="w-5 h-5 text-white" />
+  }
+];
+
 export default function Operations() {
-  const operations = [
-    {
-      title: "معالجة حرارية (HT) معتمدة للصادرات العالمية",
-      icon: <Flame className="w-5 h-5 text-white" />
-    },
-    {
-      title: "فحص دقيق لكل منتج قبل التسليم",
-      icon: <ShieldCheck className="w-5 h-5 text-white" />
-    },
-    {
-      title: "نظام لوجستي متكامل لضمان توصيل سريع وآمن",
-      icon: <Truck className="w-5 h-5 text-white" />
-    },
-    {
-      title: "صيانة دورية للمعدات لضمان استمرارية الإنتاج",
-      icon: <Settings className="w-5 h-5 text-white" />
-    }
-  ];
+  const operations = OPERATIONS_LIST;
 
   return (
     <div className="container py-8 md:py-12" id="operations">

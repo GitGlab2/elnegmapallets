@@ -1,29 +1,37 @@
 import { motion } from "framer-motion";
 import { Package, Box, DraftingCompass, Settings } from "lucide-react";
 
+interface ProductItem {
+  dimensions: string;
+  desc: string;
+  icon: React.ReactNode;
+}
+
+const PRODUCT_ITEMS: ProductItem[] = [
+  {
+    dimensions: "120 × 100",
+    desc: "بالتة شرق أوسط - حمولة 1250 كجم - متوافقة مع المعايير المحلية والإقليمية",
+    icon: <Package className="w-6 h-6 text-secondary shrink-0" />
+  },
+  {
+    dimensions: "120 × 80",
+    desc: "بالتة يورو - حمولة 1500 كجم - مطابقة لمواصفات الاتحاد الأوروبي للتصدير",
+    icon: <Box className="w-6 h-6 text-secondary shrink-0" />
+  },
+  {
+    dimensions: "تصميمات مخصصة",
+    desc: "تصميمات مخصصة وفقاً لمتطلبات العميل - نوفر جميع الأحجام والمواصفات حسب الاحتياجات الخاصة لكل مشروع",
+    icon: <DraftingCompass className="w-6 h-6 text-secondary shrink-0" />
+  },
+  {
+    dimensions: "تصنيع حسب الطلب",
+    desc: "تصنيع البالتات وفقاً لاحتياجات العميل - مرونة كاملة في التصميم والإنتاج لضمان الملاءمة المثالية للاستخدام المطلوب",
+    icon: <Settings className="w-6 h-6 text-secondary shrink-0" />
+  }
+];
+
 export default function Products() {
-  const items = [
-    {
-      dimensions: "120 × 100",
-      desc: "بالتة شرق أوسط - حمولة 1250 كجم - متوافقة مع المعايير المحلية والإقليمية",
-      icon: <Package className="w-6 h-6 text-secondary shrink-0" />
-    },
-    {
-      dimensions: "120 × 80",
-      desc: "بالتة يورو - حمولة 1500 كجم - مطابقة لمواصفات الاتحاد الأوروبي للتصدير",
-      icon: <Box className="w-6 h-6 text-secondary shrink-0" />
-    },
-    {
-      dimensions: "تصميمات مخصصة",
-      desc: "تصميمات مخصصة وفقاً لمتطلبات العميل - نوفر جميع الأحجام والمواصفات حسب الاحتياجات الخاصة لكل مشروع",
-      icon: <DraftingCompass className="w-6 h-6 text-secondary shrink-0" />
-    },
-    {
-      dimensions: "تصنيع حسب الطلب",
-      desc: "تصنيع البالتات وفقاً لاحتياجات العميل - مرونة كاملة في التصميم والإنتاج لضمان الملاءمة المثالية للاستخدام المطلوب",
-      icon: <Settings className="w-6 h-6 text-secondary shrink-0" />
-    }
-  ];
+  const items = PRODUCT_ITEMS;
 
   return (
     <div className="container py-8 md:py-12" id="products">
