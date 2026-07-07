@@ -2,10 +2,9 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Phone } from "lucide-react";
-import { motion } from "framer-motion";
 import { lazy, Suspense } from "react";
 
-// Above-the-fold sections loaded eagerly
+// Above-the-fold section loaded eagerly (NO framer-motion)
 import AdvantagesSlide from "./AdvantagesSlide";
 
 // Below-the-fold sections loaded lazily for code splitting
@@ -42,7 +41,7 @@ export default function Home() {
         <AdvantagesSlide />
       </section>
 
-      {/* Slide 1: Hero Section (Theme Brown background) */}
+      {/* Slide 1: Hero Section (Theme Brown background) - NO framer-motion, use CSS animations */}
       <section id="hero-section" className="relative min-h-[70vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#59331f] pt-6 md:pt-10 scroll-mt-24">
         
         {/* Background Wave Decorations matching slide 1 */}
@@ -55,12 +54,9 @@ export default function Home() {
 
         <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
-          {/* Content Panel (Right on desktop) */}
-          <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col gap-6 text-right order-2 lg:order-1"
+          {/* Content Panel (Right on desktop) - CSS animation instead of framer-motion */}
+          <div 
+            className="flex flex-col gap-6 text-right order-2 lg:order-1 animate-fade-in-right"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 border border-accent/30 w-fit justify-start">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
@@ -96,14 +92,11 @@ export default function Home() {
                 <span className="text-sm text-white/70 mt-0.5">يثقون في متانة منتجاتنا وتوريداتنا</span>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          {/* Hero Pallet Image (Left on desktop) */}
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative z-10 order-1 lg:order-2"
+          {/* Hero Pallet Image (Left on desktop) - CSS animation instead of framer-motion */}
+          <div 
+            className="relative z-10 order-1 lg:order-2 animate-fade-in-left"
           >
             <div className="relative w-full max-w-lg mx-auto group">
               {/* Glowing Aura */}
@@ -124,94 +117,106 @@ export default function Home() {
                 />
               </picture>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
 
-      {/* All below-the-fold sections wrapped in Suspense for code splitting */}
+      {/* Each below-the-fold section gets its own Suspense boundary for independent loading */}
       <Suspense fallback={<SectionFallback />}>
-
-        {/* Slide 2 & 3: About Section (من نحن + رسالتنا ورؤيتنا) */}
         <section id="about-section" className="scroll-mt-24">
           <About />
         </section>
+      </Suspense>
 
-        {/* Slide 4: Products Section (منتجاتنا وخدماتنا) */}
+      <Suspense fallback={<SectionFallback />}>
         <section id="products-section" className="scroll-mt-24">
           <Products />
         </section>
+      </Suspense>
 
-        {/* Slide 5: Features Section (مزايانا التنافسية) */}
+      <Suspense fallback={<SectionFallback />}>
         <section id="features-section" className="scroll-mt-24">
           <Features />
         </section>
+      </Suspense>
 
-        {/* Slide 6: Operations Section (العمليات والجودة) */}
+      <Suspense fallback={<SectionFallback />}>
         <section id="operations-section" className="scroll-mt-24">
           <Operations />
         </section>
+      </Suspense>
 
-        {/* Slide 6.2: Team Image Slide (Full Width) */}
+      <Suspense fallback={<SectionFallback />}>
         <section id="team-image-section" className="scroll-mt-24">
           <TeamImageSlide />
         </section>
+      </Suspense>
 
-        {/* Slide 6.5: Operations Video Section */}
+      <Suspense fallback={<SectionFallback />}>
         <section id="operations-video-section" className="scroll-mt-24">
           <OperationsVideo />
         </section>
+      </Suspense>
 
-        {/* Slide 7: Clients Section (عملاؤنا الكرام) */}
+      <Suspense fallback={<SectionFallback />}>
         <section id="clients-section" className="scroll-mt-24">
           <Clients />
         </section>
+      </Suspense>
 
-        {/* Slide 8 & 8b: Gallery Section (شحنات وتوريدات العملاء) */}
+      <Suspense fallback={<SectionFallback />}>
         <section id="gallery-section" className="scroll-mt-24">
           <Gallery />
         </section>
+      </Suspense>
 
-        {/* Slide 9: Pricing Section (أنظمة الأسعار والعروض) */}
+      <Suspense fallback={<SectionFallback />}>
         <section id="pricing-section" className="scroll-mt-24">
           <Pricing />
         </section>
+      </Suspense>
 
-        {/* Slide 10: Certifications List Section (الشهادات والمعايير) */}
+      <Suspense fallback={<SectionFallback />}>
         <section id="certifications-section" className="scroll-mt-24">
           <CertificationsListLazy />
         </section>
+      </Suspense>
 
-        {/* Slide 11: Quality Certification Image Section */}
+      <Suspense fallback={<SectionFallback />}>
         <section id="quality-cert-section" className="scroll-mt-24">
           <QualityCertImageLazy />
         </section>
+      </Suspense>
 
-        {/* Slide 12: Commitments Section (ضمان الالتزامات) */}
+      <Suspense fallback={<SectionFallback />}>
         <section id="commitments-section" className="scroll-mt-24">
           <Commitments />
         </section>
+      </Suspense>
 
-        {/* Slide 13: Achievements Section (الإنجازات والإحصاءات) */}
+      <Suspense fallback={<SectionFallback />}>
         <section id="achievements-section" className="scroll-mt-24">
           <Achievements />
         </section>
+      </Suspense>
 
-        {/* Slide 14: International Standards Image Section */}
+      <Suspense fallback={<SectionFallback />}>
         <section id="international-standards-section" className="scroll-mt-24">
           <InternationalStandardsImageLazy />
         </section>
+      </Suspense>
 
-        {/* Slide 15: Future Vision Section (الرؤية المستقبلية والتوسعات) */}
+      <Suspense fallback={<SectionFallback />}>
         <section id="future-vision-section" className="scroll-mt-24">
           <FutureVision />
         </section>
+      </Suspense>
 
-        {/* Slide 16: Contact Section (تواصل معنا) */}
+      <Suspense fallback={<SectionFallback />}>
         <section id="contact-section" className="scroll-mt-24">
           <Contact />
         </section>
-
       </Suspense>
 
       {/* Bottom Call to Action banner */}
