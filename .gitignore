@@ -104,3 +104,10 @@ temp/
 *.db
 *.sqlite
 *.sqlite3
+
+# Next.js static export output
+out/
+*.zip
+
+# Custom build and deployment scripts
+*.cjs
