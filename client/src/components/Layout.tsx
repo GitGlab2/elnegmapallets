@@ -71,6 +71,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <button
             className="md:hidden p-2 text-muted-foreground hover:text-primary"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "إغلاق القائمة الرئيسية" : "فتح القائمة الرئيسية"}
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
