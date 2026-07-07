@@ -1,4 +1,5 @@
-import { Link, useLocation } from "wouter";
+"use client";
+
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Facebook, MapPin, Mail } from "lucide-react";
@@ -6,7 +7,6 @@ import { useState } from "react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [location] = useLocation();
 
   const navItems = [
     { name: "من نحن", path: "#about-section" },
