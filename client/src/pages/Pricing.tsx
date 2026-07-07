@@ -112,6 +112,7 @@ export default function Pricing() {
                 step="500"
                 value={quantity}
                 onChange={(e) => setQuantity(parseInt(e.target.value))}
+                aria-label="الكمية المطلوبة شهرياً"
                 className="w-full h-1.5 md:h-2 bg-border/20 rounded-lg appearance-none cursor-pointer accent-secondary my-2 md:my-3"
                 style={{ direction: 'ltr' }}
               />

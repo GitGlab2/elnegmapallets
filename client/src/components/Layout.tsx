@@ -120,7 +120,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 الشركة رقم 1 في مصر لتصنيع الباليات الخشبية. خبرة تزيد عن 18 عامًا في خدمة كبرى الشركات والمصانع.
               </p>
               <div className="flex gap-4">
-                <a href="https://facebook.com/negma.wood" target="_blank" rel="noopener noreferrer nofollow" className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors">
+                <a href="https://facebook.com/negma.wood" target="_blank" rel="noopener noreferrer nofollow" aria-label="صفحة فيسبوك لشركة النجمة" className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors">
                   <Facebook className="w-5 h-5" />
                 </a>
               </div>

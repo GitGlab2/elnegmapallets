@@ -38,6 +38,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ar" dir="rtl" className={`${cairo.variable}`}>
+      <head>
+        <link rel="preload" as="image" type="image/webp" href="/images/pallet-hero-detail-mobile.webp" media="(max-width: 768px)" fetchPriority="high" />
+        <link rel="preload" as="image" type="image/webp" href="/images/pallet-hero-detail.webp" media="(min-width: 769px)" fetchPriority="high" />
+      </head>
       <body className={cairo.className}>
         <ErrorBoundary>
           <ThemeProvider defaultTheme="light">
