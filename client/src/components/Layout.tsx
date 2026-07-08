@@ -2,21 +2,67 @@
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, Facebook, MapPin, Mail } from "lucide-react";
-import { useState } from "react";
+import { Menu, X, Phone, Facebook, MapPin, Mail, BookOpen } from "lucide-react";
+import { useState, useEffect } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
+
+  useEffect(() => {
+    const hash = window.location.hash || sessionStorage.getItem('scrollTargetHash');
+    if (hash) {
+      const id = hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+          sessionStorage.removeItem('scrollTargetHash');
+        }, 100);
+      } else {
+        let attempts = 0;
+        const interval = setInterval(() => {
+          attempts++;
+          const el = document.getElementById(id);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+            sessionStorage.removeItem('scrollTargetHash');
+            clearInterval(interval);
+          } else if (attempts > 40) {
+            sessionStorage.removeItem('scrollTargetHash');
+            clearInterval(interval);
+          }
+        }, 100);
+        return () => clearInterval(interval);
+      }
+    }
+  }, [pathname]);
 
   const navItems = [
-    { name: "من نحن", path: "#about-section" },
-    { name: "المنتجات", path: "#products-section" },
-    { name: "المزايا", path: "#features-section" },
-    { name: "معرض الصور", path: "#gallery-section" },
-    { name: "الأسعار", path: "#pricing-section" },
-    { name: "الشهادات", path: "#certifications-section" },
-    { name: "تواصل معنا", path: "#contact-section" },
+    { name: "من نحن", path: "/#about-section", isAnchor: true },
+    { name: "المنتجات", path: "/#products-section", isAnchor: true },
+    { name: "تواصل معنا", path: "/#contact-section", isAnchor: true },
+    { name: "المقالات والمعلومات", path: "/articles", isAnchor: false },
   ];
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string, isAnchor: boolean) => {
+    if (isAnchor) {
+      e.preventDefault();
+      if (window.location.pathname === '/') {
+        const id = path.split('#')[1];
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        const hash = '#' + path.split('#')[1];
+        sessionStorage.setItem('scrollTargetHash', hash);
+        router.push('/');
+      }
+    }
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground font-['Cairo']" dir="rtl">
@@ -25,10 +71,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container flex h-20 items-center justify-between">
           <div className="flex items-center gap-2">
             <a 
-              href="#home"
+              href="/"
               onClick={(e) => {
-                e.preventDefault();
-                document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
+                if (window.location.pathname === '/') {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                  e.preventDefault();
+                  router.push('/');
+                }
               }}
             >
               <div className="flex items-center gap-3 cursor-pointer">
@@ -45,17 +96,38 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </a>
           </div>
 
-          {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-6">
-            {navItems.map((item) => (
-              <a key={item.path} href={item.path}>
-                <span
-                  className="text-sm font-bold transition-colors hover:text-primary cursor-pointer relative py-2 text-muted-foreground"
+            {navItems.map((item) => {
+              const isArticles = item.path === "/articles";
+              if (isArticles) {
+                return (
+                  <a 
+                    key={item.path} 
+                    href={item.path}
+                    onClick={(e) => handleNavClick(e, item.path, item.isAnchor)}
+                    className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-primary/40 bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all duration-300 shadow-sm"
+                  >
+                    <BookOpen className="w-4 h-4" />
+                    <span className="text-sm font-black">
+                      {item.name}
+                    </span>
+                  </a>
+                );
+              }
+              return (
+                <a 
+                  key={item.path} 
+                  href={item.path}
+                  onClick={(e) => handleNavClick(e, item.path, item.isAnchor)}
                 >
-                  {item.name}
-                </span>
-              </a>
-            ))}
+                  <span
+                    className="text-sm font-bold transition-colors hover:text-primary cursor-pointer relative py-2 text-muted-foreground"
+                  >
+                    {item.name}
+                  </span>
+                </a>
+              );
+            })}
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
@@ -80,15 +152,44 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {/* Mobile Nav */}
         {isMenuOpen && (
           <div className="md:hidden border-t border-border bg-background p-4 flex flex-col gap-4 animate-in slide-in-from-top-5">
-            {navItems.map((item) => (
-              <a key={item.path} href={item.path} onClick={() => setIsMenuOpen(false)}>
-                <span
-                  className="block p-3 rounded-lg text-base font-bold transition-colors cursor-pointer hover:bg-muted text-muted-foreground"
+            {navItems.map((item) => {
+              const isArticles = item.path === "/articles";
+              if (isArticles) {
+                return (
+                  <a 
+                    key={item.path} 
+                    href={item.path} 
+                    onClick={(e) => {
+                      setIsMenuOpen(false);
+                      handleNavClick(e, item.path, item.isAnchor);
+                    }}
+                  >
+                    <span
+                      className="flex items-center justify-center gap-2 p-3 rounded-lg text-base font-black transition-colors cursor-pointer bg-primary/10 border border-primary/20 text-primary hover:bg-primary hover:text-white"
+                    >
+                      <BookOpen className="w-5 h-5" />
+                      {item.name}
+                    </span>
+                  </a>
+                );
+              }
+              return (
+                <a 
+                  key={item.path} 
+                  href={item.path} 
+                  onClick={(e) => {
+                    setIsMenuOpen(false);
+                    handleNavClick(e, item.path, item.isAnchor);
+                  }}
                 >
-                  {item.name}
-                </span>
-              </a>
-            ))}
+                  <span
+                    className="block p-3 rounded-lg text-base font-bold transition-colors cursor-pointer hover:bg-muted text-muted-foreground"
+                  >
+                    {item.name}
+                  </span>
+                </a>
+              );
+            })}
             <a href="tel:01080012261" className="w-full">
               <Button className="w-full font-bold">
                 <Phone className="w-4 h-4 ml-2" />
@@ -130,9 +231,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div>
               <h3 className="font-bold text-lg mb-4 text-foreground">روابط سريعة</h3>
               <ul className="space-y-3">
-                {navItems.slice(0, 4).map((item) => (
+                {navItems.map((item) => (
                   <li key={item.path}>
-                    <a href={item.path}>
+                    <a 
+                      href={item.path}
+                      onClick={(e) => handleNavClick(e, item.path, item.isAnchor)}
+                    >
                       <span className="text-muted-foreground hover:text-primary transition-colors text-sm cursor-pointer">
                         {item.name}
                       </span>

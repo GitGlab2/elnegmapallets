@@ -5,14 +5,19 @@
 ## روابط وأقسام الموقع الرئيسية (Main Sections & Navigation Links)
 
 - [الصفحة الرئيسية (Home)](https://elnegmapallets.com/)
-- [من نحن (About Us)](https://elnegmapallets.com/#about-section) - تفاصيل خبرتنا الممتدة لأكثر من 18 عاماً ورسالتنا ورؤيتنا المستقبلية.
-- [منتجاتنا (Products)](https://elnegmapallets.com/#products-section) - أنواع البالتات الخشبية التي نقوم بتصنيعها (البالتات المخصصة، بالتات التصدير، البالتات القياسية).
+- [من نحن (About Us)](https://elnegmapallets.com/#about-section) - تفاصيل خبرتنا ورسالتنا ورؤيتنا المستقبلية.
+- [منتجاتنا (Products)](https://elnegmapallets.com/#products-section) - أنواع البالتات الخشبية والبلاستيكية التي نقوم بتصنيعها.
+- [المقالات والمعلومات اللوجستية (Articles & Guides)](https://elnegmapallets.com/articles/) - قسم المقالات والدراسات اللوجستية لتعزيز تصدر محركات البحث (SEO).
+  - [دليل تصدير المنتجات بالبالتات (Export Guide)](https://elnegmapallets.com/articles/exporting-products-using-pallets/) - دراسة تفصيلية شاملة عن مقاسات البالتات ومعايير الصحة النباتية ISPM-15 وأنظمة التعبئة والتغليف للصادرات المصرية.
+  - [الدليل الفني للتعبئة والتغليف (Technical Guide)](https://elnegmapallets.com/articles/logistic-packaging-technical-guide/) - تحليل مقارن لمواصفات البالتات ومعايير الصحة النباتية في التجارة الدولية ومقارنة البالتات الخشبية والبلاستيكية.
+- [تواصل معنا (Contact Us)](https://elnegmapallets.com/#contact-section) - أرقام الهاتف والبريد الإلكتروني ومقر المصنع ببني سويف.
+
+## أقسام الصفحة الرئيسية الفرعية (Homepage Sections - Accessible via scroll)
 - [المزايا التنافسية (Features)](https://elnegmapallets.com/#features-section) - الجودة، الالتزام بالوقت، الأسعار المنافسة، والمعالجة الحرارية المعتمدة.
 - [خطوات العمل والإنتاج (Operations)](https://elnegmapallets.com/#operations-section) - كيف نضمن جودة الأخشاب والمعالجة والتجميع والتسليم.
 - [معرض الصور (Gallery)](https://elnegmapallets.com/#gallery-section) - صور حية لشحنات وتوريدات البالتات وعمليات التحميل للعملاء.
 - [أنظمة الأسعار (Pricing)](https://elnegmapallets.com/#pricing-section) - حاسبة تفاعلية للأسعار والعروض المتاحة للكميات الشهرية.
 - [الشهادات والمعايير الدولية (Certifications)](https://elnegmapallets.com/#certifications-section) - شهادة معالجة حرارية HT معتمدة من وزارة الزراعة المصرية والحجر الزراعي، وتطبيق معيار الصحة النباتية ISPM 15.
-- [تواصل معنا (Contact Us)](https://elnegmapallets.com/#contact-section) - أرقام الهاتف، البريد الإلكتروني، وعنوان المصنع في بني سويف (منطقة بياض العرب الصناعية).
 
 ## ملفات وخرائط الموقع (Resources & Sitemaps)
 - [خريطة الموقع (Sitemap)](https://elnegmapallets.com/sitemap.xml) - خريطة الموقع الكاملة لمحركات البحث والوكلاء.
