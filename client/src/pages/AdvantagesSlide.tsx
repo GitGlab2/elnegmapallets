@@ -6,17 +6,17 @@ export default function AdvantagesSlide() {
         {/* Full-width Image Display - CSS animation instead of framer-motion */}
         <div className="w-full z-10 relative animate-fade-in-up">
           <picture>
-            <source media="(max-width: 768px)" srcSet="/images/pallet-hero-detail-mobile.webp" type="image/webp" />
-            <source media="(min-width: 769px)" srcSet="/images/pallet-hero-detail.webp" type="image/webp" />
+            <source media="(max-width: 768px)" srcSet="/images/sections/pallet-hero-detail-mobile.webp" type="image/webp" />
+            <source media="(min-width: 769px)" srcSet="/images/sections/pallet-hero-detail.webp" type="image/webp" />
             <img 
-              src="/images/pallet-hero-detail.png" 
+              src="/images/sections/pallet-hero-detail.webp" 
               alt="شركة النجمة لتصنيع البالتات الخشبية" 
               width={1920}
               height={600}
               fetchPriority="high"
               className="w-full h-auto object-contain block mx-auto"
               onError={(e) => {
-                (e.target as HTMLImageElement).src = '/images/sectors-preview.jpg';
+                (e.target as HTMLImageElement).src = '/images/sections/sectors-preview.webp';
               }}
             />
           </picture>

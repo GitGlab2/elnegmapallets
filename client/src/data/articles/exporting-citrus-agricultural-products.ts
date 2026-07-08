@@ -7,7 +7,7 @@ export const exportingCitrusAgriculturalProductsArticle: Article = {
   date: "2026-06-18",
   author: "إدارة اللوجستيات الزراعية - شركة النجمة",
   readTime: "4 دقائق",
-  image: "/images/factory-image.webp",
+  image: "/images/articles/exporting-citrus-agricultural-products.webp",
   category: "تصدير زراعي وموالح",
   keywords: ["تصدير البرتقال المصري", "محطات فرز وتعبئة الموالح", "حاوية مبردة للتصدير", "الحجر الزراعي المصري", "معالجة باردة للصين"],
   toc: [

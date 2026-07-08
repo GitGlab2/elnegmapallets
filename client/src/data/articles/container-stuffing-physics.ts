@@ -7,7 +7,7 @@ export const containerStuffingPhysicsArticle: Article = {
   date: "2026-06-05",
   author: "إدارة التخطيط اللوجستي - شركة النجمة",
   readTime: "4 دقائق",
-  image: "/images/factory-image.webp",
+  image: "/images/articles/container-stuffing-physics.webp",
   category: "لوجستيات النقل البحري",
   keywords: ["سعة حاوية 20 قدم بالبالتات", "حاوية 40 قدم كم بالتة يورو", "حساب السعة الاستيعابية للحاوية", "الوزن الأقصى للحاوية", "المساحة الميتة في الحاويات"],
   toc: [

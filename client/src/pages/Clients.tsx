@@ -57,9 +57,9 @@ export default function Clients() {
 
           <div className="relative z-10 w-full max-w-sm md:max-w-md bg-white p-3 md:p-4 rounded-2xl shadow-xl flex flex-col items-center">
             <picture>
-              <source srcSet="/images/clients-logos-grid.webp" type="image/webp" />
+              <source srcSet="/images/brand/clients-logos-grid.webp" type="image/webp" />
               <img 
-                src="/images/clients-logos-grid.jpg" 
+                src="/images/brand/clients-logos-grid.webp" 
                 alt="شعارات عملاء شركة النجمة الكرام" 
                 width={800}
                 height={600}

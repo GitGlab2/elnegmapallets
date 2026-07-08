@@ -7,7 +7,7 @@ export const exportingCeramicsHeavyMaterialsArticle: Article = {
   date: "2026-06-29",
   author: "إدارة الدعم اللوجستي الصناعي - شركة النجمة",
   readTime: "3 دقائق",
-  image: "/images/factory-image.webp",
+  image: "/images/articles/exporting-ceramics-heavy-materials.webp",
   category: "تصدير السيراميك والرخام",
   keywords: ["تصدير السيراميك المصري", "شحن الرخام شق الثعبان", "بالتات الدكم للرخام", "صناديق خشبية للجرانيت", "حاوية 20 قدم سيراميك"],
   toc: [

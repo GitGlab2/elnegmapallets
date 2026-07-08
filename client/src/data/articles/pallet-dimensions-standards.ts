@@ -7,7 +7,7 @@ export const palletDimensionsStandardsArticle: Article = {
   date: "2026-04-12",
   author: "إدارة الدعم الفني - شركة النجمة",
   readTime: "4 دقائق",
-  image: "/images/factory-image.webp",
+  image: "/images/articles/pallet-dimensions-standards.webp",
   category: "مقاسات وأبعاد البالتات",
   keywords: ["أبعاد الباليتة الأوروبية", "مقاسات الباليتات القياسية", "بالتة GMA", "أبعاد البالتات الخشبية", "معايير ISO 6780 للبالتات"],
   toc: [

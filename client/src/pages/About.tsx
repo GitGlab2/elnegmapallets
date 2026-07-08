@@ -18,9 +18,9 @@ export default function About() {
           >
             <div className="relative w-full max-w-md">
               <picture>
-                <source srcSet="/images/factory-image.webp" type="image/webp" />
+                <source srcSet="/images/sections/factory-image.webp" type="image/webp" />
                 <img 
-                  src="/images/factory-image.jpg" 
+                  src="/images/sections/factory-image.webp" 
                   alt="مصنع شركة النجمة للبالتات الخشبية" 
                   width={800}
                   height={600}

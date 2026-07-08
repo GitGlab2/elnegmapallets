@@ -50,7 +50,7 @@ export default function Features() {
           >
             <div className="relative w-full max-w-sm md:max-w-md">
               <img 
-                src="/images/advantages-1.jpg" 
+                src="/images/sections/advantages-1.webp" 
                 alt="مزايا شركة النجمة التنافسية" 
                 className="styled-image w-full h-60 md:h-80 object-contain"
                 onError={(e) => {

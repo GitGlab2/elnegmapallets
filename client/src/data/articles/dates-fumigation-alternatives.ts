@@ -7,7 +7,7 @@ export const datesFumigationAlternativesArticle: Article = {
   date: "2026-07-08",
   author: "إدارة السلامة الغذائية - شركة النجمة",
   readTime: "3 دقائق",
-  image: "/images/factory-image.webp",
+  image: "/images/articles/dates-fumigation-alternatives.webp",
   category: "تعقيم المواد الغذائية",
   keywords: ["تعقيم التمور في مصر", "بدائل بروميد الميثيل", "غاز الفوسفين PH3", "تبخير التمور الجافة", "لوجستيات تصدير التمور"],
   toc: [

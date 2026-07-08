@@ -103,9 +103,9 @@ export function QualityCertImage() {
           className="w-full max-w-2xl"
         >
           <picture>
-            <source srcSet="/images/quality-certification.webp" type="image/webp" />
+            <source srcSet="/images/sections/quality-certification.webp" type="image/webp" />
             <img 
-              src="/images/quality-certification.jpg" 
+              src="/images/sections/quality-certification.webp" 
               alt="شهادات جودة شركة النجمة" 
               width={1000}
               height={700}
@@ -137,9 +137,9 @@ export function InternationalStandardsImage() {
           className="w-full max-w-2xl"
         >
           <picture>
-            <source srcSet="/images/international-standards.webp" type="image/webp" />
+            <source srcSet="/images/sections/international-standards.webp" type="image/webp" />
             <img 
-              src="/images/international-standards.jpg" 
+              src="/images/sections/international-standards.webp" 
               alt="المعايير الدولية لشركة النجمة" 
               width={1000}
               height={700}

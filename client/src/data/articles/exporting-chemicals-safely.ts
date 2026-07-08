@@ -7,7 +7,7 @@ export const exportingChemicalsSafelyArticle: Article = {
   date: "2026-07-02",
   author: "إدارة السلامة والصحة المهنية - شركة النجمة",
   readTime: "3 دقائق",
-  image: "/images/factory-image.webp",
+  image: "/images/articles/exporting-chemicals-safely.webp",
   category: "شحن المواد الكيميائية",
   keywords: ["بالتات شحن الكيماويات", "مقاس 114x114 للبراميل", "شحن براميل البترول", "منع بروز الشحنة Overhang", "بالتات خشبية معالجة للبراميل"],
   toc: [

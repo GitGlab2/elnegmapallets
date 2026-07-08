@@ -22,9 +22,9 @@ export default function TeamImageSlide() {
           className="w-full z-10 relative"
         >
           <picture>
-            <source srcSet="/images/team-image.webp" type="image/webp" />
+            <source srcSet="/images/sections/team-image.webp" type="image/webp" />
             <img 
-              src="/images/team-image.jpg" 
+              src="/images/sections/team-image.webp" 
               alt="فريق عمل شركة النجمة للبالتات الخشبية" 
               width={1920}
               height={600}

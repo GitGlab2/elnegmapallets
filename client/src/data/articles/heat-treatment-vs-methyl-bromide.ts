@@ -7,7 +7,7 @@ export const heatTreatmentVsMethylBromideArticle: Article = {
   date: "2026-05-10",
   author: "إدارة البيئة والجودة - شركة النجمة",
   readTime: "4 دقائق",
-  image: "/images/factory-image.webp",
+  image: "/images/articles/heat-treatment-vs-methyl-bromide.webp",
   category: "طرق تعقيم البالتات",
   keywords: ["معالجة حرارية HT", "التبخير ببروميد الميثيل MB", "تعقيم البالتات الخشبية", "بروتوكول مونتريال للأوزون", "أفران تعقيم الخشب"],
   toc: [

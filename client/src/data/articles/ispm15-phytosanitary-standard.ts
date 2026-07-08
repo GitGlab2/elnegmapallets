@@ -7,7 +7,7 @@ export const ispm15PhytosanitaryStandardArticle: Article = {
   date: "2026-04-28",
   author: "إدارة الجودة - شركة النجمة",
   readTime: "3 دقائق",
-  image: "/images/factory-image.webp",
+  image: "/images/articles/ispm15-phytosanitary-standard.webp",
   category: "معايير الصحة النباتية",
   keywords: ["معيار ISPM 15", "ختم الصحة النباتية", "ختم IPPC للبالتات", "تعقيم خشب التصدير", "الحجر الزراعي للبالتات"],
   toc: [

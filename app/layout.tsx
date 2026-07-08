@@ -21,13 +21,13 @@ export const metadata: Metadata = {
   keywords: ["بالتات خشبية", "pallets", "تصنيع بالتات", "شركة النجمة", "بالتات مصر", "wooden pallets", "HT treatment", "معالجة حرارية", "بياض العرب", "بني سويف"],
   authors: [{ name: "شركة النجمة لتصنيع البالتات الخشبية" }],
   icons: {
-    icon: "/images/company-logo.jpg",
+    icon: "/images/brand/company-logo.webp",
   },
   openGraph: {
     type: "website",
     title: "شركة النجمة لتصنيع البالتات الخشبية",
     description: "الشركة رقم 1 في مصر - خبرة 18 عامًا في تصنيع البالتات عالية الجودة والمعالجة الحرارية للتصدير.",
-    images: ["/images/company-logo.jpg"],
+    images: ["/images/brand/company-logo.webp"],
   },
 };
 

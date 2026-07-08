@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 
 export default function Gallery() {
   const slide8Items = [
-    { src: "/images/client-gallery-4", title: "توريدات قطاع التصدير", desc: "شحنات بالتات خشبية معالجة حرارياً جاهزة للتصدير والموانئ." },
-    { src: "/images/client-gallery-3", title: "أسطول الشحن والتوزيع", desc: "تحميل وتوريد البالتات لمختلف المحافظات والشركات." }
+    { src: "/images/gallery/client-gallery-4", title: "توريدات قطاع التصدير", desc: "شحنات بالتات خشبية معالجة حرارياً جاهزة للتصدير والموانئ." },
+    { src: "/images/gallery/client-gallery-3", title: "أسطول الشحن والتوزيع", desc: "تحميل وتوريد البالتات لمختلف المحافظات والشركات." }
   ];
 
   const slide8bItems = [
-    { src: "/images/client-gallery-2", title: "مستودعات التخزين الجاف", desc: "تخزين وتجفيف الأخشاب لضمان مطابقتها لأعلى معايير الجودة." },
-    { src: "/images/client-gallery-1", title: "شحن وتنزيل البالتات للعملاء", desc: "تفريغ وتوريد آمن للبالتات في مواقع العمل والمصانع مباشرة." }
+    { src: "/images/gallery/client-gallery-2", title: "مستودعات التخزين الجاف", desc: "تخزين وتجفيف الأخشاب لضمان مطابقتها لأعلى معايير الجودة." },
+    { src: "/images/gallery/client-gallery-1", title: "شحن وتنزيل البالتات للعملاء", desc: "تفريغ وتوريد آمن للبالتات في مواقع العمل والمصانع مباشرة." }
   ];
 
   const renderGalleryItem = (item: { src: string; title: string; desc: string }, index: number) => (
@@ -24,7 +24,7 @@ export default function Gallery() {
         <picture>
           <source srcSet={`${item.src}.webp`} type="image/webp" />
           <img 
-            src={`${item.src}.jpg`} 
+            src={`${item.src}.webp`} 
             alt={item.title} 
             width={800}
             height={500}

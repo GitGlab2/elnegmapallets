@@ -86,16 +86,16 @@ export default function Home() {
               <div className="absolute -inset-1.5 bg-gradient-to-r from-secondary to-accent rounded-[20px] blur-xl opacity-30 group-hover:opacity-45 transition duration-1000 group-hover:duration-300" />
               
               <picture>
-                <source media="(max-width: 768px)" srcSet="/images/products-image-mobile.webp" type="image/webp" />
-                <source media="(min-width: 769px)" srcSet="/images/products-image.webp" type="image/webp" />
+                <source media="(max-width: 768px)" srcSet="/images/sections/products-image-mobile.webp" type="image/webp" />
+                <source media="(min-width: 769px)" srcSet="/images/sections/products-image.webp" type="image/webp" />
                 <img 
-                  src="/images/products-image.jpg" 
+                  src="/images/sections/products-image.webp" 
                   alt="تفاصيل الباليات خشبية" 
                   width={600}
                   height={480}
                   className="relative styled-image w-full h-[280px] sm:h-[350px] lg:h-[480px] object-contain shadow-2xl"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = '/images/sectors-preview.jpg';
+                    (e.target as HTMLImageElement).src = '/images/sections/sectors-preview.webp';
                   }}
                 />
               </picture>

@@ -7,7 +7,7 @@ export const newWoodenPalletsQualityStandardsArticle: Article = {
   date: "2026-05-24",
   author: "إدارة رقابة الجودة - شركة النجمة",
   readTime: "4 دقائق",
-  image: "/images/factory-image.webp",
+  image: "/images/articles/new-wooden-pallets-quality-standards.webp",
   category: "البالتات الخشبية الجديدة",
   keywords: ["بالتات خشبية جديدة", "مصنع بالتات خشبية", "مخاطر البالتات المستعملة", "بالتات خشب تصدير جديدة", "التبخير الحراري للبالتات الجديدة"],
   toc: [
