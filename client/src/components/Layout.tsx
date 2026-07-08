@@ -20,6 +20,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         setTimeout(() => {
           element.scrollIntoView({ behavior: 'smooth' });
           sessionStorage.removeItem('scrollTargetHash');
+          setTimeout(() => {
+            window.history.replaceState(null, "", window.location.pathname);
+          }, 800);
         }, 100);
       } else {
         let attempts = 0;
@@ -29,6 +32,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           if (el) {
             el.scrollIntoView({ behavior: 'smooth' });
             sessionStorage.removeItem('scrollTargetHash');
+            setTimeout(() => {
+              window.history.replaceState(null, "", window.location.pathname);
+            }, 800);
             clearInterval(interval);
           } else if (attempts > 40) {
             sessionStorage.removeItem('scrollTargetHash');
@@ -55,6 +61,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         const element = document.getElementById(id);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
+          setTimeout(() => {
+            window.history.replaceState(null, "", window.location.pathname);
+          }, 800);
         }
       } else {
         const hash = '#' + path.split('#')[1];

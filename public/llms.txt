@@ -8,8 +8,15 @@
 - [من نحن (About Us)](https://elnegmapallets.com/#about-section) - تفاصيل خبرتنا ورسالتنا ورؤيتنا المستقبلية.
 - [منتجاتنا (Products)](https://elnegmapallets.com/#products-section) - أنواع البالتات الخشبية والبلاستيكية التي نقوم بتصنيعها.
 - [المقالات والمعلومات اللوجستية (Articles & Guides)](https://elnegmapallets.com/articles/) - قسم المقالات والدراسات اللوجستية لتعزيز تصدر محركات البحث (SEO).
-  - [دليل تصدير المنتجات بالبالتات (Export Guide)](https://elnegmapallets.com/articles/exporting-products-using-pallets/) - دراسة تفصيلية شاملة عن مقاسات البالتات ومعايير الصحة النباتية ISPM-15 وأنظمة التعبئة والتغليف للصادرات المصرية.
-  - [الدليل الفني للتعبئة والتغليف (Technical Guide)](https://elnegmapallets.com/articles/logistic-packaging-technical-guide/) - تحليل مقارن لمواصفات البالتات ومعايير الصحة النباتية في التجارة الدولية ومقارنة البالتات الخشبية والبلاستيكية.
+  - [أبعاد ومقاسات الباليتات القياسية والأوروبية (Pallet Dimensions)](https://elnegmapallets.com/articles/pallet-dimensions-standards/) - أبعاد ومقاسات الباليتات الأوروبية EUR والقياسية GMA وتصنيفات الأيزو ISO 6780.
+  - [معيار الصحة النباتية الدولي ISPM 15 للبالتات (ISPM 15 Standard)](https://elnegmapallets.com/articles/ispm15-phytosanitary-standard/) - دليل معيار الصحة النباتية الدولي للعبور الآمن للبالتات الخشبية والتعبئة.
+  - [الفرق بين المعالجة الحرارية HT والتبخير MB (HT vs MB Treatment)](https://elnegmapallets.com/articles/heat-treatment-vs-methyl-bromide/) - مقارنة شاملة بين المعالجة الحرارية HT والتبخير بغاز بروميد الميثيل MB للبالتات.
+  - [البالتات الخشبية مقابل البالتات البلاستيكية (Wooden vs Plastic Pallets)](https://elnegmapallets.com/articles/wooden-vs-plastic-pallets/) - تحليل الجدوى الاقتصادية للبالتات الخشبية والبلاستيكية في سلاسل التوريد.
+  - [فيزياء وسعات شحن الحاويات (Container Stuffing Physics)](https://elnegmapallets.com/articles/container-stuffing-physics/) - الهندسة الفراغية لحساب السعة القصوى للبالتات داخل الحاويات 20 و40 قدم.
+  - [لوجستيات تصدير الموالح بالبالتات (Exporting Citrus)](https://elnegmapallets.com/articles/exporting-citrus-agricultural-products/) - معايير تعبئة الموالح ورص البالتات وشروط المعالجة الباردة للتصدير.
+  - [هندسة شحن السيراميك والرخام (Exporting Ceramics & Marble)](https://elnegmapallets.com/articles/exporting-ceramics-heavy-materials/) - معايير التعبئة الثقيلة وشحن البورسلين والرخام باستخدام بالتات الدكم وحاويات 20 قدم.
+  - [معايير سلامة شحن البراميل والكيماويات (Exporting Chemicals)](https://elnegmapallets.com/articles/exporting-chemicals-safely/) - اختيار البالتات المخصصة مثل 114×114 لشحن المواد البترولية والكيماويات بأمان.
+  - [بدائل بروميد الميثيل لتبخير التمور (Dates Fumigation)](https://elnegmapallets.com/articles/dates-fumigation-alternatives/) - استخدام غاز الفوسفين PH3 لتعقيم التمور الجافة ونصف الجافة في الحجر الزراعي.
 - [تواصل معنا (Contact Us)](https://elnegmapallets.com/#contact-section) - أرقام الهاتف والبريد الإلكتروني ومقر المصنع ببني سويف.
 
 ## أقسام الصفحة الرئيسية الفرعية (Homepage Sections - Accessible via scroll)
