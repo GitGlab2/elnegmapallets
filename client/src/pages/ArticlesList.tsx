@@ -51,14 +51,16 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
       { id: "export", name: "أدلة التصدير والشحن", icon: Globe },
       { id: "sterilization", name: "المعالجة والتعقيم", icon: ShieldCheck },
       { id: "buying", name: "أسعار الشراء والمواصفات", icon: Tag },
-      { id: "industry", name: "متطلبات الصناعات", icon: Factory }
+      { id: "industry", name: "متطلبات الصناعات", icon: Factory },
+      { id: "sizes", name: "أبعاد ومقاسات البالتات", icon: Package, href: "/pallet-sizes/" }
     ],
     en: [
       { id: "all", name: "All", icon: LayoutGrid },
       { id: "export", name: "Export & Shipping", icon: Globe },
       { id: "sterilization", name: "Sterilization & HT", icon: ShieldCheck },
       { id: "buying", name: "Specs & Pricing", icon: Tag },
-      { id: "industry", name: "Industry Specs", icon: Factory }
+      { id: "industry", name: "Industry Specs", icon: Factory },
+      { id: "sizes", name: "Pallet Sizes & Specs", icon: Package, href: "/en/pallet-sizes/" }
     ]
   }[lang];
 
@@ -120,28 +122,6 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
             {content.description}
           </p>
         </div>
-
-        {/* Pallet Sizing Catalog CTA Banner */}
-        <div className="relative rounded-3xl overflow-hidden bg-[#1c1f2a] border border-secondary/20 p-6 md:p-8 mb-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl shadow-secondary/5">
-          <div className="absolute inset-0 bg-gradient-to-r from-secondary/5 via-transparent to-transparent pointer-events-none" />
-          <div className={`flex items-center gap-4 ${isEn ? "text-left animate-slide-in-left" : "text-right animate-slide-in-right"} flex-1 w-full`}>
-            <div className="p-3.5 rounded-2xl bg-secondary/10 border border-secondary/20 text-secondary hidden sm:block">
-              <Package className="w-8 h-8" />
-            </div>
-            <div>
-              <h2 className="text-xl md:text-2xl font-black text-white mb-2">{content.palletSizesTitle}</h2>
-              <p className="text-sm text-gray-400 max-w-3xl leading-relaxed">{content.palletSizesDesc}</p>
-            </div>
-          </div>
-          <a 
-            href={isEn ? "/en/pallet-sizes/" : "/pallet-sizes/"}
-            className="shrink-0 inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-secondary hover:bg-secondary/90 text-white font-bold transition-all shadow-lg shadow-secondary/15 text-sm w-full md:w-auto justify-center"
-          >
-            <span>{content.palletSizesBtn}</span>
-            {isEn ? <ArrowRight className="w-4 h-4" /> : <ArrowLeft className="w-4 h-4" />}
-          </a>
-        </div>
-
         {/* Interactive Filters Bar */}
         <div className="mb-12 flex flex-col items-center justify-center animate-fade-in">
           <div className="inline-flex p-1 bg-[#1c1f2a]/90 border border-border/80 rounded-2xl gap-1 max-w-full overflow-x-auto no-scrollbar shadow-2xl backdrop-blur-md">
@@ -151,7 +131,13 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
               return (
                 <button
                   key={cat.id}
-                  onClick={() => setActiveCategory(cat.id)}
+                  onClick={() => {
+                    if (cat.href) {
+                      window.location.href = cat.href;
+                    } else {
+                      setActiveCategory(cat.id);
+                    }
+                  }}
                   className={`flex items-center gap-2.5 px-5 py-3 rounded-xl text-xs md:text-sm font-bold transition-all duration-300 whitespace-nowrap ${
                     isActive
                       ? "bg-secondary text-white shadow-lg shadow-secondary/15 border border-secondary/20 scale-[1.02]"
