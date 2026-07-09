@@ -13,7 +13,8 @@ function Router() {
   return (
     <Layout>
       <Switch>
-        <Route path="/" component={Home} />
+        <Route path="/">{() => <Home lang="ar" />}</Route>
+        <Route path="/en">{() => <Home lang="en" />}</Route>
         <Route component={NotFound} />
       </Switch>
     </Layout>

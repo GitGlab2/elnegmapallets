@@ -1,9 +1,25 @@
 import { motion } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
-export default function OperationsVideo() {
+export default function OperationsVideo({ lang = "ar" }: { lang?: "ar" | "en" }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const isEn = lang === "en";
+
+  const content = {
+    ar: {
+      title: "المزايا التنافسية واللوجستية",
+      iframeTitle: "فيديو خط الإنتاج في مصنع النجمة",
+      placeholder: "مرّر لأسفل لمشاهدة الفيديو",
+      caption: "عرض مرئي يوضح جودة التوريد والخدمات اللوجستية وتفاصيل متانة البالتات الخشبية في مصنع النجمة."
+    },
+    en: {
+      title: "Competitive & Logistics Advantages",
+      iframeTitle: "Production Line Video at El Negma Factory",
+      placeholder: "Scroll down to watch the video",
+      caption: "A visual demonstration showing the supply chain quality, logistics services, and durability of wooden pallets at El Negma factory."
+    }
+  }[lang];
 
   // Use IntersectionObserver to detect when video section is visible
   useEffect(() => {
@@ -39,7 +55,7 @@ export default function OperationsVideo() {
 
         <div className="relative z-10 flex items-center gap-2 md:gap-3">
           <div className="w-8 md:w-12 h-1 bg-secondary rounded-full animate-pulse" />
-          <h3 className="text-lg md:text-2xl lg:text-3xl font-black text-white">المزايا التنافسية واللوجستية</h3>
+          <h3 className="text-lg md:text-2xl lg:text-3xl font-black text-white">{content.title}</h3>
           <div className="w-8 md:w-12 h-1 bg-secondary rounded-full animate-pulse" />
         </div>
         
@@ -54,7 +70,7 @@ export default function OperationsVideo() {
           {isVisible ? (
             <iframe 
               src={videoSrc}
-              title="فيديو خط الإنتاج في مصنع النجمة"
+              title={content.iframeTitle}
               className="w-full h-full border-none"
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -68,14 +84,14 @@ export default function OperationsVideo() {
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </div>
-                <p className="text-sm md:text-base">مرّر لأسفل لمشاهدة الفيديو</p>
+                <p className="text-sm md:text-base">{content.placeholder}</p>
               </div>
             </div>
           )}
         </motion.div>
 
         <p className="relative z-10 text-xs md:text-sm lg:text-base text-muted-foreground max-w-2xl leading-relaxed mt-1 md:mt-2 px-2">
-          عرض مرئي يوضح جودة التوريد والخدمات اللوجستية وتفاصيل متانة البالتات الخشبية في مصنع النجمة.
+          {content.caption}
         </p>
 
       </div>

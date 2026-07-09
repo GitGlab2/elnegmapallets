@@ -1,6 +1,21 @@
 import { motion } from "framer-motion";
 
-export default function TeamImageSlide() {
+export default function TeamImageSlide({ lang = "ar" }: { lang?: "ar" | "en" }) {
+  const isEn = lang === "en";
+
+  const content = {
+    ar: {
+      title: "فريق العمل والعمليات الميدانية",
+      imgAlt: "فريق عمل شركة النجمة للبالتات الخشبية",
+      caption: "كادر بشري مؤهل وهندسي يضمن دقة التفاصيل وجودة التوريد في كافة مراحل الإنتاج."
+    },
+    en: {
+      title: "Our Team & Field Operations",
+      imgAlt: "El Negma Pallets Work Team",
+      caption: "Qualified technical and engineering staff ensuring attention to detail and supply chain quality at all stages of production."
+    }
+  }[lang];
+
   return (
     <div className="w-full py-8 md:py-12 bg-[#181b24]" id="team-image-slide">
       <div className="w-full flex flex-col items-center gap-6 text-center">
@@ -8,7 +23,7 @@ export default function TeamImageSlide() {
         <div className="container relative z-10 flex flex-col items-center gap-3 px-4">
           <div className="flex items-center gap-3">
             <div className="w-12 h-1 bg-secondary rounded-full animate-pulse" />
-            <h3 className="text-xl md:text-2xl font-black text-white">فريق العمل والعمليات الميدانية</h3>
+            <h3 className="text-xl md:text-2xl font-black text-white">{content.title}</h3>
             <div className="w-12 h-1 bg-secondary rounded-full animate-pulse" />
           </div>
         </div>
@@ -25,7 +40,7 @@ export default function TeamImageSlide() {
             <source srcSet="/images/sections/team-image.webp" type="image/webp" />
             <img 
               src="/images/sections/team-image.webp" 
-              alt="فريق عمل شركة النجمة للبالتات الخشبية" 
+              alt={content.imgAlt} 
               width={1920}
               height={600}
               loading="lazy"
@@ -36,7 +51,7 @@ export default function TeamImageSlide() {
 
         <div className="container px-4">
           <p className="relative z-10 text-xs md:text-sm text-muted-foreground max-w-2xl leading-relaxed mt-2 mx-auto">
-            كادر بشري مؤهل وهندسي يضمن دقة التفاصيل وجودة التوريد في كافة مراحل الإنتاج.
+            {content.caption}
           </p>
         </div>
 

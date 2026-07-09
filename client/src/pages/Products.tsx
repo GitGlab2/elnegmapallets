@@ -1,37 +1,71 @@
 import { motion } from "framer-motion";
 import { Package, Box, DraftingCompass, Settings } from "lucide-react";
 
-interface ProductItem {
-  dimensions: string;
-  desc: string;
-  icon: React.ReactNode;
-}
+export default function Products({ lang = "ar" }: { lang?: "ar" | "en" }) {
+  const isEn = lang === "en";
 
-const PRODUCT_ITEMS: ProductItem[] = [
-  {
-    dimensions: "120 × 100",
-    desc: "بالتة شرق أوسط - حمولة 1250 كجم - متوافقة مع المعايير المحلية والإقليمية",
-    icon: <Package className="w-6 h-6 text-secondary shrink-0" />
-  },
-  {
-    dimensions: "120 × 80",
-    desc: "بالتة يورو - حمولة 1500 كجم - مطابقة لمواصفات الاتحاد الأوروبي للتصدير",
-    icon: <Box className="w-6 h-6 text-secondary shrink-0" />
-  },
-  {
-    dimensions: "تصميمات مخصصة",
-    desc: "تصميمات مخصصة وفقاً لمتطلبات العميل - نوفر جميع الأحجام والمواصفات حسب الاحتياجات الخاصة لكل مشروع",
-    icon: <DraftingCompass className="w-6 h-6 text-secondary shrink-0" />
-  },
-  {
-    dimensions: "تصنيع حسب الطلب",
-    desc: "تصنيع البالتات وفقاً لاحتياجات العميل - مرونة كاملة في التصميم والإنتاج لضمان الملاءمة المثالية للاستخدام المطلوب",
-    icon: <Settings className="w-6 h-6 text-secondary shrink-0" />
-  }
-];
-
-export default function Products() {
-  const items = PRODUCT_ITEMS;
+  const content = {
+    ar: {
+      title1: "منتجاتنا",
+      title2: "وخدماتنا",
+      desc: "نقدم مجموعة متكاملة من البالتات الخشبية المصنعة وفقًا للمواصفات العالمية والمحلية، مع مرونة في التصنيع حسب متطلبات العملاء لمختلف الصناعات والاستخدامات.",
+      imgAlt: "بالتات خشبية للتصدير",
+      alignClass: "text-right",
+      oppositeAlignClass: "text-left",
+      items: [
+        {
+          dimensions: "120 × 100",
+          desc: "بالتة شرق أوسط - حمولة 1250 كجم - متوافقة مع المعايير المحلية والإقليمية",
+          icon: <Package className="w-6 h-6 text-secondary shrink-0" />
+        },
+        {
+          dimensions: "120 × 80",
+          desc: "بالتة يورو - حمولة 1500 كجم - مطابقة لمواصفات الاتحاد الأوروبي للتصدير",
+          icon: <Box className="w-6 h-6 text-secondary shrink-0" />
+        },
+        {
+          dimensions: "تصميمات مخصصة",
+          desc: "تصميمات مخصصة وفقاً لمتطلبات العميل - نوفر جميع الأحجام والمواصفات حسب الاحتياجات الخاصة لكل مشروع",
+          icon: <DraftingCompass className="w-6 h-6 text-secondary shrink-0" />
+        },
+        {
+          dimensions: "تصنيع حسب الطلب",
+          desc: "تصنيع البالتات وفقاً لاحتياجات العميل - مرونة كاملة في التصميم والإنتاج لضمان الملاءمة المثالية للاستخدام المطلوب",
+          icon: <Settings className="w-6 h-6 text-secondary shrink-0" />
+        }
+      ]
+    },
+    en: {
+      title1: "Our Products",
+      title2: "& Services",
+      desc: "We offer a complete range of wooden pallets manufactured according to global and local specifications, with design flexibility to match client requirements for various industries.",
+      imgAlt: "Wooden pallets for export",
+      alignClass: "text-left",
+      oppositeAlignClass: "text-right",
+      items: [
+        {
+          dimensions: "120 × 100 cm",
+          desc: "Middle East standard pallet - 1250 kg capacity - compatible with local and regional standards.",
+          icon: <Package className="w-6 h-6 text-secondary shrink-0" />
+        },
+        {
+          dimensions: "120 × 80 cm",
+          desc: "Euro Pallet - 1500 kg capacity - compliant with EU specifications for export shipments.",
+          icon: <Box className="w-6 h-6 text-secondary shrink-0" />
+        },
+        {
+          dimensions: "Custom Designs",
+          desc: "Custom designs tailored to client requirements - we provide all sizes and specifications for your project needs.",
+          icon: <DraftingCompass className="w-6 h-6 text-secondary shrink-0" />
+        },
+        {
+          dimensions: "On-Demand Manufacturing",
+          desc: "Pallet manufacturing based on client instructions - complete flexibility in design and production for optimal performance.",
+          icon: <Settings className="w-6 h-6 text-secondary shrink-0" />
+        }
+      ]
+    }
+  }[lang];
 
   return (
     <div className="container py-8 md:py-12" id="products">
@@ -57,10 +91,10 @@ export default function Products() {
           <div className="relative z-10 w-full max-w-sm md:max-w-md">
             <img 
               src="/images/gallery/client-delivery-pallet.webp" 
-              alt="بالتات خشبية للتصدير" 
+              alt={content.imgAlt} 
               className="styled-image w-full h-[240px] md:h-[350px] object-contain"
               onError={(e) => {
-                (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
+                (e.target as HTMLImageElement).src = '/images/sections/sectors-preview.webp';
               }}
             />
           </div>
@@ -72,23 +106,23 @@ export default function Products() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="lg:col-span-6 bg-white p-6 md:p-16 flex flex-col justify-center text-right order-2 lg:order-1"
+          className={`lg:col-span-6 bg-white p-6 md:p-16 flex flex-col justify-center ${content.alignClass} order-2 lg:order-1`}
         >
           <div className="flex items-stretch gap-3 md:gap-4 mb-4 md:mb-6 justify-start">
             <div className="w-1.5 md:w-2 bg-secondary rounded-full" />
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-[#181b24] leading-tight">
-              منتجاتنا<br />وخدماتنا
+              {content.title1}<br />{content.title2}
             </h2>
           </div>
 
           <p className="text-sm md:text-lg text-gray-600 leading-relaxed mb-6 md:mb-8">
-            نقدم مجموعة متكاملة من البالتات الخشبية المصنعة وفقًا للمواصفات العالمية والمحلية، مع مرونة في التصنيع حسب متطلبات العملاء لمختلف الصناعات والاستخدامات.
+            {content.desc}
           </p>
 
           {/* List items matching Slide 4 styles */}
           <div className="flex flex-col gap-4 md:gap-6">
-            {items.map((item, index) => (
-              <div key={index} className="flex items-start gap-3 md:gap-4 text-right justify-start">
+            {content.items.map((item, index) => (
+              <div key={index} className={`flex items-start gap-3 md:gap-4 ${content.alignClass} justify-start`}>
                 <div className="mt-1 shrink-0 p-1.5 md:p-2 rounded-lg bg-secondary/10">
                   {item.icon}
                 </div>

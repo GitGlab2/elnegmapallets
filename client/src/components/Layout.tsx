@@ -2,14 +2,15 @@
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, Facebook, MapPin, Mail, BookOpen } from "lucide-react";
+import { Menu, X, Phone, Facebook, MapPin, Mail, BookOpen, Globe } from "lucide-react";
 import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children, lang = "ar" }: { children: React.ReactNode; lang?: "ar" | "en" }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
+  const isEn = lang === "en";
 
   useEffect(() => {
     const hash = window.location.hash || sessionStorage.getItem('scrollTargetHash');
@@ -46,7 +47,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     }
   }, [pathname]);
 
-  const navItems = [
+  const navItems = isEn ? [
+    { name: "About Us", path: "/en#about-section", isAnchor: true },
+    { name: "Products", path: "/en#products-section", isAnchor: true },
+    { name: "Contact Us", path: "/en#contact-section", isAnchor: true },
+    { name: "Articles & Info", path: "/en/articles", isAnchor: false },
+  ] : [
     { name: "من نحن", path: "/#about-section", isAnchor: true },
     { name: "المنتجات", path: "/#products-section", isAnchor: true },
     { name: "تواصل معنا", path: "/#contact-section", isAnchor: true },
@@ -56,7 +62,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string, isAnchor: boolean) => {
     if (isAnchor) {
       e.preventDefault();
-      if (window.location.pathname === '/') {
+      const currentRoot = isEn ? "/en" : "/";
+      if (window.location.pathname === currentRoot) {
         const id = path.split('#')[1];
         const element = document.getElementById(id);
         if (element) {
@@ -68,38 +75,96 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       } else {
         const hash = '#' + path.split('#')[1];
         sessionStorage.setItem('scrollTargetHash', hash);
-        router.push('/');
+        router.push(currentRoot);
       }
     }
   };
 
+  const toggleLangPath = () => {
+    if (isEn) {
+      if (pathname === "/en") return "/";
+      if (pathname.startsWith("/en/articles")) {
+        return pathname.replace("/en/articles", "/articles");
+      }
+      return "/";
+    } else {
+      if (pathname === "/") return "/en";
+      if (pathname.startsWith("/articles")) {
+        return pathname.replace("/articles", "/en/articles");
+      }
+      return "/en";
+    }
+  };
+
+  const content = {
+    ar: {
+      logoMain: "شركة النجمة",
+      logoSub: "لتصنيع البالتات الخشبية",
+      logoAlt: "شعار شركة النجمة",
+      callBtn: "اتصل الآن",
+      switcherText: "English",
+      footerDesc: "الشركة رقم 1 في مصر لتصنيع البالتات الخشبية. خبرة تزيد عن 18 عامًا في خدمة كبرى الشركات والمصانع.",
+      footerQuickLinks: "روابط سريعة",
+      footerProducts: "المنتجات",
+      footerProductsList: ["بالتة 100 × 120", "بالتة يورو (Euro Pallet)", "تصميمات مخصصة", "معالجة حرارية (HT)"],
+      footerContact: "تواصل معنا",
+      footerAddress: "بني سويف - المنطقة الصناعية بياض العرب (بجوار علوم إدارية)",
+      footerCopyright: `© ${new Date().getFullYear()} شركة النجمة لتصنيع البالتات الخشبية. جميع الحقوق محفوظة.`,
+      footerDev: "تم التطوير بواسطة",
+      direction: "rtl" as const,
+      fontClass: "font-['Cairo']",
+      alignClass: "text-right",
+      oppositeAlignClass: "text-left",
+    },
+    en: {
+      logoMain: "El Negma",
+      logoSub: "Pallet Manufacturing",
+      logoAlt: "El Negma Pallets Logo",
+      callBtn: "Call Now",
+      switcherText: "العربية",
+      footerDesc: "The #1 company in Egypt for wooden pallets manufacturing. Over 18 years of experience serving major companies and factories.",
+      footerQuickLinks: "Quick Links",
+      footerProducts: "Products",
+      footerProductsList: ["Pallet 100 × 120", "Euro Pallet (EPAL)", "Custom Designs", "Heat Treatment (HT)"],
+      footerContact: "Contact Us",
+      footerAddress: "Beni Suef - Bayad Al-Arab Industrial Zone, Egypt",
+      footerCopyright: `© ${new Date().getFullYear()} El Negma Pallets. All rights reserved.`,
+      footerDev: "Developed by",
+      direction: "ltr" as const,
+      fontClass: "font-sans",
+      alignClass: "text-left",
+      oppositeAlignClass: "text-right",
+    }
+  }[lang];
+
   return (
-    <div className="min-h-screen flex flex-col bg-background text-foreground font-['Cairo']" dir="rtl">
+    <div className={`min-h-screen flex flex-col bg-background text-foreground ${content.fontClass}`} dir={content.direction}>
       {/* Navbar */}
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-20 items-center justify-between">
           <div className="flex items-center gap-2">
             <a 
-              href="/"
+              href={isEn ? "/en" : "/"}
               onClick={(e) => {
-                if (window.location.pathname === '/') {
+                const currentRoot = isEn ? "/en" : "/";
+                if (window.location.pathname === currentRoot) {
                   e.preventDefault();
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 } else {
                   e.preventDefault();
-                  router.push('/');
+                  router.push(currentRoot);
                 }
               }}
             >
               <div className="flex items-center gap-3 cursor-pointer">
                 <img 
                   src="/images/brand/company-logo.webp" 
-                  alt="شعار شركة النجمة" 
+                  alt={content.logoAlt} 
                   className="w-12 h-12 object-cover rounded-lg border border-border shadow-md bg-white"
                 />
-                <div className="flex flex-col">
-                  <span className="font-black text-xl leading-none text-white">شركة النجمة</span>
-                  <span className="text-xs text-muted-foreground font-medium mt-1">لتصنيع الباليات الخشبية</span>
+                <div className="flex flex-col text-left">
+                  <span className="font-black text-xl leading-none text-white">{content.logoMain}</span>
+                  <span className="text-xs text-muted-foreground font-medium mt-1">{content.logoSub}</span>
                 </div>
               </div>
             </a>
@@ -107,7 +172,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
           <nav className="hidden md:flex items-center gap-6">
             {navItems.map((item) => {
-              const isArticles = item.path === "/articles";
+              const isArticles = item.path === "/articles" || item.path === "/en/articles";
               if (isArticles) {
                 return (
                   <a 
@@ -140,29 +205,48 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
+            {/* Language Switcher */}
+            <a 
+              href={toggleLangPath()} 
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border hover:bg-muted text-xs font-bold text-muted-foreground transition-all duration-300"
+            >
+              <Globe className="w-3.5 h-3.5" />
+              <span>{content.switcherText}</span>
+            </a>
+            
             <a href="tel:01080012261">
               <Button variant="default" className="font-bold shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all">
-                <Phone className="w-4 h-4 ml-2" />
-                اتصل الآن
+                {isEn ? <Phone className="mr-2 w-4 h-4" /> : <Phone className="ml-2 w-4 h-4" />}
+                {content.callBtn}
               </Button>
             </a>
           </div>
 
           {/* Mobile Menu Toggle */}
-          <button
-            className="md:hidden p-2 text-muted-foreground hover:text-primary"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label={isMenuOpen ? "إغلاق القائمة الرئيسية" : "فتح القائمة الرئيسية"}
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="flex items-center gap-2 md:hidden">
+            {/* Mobile Language Switcher */}
+            <a 
+              href={toggleLangPath()} 
+              className="flex items-center gap-1 px-2.5 py-1.5 rounded-full border border-border hover:bg-muted text-xs font-bold text-muted-foreground transition-all duration-300"
+            >
+              <Globe className="w-3.5 h-3.5" />
+              <span>{content.switcherText}</span>
+            </a>
+            <button
+              className="p-2 text-muted-foreground hover:text-primary"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Nav */}
         {isMenuOpen && (
           <div className="md:hidden border-t border-border bg-background p-4 flex flex-col gap-4 animate-in slide-in-from-top-5">
             {navItems.map((item) => {
-              const isArticles = item.path === "/articles";
+              const isArticles = item.path === "/articles" || item.path === "/en/articles";
               if (isArticles) {
                 return (
                   <a 
@@ -201,8 +285,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             })}
             <a href="tel:01080012261" className="w-full">
               <Button className="w-full font-bold">
-                <Phone className="w-4 h-4 ml-2" />
-                اتصل الآن
+                {isEn ? <Phone className="mr-2 w-4 h-4" /> : <Phone className="ml-2 w-4 h-4" />}
+                {content.callBtn}
               </Button>
             </a>
           </div>
@@ -222,23 +306,23 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <div className="flex items-center gap-3 mb-4">
                 <img 
                   src="/images/brand/company-logo.webp" 
-                  alt="شعار شركة النجمة" 
+                  alt={content.logoAlt} 
                   className="w-10 h-10 object-cover rounded-md border border-border shadow-sm bg-white"
                 />
-                <span className="font-black text-lg text-white">شركة النجمة</span>
+                <span className="font-black text-lg text-white">{content.logoMain}</span>
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                الشركة رقم 1 في مصر لتصنيع الباليات الخشبية. خبرة تزيد عن 18 عامًا في خدمة كبرى الشركات والمصانع.
+                {content.footerDesc}
               </p>
               <div className="flex gap-4">
-                <a href="https://facebook.com/negma.wood" target="_blank" rel="noopener noreferrer nofollow" aria-label="صفحة فيسبوك لشركة النجمة" className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors">
+                <a href="https://facebook.com/negma.wood" target="_blank" rel="noopener noreferrer nofollow" aria-label="Facebook Page" className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors">
                   <Facebook className="w-5 h-5" />
                 </a>
               </div>
             </div>
 
             <div>
-              <h3 className="font-bold text-lg mb-4 text-foreground">روابط سريعة</h3>
+              <h3 className="font-bold text-lg mb-4 text-foreground">{content.footerQuickLinks}</h3>
               <ul className="space-y-3">
                 {navItems.map((item) => (
                   <li key={item.path}>
@@ -256,22 +340,21 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
 
             <div>
-              <h3 className="font-bold text-lg mb-4 text-foreground">المنتجات</h3>
+              <h3 className="font-bold text-lg mb-4 text-foreground">{content.footerProducts}</h3>
               <ul className="space-y-3">
-                <li><span className="text-muted-foreground text-sm">بالتة 100 × 120</span></li>
-                <li><span className="text-muted-foreground text-sm">بالتة يورو (Euro Pallet)</span></li>
-                <li><span className="text-muted-foreground text-sm">تصميمات مخصصة</span></li>
-                <li><span className="text-muted-foreground text-sm">معالجة حرارية (HT)</span></li>
+                {content.footerProductsList.map((prod, index) => (
+                  <li key={index}><span className="text-muted-foreground text-sm">{prod}</span></li>
+                ))}
               </ul>
             </div>
 
             <div>
-              <h3 className="font-bold text-lg mb-4 text-foreground">تواصل معنا</h3>
+              <h3 className="font-bold text-lg mb-4 text-foreground">{content.footerContact}</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <Phone className="w-5 h-5 text-primary mt-0.5" />
                   <div className="flex flex-col gap-1">
-                    <a href="tel:01080012261" className="text-sm text-muted-foreground hover:text-primary transition-colors dir-ltr text-right">01080012261</a>
+                    <a href="tel:01080012261" className={`text-sm text-muted-foreground hover:text-primary transition-colors dir-ltr ${content.oppositeAlignClass}`}>01080012261</a>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
@@ -288,7 +371,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     rel="noreferrer" 
                     className="text-sm text-muted-foreground hover:text-primary transition-colors leading-relaxed"
                   >
-                    بني سويف - المنطقة الصناعية بياض العرب (بجوار علوم إدارية)
+                    {content.footerAddress}
                   </a>
                 </li>
               </ul>
@@ -296,11 +379,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
           
           <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-muted-foreground text-center md:text-right">
-              © {new Date().getFullYear()} شركة النجمة لتصنيع الباليات الخشبية. جميع الحقوق محفوظة.
+            <p className="text-xs text-muted-foreground text-center">
+              {content.footerCopyright}
             </p>
             <p className="text-xs text-muted-foreground">
-              تم التطوير بواسطة{" "}
+              {content.footerDev}{" "}
               <a 
                 href="https://xfai.vercel.app/" 
                 target="_blank" 

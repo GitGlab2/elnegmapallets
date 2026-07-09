@@ -1,46 +1,29 @@
-import type { Metadata } from "next";
 import { articles } from "@/data/articles";
+import { articlesEn } from "@/data/articles-en";
 import { notFound } from "next/navigation";
-import { ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { TableOfContents, ArticleContactCard, ArticleShareWidget } from "@/components/ArticleSidebarWidgets";
 
-type Props = {
-  params: Promise<{ slug: string }>;
-};
-
-// Generate metadata dynamically for SEO
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const article = articles.find((a) => a.slug === slug);
-  if (!article) {
-    return {
-      title: "المقال غير موجود | شركة النجمة",
-    };
-  }
-  return {
-    title: `${article.title} | شركة النجمة`,
-    description: article.description,
-    keywords: article.keywords,
-  };
-}
-
-// Generate static params for Next.js static build export
-export async function generateStaticParams() {
-  return articles.map((article) => ({
-    slug: article.slug,
-  }));
-}
-
-export default async function ArticleDetailsPage({ params }: Props) {
-  const { slug } = await params;
-  const article = articles.find((a) => a.slug === slug);
+export default function ArticleDetails({ slug, lang = "ar" }: { slug: string; lang?: "ar" | "en" }) {
+  const isEn = lang === "en";
+  const currentArticles = isEn ? articlesEn : articles;
+  const article = currentArticles.find((a) => a.slug === slug);
 
   if (!article) {
     notFound();
   }
 
   // Define Table of Contents items dynamically from metadata
-  const tableOfContents = article.toc || [
+  const tableOfContents = article.toc || (isEn ? [
+    { title: "Introduction & Unitization", target: "#intro" },
+    { title: "Infrastructure & Ports", target: "#infrastructure" },
+    { title: "Agricultural & Industrial Sectors", target: "#sectors" },
+    { title: "Pallet Mechanical Engineering", target: "#engineering" },
+    { title: "Standard Dimensions Specifications", target: "#dimensions" },
+    { title: "ISPM-15 Phytosanitary Standard", target: "#ispm15" },
+    { title: "Container Stuffing Mathematics", target: "#containers" },
+    { title: "Complementary Packaging Systems", target: "#protection" },
+  ] : [
     { title: "مقدمة ودور البالتات", target: "#intro" },
     { title: "البنية التحتية والموانئ", target: "#infrastructure" },
     { title: "القطاعات الزراعية والصناعية", target: "#sectors" },
@@ -49,10 +32,31 @@ export default async function ArticleDetailsPage({ params }: Props) {
     { title: "معيار الصحة النباتية ISPM-15", target: "#ispm15" },
     { title: "لوجستيات ورياضيات الحاويات", target: "#containers" },
     { title: "أنظمة التغليف المكملة للشحنة", target: "#protection" },
-  ];
+  ]);
+
+  const config = {
+    ar: {
+      backText: "العودة للمقالات",
+      backPath: "/articles",
+      fontClass: "font-['Cairo']",
+      dir: "rtl" as const,
+      alignClass: "text-right",
+      borderSide: "border-right",
+      paddingSide: "padding-right",
+    },
+    en: {
+      backText: "Back to Articles",
+      backPath: "/en/articles",
+      fontClass: "font-sans",
+      dir: "ltr" as const,
+      alignClass: "text-left",
+      borderSide: "border-left",
+      paddingSide: "padding-left",
+    }
+  }[lang];
 
   return (
-    <div className="min-h-screen bg-[#181b24] text-white py-8 md:py-16 font-['Cairo']" dir="rtl">
+    <div className={`min-h-screen bg-[#181b24] text-white py-8 md:py-16 ${config.fontClass}`} dir={config.dir}>
       
       {/* Scoped CSS Styles for Article Body rendering */}
       <style dangerouslySetInnerHTML={{ __html: `
@@ -62,8 +66,8 @@ export default async function ArticleDetailsPage({ params }: Props) {
           color: #ffffff;
           margin-top: 2.5rem;
           margin-bottom: 1.25rem;
-          border-right: 4px solid #b165fb;
-          padding-right: 0.75rem;
+          ${config.borderSide}: 4px solid #b165fb;
+          ${config.paddingSide}: 0.75rem;
           scroll-margin-top: 100px;
         }
         .article-body h3 {
@@ -83,13 +87,13 @@ export default async function ArticleDetailsPage({ params }: Props) {
         }
         .article-body ul {
           list-style-type: disc;
-          padding-right: 1.5rem;
+          ${config.paddingSide}: 1.5rem;
           margin-bottom: 1.5rem;
           color: #cbd5e1;
         }
         .article-body ol {
           list-style-type: decimal;
-          padding-right: 1.5rem;
+          ${config.paddingSide}: 1.5rem;
           margin-bottom: 1.5rem;
           color: #cbd5e1;
         }
@@ -116,13 +120,14 @@ export default async function ArticleDetailsPage({ params }: Props) {
           font-weight: 800;
           padding: 1rem;
           border-bottom: 2px solid rgba(177, 101, 251, 0.3);
-          text-align: right;
+          text-align: ${isEn ? "left" : "right"};
         }
         .article-body td {
           padding: 1rem;
           border-bottom: 1px solid rgba(177, 101, 251, 0.1);
           color: #e2e8f0;
           line-height: 1.6;
+          text-align: ${isEn ? "left" : "right"};
         }
         .article-body tr:hover {
           background-color: rgba(177, 101, 251, 0.05);
@@ -134,11 +139,11 @@ export default async function ArticleDetailsPage({ params }: Props) {
         {/* Back Link */}
         <div className="mb-8">
           <a 
-            href="/articles" 
+            href={config.backPath} 
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-white transition-colors"
           >
-            <ArrowRight className="w-4 h-4" />
-            العودة للمقالات
+            {isEn ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
+            {config.backText}
           </a>
         </div>
 
@@ -149,7 +154,7 @@ export default async function ArticleDetailsPage({ params }: Props) {
           
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 md:p-12 items-center">
             {/* Title & Metadata */}
-            <div className="lg:col-span-7 flex flex-col gap-5 text-right">
+            <div className={`lg:col-span-7 flex flex-col gap-5 ${config.alignClass}`}>
               <span className="bg-secondary/20 border border-secondary/30 text-secondary w-fit px-3 py-1.5 rounded-full text-xs font-bold">
                 {article.category}
               </span>
@@ -160,7 +165,6 @@ export default async function ArticleDetailsPage({ params }: Props) {
               <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                 {article.description}
               </p>
-
             </div>
 
             {/* Main Image */}
@@ -177,7 +181,7 @@ export default async function ArticleDetailsPage({ params }: Props) {
         {/* Content Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           
-          {/* Right Column: Article Content */}
+          {/* Right/Left Column: Article Content */}
           <main className="lg:col-span-8 flex flex-col bg-muted/10 border border-border/20 rounded-3xl p-6 md:p-10 shadow-lg">
             <div 
               className="article-body"
@@ -185,11 +189,11 @@ export default async function ArticleDetailsPage({ params }: Props) {
             />
           </main>
 
-          {/* Left Column: Sidebar Widgets */}
+          {/* Left/Right Column: Sidebar Widgets */}
           <aside className="lg:col-span-4 flex flex-col gap-8">
-            <TableOfContents items={tableOfContents} />
-            <ArticleContactCard />
-            <ArticleShareWidget title={article.title} description={article.description} />
+            <TableOfContents items={tableOfContents} lang={lang} />
+            <ArticleContactCard lang={lang} />
+            <ArticleShareWidget title={article.title} description={article.description} lang={lang} />
           </aside>
 
         </div>

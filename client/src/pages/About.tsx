@@ -1,6 +1,39 @@
 import { motion } from "framer-motion";
 
-export default function About() {
+export default function About({ lang = "ar" }: { lang?: "ar" | "en" }) {
+  const isEn = lang === "en";
+
+  const content = {
+    ar: {
+      title: "من نحن - نبذة عن الشركة",
+      desc1: "شركة النجمة لتصنيع البالتات الخشبية هي شركة مصرية رائدة تتمتع بخبرة تزيد عن 18 عامًا في مجال تصنيع البالتات الخشبية بجميع أنواعها وأشكالها. نحن متخصصون في توفير حلول البالتات الخشبية عالية الجودة لكبرى الشركات والمصانع داخل مصر وخارجها.",
+      desc2: "تمكنا عبر سنوات الخبرة من بناء سمعة قوية كأفضل مورد للبالتات في السوق المصري، حيث نلتزم بأعلى معايير الجودة ودقة المواصفات والتسليم في المواعيد المحددة. تتنوع منتجاتنا لتلبية احتياجات مختلف القطاعات الصناعية بما في ذلك الأسمنت، السيراميك، الكيماويات، الإلكترونيات، والعديد من المجالات الأخرى.",
+      missionTitle: "رسالتنا",
+      missionDesc: "تقديم بالتة خشبية مصرية بمواصفة عالمية، تلبي احتياجات السوق المحلي والعالمي بأعلى معايير الجودة.",
+      visionTitle: "رؤيتنا",
+      visionDesc: "الريادة في حلول النقل والتخزين والصادرات الخشبية بالسوقين المحلي والدولي، وأن نكون الاختيار الأول للمصانع والشركات الكبرى.",
+      logo1: "شركة",
+      logo2: "النجمة",
+      imgAlt: "مصنع شركة النجمة للبالتات الخشبية",
+      alignClass: "text-right",
+      oppositeAlignClass: "text-left",
+    },
+    en: {
+      title: "About Us - Company Overview",
+      desc1: "El Negma for Wooden Pallets Manufacturing is a leading Egyptian company with over 18 years of experience in the wood packaging industry. We specialize in providing high-quality wooden pallet solutions to major domestic and international companies.",
+      desc2: "Over the years, we have built a solid reputation as the premier pallet supplier in the Egyptian market. We commit to the highest quality control, dimensional precision, and timely delivery. Our products serve diverse sectors including cement, ceramics, chemicals, electronics, and many others.",
+      missionTitle: "Our Mission",
+      missionDesc: "To deliver high-grade Egyptian wooden pallets that meet international standards, serving both local and global supply chains with extreme reliability.",
+      visionTitle: "Our Vision",
+      visionDesc: "To lead the domestic and international wood cargo and warehousing industry, remaining the first choice for major factories and shipping companies.",
+      logo1: "El Negma",
+      logo2: "Pallets",
+      imgAlt: "El Negma Pallets Factory",
+      alignClass: "text-left",
+      oppositeAlignClass: "text-right",
+    }
+  }[lang];
+
   return (
     <div className="flex flex-col gap-16">
       
@@ -21,7 +54,7 @@ export default function About() {
                 <source srcSet="/images/sections/factory-image.webp" type="image/webp" />
                 <img 
                   src="/images/sections/factory-image.webp" 
-                  alt="مصنع شركة النجمة للبالتات الخشبية" 
+                  alt={content.imgAlt} 
                   width={800}
                   height={600}
                   loading="lazy"
@@ -37,21 +70,21 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-7 flex flex-col justify-center text-right"
+            className={`lg:col-span-7 flex flex-col justify-center ${content.alignClass}`}
           >
             <div className="flex items-stretch gap-4 mb-6 justify-start">
               <div className="w-1.5 bg-secondary rounded-full" />
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight">
-                من نحن - نبذة عن الشركة
+                {content.title}
               </h2>
             </div>
 
             <p className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed mb-4 md:mb-6">
-              شركة النجمة لتصنيع البالتات الخشبية هي شركة مصرية رائدة تتمتع بخبرة تزيد عن 18 عامًا في مجال تصنيع البالتات الخشبية بجميع أنواعها وأشكالها. نحن متخصصون في توفير حلول البالتات الخشبية عالية الجودة لكبرى الشركات والمصانع داخل مصر وخارجها.
+              {content.desc1}
             </p>
             
             <p className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed">
-              تمكنا عبر سنوات الخبرة من بناء سمعة قوية كأفضل مورد للبالتات في السوق المصري، حيث نلتزم بأعلى معايير الجودة ودقة المواصفات والتسليم في المواعيد المحددة. تتنوع منتجاتنا لتلبية احتياجات مختلف القطاعات الصناعية بما في ذلك الأسمنت، السيراميك، الكيماويات، الإلكترونيات، والعديد من المجالات الأخرى.
+              {content.desc2}
             </p>
           </motion.div>
 
@@ -78,19 +111,19 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="lg:col-span-7 text-right flex flex-col gap-8 order-2 lg:order-1"
+              className={`lg:col-span-7 ${content.alignClass} flex flex-col gap-8 order-2 lg:order-1`}
             >
               <div>
-                <h4 className="font-bold text-secondary text-xl md:text-2xl mb-2 md:mb-3">رسالتنا</h4>
+                <h4 className="font-bold text-secondary text-xl md:text-2xl mb-2 md:mb-3">{content.missionTitle}</h4>
                 <p className="text-base md:text-lg lg:text-xl text-white/90 leading-relaxed">
-                  تقديم بالتة خشبية مصرية بمواصفة عالمية، تلبي احتياجات السوق المحلي والعالمي بأعلى معايير الجودة.
+                  {content.missionDesc}
                 </p>
               </div>
 
               <div>
-                <h4 className="font-bold text-secondary text-xl md:text-2xl mb-2 md:mb-3">رؤيتنا</h4>
+                <h4 className="font-bold text-secondary text-xl md:text-2xl mb-2 md:mb-3">{content.visionTitle}</h4>
                 <p className="text-base md:text-lg lg:text-xl text-white/90 leading-relaxed">
-                  الريادة في حلول النقل والتخزين والصادرات الخشبية بالسوقين المحلي والدولي، وأن نكون الاختيار الأول للمصانع والشركات الكبرى.
+                  {content.visionDesc}
                 </p>
               </div>
             </motion.div>
@@ -106,10 +139,10 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="lg:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-right justify-center order-1 lg:order-3"
+              className={`lg:col-span-4 flex flex-col items-center lg:items-start text-center ${isEn ? "lg:text-left" : "lg:text-right"} justify-center order-1 lg:order-3`}
             >
-              <span className="text-white/80 text-xl md:text-3xl font-black mb-1">شركة</span>
-              <span className="text-white text-4xl md:text-6xl lg:text-7xl font-black tracking-wider">النجمة</span>
+              <span className="text-white/80 text-xl md:text-3xl font-black mb-1">{content.logo1}</span>
+              <span className="text-white text-4xl md:text-6xl lg:text-7xl font-black tracking-wider">{content.logo2}</span>
             </motion.div>
 
           </div>

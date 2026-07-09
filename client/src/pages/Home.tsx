@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Phone } from "lucide-react";
+import { ArrowLeft, ArrowRight, Phone } from "lucide-react";
 
 // Eager imports of all sections to prevent layout shifts and ensure accurate scroll target positioning
 import AdvantagesSlide from "./AdvantagesSlide";
@@ -20,13 +20,44 @@ import FutureVision from "./FutureVision";
 import Contact from "./Contact";
 import { CertificationsList, QualityCertImage, InternationalStandardsImage } from "./Certifications";
 
-export default function Home() {
+export default function Home({ lang = "ar" }: { lang?: "ar" | "en" }) {
+  const isEn = lang === "en";
+
+  const heroContent = {
+    ar: {
+      badge: "الشركة رقم 1 في مصر",
+      titlePrefix: "شركة",
+      titleMain: "النجمة لتصنيع البالتات الخشبية",
+      desc: "الموقع الرسمي | خبرة 18 عاماً في تصنيع البالتات عالية الجودة للتصدير والسوق المحلي بأعلى المواصفات العالمية.",
+      btnExplore: "استكشف منتجاتنا",
+      btnContact: "تواصل معنا",
+      clientsCount: "+500 عميل",
+      clientsText: "يثقون في متانة منتجاتنا وتوريداتنا",
+      ctaTitle: "جاهز لطلب كميتك؟",
+      ctaDesc: "احصل على عرض سعر خاص ومزايا إضافية للكميات، واستفد من خدمات التوريد والشحن المجاني.",
+      ctaContact: "تواصل معنا",
+    },
+    en: {
+      badge: "#1 Manufacturer in Egypt",
+      titlePrefix: "El Negma",
+      titleMain: "Wooden Pallets Manufacturing",
+      desc: "Official Website | 18 Years of Experience in Manufacturing High-Quality Pallets for Export & Local Markets to International Standards.",
+      btnExplore: "Explore Our Products",
+      btnContact: "Contact Us",
+      clientsCount: "+500 Clients",
+      clientsText: "Trusting the durability of our products & supplies",
+      ctaTitle: "Ready to Order Your Batch?",
+      ctaDesc: "Get a special quote and additional volume benefits, and take advantage of our delivery services.",
+      ctaContact: "Contact Us",
+    }
+  }[lang];
+
   return (
-    <div className="flex flex-col gap-10 pb-20 bg-[#181b24] text-white">
+    <div className={`flex flex-col gap-10 pb-20 bg-[#181b24] text-white ${isEn ? "font-sans" : "font-['Cairo']"}`}>
       
       {/* Slide 1.5: Advantages Image Slide (First Section - above the fold) */}
       <section id="home" className="scroll-mt-24">
-        <AdvantagesSlide />
+        <AdvantagesSlide lang={lang} />
       </section>
 
       {/* Slide 1: Hero Section (Theme Brown background) */}
@@ -43,39 +74,43 @@ export default function Home() {
         <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           {/* Content Panel */}
-          <div className="flex flex-col gap-6 text-right order-2 lg:order-1 animate-fade-in-right">
+          <div className={`flex flex-col gap-6 ${isEn ? "text-left order-2 lg:order-1 animate-fade-in-left" : "text-right order-2 lg:order-1 animate-fade-in-right"} justify-start`}>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 border border-accent/30 w-fit justify-start">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <span className="text-sm font-bold text-accent">الشركة رقم 1 في مصر</span>
+              <span className="text-sm font-bold text-accent">{heroContent.badge}</span>
             </div>
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black leading-tight tracking-tight text-white">
-              <span className="text-accent text-xl sm:text-2xl md:text-3xl lg:text-4xl block font-medium mb-1 md:mb-2">شركة</span>
-              النجمة لتصنيع البالتات الخشبية
+              <span className="text-accent text-xl sm:text-2xl md:text-3xl lg:text-4xl block font-medium mb-1 md:mb-2">{heroContent.titlePrefix}</span>
+              {heroContent.titleMain}
             </h1>
             
             <p className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-xl">
-              الموقع الرسمي | خبرة 18 عاماً في تصنيع البالتات عالية الجودة للتصدير والسوق المحلي بأعلى المواصفات العالمية.
+              {heroContent.desc}
             </p>
             
             <div className="flex flex-wrap gap-4 mt-4">
               <a href="#products-section">
                 <Button size="lg" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-6 font-bold shadow-xl shadow-secondary/20 hover:shadow-secondary/40 transition-all bg-secondary hover:bg-secondary/90">
-                  استكشف منتجاتنا
-                  <ArrowLeft className="mr-2 w-5 h-5" />
+                  {heroContent.btnExplore}
+                  {isEn ? (
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  ) : (
+                    <ArrowLeft className="mr-2 w-5 h-5" />
+                  )}
                 </Button>
               </a>
               <a href="#contact-section">
                 <Button variant="outline" size="lg" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-6 font-bold border-2 border-white/20 hover:bg-white/10 transition-all text-white bg-transparent">
-                  تواصل معنا
+                  {heroContent.btnContact}
                 </Button>
               </a>
             </div>
 
             <div className="flex items-center gap-6 mt-6 md:mt-8 pt-6 md:pt-8 border-t border-white/10 justify-start">
               <div className="flex flex-col">
-                <span className="font-black text-xl md:text-2xl text-accent">+500 عميل</span>
-                <span className="text-sm text-white/70 mt-0.5">يثقون في متانة منتجاتنا وتوريداتنا</span>
+                <span className="font-black text-xl md:text-2xl text-accent">{heroContent.clientsCount}</span>
+                <span className="text-sm text-white/70 mt-0.5">{heroContent.clientsText}</span>
               </div>
             </div>
           </div>
@@ -90,7 +125,7 @@ export default function Home() {
                 <source media="(min-width: 769px)" srcSet="/images/sections/products-image.webp" type="image/webp" />
                 <img 
                   src="/images/sections/products-image.webp" 
-                  alt="تفاصيل الباليات خشبية" 
+                  alt={isEn ? "Wooden pallets details" : "تفاصيل الباليات خشبية"} 
                   width={600}
                   height={480}
                   className="relative styled-image w-full h-[280px] sm:h-[350px] lg:h-[480px] object-contain shadow-2xl"
@@ -106,88 +141,92 @@ export default function Home() {
 
       {/* Sections Rendered Eagerly to prevent layout shifting scroll issues */}
       <section id="about-section" className="scroll-mt-24">
-        <About />
+        <About lang={lang} />
       </section>
 
       <section id="products-section" className="scroll-mt-24">
-        <Products />
+        <Products lang={lang} />
       </section>
 
       <section id="features-section" className="scroll-mt-24">
-        <Features />
+        <Features lang={lang} />
       </section>
 
       <section id="operations-section" className="scroll-mt-24">
-        <Operations />
+        <Operations lang={lang} />
       </section>
 
       <section id="team-image-section" className="scroll-mt-24">
-        <TeamImageSlide />
+        <TeamImageSlide lang={lang} />
       </section>
 
       <section id="operations-video-section" className="scroll-mt-24">
-        <OperationsVideo />
+        <OperationsVideo lang={lang} />
       </section>
 
       <section id="clients-section" className="scroll-mt-24">
-        <Clients />
+        <Clients lang={lang} />
       </section>
 
       <section id="gallery-section" className="scroll-mt-24">
-        <Gallery />
+        <Gallery lang={lang} />
       </section>
 
       <section id="pricing-section" className="scroll-mt-24">
-        <Pricing />
+        <Pricing lang={lang} />
       </section>
 
       <section id="certifications-section" className="scroll-mt-24">
-        <CertificationsList />
+        <CertificationsList lang={lang} />
       </section>
 
       <section id="quality-cert-section" className="scroll-mt-24">
-        <QualityCertImage />
+        <QualityCertImage lang={lang} />
       </section>
 
       <section id="commitments-section" className="scroll-mt-24">
-        <Commitments />
+        <Commitments lang={lang} />
       </section>
 
       <section id="achievements-section" className="scroll-mt-24">
-        <Achievements />
+        <Achievements lang={lang} />
       </section>
 
       <section id="international-standards-section" className="scroll-mt-24">
-        <InternationalStandardsImage />
+        <InternationalStandardsImage lang={lang} />
       </section>
 
       <section id="future-vision-section" className="scroll-mt-24">
-        <FutureVision />
+        <FutureVision lang={lang} />
       </section>
 
       <section id="contact-section" className="scroll-mt-24">
-        <Contact />
+        <Contact lang={lang} />
       </section>
 
       {/* Bottom Call to Action banner */}
       <section className="container">
         <div className="relative rounded-2xl md:rounded-3xl overflow-hidden bg-[#59331f] text-white px-4 py-10 md:p-20 text-center border border-border/40">
-          <div className="absolute inset-0 bg-[url('/images/logistics-truck.webp')] bg-cover bg-center opacity-10 mix-blend-overlay" />
+          <div className="absolute inset-0 bg-[url('/images/sections/logistics-truck.webp')] bg-cover bg-center opacity-10 mix-blend-overlay" />
           <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center gap-6 md:gap-8">
-            <h2 className="text-2xl md:text-3xl lg:text-5xl font-black text-accent">جاهز لطلب كميتك؟</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-5xl font-black text-accent">{heroContent.ctaTitle}</h2>
             <p className="text-sm md:text-lg opacity-90 leading-relaxed">
-              احصل على عرض سعر خاص ومزايا إضافية للكميات، واستفد من خدمات التوريد والشحن المجاني.
+              {heroContent.ctaDesc}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
               <a href="tel:01080012261" className="w-full sm:w-auto">
                 <Button size="lg" className="w-full text-lg font-bold h-14 px-8 bg-secondary hover:bg-secondary/90 text-white">
-                  <Phone className="ml-2 w-5 h-5" />
+                  {isEn ? (
+                    <Phone className="mr-2 w-5 h-5" />
+                  ) : (
+                    <Phone className="ml-2 w-5 h-5" />
+                  )}
                   01080012261
                 </Button>
               </a>
-              <a href="#contact-section" className="w-full sm:w-auto">
+              <a href={isEn ? "#contact-section" : "#contact-section"} className="w-full sm:w-auto">
                 <Button size="lg" variant="outline" className="w-full text-lg font-bold h-14 px-8 bg-transparent border-white/40 hover:bg-white/10 text-white">
-                  تواصل معنا
+                  {heroContent.ctaContact}
                 </Button>
               </a>
             </div>

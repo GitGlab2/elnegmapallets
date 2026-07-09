@@ -1,29 +1,69 @@
 import { motion } from "framer-motion";
-import { Truck, Search, ShieldAlert, BadgeAlert, Percent, Flame } from "lucide-react";
+import { Truck, Search, ShieldAlert, BadgeAlert, Flame } from "lucide-react";
 
-export default function Features() {
-  const advantages = [
-    {
-      title: "توريد أي كمية خلال 48 ساعة فقط",
-      icon: <Truck className="w-5 h-5 text-secondary shrink-0" />
+export default function Features({ lang = "ar" }: { lang?: "ar" | "en" }) {
+  const isEn = lang === "en";
+
+  const content = {
+    ar: {
+      title1: "مزايانا",
+      title2: "التنافسية",
+      imgAlt: "مزايا شركة النجمة التنافسية",
+      alignClass: "text-right",
+      oppositeAlignClass: "text-left",
+      advantages: [
+        {
+          title: "توريد أي كمية خلال 48 ساعة فقط",
+          icon: <Truck className="w-5 h-5 text-secondary shrink-0" />
+        },
+        {
+          title: "الشحن والمعاينة مجاناً للكميات",
+          icon: <Search className="w-5 h-5 text-secondary shrink-0" />
+        },
+        {
+          title: "ضمان الجودة والاستلام على المواصفة",
+          icon: <ShieldAlert className="w-5 h-5 text-secondary shrink-0" />
+        },
+        {
+          title: "قسم فني متخصص لعمل المواصفات مجاناً",
+          icon: <BadgeAlert className="w-5 h-5 text-secondary shrink-0" />
+        },
+        {
+          title: "معالجة حرارية (HT) معتمدة للتصدير العالمي - نقدمها مجاناً للكميات الكبيرة",
+          icon: <Flame className="w-5 h-5 text-secondary shrink-0" />
+        }
+      ]
     },
-    {
-      title: "الشحن والمعاينة مجاناً للكميات",
-      icon: <Search className="w-5 h-5 text-secondary shrink-0" />
-    },
-    {
-      title: "ضمان الجودة والاستلام على المواصفة",
-      icon: <ShieldAlert className="w-5 h-5 text-secondary shrink-0" />
-    },
-    {
-      title: "قسم فني متخصص لعمل المواصفات مجاناً",
-      icon: <BadgeAlert className="w-5 h-5 text-secondary shrink-0" />
-    },
-    {
-      title: "معالجة حرارية (HT) معتمدة للتصدير العالمي - نقدمها مجاناً للكميات الكبيرة",
-      icon: <Flame className="w-5 h-5 text-secondary shrink-0" />
+    en: {
+      title1: "Our Competitive",
+      title2: "Advantages",
+      imgAlt: "Competitive Advantages of El Negma",
+      alignClass: "text-left",
+      oppositeAlignClass: "text-right",
+      advantages: [
+        {
+          title: "Delivery of any batch size in just 48 hours",
+          icon: <Truck className="w-5 h-5 text-secondary shrink-0" />
+        },
+        {
+          title: "Free shipping and sample inspection for bulk orders",
+          icon: <Search className="w-5 h-5 text-secondary shrink-0" />
+        },
+        {
+          title: "Quality assurance and alignment with agreed specs",
+          icon: <ShieldAlert className="w-5 h-5 text-secondary shrink-0" />
+        },
+        {
+          title: "Specialized technical department to create custom designs for free",
+          icon: <BadgeAlert className="w-5 h-5 text-secondary shrink-0" />
+        },
+        {
+          title: "ISPM-15 Heat Treatment (HT) certified for global export - free for large orders",
+          icon: <Flame className="w-5 h-5 text-secondary shrink-0" />
+        }
+      ]
     }
-  ];
+  }[lang];
 
   return (
     <div className="container py-8 md:py-12" id="features">
@@ -51,10 +91,10 @@ export default function Features() {
             <div className="relative w-full max-w-sm md:max-w-md">
               <img 
                 src="/images/sections/advantages-1.webp" 
-                alt="مزايا شركة النجمة التنافسية" 
+                alt={content.imgAlt} 
                 className="styled-image w-full h-60 md:h-80 object-contain"
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
+                  (e.target as HTMLImageElement).src = '/images/sections/sectors-preview.webp';
                 }}
               />
             </div>
@@ -66,19 +106,19 @@ export default function Features() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-6 flex flex-col justify-center text-right order-1 lg:order-2"
+            className={`lg:col-span-6 flex flex-col justify-center ${content.alignClass} order-1 lg:order-2`}
           >
             <div className="flex items-stretch gap-3 md:gap-4 mb-4 md:mb-6 justify-start">
               <div className="w-1.5 bg-secondary rounded-full" />
               <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-white leading-tight">
-                مزايانا<br />التنافسية
+                {content.title1}<br />{content.title2}
               </h2>
             </div>
 
             {/* Advantages List */}
             <ul className="flex flex-col gap-4 md:gap-5 mt-2 md:mt-4">
-              {advantages.map((adv, index) => (
-                <li key={index} className="flex items-center gap-3 md:gap-4 text-right justify-start">
+              {content.advantages.map((adv, index) => (
+                <li key={index} className={`flex items-center gap-3 md:gap-4 ${content.alignClass} justify-start`}>
                   <div className="shrink-0 p-1 md:p-1.5 rounded-full bg-secondary/15">
                     {adv.icon}
                   </div>

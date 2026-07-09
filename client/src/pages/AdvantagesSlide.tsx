@@ -1,4 +1,5 @@
-export default function AdvantagesSlide() {
+export default function AdvantagesSlide({ lang = "ar" }: { lang?: "ar" | "en" }) {
+  const isEn = lang === "en";
   return (
     <div className="w-full py-0 bg-[#181b24]" id="advantages-slide">
       <div className="w-full flex flex-col items-center text-center">
@@ -10,7 +11,7 @@ export default function AdvantagesSlide() {
             <source media="(min-width: 769px)" srcSet="/images/sections/pallet-hero-detail.webp" type="image/webp" />
             <img 
               src="/images/sections/pallet-hero-detail.webp" 
-              alt="شركة النجمة لتصنيع البالتات الخشبية" 
+              alt={isEn ? "El Negma Pallets Manufacturing" : "شركة النجمة لتصنيع البالتات الخشبية"} 
               width={1920}
               height={600}
               fetchPriority="high"
