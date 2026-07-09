@@ -122,6 +122,192 @@ export const articlesEn: Article[] = [
     `
   },
   {
+    slug: "wood-types-for-pallets",
+    title: "Wood Types for Pallet Manufacturing: How to Choose the Right Timber for Your Cargo",
+    description: "A comprehensive guide on timber varieties used in wooden pallet manufacturing in Egypt (Swedish pine, musk wood, whitewood, beech) and the trade-offs in durability and price.",
+    date: "2026-07-09",
+    author: "Production & Operations - El Negma Pallets",
+    readTime: "5 mins",
+    image: "/images/articles/wood-types-for-pallets.webp",
+    category: "Timber & Manufacturing",
+    keywords: ["wood types for pallets", "swedish pine pallet wood", "musk wood pallets", "pallet manufacturing Egypt", "best timber for pallets", "hardwood vs softwood pallets", "pallet board thickness"],
+    toc: [
+      { title: "Why Wood Type Matters for Pallet Quality", target: "#why-wood-matters" },
+      { title: "Timber Varieties Used in Egyptian Pallets", target: "#wood-types-egypt" },
+      { title: "Choosing the Right Wood for Your Shipment", target: "#choosing-wood-type" },
+      { title: "Thickness and Moisture Rules for Export", target: "#thickness-moisture" }
+    ],
+    content: `
+      <div class="space-y-6 text-left leading-relaxed text-gray-200">
+        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
+          <h2 id="why-wood-matters" class="text-xl font-bold text-accent mb-2">1. Why Wood Type Matters for Pallet Quality</h2>
+          <p class="text-sm text-gray-300">
+            Selecting the right <strong>wood types for pallets</strong> is key to determining its service lifespan, dynamic load capacity, and international export eligibility. A poorly manufactured pallet made from substandard lumber can break during transit, risking product loss. That is why procurement directors learn the trade-offs of different <strong>wood types for pallets</strong> before purchasing.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="wood-types-egypt" class="text-xl font-bold text-white border-b border-border pb-1">2. Timber Varieties Used in Egyptian Pallets</h2>
+          <p class="text-sm text-gray-300">
+            Timber used in <strong>pallet manufacturing Egypt</strong> is classified into several key categories:
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Swedish Pine (Spruce/Pine):</strong> Commonly referred to as "<strong>swedish pine pallet wood</strong>" in the local Egyptian market. It provides standard dynamic load capacities (up to 1,500 kg) with low weight, making it excellent for fruit, vegetable, and food exports.</li>
+            <li><strong>Musk Wood (Redwood):</strong> An economical softwood ideal for one-way export shipments where pallets are not returned. It offers a great balance of cost and load rating.</li>
+            <li><strong>Whitewood:</strong> Soft, lightweight timber commonly used for light-to-medium cargo. Highly compatible with European standard timber regulations.</li>
+            <li><strong>Beech Hardwood:</strong> Extremely strong and heavy timber reserved for heavy-duty cargo like industrial machinery, marble slabs, or ceramics. Supports dynamic loads well above 2,000 kg.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="choosing-wood-type" class="text-xl font-bold text-white border-b border-border pb-1">3. Choosing the Right Wood for Your Shipment</h2>
+          <p class="text-sm text-gray-300">
+            Select the **best timber for pallets** depending on your products and route:
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Fresh Produce & Citrus:</strong> Swedish pine or whitewood — lightweight, cost-effective, and moisture-controlled.</li>
+            <li><strong>Marble & Heavy Metals:</strong> Hardwood beech or thick, reinforced pine — boards must be at least 22mm thick.</li>
+            <li><strong>Chemicals & Solvents:</strong> Moisture-resistant timbers treated to ensure zero absorption of liquid chemical leaks.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="thickness-moisture" class="text-xl font-bold text-white border-b border-border pb-1">4. Thickness and Moisture Rules for Export</h2>
+          <p class="text-sm text-gray-300">
+            Regardless of wood species, two technical rules must be met for export compliance:
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Board Thickness:</strong> Standard pallets use 18mm to 22mm deck boards. At El Negma, we build custom specs with board thickness up to 25mm based on industrial client requirements.</li>
+            <li><strong>Moisture Control:</strong> Under ISPM-15 regulations, lumber moisture must not exceed 22%. Lower moisture prevents mold and fungal growth inside sealed shipping containers during sea voyages.</li>
+          </ul>
+          <p class="text-sm text-gray-300 mt-2">
+            At <strong>El Negma Pallets</strong>, we source premium imported logs and dry them to strict specs, ensuring our new wooden pallets meet global cargo quality guidelines.
+          </p>
+        </section>
+      </div>
+    `
+  },
+  {
+    slug: "pallet-prices-egypt",
+    title: "Wooden Pallet Prices in Egypt 2026: Wooden Platforms for Sale & Best Buying Places",
+    description: "Your complete guide to wooden pallet prices in Egypt for 2026, factors determining new and used pallet costs, and specifications of certified wooden pallet factories.",
+    date: "2026-07-09",
+    author: "Commercial Analysis - El Negma Pallets",
+    readTime: "4 mins",
+    image: "/images/articles/pallet-prices-egypt.webp",
+    category: "Market Prices & Supply",
+    keywords: ["wooden pallet prices in Egypt", "wooden platforms for sale", "buy wooden pallets", "wooden pallet factory", "places to buy pallets", "euro pallet price"],
+    toc: [
+      { title: "The Egyptian Pallet Market in 2026", target: "#egypt-market-2026" },
+      { title: "Factors Determining Wooden Pallet Prices", target: "#price-factors" },
+      { title: "Common Sizes and Estimated Prices in Egypt", target: "#common-sizes-prices" },
+      { title: "Where to Buy & How to Choose a Factory", target: "#where-to-buy" }
+    ],
+    content: `
+      <div class="space-y-6 text-left leading-relaxed text-gray-200">
+        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
+          <h2 id="egypt-market-2026" class="text-xl font-bold text-accent mb-2">1. The Egyptian Pallet Market in 2026</h2>
+          <p class="text-sm text-gray-300">
+            The market for <strong>wooden platforms for sale</strong> in Egypt has experienced steady growth, aligning with the large expansion of Egyptian agricultural and industrial exports. Procurement managers and supply chain directors are constantly searching for current <strong>wooden pallet prices in Egypt</strong> to secure storage and shipping processes at the best possible cost without compromising on security and safety standards.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="price-factors" class="text-xl font-bold text-white border-b border-border pb-1">2. Factors Determining Wooden Pallet Prices</h2>
+          <p class="text-sm text-gray-300">
+            Several key factors determine the price of a wooden pallet when planning to <strong>buy wooden pallets</strong> for your company or factory:
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Timber Species:</strong> Pallet factories use woods like Musk pine, Swedish white wood, or hardwoods. The source and thickness of the timber directly affect the final pallet price.</li>
+            <li><strong>Condition (New vs. Used):</strong> New wooden pallets offer superior durability, long operational life, and full compliance for international export. Used pallets are generally chosen for lower-cost internal warehousing.</li>
+            <li><strong>ISPM-15 Heat Treatment:</strong> Export shipments require timber packaging to be heat treated (HT) and stamped with the approved IPPC logo, adding a minor treatment cost while preventing customs rejection at international ports.</li>
+            <li><strong>Order Volume:</strong> Large suppliers like <strong>El Negma Pallets Factory</strong> offer custom volume discounts for bulk orders during peak agricultural export seasons.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="common-sizes-prices" class="text-xl font-bold text-white border-b border-border pb-1">3. Common Sizes and Pallet Prices in Egypt</h2>
+          <p class="text-sm text-gray-300">
+            Specifications and prices vary depending on dimensions and load capacities:
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Euro Pallet (120 × 80 cm):</strong> The standard approved European dimension for heavy cargo (up to 1,500 kg dynamic load).</li>
+            <li><strong>Industrial Pallet (120 × 100 cm):</strong> Also known as the citrus or Middle East pallet, highly requested for shipping agricultural goods.</li>
+            <li><strong>Chemical Square Pallet (114 × 114 cm):</strong> Specially engineered for chemical drums and evenly distributed industrial weights.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="where-to-buy" class="text-xl font-bold text-white border-b border-border pb-1">4. Places to Buy Pallets & Choosing the Right Supplier</h2>
+          <p class="text-sm text-gray-300">
+            When looking for <strong>places to buy pallets</strong>, look beyond pricing to find a supplier that commits to delivery schedules, dimensional tolerances, and certified heat treatment. 
+          </p>
+          <p class="text-sm text-gray-300 mt-2">
+            <strong>El Negma Pallets Factory</strong> (located in Biyad Al Arab, Beni Suef) is a key partner for major exporters in Egypt. We supply new wooden pallets manufactured to strict engineering standards, with automated production lines that guarantee bulk orders are fulfilled on schedule with certified HT stamps.
+          </p>
+        </section>
+      </div>
+    `
+  },
+  {
+    slug: "buying-pallets-guide",
+    title: "Places to Buy Wooden Pallets: A Comprehensive Guide for Exporters & Factories in Egypt",
+    description: "A professional guide to choosing the best places to buy wooden pallets in Egypt, and how to select a certified wooden pallet factory supplying new standard wooden platforms.",
+    date: "2026-07-09",
+    author: "Quality & Compliance - El Negma Pallets",
+    readTime: "5 mins",
+    image: "/images/articles/buying-pallets-guide.webp",
+    category: "Procurement & Customs Guides",
+    keywords: ["places to buy wooden pallets", "buy wooden pallets", "export wooden platforms", "wooden pallet factory in Egypt", "new wooden pallets", "wooden pallets for storage"],
+    toc: [
+      { title: "The Importance of Wooden Pallets in Exporting", target: "#importance-of-pallets" },
+      { title: "Standards for Choosing a Wooden Pallet Supplier", target: "#buying-standards" },
+      { title: "Why Buy New Automated Wooden Pallets?", target: "#new-vs-used-pallets" },
+      { title: "El Negma Pallets: The Logistics Partner for Egyptian Exporters", target: "#elnegma-pallet-factory" }
+    ],
+    content: `
+      <div class="space-y-6 text-left leading-relaxed text-gray-200">
+        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
+          <h2 id="importance-of-pallets" class="text-xl font-bold text-accent mb-2">1. The Importance of Wooden Pallets in Exporting</h2>
+          <p class="text-sm text-gray-300">
+            Using standard <strong>wooden pallets for storage</strong> and transport is critical for shipping. With rigorous phytosanitary standards enforced on Egyptian industrial and agricultural exports at international ports, selecting the right certified <strong>export wooden platforms</strong> is essential to ensure cargo safety and quick customs clearance.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="buying-standards" class="text-xl font-bold text-white border-b border-border pb-1">2. Standards for Choosing a Wooden Pallet Supplier</h2>
+          <p class="text-sm text-gray-300">
+            When planning to <strong>buy wooden pallets</strong>, check for these fundamental capabilities from your supplier:
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Official Licensing:</strong> A <strong>wooden pallet factory in Egypt</strong> must be licensed by the Agricultural Quarantine authority to execute ISPM-15 heat treatment (HT) and issue valid export certificates.</li>
+            <li><strong>Dimensional Precision:</strong> Any deviation in pallet dimensions can jam automated forklifts or lead to container load planning errors.</li>
+            <li><strong>Moisture & Timber Quality:</strong> Raw wood moisture content below 22% prevents mold, fungal growth, and rotting during maritime shipping.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="new-vs-used-pallets" class="text-xl font-bold text-white border-b border-border pb-1">3. Why Buy New Automated Wooden Pallets?</h2>
+          <p class="text-sm text-gray-300">
+            While used pallets are an option, global exporters prefer <strong>new wooden pallets</strong> for several reasons:
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Zero Contamination Risk:</strong> New pallets have never been stored in humid or infested environments, ensuring 100% compatibility with sanitary import controls.</li>
+            <li><strong>Verified Weight Limits:</strong> New pallets maintain full structural strength, handling up to 1,500 kg dynamic and 5,000 kg static load without risks of failure.</li>
+            <li><strong>Automated Stacking Consistency:</strong> Automated assembly ensures absolute dimensional uniformity, which is vital for modern smart warehouses.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="elnegma-pallet-factory" class="text-xl font-bold text-white border-b border-border pb-1">4. El Negma Pallets: The Logistics Partner for Egyptian Exporters</h2>
+          <p class="text-sm text-gray-300">
+            For reliability, quality, and strict adherence to supply contracts, <strong>El Negma Pallets Factory</strong> delivers standard and custom pallet solutions. We manufacture export pallets for citrus, chemicals, marble, and food items, using modern production lines and certified heat treatment chambers to fulfill high-volume orders for Egyptian and Middle Eastern industrial clients.
+          </p>
+        </section>
+      </div>
+    `
+  },
+  {
     slug: "ispm15-phytosanitary-standard",
     title: "ISPM-15 Phytosanitary Standard for Wood Packaging Guidelines",
     description: "Learn about the international standard for wood packaging material (ISPM-15), including heat treatment requirements and IPPC stamp codes.",

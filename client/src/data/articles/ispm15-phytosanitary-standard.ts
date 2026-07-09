@@ -9,7 +9,7 @@ export const ispm15PhytosanitaryStandardArticle: Article = {
   readTime: "3 دقائق",
   image: "/images/articles/ispm15-phytosanitary-standard.webp",
   category: "معايير الصحة النباتية",
-  keywords: ["معيار ISPM 15", "ختم الصحة النباتية", "ختم IPPC للبالتات", "تعقيم خشب التصدير", "الحجر الزراعي للبالتات"],
+  keywords: ["معيار ISPM 15", "ختم الصحة النباتية", "ختم IPPC للبالتات", "تعقيم خشب التصدير", "الحجر الزراعي للبالتات", "شهادة تبخير البالتات", "القمحة على البالتات", "ختم وزارة الزراعة للتصدير", "ISPM-15 مصر"],
   toc: [
     { title: "ما هو معيار ISPM 15؟", target: "#what-is-ispm15" },
     { title: "أهمية الختم الدولي ومكوناته", target: "#ippc-stamp" },

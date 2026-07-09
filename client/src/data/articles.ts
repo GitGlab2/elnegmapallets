@@ -1,6 +1,7 @@
 import { Article } from "./articles-types";
 import { palletPricesEgyptArticle } from "./articles/pallet-prices-egypt";
 import { buyingPalletsGuideArticle } from "./articles/buying-pallets-guide";
+import { woodTypesForPalletsArticle } from "./articles/wood-types-for-pallets";
 import { ispm15PhytosanitaryStandardArticle } from "./articles/ispm15-phytosanitary-standard";
 import { heatTreatmentVsMethylBromideArticle } from "./articles/heat-treatment-vs-methyl-bromide";
 import { newWoodenPalletsQualityStandardsArticle } from "./articles/new-wooden-pallets-quality-standards";
@@ -15,6 +16,7 @@ export type { Article, TocItem } from "./articles-types";
 export const articles: Article[] = [
   palletPricesEgyptArticle,
   buyingPalletsGuideArticle,
+  woodTypesForPalletsArticle,
   ispm15PhytosanitaryStandardArticle,
   heatTreatmentVsMethylBromideArticle,
   newWoodenPalletsQualityStandardsArticle,
