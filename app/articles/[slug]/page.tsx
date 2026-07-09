@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { articles } from "@/data/articles";
 import { notFound } from "next/navigation";
-import { Calendar, Clock, BookOpen, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { TableOfContents, ArticleContactCard, ArticleShareWidget } from "@/components/ArticleSidebarWidgets";
 
 type Props = {
@@ -161,20 +161,6 @@ export default async function ArticleDetailsPage({ params }: Props) {
                 {article.description}
               </p>
 
-              <div className="flex flex-wrap items-center gap-6 text-xs text-muted-foreground pt-4 border-t border-white/10">
-                <div className="flex items-center gap-1.5">
-                  <Calendar className="w-4 h-4 text-accent" />
-                  <span>تاريخ النشر: {new Date(article.date).toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <Clock className="w-4 h-4 text-accent" />
-                  <span>وقت القراءة: {article.readTime}</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <BookOpen className="w-4 h-4 text-accent" />
-                  <span>الكاتب: {article.author}</span>
-                </div>
-              </div>
             </div>
 
             {/* Main Image */}

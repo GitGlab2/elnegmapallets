@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { articles } from "@/data/articles";
-import { Calendar, Clock, BookOpen, ArrowLeft, Phone } from "lucide-react";
+import { BookOpen, ArrowLeft, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
@@ -52,17 +52,6 @@ export default function ArticlesPage() {
 
               {/* Card Content */}
               <div className="flex flex-col flex-1 p-6 text-right">
-                {/* Meta details */}
-                <div className="flex items-center gap-4 text-xs text-muted-foreground mb-4">
-                  <div className="flex items-center gap-1.5">
-                    <Calendar className="w-3.5 h-3.5 text-accent" />
-                    <span>{new Date(article.date).toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5 text-accent" />
-                    <span>{article.readTime}</span>
-                  </div>
-                </div>
 
                 {/* Title */}
                 <h2 className="text-xl font-bold text-white mb-3 leading-snug group-hover:text-accent transition-colors line-clamp-2">
