@@ -50,13 +50,11 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
   const navItems = isEn ? [
     { name: "About Us", path: "/en#about-section", isAnchor: true },
     { name: "Products", path: "/en#products-section", isAnchor: true },
-    { name: "Pallet Sizes", path: "/en/pallet-sizes", isAnchor: false },
     { name: "Contact Us", path: "/en#contact-section", isAnchor: true },
     { name: "Articles & Info", path: "/en/articles", isAnchor: false },
   ] : [
     { name: "من نحن", path: "/#about-section", isAnchor: true },
     { name: "المنتجات", path: "/#products-section", isAnchor: true },
-    { name: "مقاسات البالتات", path: "/pallet-sizes", isAnchor: false },
     { name: "تواصل معنا", path: "/#contact-section", isAnchor: true },
     { name: "المقالات والمعلومات", path: "/articles", isAnchor: false },
   ];

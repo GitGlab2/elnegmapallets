@@ -1,5 +1,4 @@
 import { Article } from "./articles-types";
-import { palletDimensionsStandardsArticle } from "./articles/pallet-dimensions-standards";
 import { ispm15PhytosanitaryStandardArticle } from "./articles/ispm15-phytosanitary-standard";
 import { heatTreatmentVsMethylBromideArticle } from "./articles/heat-treatment-vs-methyl-bromide";
 import { newWoodenPalletsQualityStandardsArticle } from "./articles/new-wooden-pallets-quality-standards";
@@ -12,7 +11,6 @@ import { datesFumigationAlternativesArticle } from "./articles/dates-fumigation-
 export type { Article, TocItem } from "./articles-types";
 
 export const articles: Article[] = [
-  palletDimensionsStandardsArticle,
   ispm15PhytosanitaryStandardArticle,
   heatTreatmentVsMethylBromideArticle,
   newWoodenPalletsQualityStandardsArticle,
@@ -22,3 +20,4 @@ export const articles: Article[] = [
   exportingChemicalsSafelyArticle,
   datesFumigationAlternativesArticle,
 ];
+

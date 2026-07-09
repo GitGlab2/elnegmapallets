@@ -1,6 +1,6 @@
 import { articles } from "@/data/articles";
 import { articlesEn } from "@/data/articles-en";
-import { BookOpen, ArrowLeft, ArrowRight, Phone } from "lucide-react";
+import { BookOpen, ArrowLeft, ArrowRight, Phone, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
@@ -20,6 +20,9 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
       ctaContact: "تواصل معنا",
       fontClass: "font-['Cairo']",
       dir: "rtl" as const,
+      palletSizesTitle: "دليل مقاسات وأبعاد البالتات الخشبية",
+      palletSizesDesc: "اكتشف أبعاد ومواصفات بالتات اليورو القياسية، بالتات الموالح والتصدير الزراعي، بالتات الكيماويات CP9، والبالتة الأمريكية GMA المعتمدة للشحن الدولي.",
+      palletSizesBtn: "عرض دليل المقاسات بالكامل",
     },
     en: {
       badge: "Knowledge & Logistics",
@@ -33,6 +36,9 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
       ctaContact: "Contact Us",
       fontClass: "font-sans",
       dir: "ltr" as const,
+      palletSizesTitle: "Standard Wooden Pallet Sizes & Specs Guide",
+      palletSizesDesc: "Explore dimensions, load capacities, and stuffing details for Euro pallets, Citrus/Industrial, CP9 Chemical, and US GMA pallets.",
+      palletSizesBtn: "View Full Sizing Guide",
     }
   }[lang];
 
@@ -52,6 +58,27 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
             {content.description}
           </p>
+        </div>
+
+        {/* Pallet Sizing Catalog CTA Banner */}
+        <div className="relative rounded-3xl overflow-hidden bg-[#1c1f2a] border border-secondary/20 p-6 md:p-8 mb-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl shadow-secondary/5">
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/5 via-transparent to-transparent pointer-events-none" />
+          <div className={`flex items-center gap-4 ${isEn ? "text-left animate-slide-in-left" : "text-right animate-slide-in-right"} flex-1 w-full`}>
+            <div className="p-3.5 rounded-2xl bg-secondary/10 border border-secondary/20 text-secondary hidden sm:block">
+              <Package className="w-8 h-8" />
+            </div>
+            <div>
+              <h2 className="text-xl md:text-2xl font-black text-white mb-2">{content.palletSizesTitle}</h2>
+              <p className="text-sm text-gray-400 max-w-3xl leading-relaxed">{content.palletSizesDesc}</p>
+            </div>
+          </div>
+          <a 
+            href={isEn ? "/en/pallet-sizes/" : "/pallet-sizes/"}
+            className="shrink-0 inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-secondary hover:bg-secondary/90 text-white font-bold transition-all shadow-lg shadow-secondary/15 text-sm w-full md:w-auto justify-center"
+          >
+            <span>{content.palletSizesBtn}</span>
+            {isEn ? <ArrowRight className="w-4 h-4" /> : <ArrowLeft className="w-4 h-4" />}
+          </a>
         </div>
 
         {/* Articles Grid */}
