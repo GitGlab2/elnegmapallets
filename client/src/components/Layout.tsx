@@ -50,11 +50,13 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
   const navItems = isEn ? [
     { name: "About Us", path: "/en#about-section", isAnchor: true },
     { name: "Products", path: "/en#products-section", isAnchor: true },
+    { name: "Pallet Sizes", path: "/en/pallet-sizes", isAnchor: false },
     { name: "Contact Us", path: "/en#contact-section", isAnchor: true },
     { name: "Articles & Info", path: "/en/articles", isAnchor: false },
   ] : [
     { name: "من نحن", path: "/#about-section", isAnchor: true },
     { name: "المنتجات", path: "/#products-section", isAnchor: true },
+    { name: "مقاسات البالتات", path: "/pallet-sizes", isAnchor: false },
     { name: "تواصل معنا", path: "/#contact-section", isAnchor: true },
     { name: "المقالات والمعلومات", path: "/articles", isAnchor: false },
   ];
@@ -63,7 +65,10 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
     if (isAnchor) {
       e.preventDefault();
       const currentRoot = isEn ? "/en" : "/";
-      if (window.location.pathname === currentRoot) {
+      const normalizedPathname = window.location.pathname.replace(/\/$/, "");
+      const normalizedRoot = currentRoot.replace(/\/$/, "");
+
+      if (normalizedPathname === normalizedRoot) {
         const id = path.split('#')[1];
         const element = document.getElementById(id);
         if (element) {
@@ -86,11 +91,17 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
       if (pathname.startsWith("/en/articles")) {
         return pathname.replace("/en/articles", "/articles");
       }
+      if (pathname.startsWith("/en/pallet-sizes")) {
+        return pathname.replace("/en/pallet-sizes", "/pallet-sizes");
+      }
       return "/";
     } else {
       if (pathname === "/") return "/en";
       if (pathname.startsWith("/articles")) {
         return pathname.replace("/articles", "/en/articles");
+      }
+      if (pathname.startsWith("/pallet-sizes")) {
+        return pathname.replace("/pallet-sizes", "/en/pallet-sizes");
       }
       return "/en";
     }

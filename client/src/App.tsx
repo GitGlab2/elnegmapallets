@@ -8,6 +8,8 @@ import Layout from "./components/Layout";
 
 // Pages
 import Home from "./pages/Home";
+import PalletSizesList from "./pages/PalletSizesList";
+import PalletSizeDetails from "./pages/PalletSizeDetails";
 
 function Router() {
   return (
@@ -15,6 +17,10 @@ function Router() {
       <Switch>
         <Route path="/">{() => <Home lang="ar" />}</Route>
         <Route path="/en">{() => <Home lang="en" />}</Route>
+        <Route path="/pallet-sizes">{() => <PalletSizesList lang="ar" />}</Route>
+        <Route path="/pallet-sizes/:slug">{(params) => <PalletSizeDetails slug={params.slug} lang="ar" />}</Route>
+        <Route path="/en/pallet-sizes">{() => <PalletSizesList lang="en" />}</Route>
+        <Route path="/en/pallet-sizes/:slug">{(params) => <PalletSizeDetails slug={params.slug} lang="en" />}</Route>
         <Route component={NotFound} />
       </Switch>
     </Layout>
