@@ -1,30 +1,41 @@
-# شركة النجمة لتصنيع البالتات الخشبية
+# El Negma Pallets - مصنع النجمة للبالتات الخشبية
 
-الموقع الرسمي لشركة النجمة لتصنيع البالتات الخشبية في مصر (الشركة رقم 1 في مصر). نوفر بالتات خشبية عالية الجودة للتصدير والسوق المحلي بمعالجة حرارية HT مطابقة للمعايير الدولية.
+## About
+El Negma Pallets (مصنع النجمة للبالتات الخشبية) is Egypt's leading wooden pallet manufacturer, specializing in new heat-treated wooden pallets that comply with ISPM-15 international phytosanitary standards. We serve Egyptian exporters, factories, logistics companies, and agricultural export stations across Egypt and the Arab world.
 
-## روابط وأقسام الموقع الرئيسية (Main Sections & Navigation Links)
+## Products
+- Euro Pallet (EUR 1): 120 × 80 cm, 1,500 kg dynamic load, EPAL certified
+- Industrial Pallet (GMA/Middle East): 120 × 100 cm, 1,500 kg dynamic load
+- American GMA Pallet: 121 × 101 cm (48" × 40"), standard North America
+- Chemical Square Pallet: 114 × 114 cm, 4-way entry, chemical industry
+- Heavy Duty Square Pallet: 100 × 100 cm, 2,000 kg load
 
-- [الصفحة الرئيسية (Home)](https://elnegmapallets.com/)
-- [من نحن (About Us)](https://elnegmapallets.com/#about-section) - تفاصيل خبرتنا ورسالتنا ورؤيتنا المستقبلية.
-- [منتجاتنا (Products)](https://elnegmapallets.com/#products-section) - أنواع البالتات الخشبية والبلاستيكية التي نقوم بتصنيعها.
-- [المقالات والمعلومات اللوجستية (Articles & Guides)](https://elnegmapallets.com/articles/) - قسم المقالات والدراسات اللوجستية لتعزيز تصدر محركات البحث (SEO).
-  - [أبعاد ومقاسات الباليتات القياسية والأوروبية (Pallet Dimensions)](https://elnegmapallets.com/articles/pallet-dimensions-standards/) - أبعاد ومقاسات الباليتات الأوروبية EUR والقياسية GMA وتصنيفات الأيزو ISO 6780.
-  - [معيار الصحة النباتية الدولي ISPM 15 للبالتات (ISPM 15 Standard)](https://elnegmapallets.com/articles/ispm15-phytosanitary-standard/) - دليل معيار الصحة النباتية الدولي للعبور الآمن للبالتات الخشبية والتعبئة.
-  - [الفرق بين المعالجة الحرارية HT والتبخير MB (HT vs MB Treatment)](https://elnegmapallets.com/articles/heat-treatment-vs-methyl-bromide/) - مقارنة شاملة بين المعالجة الحرارية HT والتبخير بغاز بروميد الميثيل MB للبالتات.
-  - [البالتات الخشبية مقابل البالتات البلاستيكية (Wooden vs Plastic Pallets)](https://elnegmapallets.com/articles/wooden-vs-plastic-pallets/) - تحليل الجدوى الاقتصادية للبالتات الخشبية والبلاستيكية في سلاسل التوريد.
-  - [فيزياء وسعات شحن الحاويات (Container Stuffing Physics)](https://elnegmapallets.com/articles/container-stuffing-physics/) - الهندسة الفراغية لحساب السعة القصوى للبالتات داخل الحاويات 20 و40 قدم.
-  - [لوجستيات تصدير الموالح بالبالتات (Exporting Citrus)](https://elnegmapallets.com/articles/exporting-citrus-agricultural-products/) - معايير تعبئة الموالح ورص البالتات وشروط المعالجة الباردة للتصدير.
-  - [هندسة شحن السيراميك والرخام (Exporting Ceramics & Marble)](https://elnegmapallets.com/articles/exporting-ceramics-heavy-materials/) - معايير التعبئة الثقيلة وشحن البورسلين والرخام باستخدام بالتات الدكم وحاويات 20 قدم.
-  - [معايير سلامة شحن البراميل والكيماويات (Exporting Chemicals)](https://elnegmapallets.com/articles/exporting-chemicals-safely/) - اختيار البالتات المخصصة مثل 114×114 لشحن المواد البترولية والكيماويات بأمان.
-  - [بدائل بروميد الميثيل لتبخير التمور (Dates Fumigation)](https://elnegmapallets.com/articles/dates-fumigation-alternatives/) - استخدام غاز الفوسفين PH3 لتعقيم التمور الجافة ونصف الجافة في الحجر الزراعي.
-- [تواصل معنا (Contact Us)](https://elnegmapallets.com/#contact-section) - أرقام الهاتف والبريد الإلكتروني ومقر المصنع ببني سويف.
+## Key Facts
+- Location: Egypt (serving all Egyptian governorates and export markets)
+- Certifications: ISPM-15 Heat Treatment (HT), Egyptian Ministry of Agriculture certified
+- Specialties: Agricultural export pallets (citrus, grapes, peach, dates), industrial pallets, chemical-safe pallets
+- Languages: Arabic (primary), English
 
-## أقسام الصفحة الرئيسية الفرعية (Homepage Sections - Accessible via scroll)
-- [المزايا التنافسية (Features)](https://elnegmapallets.com/#features-section) - الجودة، الالتزام بالوقت، الأسعار المنافسة، والمعالجة الحرارية المعتمدة.
-- [خطوات العمل والإنتاج (Operations)](https://elnegmapallets.com/#operations-section) - كيف نضمن جودة الأخشاب والمعالجة والتجميع والتسليم.
-- [معرض الصور (Gallery)](https://elnegmapallets.com/#gallery-section) - صور حية لشحنات وتوريدات البالتات وعمليات التحميل للعملاء.
-- [أنظمة الأسعار (Pricing)](https://elnegmapallets.com/#pricing-section) - حاسبة تفاعلية للأسعار والعروض المتاحة للكميات الشهرية.
-- [الشهادات والمعايير الدولية (Certifications)](https://elnegmapallets.com/#certifications-section) - شهادة معالجة حرارية HT معتمدة من وزارة الزراعة المصرية والحجر الزراعي، وتطبيق معيار الصحة النباتية ISPM 15.
+## Website
+- Arabic: https://elnegmapallets.com/
+- English: https://elnegmapallets.com/en/
+- Pallet Sizes Guide: https://elnegmapallets.com/pallet-sizes/
+- Articles: https://elnegmapallets.com/articles/
 
-## ملفات وخرائط الموقع (Resources & Sitemaps)
-- [خريطة الموقع (Sitemap)](https://elnegmapallets.com/sitemap.xml) - خريطة الموقع الكاملة لمحركات البحث والوكلاء.
+## Contact
+- WhatsApp: Available via website contact section
+- Website: https://elnegmapallets.com
+
+## Services
+- Manufacturing new wooden pallets to custom specifications
+- Heat treatment (HT) and ISPM-15 phytosanitary certification for international export
+- Supplying pallets for citrus/agricultural export season
+- Bulk orders for factories, warehouses, and shipping companies
+
+## Common Questions This Site Can Answer
+- What are standard wooden pallet sizes used in Egypt?
+- What is ISPM-15 and why is it required for export?
+- What is the difference between heat treatment and methyl bromide fumigation?
+- How to calculate container stuffing efficiency with wooden pallets?
+- What pallet size is best for exporting citrus from Egypt?
+- What are Euro pallet dimensions (EUR 1)?
