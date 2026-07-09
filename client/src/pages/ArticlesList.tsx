@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { articles } from "@/data/articles";
 import { articlesEn } from "@/data/articles-en";
-import { BookOpen, ArrowLeft, ArrowRight, Phone, Package, Layers } from "lucide-react";
+import { BookOpen, ArrowLeft, ArrowRight, Phone, Package, LayoutGrid, Globe, ShieldCheck, Tag, Factory } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
@@ -47,18 +47,18 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
 
   const categories = {
     ar: [
-      { id: "all", name: "الكل" },
-      { id: "export", name: "🚢 أدلة التصدير والشحن" },
-      { id: "sterilization", name: "🔬 المعالجة والتعقيم" },
-      { id: "buying", name: "💰 أسعار الشراء والمواصفات" },
-      { id: "industry", name: "🏭 متطلبات الصناعات" }
+      { id: "all", name: "الكل", icon: LayoutGrid },
+      { id: "export", name: "أدلة التصدير والشحن", icon: Globe },
+      { id: "sterilization", name: "المعالجة والتعقيم", icon: ShieldCheck },
+      { id: "buying", name: "أسعار الشراء والمواصفات", icon: Tag },
+      { id: "industry", name: "متطلبات الصناعات", icon: Factory }
     ],
     en: [
-      { id: "all", name: "All" },
-      { id: "export", name: "🚢 Export & Shipping" },
-      { id: "sterilization", name: "🔬 Sterilization & HT" },
-      { id: "buying", name: "💰 Specs & Pricing" },
-      { id: "industry", name: "🏭 Industry Specs" }
+      { id: "all", name: "All", icon: LayoutGrid },
+      { id: "export", name: "Export & Shipping", icon: Globe },
+      { id: "sterilization", name: "Sterilization & HT", icon: ShieldCheck },
+      { id: "buying", name: "Specs & Pricing", icon: Tag },
+      { id: "industry", name: "Industry Specs", icon: Factory }
     ]
   }[lang];
 
@@ -143,24 +143,23 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
         </div>
 
         {/* Interactive Filters Bar */}
-        <div className="mb-10 text-center animate-fade-in">
-          <p className="text-xs text-muted-foreground uppercase tracking-wider mb-4 font-bold">
-            {content.filterTitle}
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-2 max-w-4xl mx-auto">
+        <div className="mb-12 flex flex-col items-center justify-center animate-fade-in">
+          <div className="inline-flex p-1 bg-[#1c1f2a]/90 border border-border/80 rounded-2xl gap-1 max-w-full overflow-x-auto no-scrollbar shadow-2xl backdrop-blur-md">
             {categories.map((cat) => {
               const isActive = activeCategory === cat.id;
+              const Icon = cat.icon;
               return (
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`px-4 py-2.5 rounded-xl text-xs md:text-sm font-bold transition-all duration-300 ${
+                  className={`flex items-center gap-2.5 px-5 py-3 rounded-xl text-xs md:text-sm font-bold transition-all duration-300 whitespace-nowrap ${
                     isActive
-                      ? "bg-secondary text-white shadow-md shadow-secondary/20 border border-secondary"
-                      : "bg-[#1c1f2a] hover:bg-muted text-gray-300 hover:text-white border border-border/40"
+                      ? "bg-secondary text-white shadow-lg shadow-secondary/15 border border-secondary/20 scale-[1.02]"
+                      : "text-muted-foreground hover:text-white hover:bg-white/5 border border-transparent"
                   }`}
                 >
-                  {cat.name}
+                  <Icon className={`w-4 h-4 ${isActive ? "text-white" : "text-muted-foreground group-hover:text-white"}`} />
+                  <span>{cat.name}</span>
                 </button>
               );
             })}
