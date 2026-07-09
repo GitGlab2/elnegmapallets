@@ -733,6 +733,139 @@ export const articlesEn: Article[] = [
         </section>
       </div>
     `
+  },
+  {
+    slug: "pallets-food-pharmaceutical",
+    title: "Wooden Pallets for Food & Pharmaceutical Industries: Safety Standards & Specifications",
+    description: "A specialist guide for Egyptian exporters and factories on the specific requirements for wooden pallets in food and pharmaceutical supply chains, including BRC, IFS, and FDA compliance.",
+    date: "2026-07-09",
+    author: "Quality & Compliance - El Negma Pallets",
+    readTime: "5 mins",
+    image: "/images/articles/pallets-food-pharmaceutical.webp",
+    category: "Quality & Safety Standards",
+    keywords: ["food grade wooden pallets", "pharmaceutical pallets", "FDA pallet requirements", "BRC pallet standards", "pallets for food factories", "HT certified food pallets", "safe pallets for food", "IFS pallet compliance"],
+    toc: [
+      { title: "Why Food & Pharma Pallets Are Different", target: "#why-different-standards" },
+      { title: "Key International Standards (BRC, IFS, FDA)", target: "#international-standards" },
+      { title: "Specifications of a Food-Safe Pallet", target: "#safe-pallet-specs" },
+      { title: "Risks of Using Used Pallets for Food", target: "#used-pallet-risks" }
+    ],
+    content: `
+      <div class="space-y-6 text-left leading-relaxed text-gray-200">
+        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
+          <h2 id="why-different-standards" class="text-xl font-bold text-accent mb-2">1. Why Food & Pharma Pallets Are Different</h2>
+          <p class="text-sm text-gray-300">
+            <strong>Food grade wooden pallets</strong> are among the most regulated items in the supply chain. Millions of tons of food products and pharmaceutical goods travel on pallets each year, yet a standard wooden pallet can pose a serious contamination risk if it doesn't meet strict requirements for wood type, treatment method, moisture content, and chemical-free certification.
+          </p>
+          <p class="text-sm text-gray-300 mt-2">
+            Countries that import Egyptian food products — including EU nations, the USA, and Gulf countries — enforce strict pallet hygiene laws. Non-compliance can result in an entire shipment being rejected and destroyed at the importer's cost.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="international-standards" class="text-xl font-bold text-white border-b border-border pb-1">2. Key International Standards (BRC, IFS, FDA)</h2>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-3 mt-2 pl-2">
+            <li><strong>BRC (British Retail Consortium):</strong> Requires pallets used in BRC-certified food facilities to be free from cracks, protruding nails, and microbial contamination. New or ISPM-15 HT-certified pallets are strongly preferred.</li>
+            <li><strong>IFS (International Food Standard):</strong> A German/French standard that requires full documentary traceability for every pallet batch entering production lines, including timber species and HT certificate numbers.</li>
+            <li><strong>FDA Requirements (USA):</strong> While the FDA does not fully prohibit wood, it requires timber packaging to be "fit for purpose" and non-absorbent in ways that create contamination risks. ISPM-15 compliance is mandatory for all imports into the US.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="safe-pallet-specs" class="text-xl font-bold text-white border-b border-border pb-1">3. Specifications of a Food-Safe Pallet</h2>
+          <p class="text-sm text-gray-300">For a pallet to qualify as <strong>food safe</strong>, it must meet these key criteria:</p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>HT-Certified Softwood:</strong> European or Swedish pine heat-treated to ≥56°C core temperature for 30 minutes — eliminating pests without harmful chemical residues.</li>
+            <li><strong>Moisture Content ≤ 19%:</strong> Low moisture prevents mold, bacteria, and fungal growth that threaten product integrity during refrigerated or ambient storage.</li>
+            <li><strong>No Protruding Nails:</strong> Any loose or raised nail creates a physical contamination risk and must not be present in food-grade pallets.</li>
+            <li><strong>No Paints or Chemical Treatments:</strong> Pallets for food and pharmaceutical use must never be painted or treated with non-food-safe chemicals.</li>
+            <li><strong>HT Treatment Only (Not MB):</strong> Methyl bromide fumigation is banned for food-grade pallets under global food safety regulations.</li>
+          </ul>
+          <p class="text-sm text-gray-300 mt-3">
+            <strong>El Negma Pallets Factory</strong> manufactures new food-grade pallets from certified European softwoods with full moisture control and issued HT certificates, serving Egyptian exporters to EU, Gulf, and US markets.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="used-pallet-risks" class="text-xl font-bold text-white border-b border-border pb-1">4. Risks of Using Used Pallets for Food Products</h2>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Unknown Contamination History:</strong> A used pallet may have previously carried pesticides, chemicals, or hazardous goods. This unknown history makes it fundamentally unsafe for food contact.</li>
+            <li><strong>Hidden Fractures:</strong> Micro-cracks in used timber harbor bacteria and mold even after surface cleaning.</li>
+            <li><strong>Audit Failure Risk:</strong> BRC and IFS audits include pallet inspections. Failing to use compliant pallets can result in total loss of the international food safety certificate.</li>
+            <li><strong>Port Rejection:</strong> Germany, France, UAE and others actively reject food shipments transported on pallets lacking a valid HT stamp or showing damage signs.</li>
+          </ul>
+        </section>
+      </div>
+    `
+  },
+  {
+    slug: "pallets-warehouse-storage",
+    title: "Wooden Pallets for Warehouse Storage: Differences Between Storage & Export Pallets",
+    description: "A comprehensive guide for warehouse managers and logistics officers explaining the key differences between storage and export pallets, with specification recommendations from El Negma experts.",
+    date: "2026-07-09",
+    author: "Logistics Planning - El Negma Pallets",
+    readTime: "5 mins",
+    image: "/images/articles/pallets-warehouse-storage.webp",
+    category: "Storage & Logistics",
+    keywords: ["warehouse wooden pallets", "storage pallets", "racking system pallets", "pallets for warehouse shelves", "storage vs export pallets", "warehouse pallet specs", "floor stacking pallets", "pallet storage systems"],
+    toc: [
+      { title: "Storage vs Export: What's the Difference?", target: "#storage-vs-export" },
+      { title: "Storage Systems and Their Pallet Requirements", target: "#storage-systems" },
+      { title: "Specs for Racking-Compatible Pallets", target: "#racking-specs" },
+      { title: "Common Warehouse Pallet Purchasing Mistakes", target: "#common-mistakes" }
+    ],
+    content: `
+      <div class="space-y-6 text-left leading-relaxed text-gray-200">
+        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
+          <h2 id="storage-vs-export" class="text-xl font-bold text-accent mb-2">1. Storage vs Export: What's the Difference?</h2>
+          <p class="text-sm text-gray-300">
+            Many procurement managers mistakenly assume that <strong>warehouse storage pallets</strong> and international export pallets share the same specifications. In reality, the purpose determines the specification:
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Export Pallets:</strong> Must carry HT treatment and IPPC stamps to pass phytosanitary customs inspection in destination countries.</li>
+            <li><strong>Storage Pallets:</strong> Do not necessarily require HT certification, but must handle heavy repetitive loads, resist humidity cycles, and be fully compatible with forklift equipment and racking systems used in the facility.</li>
+          </ul>
+          <p class="text-sm text-gray-300 mt-2">
+            In short: <strong>racking storage pallets need superior structural rigidity</strong>, while <strong>export pallets need international phytosanitary certification</strong>. El Negma manufactures both to separate specialized specifications.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="storage-systems" class="text-xl font-bold text-white border-b border-border pb-1">2. Storage Systems and Their Pallet Requirements</h2>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-3 mt-2 pl-2">
+            <li><strong>Floor Stacking:</strong> The simplest and most economical system. Pallets are stacked directly on top of each other. Requires high static load capacity (up to 5,000 kg) and thick top boards to resist the stacked weight above.</li>
+            <li><strong>Selective/Drive-In Racking Systems:</strong> Pallets are supported only by two horizontal arms — no floor beneath them. Transverse rigidity of the pallet becomes critical to prevent collapse under racking loads. Bottom boards must be sturdy with minimum 100mm board width.</li>
+            <li><strong>ASRS (Automated Storage and Retrieval Systems):</strong> Require pallets manufactured to tight dimensional tolerances (±2mm) with fully closed top decks to enable reliable robot sensing and movement.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="racking-specs" class="text-xl font-bold text-white border-b border-border pb-1">3. Specs for Racking-Compatible Pallets</h2>
+          <p class="text-sm text-gray-300">Based on international racking load standards (EN 15512), minimum recommended <strong>warehouse pallet specs</strong> are:</p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Dynamic Racking Load:</strong> Minimum 1,000 kg for selective racking applications.</li>
+            <li><strong>Static Floor Load:</strong> Minimum 3,000 kg for conventional ground stacking.</li>
+            <li><strong>Top Board Thickness:</strong> 22-25mm minimum for uniform weight distribution across the pallet surface.</li>
+            <li><strong>Timber Species:</strong> Musk wood or alternating pine for a cost-performance balance in internal warehouse settings.</li>
+            <li><strong>4-Way Entry:</strong> Required for full forklift maneuverability in narrow-aisle warehouse configurations.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="common-mistakes" class="text-xl font-bold text-white border-b border-border pb-1">4. Common Warehouse Pallet Purchasing Mistakes</h2>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Buying Mixed-Size Used Pallets:</strong> Non-uniform dimensions cause operational bottlenecks with racking systems and slow down loading/unloading cycles.</li>
+            <li><strong>Wrong Pallet Size for Aisle Width:</strong> Euro pallets (120×80cm) suit narrow aisles; Industrial pallets (120×100cm) require wider clearance for safe maneuvering.</li>
+            <li><strong>Skipping Regular Pallet Inspections:</strong> Cracked or broken pallets in a warehouse present a worker safety hazard and risk goods falling from racking systems.</li>
+            <li><strong>Over-Specifying with Export Pallets for Internal Use:</strong> Purchasing expensive HT-certified export pallets for purely internal storage is an unnecessary budget waste.</li>
+          </ul>
+          <p class="text-sm text-gray-300 mt-3">
+            The <strong>El Negma Pallets Factory</strong> team can advise you on the optimal type and size for your facility based on your storage system and load profile. Contact us for a free technical consultation.
+          </p>
+        </section>
+      </div>
+    `
   }
 ];
+
 
