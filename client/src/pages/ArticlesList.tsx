@@ -1,11 +1,66 @@
+"use client";
+
+import { useState } from "react";
 import { articles } from "@/data/articles";
 import { articlesEn } from "@/data/articles-en";
-import { BookOpen, ArrowLeft, ArrowRight, Phone, Package } from "lucide-react";
+import { BookOpen, ArrowLeft, ArrowRight, Phone, Package, Layers } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
   const isEn = lang === "en";
   const currentArticles = isEn ? articlesEn : articles;
+  const [activeCategory, setActiveCategory] = useState("all");
+
+  // Dynamic grouping based on article slug
+  const getCategoryKey = (slug: string) => {
+    const exportSlugs = [
+      "container-stuffing-physics",
+      "exporting-citrus-agricultural-products",
+      "exporting-ceramics-heavy-materials",
+      "exporting-chemicals-safely",
+      "exporting-products",
+      "technical-guide"
+    ];
+    const sterilizationSlugs = [
+      "ispm15-phytosanitary-standard",
+      "heat-treatment-vs-methyl-bromide",
+      "dates-fumigation-alternatives"
+    ];
+    const buyingSlugs = [
+      "pallet-prices-egypt",
+      "buying-pallets-guide",
+      "wood-types-for-pallets",
+      "new-wooden-pallets-quality-standards",
+      "pallet-dimensions-standards"
+    ];
+    const industrySlugs = [
+      "pallets-food-pharmaceutical",
+      "pallets-warehouse-storage"
+    ];
+
+    if (exportSlugs.includes(slug)) return "export";
+    if (sterilizationSlugs.includes(slug)) return "sterilization";
+    if (buyingSlugs.includes(slug)) return "buying";
+    if (industrySlugs.includes(slug)) return "industry";
+    return "export";
+  };
+
+  const categories = {
+    ar: [
+      { id: "all", name: "الكل" },
+      { id: "export", name: "🚢 أدلة التصدير والشحن" },
+      { id: "sterilization", name: "🔬 المعالجة والتعقيم" },
+      { id: "buying", name: "💰 أسعار الشراء والمواصفات" },
+      { id: "industry", name: "🏭 متطلبات الصناعات" }
+    ],
+    en: [
+      { id: "all", name: "All" },
+      { id: "export", name: "🚢 Export & Shipping" },
+      { id: "sterilization", name: "🔬 Sterilization & HT" },
+      { id: "buying", name: "💰 Specs & Pricing" },
+      { id: "industry", name: "🏭 Industry Specs" }
+    ]
+  }[lang];
 
   const content = {
     ar: {
@@ -23,6 +78,7 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
       palletSizesTitle: "دليل مقاسات وأبعاد البالتات الخشبية",
       palletSizesDesc: "اكتشف أبعاد ومواصفات بالتات اليورو القياسية، بالتات الموالح والتصدير الزراعي، بالتات الكيماويات CP9، والبالتة الأمريكية GMA المعتمدة للشحن الدولي.",
       palletSizesBtn: "عرض دليل المقاسات بالكامل",
+      filterTitle: "تصنيف المقالات حسب الموضوع:",
     },
     en: {
       badge: "Knowledge & Logistics",
@@ -39,8 +95,13 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
       palletSizesTitle: "Standard Wooden Pallet Sizes & Specs Guide",
       palletSizesDesc: "Explore dimensions, load capacities, and stuffing details for Euro pallets, Citrus/Industrial, CP9 Chemical, and US GMA pallets.",
       palletSizesBtn: "View Full Sizing Guide",
+      filterTitle: "Filter Articles by Category:",
     }
   }[lang];
+
+  const filteredArticles = activeCategory === "all"
+    ? currentArticles
+    : currentArticles.filter((art) => getCategoryKey(art.slug) === activeCategory);
 
   return (
     <div className={`min-h-screen bg-[#181b24] text-white py-12 md:py-20 ${content.fontClass}`} dir={content.dir}>
@@ -81,9 +142,34 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
           </a>
         </div>
 
+        {/* Interactive Filters Bar */}
+        <div className="mb-10 text-center animate-fade-in">
+          <p className="text-xs text-muted-foreground uppercase tracking-wider mb-4 font-bold">
+            {content.filterTitle}
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-2 max-w-4xl mx-auto">
+            {categories.map((cat) => {
+              const isActive = activeCategory === cat.id;
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveCategory(cat.id)}
+                  className={`px-4 py-2.5 rounded-xl text-xs md:text-sm font-bold transition-all duration-300 ${
+                    isActive
+                      ? "bg-secondary text-white shadow-md shadow-secondary/20 border border-secondary"
+                      : "bg-[#1c1f2a] hover:bg-muted text-gray-300 hover:text-white border border-border/40"
+                  }`}
+                >
+                  {cat.name}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
         {/* Articles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {currentArticles.map((article, idx) => (
+          {filteredArticles.map((article, idx) => (
             <article 
               key={article.slug} 
               className="flex flex-col bg-muted/20 border border-border/40 hover:border-secondary/50 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 group shadow-lg"
