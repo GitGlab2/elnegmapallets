@@ -1308,8 +1308,8 @@ export const articlesEn: Article[] = [
   },
   {
     slug: "pallet-block-solid",
-    title: "Block Wooden Pallets (Sadd): Extreme Load Capacity & 4-Way Entry Flex",
-    description: "Your complete guide to block wooden pallets (Sadd/Block style) — the gold standard for automated warehouse operations and heavy load shipping. Technical specifications and advantages.",
+    title: "Solid Deck Wooden Pallets (Sadd): Specifications & Industrial Applications",
+    description: "Your complete guide to solid deck wooden pallets (Sadd style with closed top) in Egypt. Technical specifications, comparisons with open-deck pallets, and applications in chemical & food logistics.",
     date: "2026-07-10",
     author: "Technical Support - El Negma",
     readTime: "5 mins",
@@ -1317,88 +1317,90 @@ export const articlesEn: Article[] = [
     category: "Pallet Sizes & Specs",
     categoryId: "sizes",
     keywords: [
-      "block pallet",
+      "solid deck pallet",
       "sadd pallet",
-      "euro block pallet",
-      "solid block pallet",
-      "four-way wooden pallet",
-      "heavy load pallets",
-      "block pallet manufacturer Egypt",
-      "EPAL block specs"
+      "closed deck pallet",
+      "wooden pallets Egypt",
+      "solid pallet specifications",
+      "difference between solid and open deck pallets",
+      "chemical pallet Egypt"
     ],
     toc: [
-      { title: "What is a Block Pallet (Sadd)?", target: "#what-is-block" },
-      { title: "Anatomy & Components of a Block Pallet", target: "#block-anatomy" },
-      { title: "Key Benefits of Block Pallets", target: "#block-benefits" },
-      { title: "Technical Specs & Loading Dimensions", target: "#block-specs" },
-      { title: "Why Block Pallets are Crucial for Modern Warehousing", target: "#block-modern-warehousing" }
+      { title: "What is a Solid Deck Pallet (Sadd)?", target: "#what-is-solid" },
+      { title: "Solid Deck vs. Open/Gapped Deck Pallets", target: "#solid-vs-gapped" },
+      { title: "Technical Components & Anatomy", target: "#solid-components" },
+      { title: "Industrial Applications in Egypt", target: "#solid-applications" },
+      { title: "Pros and Cons of Solid Deck Pallets", target: "#solid-pros-cons" }
     ],
     content: `
       <div class="space-y-6 text-left leading-relaxed text-gray-200">
         <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
-          <h2 id="what-is-block" class="text-xl font-bold text-accent mb-2">1. What is a Block Pallet (Sadd)?</h2>
+          <h2 id="what-is-solid" class="text-xl font-bold text-accent mb-2">1. What is a Solid Deck Pallet (Sadd)?</h2>
           <p class="text-sm text-gray-300">
-            A <strong>block pallet</strong> (commonly known as \"Sadd\" or \"Block style\" in Egypt) is a highly durable wooden platform that utilizes <strong>solid wood blocks</strong> instead of continuous stringers. This structural configuration creates open spaces between the blocks, enabling forklifts and manual pallet jacks to enter from <strong>all four sides (4-Way Entry)</strong>.
+            In the wooden pallet manufacturing trade in Egypt, a <strong>"Solid Deck Pallet"</strong> (referred to as "Sadd") is a platform designed with a <strong>completely closed top surface, leaving no gaps or spaces between the deck boards</strong>. The top boards are placed flush against one another to create a continuous, flat 100% solid surface area.
           </p>
           <p class="text-sm text-gray-300 mt-2">
-            Block pallets serve as the foundation for the prestigious <strong>Euro Pallet (EUR/EPAL)</strong> standards widely used across European distribution centers, container ports, and high-bay warehouses.
+            A solid deck pallet can be built structurally using either a stringer (dokum) or block base, but its defining commercial characteristic is the <strong>fully closed top deck</strong> that protects sensitive goods from falling or sagging.
           </p>
         </section>
 
         <section>
-          <h2 id="block-anatomy" class="text-xl font-bold text-white border-b border-border pb-1">2. Anatomy & Components of a Block Pallet</h2>
+          <h2 id="solid-vs-gapped" class="text-xl font-bold text-white border-b border-border pb-1">2. Solid Deck vs. Open/Gapped Deck Pallets</h2>
+          <p class="text-sm text-gray-300">Wooden platforms are divided into two main categories based on the top deck structure:</p>
           <ul class="list-disc list-inside text-xs text-gray-300 space-y-3 mt-2 pl-2">
-            <li><strong>Top Deck Boards:</strong> Parallel timber boards that provide a flat, close-spaced surface area for loading goods safely.</li>
-            <li><strong>Stringer Boards:</strong> Lateral boards sitting directly below the top deck and above the blocks to tie the top deck together.</li>
-            <li><strong>Blocks (9 Blocks total):</strong> Solid timber cubes (or high-density composite blocks) positioned at all four corners, the center of each side, and the absolute center to carry vertical pressures.</li>
-            <li><strong>Bottom Deck Boards:</strong> 3 base boards (sometimes configured as a full perimeter frame) facilitating smooth conveyor transit and stable racking support.</li>
+            <li><strong>Solid Deck (Sadd):</strong> Zero gaps between boards. It offers maximum surface coverage, protects cargo from bottom dirt/moisture, and prevents small boxes or bag materials from slipping or tearing.</li>
+            <li><strong>Open/Gapped Deck (Sheesh):</strong> Features gaps between the deck boards (usually 2 to 8 cm wide). This is the standard design because it uses less wood, making it lighter and more economical, while allowing drainage and airflow.</li>
           </ul>
         </section>
 
         <section>
-          <h2 id="block-benefits" class="text-xl font-bold text-white border-b border-border pb-1">3. Key Benefits of Block Pallets</h2>
+          <h2 id="solid-components" class="text-xl font-bold text-white border-b border-border pb-1">3. Technical Components & Anatomy</h2>
+          <p class="text-sm text-gray-300">A solid deck pallet consists of:</p>
           <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
-            <li><strong>Full 4-Way Entry:</strong> Drastically cuts down loading times inside narrow container walls and box trucks, as drivers don't have to reposition the pallet.</li>
-            <li><strong>Higher Structural Integrity:</strong> The layout of 9 solid blocks absorbs localized dynamic shocks much better than typical stringers.</li>
-            <li><strong>Automated Conveyor Friendly:</strong> Perfectly fits into robotic automated storage and retrieval systems (ASRS) without getting stuck on roller tracks.</li>
-            <li><strong>Longer Operational Life:</strong> Excellent durability that withstands multiple circular logistics cycles.</li>
+            <li><strong>Top Solid Deck Boards:</strong> 8 to 12 timber boards (depending on pallet width) nailed tight side-by-side. Standard thicknesses range from 18 to 22 mm.</li>
+            <li><strong>Base Support Structure:</strong> Can be configured as a 3-stringer base (two-way entry) or a 9-block base (four-way entry) according to the operational requirements.</li>
+            <li><strong>Bottom Deck Boards:</strong> Support boards on the base that stabilize the unit for racking and stacking.</li>
           </ul>
         </section>
 
         <section>
-          <h2 id="block-specs" class="text-xl font-bold text-white border-b border-border pb-1">4. Technical Specs & Loading Dimensions</h2>
-          <p class="text-sm text-gray-300">Technical parameters for block pallets produced at El Negma:</p>
+          <h2 id="solid-applications" class="text-xl font-bold text-white border-b border-border pb-1">4. Industrial Applications in Egypt</h2>
+          <p class="text-sm text-gray-300">Solid deck pallets are heavily requested in specific Egyptian industrial sectors:</p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Chemicals & Powder Bags:</strong> Prevents industrial sacks and granules from tearing or falling through deck spacing.</li>
+            <li><strong>Food & Pharmaceutical Factories:</strong> Provides a clean barrier that prevents ground moisture, splinters, or dirt from making contact with primary packaging.</li>
+            <li><strong>Lightweight Cartons & Paper Goods:</strong> Distributes weight evenly across a flat surface, preventing box compression and crushing that typically occurs over open gaps.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="solid-pros-cons" class="text-xl font-bold text-white border-b border-border pb-1">5. Pros and Cons of Solid Deck Pallets</h2>
           <div class="overflow-x-auto mt-3">
             <table class="w-full text-xs text-gray-300 border border-border/40">
               <thead class="bg-muted/30">
                 <tr>
-                  <th class="p-2 border border-border/40 text-left">Specification</th>
-                  <th class="p-2 border border-border/40 text-left">Details (Standard 120×80 cm / 120×100 cm sizes)</th>
+                  <th class="p-2 border border-border/40 text-left">Advantages</th>
+                  <th class="p-2 border border-border/40 text-left">Disadvantages / Challenges</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td class="p-2 border border-border/40 font-bold">Static Load Limit</td><td class="p-2 border border-border/40">Up to 4,000 kg</td></tr>
-                <tr><td class="p-2 border border-border/40 font-bold">Dynamic Cargo Load</td><td class="p-2 border border-border/40">1,500 kg to 2,000 kg</td></tr>
-                <tr><td class="p-2 border border-border/40 font-bold">Block Dimensions</td><td class="p-2 border border-border/40">Typically 145×145×78 mm or 145×90×78 mm</td></tr>
-                <tr><td class="p-2 border border-border/40 font-bold">Assembly Fasteners</td><td class="p-2 border border-border/40">Spiral cement-coated nails for maximum pullout resistance</td></tr>
-                <tr><td class="p-2 border border-border/40 font-bold">Heat Treatment</td><td class="p-2 border border-border/40">Pre-treated (HT) and stamped according to ISPM-15 regulations.</td></tr>
+                <tr>
+                  <td class="p-2 border border-border/40">✅ Smooth, flat surface ideal for sensitive or bagged cargos.</td>
+                  <td class="p-2 border border-border/40">❌ Consumes 20% to 30% more timber, resulting in higher production costs.</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border border-border/40">✅ Superior load distribution for custom or odd-shaped items.</td>
+                  <td class="p-2 border border-border/40">❌ Total empty weight is heavier, which can affect shipping calculations.</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border border-border/40">✅ High barrier protection from ground moisture and forklift fork tips.</td>
+                  <td class="p-2 border border-border/40">❌ No water drainage or bottom airflow compared to open styles.</td>
+                </tr>
               </tbody>
             </table>
           </div>
-        </section>
-
-        <section>
-          <h2 id="block-modern-warehousing" class="text-xl font-bold text-white border-b border-border pb-1">5. Why Block Pallets are Crucial for Modern Warehousing</h2>
-          <p class="text-sm text-gray-300">
-            While block pallets require a higher initial manufacturing investment than standard stringer pallets, they pay off through:
-          </p>
-          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
-            <li><strong>Trouble-Free Exports:</strong> Essential for EU destinations where EPAL/EUR designs are mandatory to ensure warehouse compatibility.</li>
-            <li><strong>High-Rack Safety:</strong> Provides a sturdy bottom footprint that rests securely on steel racking shelves (selective racking) without sliding.</li>
-            <li><strong>Reduced Goods Damage:</strong> Less bending or bowing means lower risk of stack collapses.</li>
-          </ul>
-          <p class="text-sm text-gray-300 mt-3">
-            Looking for highly durable block pallets matching international standards? <strong>El Negma Pallets Factory</strong> is fully equipped to manufacture premium block/sadd platforms for all your local storage and international shipping needs.
+          <p class="text-sm text-gray-300 mt-4">
+            <strong>El Negma Pallets Factory</strong> manufactures custom and standard solid deck pallets (120×80 cm, 120×100 cm) using premium heat-treated Swedish pine and Musk wood. Contact our technical team today for a free consultation.
           </p>
         </section>
       </div>
