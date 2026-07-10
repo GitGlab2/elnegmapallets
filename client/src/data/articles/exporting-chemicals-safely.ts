@@ -9,6 +9,7 @@ export const exportingChemicalsSafelyArticle: Article = {
   readTime: "3 دقائق",
   image: "/images/articles/exporting-chemicals-safely.webp",
   category: "شحن المواد الكيميائية",
+  categoryId: "export",
   keywords: ["بالتات شحن الكيماويات", "مقاس 114x114 للبراميل", "شحن براميل البترول", "منع بروز الشحنة Overhang", "بالتات خشبية معالجة للبراميل"],
   toc: [
     { title: "أهمية اختيار البالتة للكيماويات", target: "#chemical-safety" },

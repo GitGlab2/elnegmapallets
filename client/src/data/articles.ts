@@ -12,6 +12,8 @@ import { exportingCitrusAgriculturalProductsArticle } from "./articles/exporting
 import { exportingCeramicsHeavyMaterialsArticle } from "./articles/exporting-ceramics-heavy-materials";
 import { exportingChemicalsSafelyArticle } from "./articles/exporting-chemicals-safely";
 import { datesFumigationAlternativesArticle } from "./articles/dates-fumigation-alternatives";
+import { palletDimensionsStandardsArticle } from "./articles/pallet-dimensions-standards";
+import { palletSizeArticlesAr } from "./pallet-size-articles";
 
 export type { Article, TocItem } from "./articles-types";
 
@@ -29,6 +31,6 @@ export const articles: Article[] = [
   exportingCeramicsHeavyMaterialsArticle,
   exportingChemicalsSafelyArticle,
   datesFumigationAlternativesArticle,
+  palletDimensionsStandardsArticle,
+  ...palletSizeArticlesAr,
 ];
-
-

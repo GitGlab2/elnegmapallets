@@ -9,6 +9,7 @@ export const exportingCeramicsHeavyMaterialsArticle: Article = {
   readTime: "3 دقائق",
   image: "/images/articles/exporting-ceramics-heavy-materials.webp",
   category: "تصدير السيراميك والرخام",
+  categoryId: "export",
   keywords: ["تصدير السيراميك المصري", "شحن الرخام شق الثعبان", "بالتات الدكم للرخام", "صناديق خشبية للجرانيت", "حاوية 20 قدم سيراميك"],
   toc: [
     { title: "سوق صادرات السيراميك والرخام المصري", target: "#market-heavy" },

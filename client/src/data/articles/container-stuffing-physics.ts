@@ -9,6 +9,7 @@ export const containerStuffingPhysicsArticle: Article = {
   readTime: "8 دقائق",
   image: "/images/articles/container-stuffing-physics.webp",
   category: "لوجستيات النقل البحري",
+  categoryId: "export",
   keywords: ["سعة حاوية 20 قدم بالبالتات", "حاوية 40 قدم كم بالتة يورو", "حساب السعة الاستيعابية للحاوية", "الوزن الأقصى للحاوية", "المساحة الميتة في الحاويات", "رص البالتات في الحاوية", "تحميل حاوية بالتات خشب", "كم بالتة تسع الحاوية", "تحميل بضائع على البالتات"],
   toc: [
     { title: "أبعاد الحاويات القياسية والمساحات المتاحة", target: "#dimensions-guide" },

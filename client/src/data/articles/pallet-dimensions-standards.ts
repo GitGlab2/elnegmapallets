@@ -3,17 +3,25 @@ import { Article } from "../articles-types";
 export const palletDimensionsStandardsArticle: Article = {
   slug: "pallet-dimensions-standards",
   title: "دليل أبعاد ومقاسات الباليتات القياسية والأوروبية المعتمدة دولياً",
-  description: "شرح تفصيلي لأبعاد ومقاسات الباليتات الأوروبية (Euro Pallet) والبالتات القياسية (Standard GMA) وتصنيفات الأيزو ISO 6780 للتداول الدولي.",
+  description:
+    "شرح تفصيلي لأبعاد ومقاسات الباليتات الأوروبية (Euro Pallet) والبالتات القياسية (Standard GMA) وتصنيفات الأيزو ISO 6780 للتداول الدولي.",
   date: "2026-04-12",
   author: "إدارة الدعم الفني - شركة النجمة",
   readTime: "4 دقائق",
   image: "/images/articles/pallet-dimensions-standards.webp",
   category: "مقاسات وأبعاد البالتات",
-  keywords: ["أبعاد الباليتة الأوروبية", "مقاسات الباليتات القياسية", "بالتة GMA", "أبعاد البالتات الخشبية", "معايير ISO 6780 للبالتات"],
+  categoryId: "sizes",
+  keywords: [
+    "أبعاد الباليتة الأوروبية",
+    "مقاسات الباليتات القياسية",
+    "بالتة GMA",
+    "أبعاد البالتات الخشبية",
+    "معايير ISO 6780 للبالتات",
+  ],
   toc: [
     { title: "البالتة الأوروبية Euro Pallet", target: "#euro-pallet" },
     { title: "البالتة القياسية الأمريكية GMA", target: "#gma-pallet" },
-    { title: "المواصفات القياسية لأيزو ISO 6780", target: "#iso-standards" }
+    { title: "المواصفات القياسية لأيزو ISO 6780", target: "#iso-standards" },
   ],
   content: `
     <div class="space-y-6 text-right leading-relaxed text-gray-200">
@@ -93,5 +101,5 @@ export const palletDimensionsStandardsArticle: Article = {
         </div>
       </section>
     </div>
-  `
+  `,
 };

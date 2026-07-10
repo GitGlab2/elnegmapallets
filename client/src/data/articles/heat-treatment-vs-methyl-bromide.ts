@@ -9,6 +9,7 @@ export const heatTreatmentVsMethylBromideArticle: Article = {
   readTime: "4 دقائق",
   image: "/images/articles/heat-treatment-vs-methyl-bromide.webp",
   category: "طرق تعقيم البالتات",
+  categoryId: "compliance",
   keywords: ["معالجة حرارية HT", "التبخير ببروميد الميثيل MB", "تعقيم البالتات الخشبية", "بروتوكول مونتريال للأوزون", "أفران تعقيم الخشب", "المعالجة الحرارية للبالتات في مصر", "فرن تبخير خشب", "الفرق بين المعالجة والتبخير"],
   toc: [
     { title: "المعالجة الحرارية (Heat Treatment - HT)", target: "#heat-treatment" },

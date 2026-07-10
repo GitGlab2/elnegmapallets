@@ -9,6 +9,7 @@ export const buyingPalletsGuideArticle: Article = {
   readTime: "5 دقائق",
   image: "/images/articles/buying-pallets-guide.webp",
   category: "أدلة المشتريات والجمارك",
+  categoryId: "procurement",
   keywords: [
     "أماكن بيع البالتات الخشب",
     "شراء بالتات خشب",

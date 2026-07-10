@@ -9,6 +9,7 @@ export const palletsWarehouseStorageArticle: Article = {
   readTime: "5 دقائق",
   image: "/images/articles/pallets-warehouse-storage.webp",
   category: "تخزين ولوجستيات",
+  categoryId: "industry",
   keywords: [
     "بالتات مستودعات",
     "طبالي خشب للتخزين",

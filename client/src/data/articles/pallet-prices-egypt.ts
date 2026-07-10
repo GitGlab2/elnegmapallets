@@ -9,6 +9,7 @@ export const palletPricesEgyptArticle: Article = {
   readTime: "4 دقائق",
   image: "/images/articles/pallet-prices-egypt.webp",
   category: "أسعار السوق والتوريد",
+  categoryId: "procurement",
   keywords: [
     "أسعار البالتات الخشبية في مصر",
     "طبالي خشب للبيع",

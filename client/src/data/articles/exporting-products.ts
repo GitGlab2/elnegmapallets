@@ -9,6 +9,7 @@ export const exportingProductsArticle: Article = {
   readTime: "12 دقيقة",
   image: "/images/logistics-truck.webp",
   category: "دليل التصدير واللوجستيات",
+  categoryId: "export",
   keywords: ["بالتات خشبية للتصدير", "معالجة حرارية للبالتات HT", "معيار الصحة النباتية ISPM-15", "مقاسات البالتات القياسية", "بالتات يورو مصر", "لوجستيات حاويات الشحن"],
   toc: [
     { title: "مقدمة ودور البالتات", target: "#intro" },

@@ -9,6 +9,7 @@ export const datesFumigationAlternativesArticle: Article = {
   readTime: "3 دقائق",
   image: "/images/articles/dates-fumigation-alternatives.webp",
   category: "تعقيم المواد الغذائية",
+  categoryId: "compliance",
   keywords: ["تعقيم التمور في مصر", "بدائل بروميد الميثيل", "غاز الفوسفين PH3", "تبخير التمور الجافة", "لوجستيات تصدير التمور"],
   toc: [
     { title: "الحاجة لبدائل غاز بروميد الميثيل", target: "#dates-fumigation" },

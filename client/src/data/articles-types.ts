@@ -3,6 +3,13 @@ export interface TocItem {
   target: string;
 }
 
+export type ArticleCategoryId =
+  | "export"
+  | "compliance"
+  | "procurement"
+  | "industry"
+  | "sizes";
+
 export interface Article {
   slug: string;
   title: string;
@@ -12,6 +19,7 @@ export interface Article {
   readTime: string;
   image: string;
   category: string;
+  categoryId: ArticleCategoryId;
   keywords: string[];
   content: string;
   toc?: TocItem[];

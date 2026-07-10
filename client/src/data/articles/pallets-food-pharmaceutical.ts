@@ -9,6 +9,7 @@ export const palletsFoodPharmaceuticalArticle: Article = {
   readTime: "5 دقائق",
   image: "/images/articles/pallets-food-pharmaceutical.webp",
   category: "معايير الجودة والسلامة",
+  categoryId: "industry",
   keywords: [
     "بالتات الصناعات الغذائية",
     "بالتات للدواء والمستحضرات",

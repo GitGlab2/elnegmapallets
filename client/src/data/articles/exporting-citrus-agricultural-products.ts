@@ -9,6 +9,7 @@ export const exportingCitrusAgriculturalProductsArticle: Article = {
   readTime: "4 دقائق",
   image: "/images/articles/exporting-citrus-agricultural-products.webp",
   category: "تصدير زراعي وموالح",
+  categoryId: "export",
   keywords: ["تصدير البرتقال المصري", "محطات فرز وتعبئة الموالح", "حاوية مبردة للتصدير", "الحجر الزراعي المصري", "معالجة باردة للصين", "بالتات تصدير موالح", "طبالي خشب للزراعة", "بالتات فرز وتعبئة برتقال", "تصدير ليمون مصر"],
   toc: [
     { title: "ريادة مصر في تصدير الموالح", target: "#citrus-leadership" },

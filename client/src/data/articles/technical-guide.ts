@@ -9,6 +9,7 @@ export const technicalGuideArticle: Article = {
   readTime: "15 دقيقة",
   image: "/images/factory-image.webp",
   category: "أدلة لوجستية ودراسات",
+  categoryId: "export",
   keywords: ["التعبئة والتغليف اللوجستي", "البالتات الأوروبية والقياسية", "معالجة الأخشاب بالتبخير HT", "بالتات خشبية وبلاستيكية", "لوجستيات النقل البحري", "ختم الصحة النباتية IPPC"],
   toc: [
     { title: "مقدمة الأهمية اللوجستية", target: "#intro" },

@@ -9,6 +9,7 @@ export const woodTypesForPalletsArticle: Article = {
   readTime: "5 دقائق",
   image: "/images/articles/wood-types-for-pallets.webp",
   category: "مواد التصنيع والإنتاج",
+  categoryId: "procurement",
   keywords: [
     "أنواع خشب البالتات",
     "خشب السويد للبالتات",

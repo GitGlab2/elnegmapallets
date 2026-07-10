@@ -1,21 +1,44 @@
 import { Article } from "./articles-types";
+import { palletSizeArticlesEn } from "./pallet-size-articles";
 
 export const articlesEn: Article[] = [
   {
     slug: "pallet-prices-egypt",
-    title: "Wooden Pallet Prices in Egypt 2026: Wooden Platforms for Sale & Best Buying Places",
-    description: "Your complete guide to wooden pallet prices in Egypt for 2026, factors determining new and used pallet costs, and specifications of certified wooden pallet factories.",
+    title:
+      "Wooden Pallet Prices in Egypt 2026: Wooden Platforms for Sale & Best Buying Places",
+    description:
+      "Your complete guide to wooden pallet prices in Egypt for 2026, factors determining new and used pallet costs, and specifications of certified wooden pallet factories.",
     date: "2026-07-09",
     author: "Commercial Analysis - El Negma Pallets",
     readTime: "4 mins",
     image: "/images/articles/pallet-prices-egypt.webp",
     category: "Market Prices & Supply",
-    keywords: ["wooden pallet prices in Egypt", "wooden platforms for sale", "buy wooden pallets", "wooden pallet factory", "places to buy pallets", "euro pallet price"],
+    categoryId: "procurement",
+    keywords: [
+      "wooden pallet prices in Egypt",
+      "wooden platforms for sale",
+      "buy wooden pallets",
+      "wooden pallet factory",
+      "places to buy pallets",
+      "euro pallet price",
+    ],
     toc: [
-      { title: "The Egyptian Pallet Market in 2026", target: "#egypt-market-2026" },
-      { title: "Factors Determining Wooden Pallet Prices", target: "#price-factors" },
-      { title: "Common Sizes and Estimated Prices in Egypt", target: "#common-sizes-prices" },
-      { title: "Where to Buy & How to Choose a Factory", target: "#where-to-buy" }
+      {
+        title: "The Egyptian Pallet Market in 2026",
+        target: "#egypt-market-2026",
+      },
+      {
+        title: "Factors Determining Wooden Pallet Prices",
+        target: "#price-factors",
+      },
+      {
+        title: "Common Sizes and Estimated Prices in Egypt",
+        target: "#common-sizes-prices",
+      },
+      {
+        title: "Where to Buy & How to Choose a Factory",
+        target: "#where-to-buy",
+      },
     ],
     content: `
       <div class="space-y-6 text-left leading-relaxed text-gray-200">
@@ -61,23 +84,45 @@ export const articlesEn: Article[] = [
           </p>
         </section>
       </div>
-    `
+    `,
   },
   {
     slug: "buying-pallets-guide",
-    title: "Places to Buy Wooden Pallets: A Comprehensive Guide for Exporters & Factories in Egypt",
-    description: "A professional guide to choosing the best places to buy wooden pallets in Egypt, and how to select a certified wooden pallet factory supplying new standard wooden platforms.",
+    title:
+      "Places to Buy Wooden Pallets: A Comprehensive Guide for Exporters & Factories in Egypt",
+    description:
+      "A professional guide to choosing the best places to buy wooden pallets in Egypt, and how to select a certified wooden pallet factory supplying new standard wooden platforms.",
     date: "2026-07-09",
     author: "Quality & Compliance - El Negma Pallets",
     readTime: "5 mins",
     image: "/images/articles/buying-pallets-guide.webp",
     category: "Procurement & Customs Guides",
-    keywords: ["places to buy wooden pallets", "buy wooden pallets", "export wooden platforms", "wooden pallet factory in Egypt", "new wooden pallets", "wooden pallets for storage"],
+    categoryId: "procurement",
+    keywords: [
+      "places to buy wooden pallets",
+      "buy wooden pallets",
+      "export wooden platforms",
+      "wooden pallet factory in Egypt",
+      "new wooden pallets",
+      "wooden pallets for storage",
+    ],
     toc: [
-      { title: "The Importance of Wooden Pallets in Exporting", target: "#importance-of-pallets" },
-      { title: "Standards for Choosing a Wooden Pallet Supplier", target: "#buying-standards" },
-      { title: "Why Buy New Automated Wooden Pallets?", target: "#new-vs-used-pallets" },
-      { title: "El Negma Pallets: The Logistics Partner for Egyptian Exporters", target: "#elnegma-pallet-factory" }
+      {
+        title: "The Importance of Wooden Pallets in Exporting",
+        target: "#importance-of-pallets",
+      },
+      {
+        title: "Standards for Choosing a Wooden Pallet Supplier",
+        target: "#buying-standards",
+      },
+      {
+        title: "Why Buy New Automated Wooden Pallets?",
+        target: "#new-vs-used-pallets",
+      },
+      {
+        title: "El Negma Pallets: The Logistics Partner for Egyptian Exporters",
+        target: "#elnegma-pallet-factory",
+      },
     ],
     content: `
       <div class="space-y-6 text-left leading-relaxed text-gray-200">
@@ -119,23 +164,46 @@ export const articlesEn: Article[] = [
           </p>
         </section>
       </div>
-    `
+    `,
   },
   {
     slug: "wood-types-for-pallets",
-    title: "Wood Types for Pallet Manufacturing: How to Choose the Right Timber for Your Cargo",
-    description: "A comprehensive guide on timber varieties used in wooden pallet manufacturing in Egypt (Swedish pine, musk wood, whitewood, beech) and the trade-offs in durability and price.",
+    title:
+      "Wood Types for Pallet Manufacturing: How to Choose the Right Timber for Your Cargo",
+    description:
+      "A comprehensive guide on timber varieties used in wooden pallet manufacturing in Egypt (Swedish pine, musk wood, whitewood, beech) and the trade-offs in durability and price.",
     date: "2026-07-09",
     author: "Production & Operations - El Negma Pallets",
     readTime: "5 mins",
     image: "/images/articles/wood-types-for-pallets.webp",
     category: "Timber & Manufacturing",
-    keywords: ["wood types for pallets", "swedish pine pallet wood", "musk wood pallets", "pallet manufacturing Egypt", "best timber for pallets", "hardwood vs softwood pallets", "pallet board thickness"],
+    categoryId: "procurement",
+    keywords: [
+      "wood types for pallets",
+      "swedish pine pallet wood",
+      "musk wood pallets",
+      "pallet manufacturing Egypt",
+      "best timber for pallets",
+      "hardwood vs softwood pallets",
+      "pallet board thickness",
+    ],
     toc: [
-      { title: "Why Wood Type Matters for Pallet Quality", target: "#why-wood-matters" },
-      { title: "Timber Varieties Used in Egyptian Pallets", target: "#wood-types-egypt" },
-      { title: "Choosing the Right Wood for Your Shipment", target: "#choosing-wood-type" },
-      { title: "Thickness and Moisture Rules for Export", target: "#thickness-moisture" }
+      {
+        title: "Why Wood Type Matters for Pallet Quality",
+        target: "#why-wood-matters",
+      },
+      {
+        title: "Timber Varieties Used in Egyptian Pallets",
+        target: "#wood-types-egypt",
+      },
+      {
+        title: "Choosing the Right Wood for Your Shipment",
+        target: "#choosing-wood-type",
+      },
+      {
+        title: "Thickness and Moisture Rules for Export",
+        target: "#thickness-moisture",
+      },
     ],
     content: `
       <div class="space-y-6 text-left leading-relaxed text-gray-200">
@@ -185,23 +253,45 @@ export const articlesEn: Article[] = [
           </p>
         </section>
       </div>
-    `
+    `,
   },
   {
     slug: "pallet-prices-egypt",
-    title: "Wooden Pallet Prices in Egypt 2026: Wooden Platforms for Sale & Best Buying Places",
-    description: "Your complete guide to wooden pallet prices in Egypt for 2026, factors determining new and used pallet costs, and specifications of certified wooden pallet factories.",
+    title:
+      "Wooden Pallet Prices in Egypt 2026: Wooden Platforms for Sale & Best Buying Places",
+    description:
+      "Your complete guide to wooden pallet prices in Egypt for 2026, factors determining new and used pallet costs, and specifications of certified wooden pallet factories.",
     date: "2026-07-09",
     author: "Commercial Analysis - El Negma Pallets",
     readTime: "4 mins",
     image: "/images/articles/pallet-prices-egypt.webp",
     category: "Market Prices & Supply",
-    keywords: ["wooden pallet prices in Egypt", "wooden platforms for sale", "buy wooden pallets", "wooden pallet factory", "places to buy pallets", "euro pallet price"],
+    categoryId: "procurement",
+    keywords: [
+      "wooden pallet prices in Egypt",
+      "wooden platforms for sale",
+      "buy wooden pallets",
+      "wooden pallet factory",
+      "places to buy pallets",
+      "euro pallet price",
+    ],
     toc: [
-      { title: "The Egyptian Pallet Market in 2026", target: "#egypt-market-2026" },
-      { title: "Factors Determining Wooden Pallet Prices", target: "#price-factors" },
-      { title: "Common Sizes and Estimated Prices in Egypt", target: "#common-sizes-prices" },
-      { title: "Where to Buy & How to Choose a Factory", target: "#where-to-buy" }
+      {
+        title: "The Egyptian Pallet Market in 2026",
+        target: "#egypt-market-2026",
+      },
+      {
+        title: "Factors Determining Wooden Pallet Prices",
+        target: "#price-factors",
+      },
+      {
+        title: "Common Sizes and Estimated Prices in Egypt",
+        target: "#common-sizes-prices",
+      },
+      {
+        title: "Where to Buy & How to Choose a Factory",
+        target: "#where-to-buy",
+      },
     ],
     content: `
       <div class="space-y-6 text-left leading-relaxed text-gray-200">
@@ -247,23 +337,45 @@ export const articlesEn: Article[] = [
           </p>
         </section>
       </div>
-    `
+    `,
   },
   {
     slug: "buying-pallets-guide",
-    title: "Places to Buy Wooden Pallets: A Comprehensive Guide for Exporters & Factories in Egypt",
-    description: "A professional guide to choosing the best places to buy wooden pallets in Egypt, and how to select a certified wooden pallet factory supplying new standard wooden platforms.",
+    title:
+      "Places to Buy Wooden Pallets: A Comprehensive Guide for Exporters & Factories in Egypt",
+    description:
+      "A professional guide to choosing the best places to buy wooden pallets in Egypt, and how to select a certified wooden pallet factory supplying new standard wooden platforms.",
     date: "2026-07-09",
     author: "Quality & Compliance - El Negma Pallets",
     readTime: "5 mins",
     image: "/images/articles/buying-pallets-guide.webp",
     category: "Procurement & Customs Guides",
-    keywords: ["places to buy wooden pallets", "buy wooden pallets", "export wooden platforms", "wooden pallet factory in Egypt", "new wooden pallets", "wooden pallets for storage"],
+    categoryId: "procurement",
+    keywords: [
+      "places to buy wooden pallets",
+      "buy wooden pallets",
+      "export wooden platforms",
+      "wooden pallet factory in Egypt",
+      "new wooden pallets",
+      "wooden pallets for storage",
+    ],
     toc: [
-      { title: "The Importance of Wooden Pallets in Exporting", target: "#importance-of-pallets" },
-      { title: "Standards for Choosing a Wooden Pallet Supplier", target: "#buying-standards" },
-      { title: "Why Buy New Automated Wooden Pallets?", target: "#new-vs-used-pallets" },
-      { title: "El Negma Pallets: The Logistics Partner for Egyptian Exporters", target: "#elnegma-pallet-factory" }
+      {
+        title: "The Importance of Wooden Pallets in Exporting",
+        target: "#importance-of-pallets",
+      },
+      {
+        title: "Standards for Choosing a Wooden Pallet Supplier",
+        target: "#buying-standards",
+      },
+      {
+        title: "Why Buy New Automated Wooden Pallets?",
+        target: "#new-vs-used-pallets",
+      },
+      {
+        title: "El Negma Pallets: The Logistics Partner for Egyptian Exporters",
+        target: "#elnegma-pallet-factory",
+      },
     ],
     content: `
       <div class="space-y-6 text-left leading-relaxed text-gray-200">
@@ -305,22 +417,30 @@ export const articlesEn: Article[] = [
           </p>
         </section>
       </div>
-    `
+    `,
   },
   {
     slug: "ispm15-phytosanitary-standard",
     title: "ISPM-15 Phytosanitary Standard for Wood Packaging Guidelines",
-    description: "Learn about the international standard for wood packaging material (ISPM-15), including heat treatment requirements and IPPC stamp codes.",
+    description:
+      "Learn about the international standard for wood packaging material (ISPM-15), including heat treatment requirements and IPPC stamp codes.",
     date: "2026-06-02",
     author: "Quality & Compliance - El Negma",
     readTime: "3 mins",
     image: "/images/articles/ispm15-phytosanitary-standard.webp",
     category: "Customs Regulations",
-    keywords: ["ISPM-15 standard", "IPPC stamp code", "wood packaging treatment", "customs quarantine", "pallet debarking"],
+    categoryId: "compliance",
+    keywords: [
+      "ISPM-15 standard",
+      "IPPC stamp code",
+      "wood packaging treatment",
+      "customs quarantine",
+      "pallet debarking",
+    ],
     toc: [
       { title: "What is ISPM-15?", target: "#what-is-ispm15" },
       { title: "IPPC Stamp Breakdown", target: "#stamp-breakdown" },
-      { title: "Exemptions from ISPM-15", target: "#exemptions" }
+      { title: "Exemptions from ISPM-15", target: "#exemptions" },
     ],
     content: `
       <div class="space-y-6 text-left leading-relaxed text-gray-200">
@@ -355,22 +475,30 @@ export const articlesEn: Article[] = [
           </ul>
         </section>
       </div>
-    `
+    `,
   },
   {
     slug: "heat-treatment-vs-methyl-bromide",
     title: "Heat Treatment (HT) vs Methyl Bromide (MB) Fumigation",
-    description: "A technical comparison between heat treatment kilns and chemical fumigation for wooden pallets under ISPM-15 standards.",
+    description:
+      "A technical comparison between heat treatment kilns and chemical fumigation for wooden pallets under ISPM-15 standards.",
     date: "2026-06-03",
     author: "Quarantine Dept - El Negma",
     readTime: "4 mins",
     image: "/images/articles/heat-treatment-vs-methyl-bromide.webp",
     category: "Pallet Treatment",
-    keywords: ["heat treatment HT", "methyl bromide fumigation", "ISPM-15 treatment", "eco-friendly pallets", "fumigated pallets"],
+    categoryId: "compliance",
+    keywords: [
+      "heat treatment HT",
+      "methyl bromide fumigation",
+      "ISPM-15 treatment",
+      "eco-friendly pallets",
+      "fumigated pallets",
+    ],
     toc: [
       { title: "Heat Treatment (HT) Process", target: "#ht-process" },
       { title: "Methyl Bromide (MB) Fumigation", target: "#mb-process" },
-      { title: "Comparative Evaluation", target: "#comparison" }
+      { title: "Comparative Evaluation", target: "#comparison" },
     ],
     content: `
       <div class="space-y-6 text-left leading-relaxed text-gray-200">
@@ -395,22 +523,30 @@ export const articlesEn: Article[] = [
           </p>
         </section>
       </div>
-    `
+    `,
   },
   {
     slug: "new-wooden-pallets-quality-standards",
     title: "Why Choose New Wooden Pallets for Export Shipments?",
-    description: "Discover why new wooden pallets are safer and more reliable than used or plastic alternatives for premium export products.",
+    description:
+      "Discover why new wooden pallets are safer and more reliable than used or plastic alternatives for premium export products.",
     date: "2026-06-04",
     author: "Logistics Quality - El Negma",
     readTime: "4 mins",
     image: "/images/articles/new-wooden-pallets-quality-standards.webp",
     category: "Quality Standards",
-    keywords: ["new wooden pallets", "export quality pallets", "heavy duty pallets", "custom wooden pallets", "pallet durability"],
+    categoryId: "procurement",
+    keywords: [
+      "new wooden pallets",
+      "export quality pallets",
+      "heavy duty pallets",
+      "custom wooden pallets",
+      "pallet durability",
+    ],
     toc: [
       { title: "Strength & Structural Integrity", target: "#integrity" },
       { title: "ISPM-15 Compliance Security", target: "#compliance-safety" },
-      { title: "Custom Dimensions Flexibility", target: "#customization" }
+      { title: "Custom Dimensions Flexibility", target: "#customization" },
     ],
     content: `
       <div class="space-y-6 text-left leading-relaxed text-gray-200">
@@ -435,25 +571,45 @@ export const articlesEn: Article[] = [
           </p>
         </section>
       </div>
-    `
+    `,
   },
   {
     slug: "container-stuffing-physics",
     title: "Container Stuffing Physics: Pallet Loading Capacity Guide",
-    description: "The comprehensive guide to spatial calculation, double-stacking logic, center of gravity, and container capacity for Euro and GMA pallets.",
+    description:
+      "The comprehensive guide to spatial calculation, double-stacking logic, center of gravity, and container capacity for Euro and GMA pallets.",
     date: "2026-06-05",
     author: "Logistics Planning - El Negma",
     readTime: "8 mins",
     image: "/images/articles/container-stuffing-physics.webp",
     category: "Ocean Freight Logistics",
-    keywords: ["20ft container pallet capacity", "40ft container Euro pallets", "staggered loading layout", "container weight distribution", "cargo securing math"],
+    categoryId: "export",
+    keywords: [
+      "20ft container pallet capacity",
+      "40ft container Euro pallets",
+      "staggered loading layout",
+      "container weight distribution",
+      "cargo securing math",
+    ],
     toc: [
-      { title: "Standard Container Dimensions & Space", target: "#dimensions-guide" },
-      { title: "Capacity Table: Euro vs Standard Pallets", target: "#pallet-capacities" },
+      {
+        title: "Standard Container Dimensions & Space",
+        target: "#dimensions-guide",
+      },
+      {
+        title: "Capacity Table: Euro vs Standard Pallets",
+        target: "#pallet-capacities",
+      },
       { title: "Mechanical Loading Patterns", target: "#stuffing-patterns" },
-      { title: "Double-Stacking Physics & Height Limits", target: "#double-stacking" },
-      { title: "Weight Distribution & Dynamic Stability", target: "#weight-distribution" },
-      { title: "Cargo Securing & Void Prevention", target: "#cargo-securing" }
+      {
+        title: "Double-Stacking Physics & Height Limits",
+        target: "#double-stacking",
+      },
+      {
+        title: "Weight Distribution & Dynamic Stability",
+        target: "#weight-distribution",
+      },
+      { title: "Cargo Securing & Void Prevention", target: "#cargo-securing" },
     ],
     content: `
       <div class="space-y-6 text-left leading-relaxed text-gray-200">
@@ -572,22 +728,33 @@ export const articlesEn: Article[] = [
           </ul>
         </section>
       </div>
-    `
+    `,
   },
   {
     slug: "exporting-citrus-agricultural-products",
     title: "Citrus Export Logistics: Pallet Specifications & Reefers",
-    description: "Pallet requirements for exporting Egyptian citrus (Valencia and Navel oranges), sizing rules, packaging, and reefer stuffing guidelines.",
+    description:
+      "Pallet requirements for exporting Egyptian citrus (Valencia and Navel oranges), sizing rules, packaging, and reefer stuffing guidelines.",
     date: "2026-06-06",
     author: "Agro Exports - El Negma",
     readTime: "4 mins",
     image: "/images/articles/exporting-citrus-agricultural-products.webp",
     category: "Agricultural Exports",
-    keywords: ["exporting Egyptian citrus", "citrus reefer container", "orange packaging pallets", "cold chain logistics", "agricultural cargo securing"],
+    categoryId: "export",
+    keywords: [
+      "exporting Egyptian citrus",
+      "citrus reefer container",
+      "orange packaging pallets",
+      "cold chain logistics",
+      "agricultural cargo securing",
+    ],
     toc: [
-      { title: "Export Orange Sizing & Packaging", target: "#orange-packaging" },
+      {
+        title: "Export Orange Sizing & Packaging",
+        target: "#orange-packaging",
+      },
       { title: "Reefer Loading Specifications", target: "#reefer-stuffing" },
-      { title: "Phytosanitary Certification", target: "#agro-quarantine" }
+      { title: "Phytosanitary Certification", target: "#agro-quarantine" },
     ],
     content: `
       <div class="space-y-6 text-left leading-relaxed text-gray-200">
@@ -612,22 +779,30 @@ export const articlesEn: Article[] = [
           </p>
         </section>
       </div>
-    `
+    `,
   },
   {
     slug: "exporting-ceramics-heavy-materials",
     title: "Exporting Ceramics & Heavy Tiles: Stringer vs Block Pallets",
-    description: "Logistics solutions for shipping heavy ceramics and marble on reinforced wooden pallets to prevent damage and handle weight.",
+    description:
+      "Logistics solutions for shipping heavy ceramics and marble on reinforced wooden pallets to prevent damage and handle weight.",
     date: "2026-06-07",
     author: "Heavy Industries - El Negma",
     readTime: "3 mins",
     image: "/images/articles/exporting-ceramics-heavy-materials.webp",
     category: "Industrial Materials",
-    keywords: ["exporting ceramics pallets", "marble wooden crates", "heavy duty block pallets", "industrial shipping crates", "loading tiles safely"],
+    categoryId: "export",
+    keywords: [
+      "exporting ceramics pallets",
+      "marble wooden crates",
+      "heavy duty block pallets",
+      "industrial shipping crates",
+      "loading tiles safely",
+    ],
     toc: [
       { title: "Ceramics Weight Challenges", target: "#heavy-weight" },
       { title: "Reinforced Block Pallets", target: "#block-pallets" },
-      { title: "Marble Packaging in Wooden Crates", target: "#marble-crates" }
+      { title: "Marble Packaging in Wooden Crates", target: "#marble-crates" },
     ],
     content: `
       <div class="space-y-6 text-left leading-relaxed text-gray-200">
@@ -652,22 +827,30 @@ export const articlesEn: Article[] = [
           </p>
         </section>
       </div>
-    `
+    `,
   },
   {
     slug: "exporting-chemicals-safely",
     title: "Chemical Drum Shipments: Block Pallets & Plastic Wrapping",
-    description: "Safety guidelines for transporting chemical drums and hazardous materials using heavy-duty block pallets and proper security wrapping.",
+    description:
+      "Safety guidelines for transporting chemical drums and hazardous materials using heavy-duty block pallets and proper security wrapping.",
     date: "2026-06-08",
     author: "Chemical Logistics - El Negma",
     readTime: "3 mins",
     image: "/images/articles/exporting-chemicals-safely.webp",
     category: "Chemical Logistics",
-    keywords: ["chemical drum pallets", "hazardous material shipping", "spill protection pallets", "heavy block pallets", "securing chemical cargo"],
+    categoryId: "export",
+    keywords: [
+      "chemical drum pallets",
+      "hazardous material shipping",
+      "spill protection pallets",
+      "heavy block pallets",
+      "securing chemical cargo",
+    ],
     toc: [
       { title: "Drum Palletizing Layouts", target: "#drum-layouts" },
       { title: "Heavy Block Pallets Setup", target: "#chemical-blocks" },
-      { title: "Stretch Wrap & Binding Security", target: "#chemical-stretch" }
+      { title: "Stretch Wrap & Binding Security", target: "#chemical-stretch" },
     ],
     content: `
       <div class="space-y-6 text-left leading-relaxed text-gray-200">
@@ -692,22 +875,30 @@ export const articlesEn: Article[] = [
           </p>
         </section>
       </div>
-    `
+    `,
   },
   {
     slug: "dates-fumigation-alternatives",
     title: "Dates Fumigation: Safe Phosphine Alternatives under Quarantine",
-    description: "Modern alternatives to methyl bromide for date fumigation, focusing on phosphine gas and climate-controlled warehouse protocols.",
+    description:
+      "Modern alternatives to methyl bromide for date fumigation, focusing on phosphine gas and climate-controlled warehouse protocols.",
     date: "2026-06-09",
     author: "Agronomy Research - El Negma",
     readTime: "3 mins",
     image: "/images/articles/dates-fumigation-alternatives.webp",
     category: "Agricultural Technology",
-    keywords: ["date fumigation Egypt", "phosphine gas treatment", "methyl bromide alternatives", "storing dried dates", "agricultural pest control"],
+    categoryId: "compliance",
+    keywords: [
+      "date fumigation Egypt",
+      "phosphine gas treatment",
+      "methyl bromide alternatives",
+      "storing dried dates",
+      "agricultural pest control",
+    ],
     toc: [
       { title: "The Need for Safe Fumigation", target: "#need-safe" },
       { title: "Phosphine Gas (PH3) Treatment", target: "#phosphine-gas" },
-      { title: "Cold Storage Stacking Methods", target: "#dates-stacking" }
+      { title: "Cold Storage Stacking Methods", target: "#dates-stacking" },
     ],
     content: `
       <div class="space-y-6 text-left leading-relaxed text-gray-200">
@@ -732,23 +923,47 @@ export const articlesEn: Article[] = [
           </p>
         </section>
       </div>
-    `
+    `,
   },
   {
     slug: "pallets-food-pharmaceutical",
-    title: "Wooden Pallets for Food & Pharmaceutical Industries: Safety Standards & Specifications",
-    description: "A specialist guide for Egyptian exporters and factories on the specific requirements for wooden pallets in food and pharmaceutical supply chains, including BRC, IFS, and FDA compliance.",
+    title:
+      "Wooden Pallets for Food & Pharmaceutical Industries: Safety Standards & Specifications",
+    description:
+      "A specialist guide for Egyptian exporters and factories on the specific requirements for wooden pallets in food and pharmaceutical supply chains, including BRC, IFS, and FDA compliance.",
     date: "2026-07-09",
     author: "Quality & Compliance - El Negma Pallets",
     readTime: "5 mins",
     image: "/images/articles/pallets-food-pharmaceutical.webp",
     category: "Quality & Safety Standards",
-    keywords: ["food grade wooden pallets", "pharmaceutical pallets", "FDA pallet requirements", "BRC pallet standards", "pallets for food factories", "HT certified food pallets", "safe pallets for food", "IFS pallet compliance"],
+    categoryId: "industry",
+    keywords: [
+      "food grade wooden pallets",
+      "pharmaceutical pallets",
+      "FDA pallet requirements",
+      "BRC pallet standards",
+      "pallets for food factories",
+      "HT certified food pallets",
+      "safe pallets for food",
+      "IFS pallet compliance",
+    ],
     toc: [
-      { title: "Why Food & Pharma Pallets Are Different", target: "#why-different-standards" },
-      { title: "Key International Standards (BRC, IFS, FDA)", target: "#international-standards" },
-      { title: "Specifications of a Food-Safe Pallet", target: "#safe-pallet-specs" },
-      { title: "Risks of Using Used Pallets for Food", target: "#used-pallet-risks" }
+      {
+        title: "Why Food & Pharma Pallets Are Different",
+        target: "#why-different-standards",
+      },
+      {
+        title: "Key International Standards (BRC, IFS, FDA)",
+        target: "#international-standards",
+      },
+      {
+        title: "Specifications of a Food-Safe Pallet",
+        target: "#safe-pallet-specs",
+      },
+      {
+        title: "Risks of Using Used Pallets for Food",
+        target: "#used-pallet-risks",
+      },
     ],
     content: `
       <div class="space-y-6 text-left leading-relaxed text-gray-200">
@@ -796,23 +1011,47 @@ export const articlesEn: Article[] = [
           </ul>
         </section>
       </div>
-    `
+    `,
   },
   {
     slug: "pallets-warehouse-storage",
-    title: "Wooden Pallets for Warehouse Storage: Differences Between Storage & Export Pallets",
-    description: "A comprehensive guide for warehouse managers and logistics officers explaining the key differences between storage and export pallets, with specification recommendations from El Negma experts.",
+    title:
+      "Wooden Pallets for Warehouse Storage: Differences Between Storage & Export Pallets",
+    description:
+      "A comprehensive guide for warehouse managers and logistics officers explaining the key differences between storage and export pallets, with specification recommendations from El Negma experts.",
     date: "2026-07-09",
     author: "Logistics Planning - El Negma Pallets",
     readTime: "5 mins",
     image: "/images/articles/pallets-warehouse-storage.webp",
     category: "Storage & Logistics",
-    keywords: ["warehouse wooden pallets", "storage pallets", "racking system pallets", "pallets for warehouse shelves", "storage vs export pallets", "warehouse pallet specs", "floor stacking pallets", "pallet storage systems"],
+    categoryId: "industry",
+    keywords: [
+      "warehouse wooden pallets",
+      "storage pallets",
+      "racking system pallets",
+      "pallets for warehouse shelves",
+      "storage vs export pallets",
+      "warehouse pallet specs",
+      "floor stacking pallets",
+      "pallet storage systems",
+    ],
     toc: [
-      { title: "Storage vs Export: What's the Difference?", target: "#storage-vs-export" },
-      { title: "Storage Systems and Their Pallet Requirements", target: "#storage-systems" },
-      { title: "Specs for Racking-Compatible Pallets", target: "#racking-specs" },
-      { title: "Common Warehouse Pallet Purchasing Mistakes", target: "#common-mistakes" }
+      {
+        title: "Storage vs Export: What's the Difference?",
+        target: "#storage-vs-export",
+      },
+      {
+        title: "Storage Systems and Their Pallet Requirements",
+        target: "#storage-systems",
+      },
+      {
+        title: "Specs for Racking-Compatible Pallets",
+        target: "#racking-specs",
+      },
+      {
+        title: "Common Warehouse Pallet Purchasing Mistakes",
+        target: "#common-mistakes",
+      },
     ],
     content: `
       <div class="space-y-6 text-left leading-relaxed text-gray-200">
@@ -864,8 +1103,7 @@ export const articlesEn: Article[] = [
           </p>
         </section>
       </div>
-    `
-  }
+    `,
+  },
+  ...palletSizeArticlesEn,
 ];
-
-
