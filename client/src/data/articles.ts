@@ -14,6 +14,9 @@ import { exportingChemicalsSafelyArticle } from "./articles/exporting-chemicals-
 import { datesFumigationAlternativesArticle } from "./articles/dates-fumigation-alternatives";
 import { palletDimensionsStandardsArticle } from "./articles/pallet-dimensions-standards";
 import { palletSizeArticlesAr } from "./pallet-size-articles";
+import { palletTypesDokumStringerArticle } from "./articles/pallet-types-dokum-stringer";
+import { palletRunnersMarainArticle } from "./articles/pallet-runners-marain";
+import { palletBlockSolidArticle } from "./articles/pallet-block-solid";
 
 export type { Article, TocItem } from "./articles-types";
 
@@ -21,6 +24,9 @@ export const articles: Article[] = [
   palletPricesEgyptArticle,
   buyingPalletsGuideArticle,
   woodTypesForPalletsArticle,
+  palletTypesDokumStringerArticle,
+  palletRunnersMarainArticle,
+  palletBlockSolidArticle,
   palletsFoodPharmaceuticalArticle,
   palletsWarehouseStorageArticle,
   ispm15PhytosanitaryStandardArticle,
@@ -34,3 +40,4 @@ export const articles: Article[] = [
   palletDimensionsStandardsArticle,
   ...palletSizeArticlesAr,
 ];
+

@@ -1098,8 +1098,307 @@ export const articlesEn: Article[] = [
             <li><strong>Skipping Regular Pallet Inspections:</strong> Cracked or broken pallets in a warehouse present a worker safety hazard and risk goods falling from racking systems.</li>
             <li><strong>Over-Specifying with Export Pallets for Internal Use:</strong> Purchasing expensive HT-certified export pallets for purely internal storage is an unnecessary budget waste.</li>
           </ul>
+        </section>
+      </div>
+    `,
+  },
+  {
+    slug: "pallet-types-dokum-stringer",
+    title: "Stringer Wooden Pallets (Dokum): The Ultimate Guide to Specifications & Uses",
+    description: "Learn all about stringer wooden pallets (Dokum style) — the most common pallet type in Egypt. Detailed specs, components, applications, and comparison with block pallets.",
+    date: "2026-07-10",
+    author: "Production & Manufacturing - El Negma",
+    readTime: "6 mins",
+    image: "/images/articles/pallet-types-dokum-stringer.webp",
+    category: "Pallet Sizes & Specs",
+    categoryId: "sizes",
+    keywords: [
+      "stringer pallet",
+      "dokum pallet",
+      "wooden stringer pallet",
+      "two-way pallet",
+      "wooden pallets Egypt",
+      "stringer pallet specifications",
+      "difference between stringer and block pallets"
+    ],
+    toc: [
+      { title: "What is a Stringer Pallet?", target: "#what-is-stringer" },
+      { title: "Stringer Pallet Components", target: "#stringer-components" },
+      { title: "Technical Specifications & Dimensions", target: "#stringer-specs" },
+      { title: "Stringer Pallets vs. Block Pallets", target: "#stringer-vs-block" },
+      { title: "Industrial Applications in Egypt", target: "#stringer-applications" }
+    ],
+    content: `
+      <div class="space-y-6 text-left leading-relaxed text-gray-200">
+        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
+          <h2 id="what-is-stringer" class="text-xl font-bold text-accent mb-2">1. What is a Stringer Pallet (Dokum)?</h2>
+          <p class="text-sm text-gray-300">
+            A <strong>stringer pallet</strong> (commonly referred to in Egypt as \"Dokum\") is the most widely used wooden platform style worldwide. It relies on <strong>parallel timber beams (stringers)</strong> to support the top and bottom deck boards. This configuration is highly popular because it is <strong>cost-effective to manufacture</strong> and perfectly suitable for general shipping and warehousing applications.
+          </p>
+          <p class="text-sm text-gray-300 mt-2">
+            They are also known as \"Two-Way\" pallets because forklift entry is restricted to the two opposite ends where the stringers do not block the opening (unless the stringers are notched, which allows partial four-way entry).
+          </p>
+        </section>
+
+        <section>
+          <h2 id="stringer-components" class="text-xl font-bold text-white border-b border-border pb-1">2. Stringer Pallet Components</h2>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-3 mt-2 pl-2">
+            <li><strong>Top Deck Boards:</strong> Usually 5 to 7 boards that hold the cargo. Increasing board count and thickness (18-22 mm) increases weight capacity.</li>
+            <li><strong>Stringers (Dokum):</strong> Typically 3 thick boards (usually 70-100 mm height × 35-50 mm width) running the length of the pallet that carry the entire load.</li>
+            <li><strong>Bottom Deck Boards:</strong> 3 to 5 boards on the base that stabilize the pallet and distribute the weight during stacking.</li>
+            <li><strong>Spiral/Ring Nails:</strong> Specialized ribbed nails that resist pulling, ensuring the joints remain strong under heavy movements.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="stringer-specs" class="text-xl font-bold text-white border-b border-border pb-1">3. Technical Specifications & Dimensions</h2>
+          <p class="text-sm text-gray-300">Standard stringer pallet sizes manufactured by El Negma:</p>
+          <div class="overflow-x-auto mt-3">
+            <table class="w-full text-xs text-gray-300 border border-border/40">
+              <thead class="bg-muted/30">
+                <tr>
+                  <th class="p-2 border border-border/40 text-left">Dimensions (cm)</th>
+                  <th class="p-2 border border-border/40 text-left">Primary Application</th>
+                  <th class="p-2 border border-border/40 text-left">Dynamic Load Capacity</th>
+                  <th class="p-2 border border-border/40 text-left">No. of Stringers</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="p-2 border border-border/40">120 × 80</td><td class="p-2 border border-border/40">European Export standard</td><td class="p-2 border border-border/40">1,000 - 1,500 kg</td><td class="p-2 border border-border/40">3</td></tr>
+                <tr><td class="p-2 border border-border/40">120 × 100</td><td class="p-2 border border-border/40">Middle East & Asian Export</td><td class="p-2 border border-border/40">1,200 - 1,500 kg</td><td class="p-2 border border-border/40">3</td></tr>
+                <tr><td class="p-2 border border-border/40">110 × 110</td><td class="p-2 border border-border/40">Chemical Drums & Bags</td><td class="p-2 border border-border/40">1,500 - 2,000 kg</td><td class="p-2 border border-border/40">3</td></tr>
+                <tr><td class="p-2 border border-border/40">Custom Dimensions</td><td class="p-2 border border-border/40">Specialized industrial cargos</td><td class="p-2 border border-border/40">Based on specs</td><td class="p-2 border border-border/40">2-4</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2 id="stringer-vs-block" class="text-xl font-bold text-white border-b border-border pb-1">4. Stringer Pallets vs. Block Pallets</h2>
+          <div class="overflow-x-auto mt-3">
+            <table class="w-full text-xs text-gray-300 border border-border/40">
+              <thead class="bg-muted/30">
+                <tr>
+                  <th class="p-2 border border-border/40 text-left">Comparison</th>
+                  <th class="p-2 border border-border/40 text-left">Stringer Pallet (Dokum)</th>
+                  <th class="p-2 border border-border/40 text-left">Block Pallet (Solid/Sadd)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="p-2 border border-border/40 font-bold">Forklift Entry</td><td class="p-2 border border-border/40">2-Way (or partial 4-way with notches)</td><td class="p-2 border border-border/40">Full 4-Way Entry</td></tr>
+                <tr><td class="p-2 border border-border/40 font-bold">Manufacturing Cost</td><td class="p-2 border border-border/40">15% to 25% lower</td><td class="p-2 border border-border/40">Higher</td></tr>
+                <tr><td class="p-2 border border-border/40 font-bold">Structural Strength</td><td class="p-2 border border-border/40">Good for medium-heavy loads</td><td class="p-2 border border-border/40">Exceptional for extreme weights</td></tr>
+                <tr><td class="p-2 border border-border/40 font-bold">Best Used For</td><td class="p-2 border border-border/40">Road freight & export shipping</td><td class="p-2 border border-border/40">ASRS & automated warehousing</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2 id="stringer-applications" class="text-xl font-bold text-white border-b border-border pb-1">5. Industrial Applications in Egypt</h2>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Citrus & Agriculture Exports:</strong> The 120×100 cm stringer pallet is the default standard for exporting Egyptian oranges, potatoes, and onions to GCC and Asian markets.</li>
+            <li><strong>Ceramics & Heavy Cargo:</strong> Reinforced stringer pallets (with 50 mm thick stringers) are used to transport heavy ceramic crates and marble blocks.</li>
+            <li><strong>General Factory Storage:</strong> The most economical solution for ground stacking and basic pallet storage in industrial zones.</li>
+          </ul>
           <p class="text-sm text-gray-300 mt-3">
-            The <strong>El Negma Pallets Factory</strong> team can advise you on the optimal type and size for your facility based on your storage system and load profile. Contact us for a free technical consultation.
+            At <strong>El Negma Pallets Factory</strong>, we manufacture stringer pallets using certified Swedish pine wood with ISPM-15 heat treatment (HT) stamps for trouble-free exports. Contact us for a custom quote.
+          </p>
+        </section>
+      </div>
+    `,
+  },
+  {
+    slug: "pallet-runners-marain",
+    title: "Wooden Runners (Marain): The Backbone of Pallet Structural Strength",
+    description: "Understand the crucial role of wooden runners (Stringers/Marain) in pallet manufacturing. Discover standard sizes, wood species, and how they determine the load capacity of wooden platforms.",
+    date: "2026-07-10",
+    author: "Production & Quality - El Negma",
+    readTime: "5 mins",
+    image: "/images/articles/pallet-runners-marain.webp",
+    category: "Pallet Sizes & Specs",
+    categoryId: "sizes",
+    keywords: [
+      "wooden runners",
+      "marain khashab",
+      "pallet runners",
+      "stringers wood",
+      "pallet components",
+      "musk runners",
+      "wooden pallet manufacturing",
+      "runners Egypt"
+    ],
+    toc: [
+      { title: "What are Wooden Runners (Marain)?", target: "#what-are-runners" },
+      { title: "Types & Designs of Pallet Runners", target: "#runner-types" },
+      { title: "Technical Dimensions & Specifications", target: "#runner-dimensions" },
+      { title: "Best Timber Species for Runners", target: "#runner-timber" },
+      { title: "Runner Quality & Pallet Safety", target: "#runner-safety" }
+    ],
+    content: `
+      <div class="space-y-6 text-left leading-relaxed text-gray-200">
+        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
+          <h2 id="what-are-runners" class="text-xl font-bold text-accent mb-2">1. What are Wooden Runners (Marain)?</h2>
+          <p class="text-sm text-gray-300">
+            <strong>Wooden runners</strong> (known in the Egyptian industry as \"Marain\") are the thick structural timber boards running along the length of a pallet. They act as the primary load-bearing beams to which deck boards are nailed. The density, thickness, and layout of these runners dictate how much weight a pallet can safely carry without bowing or fracturing.
+          </p>
+          <p class="text-sm text-gray-300 mt-2">
+            In standard shipping platforms, a configuration of <strong>3 parallel runners</strong> is standard (one on each edge, and one centered). For wider platforms or extra heavy industrial loads, 4 or more runners are utilized.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="runner-types" class="text-xl font-bold text-white border-b border-border pb-1">2. Types & Designs of Pallet Runners</h2>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-3 mt-2 pl-2">
+            <li><strong>Solid Runners:</strong> Continuous solid wood beams. They are strong and easy to manufacture, but limit forklift entry to 2-way access.</li>
+            <li><strong>Notched Runners:</strong> Solid runners featuring pre-cut rectangular openings (notches) on the bottom edge. These notches allow forklift forks to slide through, turning a two-way layout into a partial four-way access configuration.</li>
+            <li><strong>Double/Multi-Runners:</strong> Doubling up two runners side-by-side to support extreme payloads exceeding 2,000 kg.</li>
+            <li><strong>LVL (Laminated Veneer Lumber) Runners:</strong> Engineered composite wood made of pressed wood layers. Extremely strong, highly consistent, but more expensive.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="runner-dimensions" class="text-xl font-bold text-white border-b border-border pb-1">3. Technical Dimensions & Specifications</h2>
+          <p class="text-sm text-gray-300">Standard runner sizes cut at El Negma sawmills:</p>
+          <div class="overflow-x-auto mt-3">
+            <table class="w-full text-xs text-gray-300 border border-border/40">
+              <thead class="bg-muted/30">
+                <tr>
+                  <th class="p-2 border border-border/40 text-left">Runner Length</th>
+                  <th class="p-2 border border-border/40 text-left">Height (Thickness)</th>
+                  <th class="p-2 border border-border/40 text-left">Width</th>
+                  <th class="p-2 border border-border/40 text-left">Target Pallet Style</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="p-2 border border-border/40">80 cm</td><td class="p-2 border border-border/40">70-90 mm</td><td class="p-2 border border-border/40">35-50 mm</td><td class="p-2 border border-border/40">Euro Pallet 120×80 cm</td></tr>
+                <tr><td class="p-2 border border-border/40">100 cm</td><td class="p-2 border border-border/40">70-100 mm</td><td class="p-2 border border-border/40">35-50 mm</td><td class="p-2 border border-border/40">Citrus/Industrial 120×100 cm</td></tr>
+                <tr><td class="p-2 border border-border/40">110 cm</td><td class="p-2 border border-border/40">80-100 mm</td><td class="p-2 border border-border/40">40-50 mm</td><td class="p-2 border border-border/40">Chemical CP Square Pallets</td></tr>
+                <tr><td class="p-2 border border-border/40">120 cm</td><td class="p-2 border border-border/40">70-90 mm</td><td class="p-2 border border-border/40">35-45 mm</td><td class="p-2 border border-border/40">Standard GMA/US Pallets</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2 id="runner-timber" class="text-xl font-bold text-white border-b border-border pb-1">4. Best Timber Species for Runners</h2>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-3 mt-2 pl-2">
+            <li><strong>Swedish Pine / Spruce (Softwood):</strong> The most cost-effective and common choice. Offers an excellent strength-to-weight ratio and reacts perfectly to ISPM-15 heat treatment.</li>
+            <li><strong>Beechwood (Hardwood):</strong> 30-40% stronger than pine. Excellent for multi-use industrial pallets handling heavy machinery parts. Higher price point.</li>
+            <li><strong>Musk Pine (Moski):</strong> Highly popular locally in Egypt. Slightly softer than Swedish pine, best suited for local standard pallets or single-use export shipments.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="runner-safety" class="text-xl font-bold text-white border-b border-border pb-1">5. Runner Quality & Pallet Safety</h2>
+          <p class="text-sm text-gray-300">
+            Because runners carry the main bending moment, a single failure can lead to catastrophic cargo drops. El Negma ensures quality by checking:
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Moisture Content (MC):</strong> Keeping moisture below 20% to prevent wood warping and shrinkage.</li>
+            <li><strong>Straight Grain Fiber:</strong> Ensuring wood grains run parallel to the runner length. Slanted grains drastically reduce load limits.</li>
+            <li><strong>Knot Inspections:</strong> Excluding large structural knots in the center of the runners where tension stresses are highest.</li>
+          </ul>
+          <p class="text-sm text-gray-300 mt-3">
+            By sourcing premium timber and inspecting every runner before assembly, <strong>El Negma Pallets Factory</strong> guarantees highly dependable platforms. Contact us to order custom-sized timber components or assembled units.
+          </p>
+        </section>
+      </div>
+    `,
+  },
+  {
+    slug: "pallet-block-solid",
+    title: "Block Wooden Pallets (Sadd): Extreme Load Capacity & 4-Way Entry Flex",
+    description: "Your complete guide to block wooden pallets (Sadd/Block style) — the gold standard for automated warehouse operations and heavy load shipping. Technical specifications and advantages.",
+    date: "2026-07-10",
+    author: "Technical Support - El Negma",
+    readTime: "5 mins",
+    image: "/images/articles/pallet-block-solid.webp",
+    category: "Pallet Sizes & Specs",
+    categoryId: "sizes",
+    keywords: [
+      "block pallet",
+      "sadd pallet",
+      "euro block pallet",
+      "solid block pallet",
+      "four-way wooden pallet",
+      "heavy load pallets",
+      "block pallet manufacturer Egypt",
+      "EPAL block specs"
+    ],
+    toc: [
+      { title: "What is a Block Pallet (Sadd)?", target: "#what-is-block" },
+      { title: "Anatomy & Components of a Block Pallet", target: "#block-anatomy" },
+      { title: "Key Benefits of Block Pallets", target: "#block-benefits" },
+      { title: "Technical Specs & Loading Dimensions", target: "#block-specs" },
+      { title: "Why Block Pallets are Crucial for Modern Warehousing", target: "#block-modern-warehousing" }
+    ],
+    content: `
+      <div class="space-y-6 text-left leading-relaxed text-gray-200">
+        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
+          <h2 id="what-is-block" class="text-xl font-bold text-accent mb-2">1. What is a Block Pallet (Sadd)?</h2>
+          <p class="text-sm text-gray-300">
+            A <strong>block pallet</strong> (commonly known as \"Sadd\" or \"Block style\" in Egypt) is a highly durable wooden platform that utilizes <strong>solid wood blocks</strong> instead of continuous stringers. This structural configuration creates open spaces between the blocks, enabling forklifts and manual pallet jacks to enter from <strong>all four sides (4-Way Entry)</strong>.
+          </p>
+          <p class="text-sm text-gray-300 mt-2">
+            Block pallets serve as the foundation for the prestigious <strong>Euro Pallet (EUR/EPAL)</strong> standards widely used across European distribution centers, container ports, and high-bay warehouses.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="block-anatomy" class="text-xl font-bold text-white border-b border-border pb-1">2. Anatomy & Components of a Block Pallet</h2>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-3 mt-2 pl-2">
+            <li><strong>Top Deck Boards:</strong> Parallel timber boards that provide a flat, close-spaced surface area for loading goods safely.</li>
+            <li><strong>Stringer Boards:</strong> Lateral boards sitting directly below the top deck and above the blocks to tie the top deck together.</li>
+            <li><strong>Blocks (9 Blocks total):</strong> Solid timber cubes (or high-density composite blocks) positioned at all four corners, the center of each side, and the absolute center to carry vertical pressures.</li>
+            <li><strong>Bottom Deck Boards:</strong> 3 base boards (sometimes configured as a full perimeter frame) facilitating smooth conveyor transit and stable racking support.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="block-benefits" class="text-xl font-bold text-white border-b border-border pb-1">3. Key Benefits of Block Pallets</h2>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Full 4-Way Entry:</strong> Drastically cuts down loading times inside narrow container walls and box trucks, as drivers don't have to reposition the pallet.</li>
+            <li><strong>Higher Structural Integrity:</strong> The layout of 9 solid blocks absorbs localized dynamic shocks much better than typical stringers.</li>
+            <li><strong>Automated Conveyor Friendly:</strong> Perfectly fits into robotic automated storage and retrieval systems (ASRS) without getting stuck on roller tracks.</li>
+            <li><strong>Longer Operational Life:</strong> Excellent durability that withstands multiple circular logistics cycles.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="block-specs" class="text-xl font-bold text-white border-b border-border pb-1">4. Technical Specs & Loading Dimensions</h2>
+          <p class="text-sm text-gray-300">Technical parameters for block pallets produced at El Negma:</p>
+          <div class="overflow-x-auto mt-3">
+            <table class="w-full text-xs text-gray-300 border border-border/40">
+              <thead class="bg-muted/30">
+                <tr>
+                  <th class="p-2 border border-border/40 text-left">Specification</th>
+                  <th class="p-2 border border-border/40 text-left">Details (Standard 120×80 cm / 120×100 cm sizes)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="p-2 border border-border/40 font-bold">Static Load Limit</td><td class="p-2 border border-border/40">Up to 4,000 kg</td></tr>
+                <tr><td class="p-2 border border-border/40 font-bold">Dynamic Cargo Load</td><td class="p-2 border border-border/40">1,500 kg to 2,000 kg</td></tr>
+                <tr><td class="p-2 border border-border/40 font-bold">Block Dimensions</td><td class="p-2 border border-border/40">Typically 145×145×78 mm or 145×90×78 mm</td></tr>
+                <tr><td class="p-2 border border-border/40 font-bold">Assembly Fasteners</td><td class="p-2 border border-border/40">Spiral cement-coated nails for maximum pullout resistance</td></tr>
+                <tr><td class="p-2 border border-border/40 font-bold">Heat Treatment</td><td class="p-2 border border-border/40">Pre-treated (HT) and stamped according to ISPM-15 regulations.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2 id="block-modern-warehousing" class="text-xl font-bold text-white border-b border-border pb-1">5. Why Block Pallets are Crucial for Modern Warehousing</h2>
+          <p class="text-sm text-gray-300">
+            While block pallets require a higher initial manufacturing investment than standard stringer pallets, they pay off through:
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Trouble-Free Exports:</strong> Essential for EU destinations where EPAL/EUR designs are mandatory to ensure warehouse compatibility.</li>
+            <li><strong>High-Rack Safety:</strong> Provides a sturdy bottom footprint that rests securely on steel racking shelves (selective racking) without sliding.</li>
+            <li><strong>Reduced Goods Damage:</strong> Less bending or bowing means lower risk of stack collapses.</li>
+          </ul>
+          <p class="text-sm text-gray-300 mt-3">
+            Looking for highly durable block pallets matching international standards? <strong>El Negma Pallets Factory</strong> is fully equipped to manufacture premium block/sadd platforms for all your local storage and international shipping needs.
           </p>
         </section>
       </div>
