@@ -16,6 +16,8 @@ import {
   ShieldCheck,
   Tag,
   Factory,
+  Calendar,
+  Clock,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -260,78 +262,70 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
         {filteredArticles.length > 0 ? (
           <div className="mb-16">
             <div
-              className={`grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 ${remainingArticleCount > 0 ? "mb-8" : ""}`}
+              className={`flex flex-col gap-4 ${remainingArticleCount > 0 ? "mb-8" : ""}`}
             >
               {displayedArticles.map((article, idx) => (
-                <article
+                <a
                   key={article.slug}
-                  className="flex flex-col bg-muted/20 border border-border/40 hover:border-secondary/50 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 group shadow-lg"
-                  style={{ animationDelay: `${idx * 150}ms` }}
+                  href={
+                    isEn
+                      ? `/en/articles/${article.slug}/`
+                      : `/articles/${article.slug}/`
+                  }
+                  className="flex flex-col md:flex-row gap-5 p-4 md:p-5 bg-[#1c1f2a]/80 border border-white/5 hover:border-secondary/30 rounded-2xl transition-all duration-300 group items-center md:items-stretch"
+                  style={{ animationDelay: `${idx * 80}ms` }}
                 >
-                  {/* Image Cover */}
-                  <div className="relative aspect-video w-full overflow-hidden bg-muted">
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#181b24] to-transparent opacity-60 z-10" />
+                  {/* Image Thumbnail — compact 4:3 */}
+                  <div className="relative w-full md:w-56 shrink-0 aspect-[16/10] md:aspect-[4/3] rounded-xl overflow-hidden bg-muted">
                     <img
                       src={article.image}
                       alt={article.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
-                    <span
-                      className={`absolute top-4 ${isEn ? "left-4" : "right-4"} z-20 bg-secondary px-3 py-1.5 rounded-full text-xs font-bold shadow-md`}
-                    >
-                      {article.category}
-                    </span>
                   </div>
 
-                  {/* Card Content */}
+                  {/* Content */}
                   <div
-                    className={`flex flex-col flex-1 p-6 ${isEn ? "text-left" : "text-right"}`}
+                    className={`flex flex-col flex-1 ${isEn ? "text-left" : "text-right"} justify-between gap-3`}
                   >
-                    {/* Title */}
-                    <h2 className="text-xl font-bold text-white mb-3 leading-snug group-hover:text-accent transition-colors line-clamp-2">
-                      <a
-                        href={
-                          isEn
-                            ? `/en/articles/${article.slug}/`
-                            : `/articles/${article.slug}/`
-                        }
-                      >
+                    <div>
+                      {/* Title */}
+                      <h2 className="text-lg md:text-xl font-black text-white mb-2 leading-snug group-hover:text-accent transition-colors line-clamp-2">
                         {article.title}
-                      </a>
-                    </h2>
+                      </h2>
 
-                    {/* Short Description */}
-                    <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 mb-6">
-                      {article.description}
-                    </p>
+                      {/* Short Description */}
+                      <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
+                        {article.description}
+                      </p>
+                    </div>
 
-                    {/* Action Link */}
-                    <div className="mt-auto pt-4 border-t border-border/20 flex justify-between items-center">
-                      <span className="text-xs text-white/50 font-medium">
-                        {content.author}{" "}
-                        {isEn
-                          ? article.author.split(" - ")[0]
-                          : article.author.split(" - ")[0]}
-                      </span>
-                      <a
-                        href={
-                          isEn
-                            ? `/en/articles/${article.slug}/`
-                            : `/articles/${article.slug}/`
-                        }
-                        className="inline-flex items-center gap-1.5 text-sm font-bold text-secondary hover:text-accent transition-colors group/btn"
+                    {/* Footer: Meta + Read Link */}
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="flex items-center gap-3 text-xs text-muted-foreground font-semibold">
+                        <span className="flex items-center gap-1">
+                          <Calendar className="w-3.5 h-3.5 text-secondary/70" />
+                          {article.date}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Clock className="w-3.5 h-3.5 text-secondary/70" />
+                          {article.readTime}
+                        </span>
+                      </div>
+                      <span
+                        className="inline-flex items-center gap-1 text-sm font-bold text-secondary group-hover:text-accent transition-colors whitespace-nowrap"
                       >
-                        {content.readMore}
+                        {isEn ? "Read Full Article" : "اقرأ المقال بالكامل"}
                         {isEn ? (
-                          <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                          <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                         ) : (
-                          <ArrowLeft className="w-4 h-4 transition-transform group-hover/btn:-translate-x-1" />
+                          <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
                         )}
-                      </a>
+                      </span>
                     </div>
                   </div>
-                </article>
+                </a>
               ))}
             </div>
 

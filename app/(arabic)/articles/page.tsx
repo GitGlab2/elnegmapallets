@@ -16,5 +16,34 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <ArticlesList lang="ar" />;
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "الرئيسية",
+        "item": "https://elnegmapallets.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "المقالات والمعلومات اللوجستية",
+        "item": "https://elnegmapallets.com/articles/"
+      }
+    ]
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbData).replace(/</g, "\\u003c"),
+        }}
+      />
+      <ArticlesList lang="ar" />
+    </>
+  );
 }

@@ -63,13 +63,13 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
   const navItems = isEn ? [
     { name: "About Us", path: "/en#about-section", isAnchor: true },
     { name: "Products", path: "/en#products-section", isAnchor: true },
-    { name: "Contact Us", path: "/en#contact-section", isAnchor: true },
     { name: "Articles & Info", path: "/en/articles", isAnchor: false },
+    { name: "Contact Us", path: "/en#contact-section", isAnchor: true },
   ] : [
     { name: "من نحن", path: "/#about-section", isAnchor: true },
     { name: "المنتجات", path: "/#products-section", isAnchor: true },
-    { name: "تواصل معنا", path: "/#contact-section", isAnchor: true },
     { name: "المقالات والمعلومات", path: "/articles", isAnchor: false },
+    { name: "تواصل معنا", path: "/#contact-section", isAnchor: true },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string, isAnchor: boolean) => {
@@ -128,7 +128,12 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
       footerDesc: "الشركة رقم 1 في مصر لتصنيع البالتات الخشبية. خبرة تزيد عن 18 عامًا في خدمة كبرى الشركات والمصانع.",
       footerQuickLinks: "روابط سريعة",
       footerProducts: "المنتجات",
-      footerProductsList: ["بالتة 100 × 120", "بالتة يورو (Euro Pallet)", "تصميمات مخصصة", "معالجة حرارية (HT)"],
+      footerProductsList: [
+        { name: "بالتة 100 × 120", path: "/pallet-sizes/120x100-industrial-pallet", isAnchor: false },
+        { name: "بالتة يورو (Euro Pallet)", path: "/pallet-sizes/120x80-euro-pallet", isAnchor: false },
+        { name: "تصميمات مخصصة", path: "/#contact-section", isAnchor: true },
+        { name: "معالجة حرارية (HT)", path: "/articles/heat-treatment-vs-methyl-bromide", isAnchor: false }
+      ],
       footerContact: "تواصل معنا",
       footerAddress: "بني سويف - المنطقة الصناعية بياض العرب (بجوار علوم إدارية)",
       footerCopyright: `© ${new Date().getFullYear()} شركة النجمة لتصنيع البالتات الخشبية. جميع الحقوق محفوظة.`,
@@ -147,7 +152,12 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
       footerDesc: "The #1 company in Egypt for wooden pallets manufacturing. Over 18 years of experience serving major companies and factories.",
       footerQuickLinks: "Quick Links",
       footerProducts: "Products",
-      footerProductsList: ["Pallet 100 × 120", "Euro Pallet (EPAL)", "Custom Designs", "Heat Treatment (HT)"],
+      footerProductsList: [
+        { name: "Pallet 100 × 120", path: "/en/pallet-sizes/120x100-industrial-pallet", isAnchor: false },
+        { name: "Euro Pallet (EPAL)", path: "/en/pallet-sizes/120x80-euro-pallet", isAnchor: false },
+        { name: "Custom Designs", path: "/en#contact-section", isAnchor: true },
+        { name: "Heat Treatment (HT)", path: "/en/articles/heat-treatment-vs-methyl-bromide", isAnchor: false }
+      ],
       footerContact: "Contact Us",
       footerAddress: "Beni Suef - Bayad Al-Arab Industrial Zone, Egypt",
       footerCopyright: `© ${new Date().getFullYear()} El Negma Pallets. All rights reserved.`,
@@ -387,7 +397,16 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
               <h3 className="font-bold text-lg mb-4 text-foreground">{content.footerProducts}</h3>
               <ul className="space-y-3">
                 {content.footerProductsList.map((prod, index) => (
-                  <li key={index}><span className="text-muted-foreground text-sm">{prod}</span></li>
+                  <li key={index}>
+                    <a 
+                      href={prod.path}
+                      onClick={(e) => handleNavClick(e, prod.path, prod.isAnchor)}
+                    >
+                      <span className="text-muted-foreground hover:text-primary transition-colors text-sm cursor-pointer">
+                        {prod.name}
+                      </span>
+                    </a>
+                  </li>
                 ))}
               </ul>
             </div>

@@ -39,5 +39,80 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: Props) {
   const { slug } = await params;
-  return <PalletSizeDetails slug={slug} lang="ar" />;
+  const item = palletSizesAr.find((p) => p.slug === slug);
+  const itemUrl = `${SITE_URL}/pallet-sizes/${slug}/`;
+  const imageUrl = item ? new URL(item.image, SITE_URL).toString() : undefined;
+
+  const productData = item && {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": item.title,
+    "description": item.description,
+    "image": imageUrl ? [imageUrl] : undefined,
+    "sku": item.slug,
+    "brand": {
+      "@type": "Brand",
+      "name": "مصنع النجمة للبالتات الخشبية"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": itemUrl,
+      "priceCurrency": "EGP",
+      "price": "0",
+      "priceValidUntil": "2027-12-31",
+      "itemCondition": "https://schema.org/NewCondition",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "مصنع النجمة للبالتات الخشبية"
+      }
+    }
+  };
+
+  const breadcrumbData = item && {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "الرئيسية",
+        "item": `${SITE_URL}/`
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "مقاسات وأبعاد البالتات",
+        "item": `${SITE_URL}/pallet-sizes/`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": item.title,
+        "item": itemUrl
+      }
+    ]
+  };
+
+  return (
+    <>
+      {productData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(productData).replace(/</g, "\\u003c"),
+          }}
+        />
+      )}
+      {breadcrumbData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(breadcrumbData).replace(/</g, "\\u003c"),
+          }}
+        />
+      )}
+      <PalletSizeDetails slug={slug} lang="ar" />
+    </>
+  );
 }

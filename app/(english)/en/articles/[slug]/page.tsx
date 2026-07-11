@@ -84,6 +84,31 @@ export default async function Page({ params }: Props) {
     inLanguage: "en",
   };
 
+  const breadcrumbData = article && {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": `${SITE_URL}/en/`
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Logistics Insights & Articles",
+        "item": `${SITE_URL}/en/articles/`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": article.title,
+        "item": articleUrl
+      }
+    ]
+  };
+
   return (
     <>
       {structuredData && (
@@ -91,6 +116,14 @@ export default async function Page({ params }: Props) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+          }}
+        />
+      )}
+      {breadcrumbData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(breadcrumbData).replace(/</g, "\\u003c"),
           }}
         />
       )}

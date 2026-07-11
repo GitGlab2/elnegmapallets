@@ -16,5 +16,34 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <ArticlesList lang="en" />;
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://elnegmapallets.com/en/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Logistics Insights & Articles",
+        "item": "https://elnegmapallets.com/en/articles/"
+      }
+    ]
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbData).replace(/</g, "\\u003c"),
+        }}
+      />
+      <ArticlesList lang="en" />
+    </>
+  );
 }
