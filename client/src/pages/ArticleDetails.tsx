@@ -13,26 +13,8 @@ export default function ArticleDetails({ slug, lang = "ar" }: { slug: string; la
     notFound();
   }
 
-  // Define Table of Contents items dynamically from metadata
-  const tableOfContents = article.toc || (isEn ? [
-    { title: "Introduction & Unitization", target: "#intro" },
-    { title: "Infrastructure & Ports", target: "#infrastructure" },
-    { title: "Agricultural & Industrial Sectors", target: "#sectors" },
-    { title: "Pallet Mechanical Engineering", target: "#engineering" },
-    { title: "Standard Dimensions Specifications", target: "#dimensions" },
-    { title: "ISPM-15 Phytosanitary Standard", target: "#ispm15" },
-    { title: "Container Stuffing Mathematics", target: "#containers" },
-    { title: "Complementary Packaging Systems", target: "#protection" },
-  ] : [
-    { title: "مقدمة ودور البالتات", target: "#intro" },
-    { title: "البنية التحتية والموانئ", target: "#infrastructure" },
-    { title: "القطاعات الزراعية والصناعية", target: "#sectors" },
-    { title: "الهندسة الميكانيكية للبالتات", target: "#engineering" },
-    { title: "المعايير القياسية للأبعاد", target: "#dimensions" },
-    { title: "معيار الصحة النباتية ISPM-15", target: "#ispm15" },
-    { title: "لوجستيات ورياضيات الحاويات", target: "#containers" },
-    { title: "أنظمة التغليف المكملة للشحنة", target: "#protection" },
-  ]);
+  // Only use Table of Contents if the article explicitly defines it
+  const tableOfContents = article.toc || [];
 
   const config = {
     ar: {
@@ -191,7 +173,7 @@ export default function ArticleDetails({ slug, lang = "ar" }: { slug: string; la
 
           {/* Left/Right Column: Sidebar Widgets */}
           <aside className="lg:col-span-4 flex flex-col gap-8">
-            <TableOfContents items={tableOfContents} lang={lang} />
+            {tableOfContents.length > 0 && <TableOfContents items={tableOfContents} lang={lang} />}
             <ArticleContactCard lang={lang} />
             <ArticleShareWidget title={article.title} description={article.description} lang={lang} />
           </aside>

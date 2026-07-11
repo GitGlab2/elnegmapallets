@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import { articles } from "@/data/articles";
 import { articlesEn } from "@/data/articles-en";
 import ArticleDetails from "@/pages/ArticleDetails";
-
-const SITE_URL = "https://elnegmapallets.com";
+import { getAbsoluteUrl } from "@/lib/site-config";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -16,8 +16,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: "Article Not Found | El Negma Pallets",
     };
   }
-  const articleUrl = `${SITE_URL}/en/articles/${slug}/`;
-  const imageUrl = new URL(article.image, SITE_URL).toString();
+  const articleUrl = getAbsoluteUrl(`/en/articles/${slug}/`);
+  const imageUrl = getAbsoluteUrl(article.image);
+
+  // Only add Arabic alternate if the Arabic version of this article exists
+  const hasArabicVersion = articles.some(a => a.slug === slug);
+  const languages: Record<string, string> = {
+    "en": articleUrl,
+  };
+  if (hasArabicVersion) {
+    languages["ar"] = getAbsoluteUrl(`/articles/${slug}/`);
+    languages["x-default"] = getAbsoluteUrl(`/articles/${slug}/`);
+  } else {
+    languages["x-default"] = articleUrl;
+  }
 
   return {
     title: `${article.title} | El Negma Pallets`,
@@ -25,11 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: article.keywords,
     alternates: {
       canonical: articleUrl,
-      languages: {
-        "ar": `${SITE_URL}/articles/${slug}/`,
-        "en": `${SITE_URL}/en/articles/${slug}/`,
-        "x-default": `${SITE_URL}/articles/${slug}/`,
-      },
+      languages,
     },
     openGraph: {
       type: "article",
@@ -50,9 +58,9 @@ export async function generateStaticParams() {
 export default async function Page({ params }: Props) {
   const { slug } = await params;
   const article = articlesEn.find(item => item.slug === slug);
-  const articleUrl = `${SITE_URL}/en/articles/${slug}/`;
+  const articleUrl = getAbsoluteUrl(`/en/articles/${slug}/`);
   const imageUrl = article
-    ? new URL(article.image, SITE_URL).toString()
+    ? getAbsoluteUrl(article.image)
     : undefined;
   const structuredData = article && {
     "@context": "https://schema.org",
@@ -74,9 +82,10 @@ export default async function Page({ params }: Props) {
     publisher: {
       "@type": "Organization",
       name: "El Negma Pallets",
+      "@id": getAbsoluteUrl("/#organization"),
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/images/brand/company-logo.webp`,
+        url: getAbsoluteUrl("/images/brand/company-logo.webp"),
       },
     },
     articleSection: article.category,
@@ -92,13 +101,13 @@ export default async function Page({ params }: Props) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": `${SITE_URL}/en/`
+        "item": getAbsoluteUrl("/en/")
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Logistics Insights & Articles",
-        "item": `${SITE_URL}/en/articles/`
+        "item": getAbsoluteUrl("/en/articles/")
       },
       {
         "@type": "ListItem",

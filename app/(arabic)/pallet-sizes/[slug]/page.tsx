@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { palletSizesAr } from "@/data/pallet-sizes";
+import { palletSizesEn } from "@/data/pallet-sizes-en";
 import PalletSizeDetails from "@/pages/PalletSizeDetails";
+import { getAbsoluteUrl } from "@/lib/site-config";
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
-
-const SITE_URL = "https://elnegmapallets.com";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -16,17 +16,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: "مقاس غير موجود | مصنع النجمة للبالتات",
     };
   }
+  const sizeUrl = getAbsoluteUrl(`/pallet-sizes/${slug}/`);
+  const hasEnglishVersion = palletSizesEn.some(s => s.slug === slug);
+  const languages: Record<string, string> = {
+    "ar": sizeUrl,
+    "x-default": sizeUrl,
+  };
+  if (hasEnglishVersion) {
+    languages["en"] = getAbsoluteUrl(`/en/pallet-sizes/${slug}/`);
+  }
   return {
     title: `${item.title} - المقاسات والمواصفات الفنية | مصنع النجمة`,
     description: item.description,
     keywords: item.keywords,
     alternates: {
-      canonical: `${SITE_URL}/pallet-sizes/${slug}/`,
-      languages: {
-        "ar": `${SITE_URL}/pallet-sizes/${slug}/`,
-        "en": `${SITE_URL}/en/pallet-sizes/${slug}/`,
-        "x-default": `${SITE_URL}/pallet-sizes/${slug}/`,
-      },
+      canonical: sizeUrl,
+      languages,
     },
   };
 }
@@ -40,8 +45,8 @@ export async function generateStaticParams() {
 export default async function Page({ params }: Props) {
   const { slug } = await params;
   const item = palletSizesAr.find((p) => p.slug === slug);
-  const itemUrl = `${SITE_URL}/pallet-sizes/${slug}/`;
-  const imageUrl = item ? new URL(item.image, SITE_URL).toString() : undefined;
+  const itemUrl = getAbsoluteUrl(`/pallet-sizes/${slug}/`);
+  const imageUrl = item ? getAbsoluteUrl(item.image) : undefined;
 
   const productData = item && {
     "@context": "https://schema.org",
@@ -64,7 +69,8 @@ export default async function Page({ params }: Props) {
       "availability": "https://schema.org/InStock",
       "seller": {
         "@type": "Organization",
-        "name": "مصنع النجمة للبالتات الخشبية"
+        "name": "مصنع النجمة للبالتات الخشبية",
+        "@id": getAbsoluteUrl("/#organization")
       }
     }
   };
@@ -77,13 +83,13 @@ export default async function Page({ params }: Props) {
         "@type": "ListItem",
         "position": 1,
         "name": "الرئيسية",
-        "item": `${SITE_URL}/`
+        "item": getAbsoluteUrl("/")
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "مقاسات وأبعاد البالتات",
-        "item": `${SITE_URL}/pallet-sizes/`
+        "item": getAbsoluteUrl("/pallet-sizes/")
       },
       {
         "@type": "ListItem",

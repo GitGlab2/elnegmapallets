@@ -8,6 +8,10 @@
     "build": "next build",
     "start": "next start",
     "check": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "preview": "npx serve out",
+    "validate:build": "node scripts/validate-build.js",
+    "quality": "npm run typecheck && npm run build && npm run validate:build",
     "format": "prettier --write ."
   },
   "dependencies": {
