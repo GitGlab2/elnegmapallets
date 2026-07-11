@@ -36,6 +36,14 @@ export const metadata: Metadata = {
   icons: {
     icon: "/images/brand/company-logo.webp",
   },
+  alternates: {
+    canonical: "https://elnegmapallets.com",
+    languages: {
+      "ar": "https://elnegmapallets.com",
+      "en": "https://elnegmapallets.com/en",
+      "x-default": "https://elnegmapallets.com",
+    },
+  },
   openGraph: {
     type: "website",
     title: "شركة النجمة لتصنيع البالتات الخشبية",
@@ -94,7 +102,7 @@ export default function RootLayout({
                 addressRegion: "Beni Suef",
                 streetAddress: "بياض العرب، بني سويف",
               },
-              telephone: "+20",
+              telephone: "+201080012261",
               priceRange: "$$",
               openingHours: "Mo-Sa 08:00-18:00",
               knowsAbout: [

@@ -25,6 +25,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: article.keywords,
     alternates: {
       canonical: articleUrl,
+      languages: {
+        "ar": `${SITE_URL}/articles/${slug}/`,
+        "en": `${SITE_URL}/en/articles/${slug}/`,
+        "x-default": `${SITE_URL}/articles/${slug}/`,
+      },
     },
     openGraph: {
       type: "article",

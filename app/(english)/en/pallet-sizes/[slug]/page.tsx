@@ -6,6 +6,8 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+const SITE_URL = "https://elnegmapallets.com";
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const item = palletSizesEn.find((p) => p.slug === slug);
@@ -18,6 +20,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${item.title} Specifications & Dimensions | El Negma Pallets`,
     description: item.description,
     keywords: item.keywords,
+    alternates: {
+      canonical: `${SITE_URL}/en/pallet-sizes/${slug}/`,
+      languages: {
+        "ar": `${SITE_URL}/pallet-sizes/${slug}/`,
+        "en": `${SITE_URL}/en/pallet-sizes/${slug}/`,
+        "x-default": `${SITE_URL}/pallet-sizes/${slug}/`,
+      },
+    },
   };
 }
 

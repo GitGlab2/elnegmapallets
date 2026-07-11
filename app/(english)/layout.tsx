@@ -31,6 +31,14 @@ export const metadata: Metadata = {
   icons: {
     icon: "/images/brand/company-logo.webp",
   },
+  alternates: {
+    canonical: "https://elnegmapallets.com/en",
+    languages: {
+      "ar": "https://elnegmapallets.com",
+      "en": "https://elnegmapallets.com/en",
+      "x-default": "https://elnegmapallets.com",
+    },
+  },
 };
 
 export default function EnglishLayout({
@@ -65,6 +73,7 @@ export default function EnglishLayout({
                 addressRegion: "Beni Suef",
                 streetAddress: "Biyad Al Arab, Beni Suef",
               },
+              telephone: "+201080012261",
               priceRange: "$$",
               openingHours: "Mo-Sa 08:00-18:00",
               knowsAbout: [
