@@ -3,6 +3,134 @@ import { palletSizeArticlesEn } from "./pallet-size-articles";
 
 export const articlesEn: Article[] = [
   {
+    slug: "wooden-crates-pallet-collars-export",
+    title: "Open vs. Closed Wooden Crates for Shipping: Which to Choose?",
+    description: "A comprehensive comparison between open and closed wooden crates and pallet collars used in export and international shipping. Learn about custom packaging designs and ISPM-15 compliance.",
+    date: "2026-07-12",
+    author: "Logistics Division - El Negma Pallets",
+    readTime: "7 mins",
+    image: "/images/articles/wooden-crates-pallet-collars-export.png",
+    category: "Export & Shipping Logistics",
+    categoryId: "export",
+    keywords: [
+      "closed wooden crates",
+      "open wooden crates for shipping",
+      "wooden crates for export",
+      "wooden shipping boxes Egypt",
+      "pallet collars",
+      "open vs closed crates comparison"
+    ],
+    toc: [
+      { title: "Introduction to Wooden Shipping Crates", target: "#introduction" },
+      { title: "1. Closed Wooden Crates (Fully Enclosed)", target: "#closed-crates" },
+      { title: "2. Open Wooden Crates (Slatted Crates/Cages)", target: "#open-crates" },
+      { title: "3. Pallet Collars: The Flexible Solution", target: "#pallet-collars" },
+      { title: "4. Quick Comparison: Closed vs. Open Crates", target: "#comparison-table" },
+      { title: "5. Phytosanitary Regulations & ISPM-15 for Crates", target: "#ispm15-compliance" }
+    ],
+    content: `
+      <div class="space-y-6 text-left leading-relaxed text-gray-200">
+        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
+          <h2 id="introduction" class="text-xl font-bold text-accent mb-2">Introduction to Wooden Shipping Crates</h2>
+          <p class="text-sm text-gray-300">
+            When shipping fragile, heavy, or high-value cargo internationally, selecting the right packaging is paramount. <strong>Wooden crates for export</strong> are the standard industry solution for cargo protection. However, logistics managers often struggle to decide between <strong>closed wooden crates</strong> and <strong>open wooden crates for shipping</strong>. This choice directly impacts shipping safety, packaging weight, and overall transportation costs.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="closed-crates" class="text-xl font-bold text-white border-b border-border pb-1">1. Closed Wooden Crates (Fully Enclosed)</h2>
+          <p class="text-sm text-gray-300 mt-2">
+            Closed wooden crates are fully enclosed containers made from wood panels or heavy plywood on all six sides. The contents inside are completely hidden from view and sealed against the external environment.
+          </p>
+          <h3 class="text-md font-bold text-accent mt-3">Advantages of Closed Crates:</h3>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-1 mt-2 pl-2">
+            <li><strong>Complete Weather Protection:</strong> Blocks dust, rain, saltwater mist, and moisture—critical for long transit ocean shipping.</li>
+            <li><strong>Security and Theft Deterrence:</strong> Because the contents are invisible, it reduces the risk of tampering or cargo theft.</li>
+            <li><strong>Maximum Load Durability:</strong> Provides superior structural support, allowing other heavy containers to be stacked on top securely.</li>
+          </ul>
+          <h3 class="text-md font-bold text-accent mt-3">Ideal Applications:</h3>
+          <p class="text-xs text-gray-300 pl-2">
+            Electronic equipment, electrical panels, high-value components, automotive engines, heavy precision machinery, and glass.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="open-crates" class="text-xl font-bold text-white border-b border-border pb-1">2. Open Wooden Crates (Slatted Crates/Cages)</h2>
+          <p class="text-sm text-gray-300 mt-2">
+            Open wooden crates, often called slatted crates or wooden cages, are constructed with spaced wood slats instead of solid panels. This design provides visible spaces between the boards.
+          </p>
+          <h3 class="text-md font-bold text-accent mt-3">Advantages of Open Crates:</h3>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-1 mt-2 pl-2">
+            <li><strong>Superior Ventilation:</strong> Prevents heat accumulation and moisture condensation, which is crucial for fresh agricultural produce.</li>
+            <li><strong>Lighter Weight & Lower Cost:</strong> Uses less timber, reducing manufacturing costs and overall shipping weight (lowering freight charges).</li>
+            <li><strong>Simple Customs Verification:</strong> Allows port inspectors to quickly examine cargo content without breaking open the entire structure.</li>
+          </ul>
+          <h3 class="text-md font-bold text-accent mt-3">Ideal Applications:</h3>
+          <p class="text-xs text-gray-300 pl-2">
+            Fresh fruits and vegetables, heavy marble slabs, metal pipes, bulk cargo, and industrial goods that do not degrade from dust or ambient moisture.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="pallet-collars" class="text-xl font-bold text-white border-b border-border pb-1">3. Pallet Collars: The Flexible Solution</h2>
+          <p class="text-sm text-gray-300 mt-2">
+            For dynamic warehousing and transport, <strong>pallet collars</strong> are a highly cost-effective option. These are collapsible wooden frames that fit on top of standard platforms (like 120x80 cm Euro pallets) to build custom height crate walls instantly.
+          </p>
+          <p class="text-xs text-gray-300 mt-2">
+            Pallet collars can be easily folded flat when empty to save space, and stacked to accommodate bulk items of varying heights, providing unmatched flexibility over traditional fixed-size boxes.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="comparison-table" class="text-xl font-bold text-white border-b border-border pb-1">4. Quick Comparison: Closed vs. Open Crates</h2>
+          <div class="overflow-x-auto mt-3">
+            <table class="w-full text-xs text-gray-300 border border-border/50 text-left">
+              <thead>
+                <tr class="bg-muted/40 text-white border-b border-border/50">
+                  <th class="p-2 border-r border-border/50">Metric</th>
+                  <th class="p-2 border-r border-border/50">Closed Crates</th>
+                  <th class="p-2">Open Crates (Slatted Cages)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-border/30">
+                  <td class="p-2 border-r border-border/50 font-bold">Weather Protection</td>
+                  <td class="p-2 border-r border-border/50">Excellent (waterproof, dust-proof)</td>
+                  <td class="p-2">Minimal (exposed to air, dust, and rain)</td>
+                </tr>
+                <tr class="border-b border-border/30 bg-muted/10">
+                  <td class="p-2 border-r border-border/50 font-bold">Air Ventilation</td>
+                  <td class="p-2 border-r border-border/50">None (unless specialized vents are installed)</td>
+                  <td class="p-2">Excellent (keeps air circulating naturally)</td>
+                </tr>
+                <tr class="border-b border-border/30">
+                  <td class="p-2 border-r border-border/50 font-bold">Weight & Pricing</td>
+                  <td class="p-2 border-r border-border/50">Heavier and more expensive to construct</td>
+                  <td class="p-2">Lighter and highly cost-effective</td>
+                </tr>
+                <tr class="border-b border-border/30 bg-muted/10">
+                  <td class="p-2 border-r border-border/50 font-bold">Best For</td>
+                  <td class="p-2 border-r border-border/50">Electronics, high-value machinery, delicate goods</td>
+                  <td class="p-2">Fresh agricultural produce, marble, solid structures</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2 id="ispm15-compliance" class="text-xl font-bold text-white border-b border-border pb-1">5. Phytosanitary Regulations & ISPM-15 for Crates</h2>
+          <p class="text-sm text-gray-300 mt-2">
+            Regardless of your choice between closed crates, open cages, or pallet collars, any timber packaging used for international trade must comply with the <strong>ISPM 15 phytosanitary standard</strong>.
+          </p>
+          <p class="text-xs text-gray-300 mt-2">
+            The wood must undergo rigorous heat treatment (HT) and be branded with the official IPPC logo to guarantee the eradication of timber pests. At <strong>El Negma Pallets & Crates Factory</strong>, we provide fully certified heat-treated shipping containers and pallets complete with phytosanitary certificates, ensuring your exports pass smoothly through customs globally without any delays or rejections.
+          </p>
+        </section>
+      </div>
+    `,
+  },
+  {
     slug: "pallet-prices-egypt",
     title:
       "Wooden Pallet Prices in Egypt 2026: Wooden Platforms for Sale & Best Buying Places",

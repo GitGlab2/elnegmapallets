@@ -22,10 +22,12 @@ import { wholesalePalletsEgyptArticle } from "./articles/wholesale-pallets-egypt
 import { woodVsPlasticPalletsArticle } from "./articles/wood-vs-plastic-pallets";
 import { palletsPotatoVegetablesExportArticle } from "./articles/pallets-potato-vegetables-export";
 import { palletsFactoriesWarehousesArticle } from "./articles/pallets-factories-warehouses";
+import { woodenCratesPalletCollarsExportArticle } from "./articles/wooden-crates-pallet-collars-export";
 
 export type { Article, TocItem } from "./articles-types";
 
 export const articles: Article[] = [
+  woodenCratesPalletCollarsExportArticle,
   palletPricesEgyptArticle,
   buyingPalletsGuideArticle,
   bestPalletFactoryEgyptArticle,
