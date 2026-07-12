@@ -60,7 +60,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ar" dir="rtl" className={`${cairo.variable}`}>
+    <html lang="ar" dir="rtl" className={`${cairo.variable}`} suppressHydrationWarning>
       <head>
         {/* Geo Meta Tags for Local SEO */}
         <meta name="geo.region" content="EG-BNS" />

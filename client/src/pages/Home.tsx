@@ -18,7 +18,7 @@ import Commitments from "./Commitments";
 import Achievements from "./Achievements";
 import FutureVision from "./FutureVision";
 import Contact from "./Contact";
-import { CertificationsList, QualityCertImage, InternationalStandardsImage } from "./Certifications";
+import { CertificationsList, QualityCertImage } from "./Certifications";
 
 export default function Home({ lang = "ar" }: { lang?: "ar" | "en" }) {
   const isEn = lang === "en";
@@ -139,43 +139,52 @@ export default function Home({ lang = "ar" }: { lang?: "ar" | "en" }) {
         </div>
       </section>
 
-      {/* Sections Rendered Eagerly to prevent layout shifting scroll issues */}
+      {/* من نحن — التعريف بالشركة */}
       <section id="about-section" className="scroll-mt-24">
         <About lang={lang} />
       </section>
 
+      {/* المنتجات — إيه اللي بنصنعه (الزائر جه عشان ده) */}
       <section id="products-section" className="scroll-mt-24">
         <Products lang={lang} />
       </section>
 
+      {/* المزايا التنافسية — ليه تختارنا */}
       <section id="features-section" className="scroll-mt-24">
         <Features lang={lang} />
       </section>
 
+      {/* خط الإنتاج — شوف المصنع */}
       <section id="operations-section" className="scroll-mt-24">
         <Operations lang={lang} />
       </section>
 
-      <section id="team-image-section" className="scroll-mt-24">
-        <TeamImageSlide lang={lang} />
-      </section>
-
+      {/* فيديو العمليات — إثبات بصري */}
       <section id="operations-video-section" className="scroll-mt-24">
         <OperationsVideo lang={lang} />
       </section>
 
+      {/* فريق العمل — العنصر البشري */}
+      <section id="team-image-section" className="scroll-mt-24">
+        <TeamImageSlide lang={lang} />
+      </section>
+
+      {/* الإنجازات والأرقام — بعد ما شاف المصنع، الأرقام بتضرب أقوى */}
+      <section id="achievements-section" className="scroll-mt-24">
+        <Achievements lang={lang} />
+      </section>
+
+      {/* العملاء — مين بيثق فينا */}
       <section id="clients-section" className="scroll-mt-24">
         <Clients lang={lang} />
       </section>
 
+      {/* معرض الصور — توريدات حقيقية */}
       <section id="gallery-section" className="scroll-mt-24">
         <Gallery lang={lang} />
       </section>
 
-      <section id="pricing-section" className="scroll-mt-24">
-        <Pricing lang={lang} />
-      </section>
-
+      {/* الشهادات والمعايير — ختم الجودة الرسمي */}
       <section id="certifications-section" className="scroll-mt-24">
         <CertificationsList lang={lang} />
       </section>
@@ -184,22 +193,23 @@ export default function Home({ lang = "ar" }: { lang?: "ar" | "en" }) {
         <QualityCertImage lang={lang} />
       </section>
 
+
+      {/* الالتزامات — الضمانات قبل السعر */}
       <section id="commitments-section" className="scroll-mt-24">
         <Commitments lang={lang} />
       </section>
 
-      <section id="achievements-section" className="scroll-mt-24">
-        <Achievements lang={lang} />
+      {/* الأسعار — بعد ما شاف كل حاجة، السعر مبرر */}
+      <section id="pricing-section" className="scroll-mt-24">
+        <Pricing lang={lang} />
       </section>
 
-      <section id="international-standards-section" className="scroll-mt-24">
-        <InternationalStandardsImage lang={lang} />
-      </section>
-
+      {/* الرؤية المستقبلية */}
       <section id="future-vision-section" className="scroll-mt-24">
         <FutureVision lang={lang} />
       </section>
 
+      {/* تواصل معنا — القرار النهائي */}
       <section id="contact-section" className="scroll-mt-24">
         <Contact lang={lang} />
       </section>

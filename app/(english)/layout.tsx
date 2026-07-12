@@ -48,7 +48,7 @@ export default function EnglishLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" dir="ltr" className={`${outfit.variable}`}>
+    <html lang="en" dir="ltr" className={`${outfit.variable}`} suppressHydrationWarning>
       <head>
         {/* Geo Meta Tags for Local SEO */}
         <meta name="geo.region" content="EG-BNS" />

@@ -7,7 +7,7 @@ export const woodenCratesPalletCollarsExportArticle: Article = {
   date: "2026-07-12",
   author: "إدارة اللوجستيات - مصنع النجمة",
   readTime: "7 دقائق",
-  image: "/images/articles/wooden-crates-pallet-collars-export.png",
+  image: "/images/sections/international-standards.webp",
   category: "الشحن والتصدير الدولي",
   categoryId: "export",
   keywords: [

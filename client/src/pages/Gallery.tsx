@@ -1,115 +1,202 @@
-import { motion } from "framer-motion";
+"use client";
+
+import { useState, useEffect, useRef, useCallback } from "react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 export default function Gallery({ lang = "ar" }: { lang?: "ar" | "en" }) {
-  const isEn = lang === "en";
+  const items = [
+    "/images/gallery/client-gallery-4.webp",
+    "/images/gallery/client-gallery-3.webp",
+    "/images/gallery/client-gallery-2.webp",
+    "/images/gallery/client-gallery-1.webp",
+  ];
 
-  const content = {
-    ar: {
-      badge: "الصور الميدانية",
-      title1: "معرض شحنات وتوريدات العملاء - الجزء الأول",
-      title2: "معرض شحنات وتوريدات العملاء - الجزء الثاني",
-      alignClass: "text-right",
-      paddingSideClass: "pr-1 md:pr-2",
-      items1: [
-        { src: "/images/gallery/client-gallery-4", title: "توريدات قطاع التصدير", desc: "شحنات بالتات خشبية معالجة حرارياً جاهزة للتصدير والموانئ." },
-        { src: "/images/gallery/client-gallery-3", title: "أسطول الشحن والتوزيع", desc: "تحميل وتوريد البالتات لمختلف المحافظات والشركات." }
-      ],
-      items2: [
-        { src: "/images/gallery/client-gallery-2", title: "مستودعات التخزين الجاف", desc: "تخزين وتجفيف الأخشاب لضمان مطابقتها لأعلى معايير الجودة." },
-        { src: "/images/gallery/client-gallery-1", title: "شحن وتنزيل البالتات للعملاء", desc: "تفريغ وتوريد آمن للبالتات في مواقع العمل والمصانع مباشرة." }
-      ]
-    },
-    en: {
-      badge: "Field Gallery",
-      title1: "Client Deliveries & Shipments - Part I",
-      title2: "Client Deliveries & Shipments - Part II",
-      alignClass: "text-left",
-      paddingSideClass: "pl-1 md:pl-2",
-      items1: [
-        { src: "/images/gallery/client-gallery-4", title: "Export Sector Supplies", desc: "Heat-treated wooden pallet shipments ready for export and ports." },
-        { src: "/images/gallery/client-gallery-3", title: "Shipping & Logistics Fleet", desc: "Loading and supplying pallets to various governorates and corporate clients." }
-      ],
-      items2: [
-        { src: "/images/gallery/client-gallery-2", title: "Dry Storage Warehousing", desc: "Storing and seasoning wood to guarantee compliance with the highest standards." },
-        { src: "/images/gallery/client-gallery-1", title: "Unloading Pallets for Clients", desc: "Safe unloading and delivery of pallets directly to operational sites and factories." }
-      ]
+  const totalSlides = items.length;
+
+  // We append a clone of the first slide at the end for seamless looping
+  const extendedItems = [...items, items[0]];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
+  const [activeImage, setActiveImage] = useState<string | null>(null);
+  
+  const autoplayRef = useRef<NodeJS.Timeout | null>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+
+  const stopAutoplay = useCallback(() => {
+    if (autoplayRef.current) {
+      clearInterval(autoplayRef.current);
+      autoplayRef.current = null;
     }
-  }[lang];
+  }, []);
 
-  const renderGalleryItem = (item: { src: string; title: string; desc: string }, index: number) => (
-    <motion.div 
-      key={index} 
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className={`flex flex-col gap-3 md:gap-4 ${content.alignClass} group`}
-    >
-      <div className="overflow-hidden rounded-xl md:rounded-2xl">
-        <picture>
-          <source srcSet={`${item.src}.webp`} type="image/webp" />
-          <img 
-            src={`${item.src}.webp`} 
-            alt={item.title} 
-            width={800}
-            height={500}
-            loading="lazy"
-            className="styled-image w-full h-56 sm:h-80 md:h-[380px] object-cover transition-transform duration-500 md:group-hover:scale-102"
-          />
-        </picture>
-      </div>
-      <div className={content.paddingSideClass}>
-        <h4 className="font-bold text-lg md:text-xl text-white md:group-hover:text-secondary transition-colors">{item.title}</h4>
-        <p className="text-xs md:text-base text-muted-foreground mt-0.5 md:mt-1 leading-relaxed">{item.desc}</p>
-      </div>
-    </motion.div>
-  );
+  const goToNext = useCallback(() => {
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => prev + 1);
+  }, []);
+
+  const startAutoplay = useCallback(() => {
+    stopAutoplay();
+    autoplayRef.current = setInterval(goToNext, 2000);
+  }, [stopAutoplay, goToNext]);
+
+  useEffect(() => {
+    startAutoplay();
+    return () => stopAutoplay();
+  }, [startAutoplay, stopAutoplay]);
+
+  // When we land on the clone (index === totalSlides), snap back to 0 instantly
+  useEffect(() => {
+    if (currentIndex === totalSlides) {
+      const timer = setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrentIndex(0);
+      }, 700); // wait for the slide animation to finish
+      return () => clearTimeout(timer);
+    }
+  }, [currentIndex, totalSlides]);
+
+  // Close lightbox on Escape key press
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setActiveImage(null);
+      }
+    };
+    if (activeImage) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [activeImage]);
+
+  const handleNext = () => {
+    stopAutoplay();
+    goToNext();
+    startAutoplay();
+  };
+
+  const handlePrev = () => {
+    stopAutoplay();
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => (prev <= 0 ? totalSlides - 1 : prev - 1));
+    startAutoplay();
+  };
+
+  const handleDotClick = (index: number) => {
+    stopAutoplay();
+    setIsTransitioning(true);
+    setCurrentIndex(index);
+    startAutoplay();
+  };
+
+  const translatePercent = currentIndex * 100;
+  const isRtl = lang === "ar";
+  const displayDotIndex = currentIndex >= totalSlides ? 0 : currentIndex;
 
   return (
-    <div className="flex flex-col gap-16">
-      
-      {/* Slide 8: شحنات وتوريدات العملاء - الجزء الأول */}
-      <div className="container py-8 md:py-12" id="gallery-part-1">
-        <div className="rounded-2xl md:rounded-3xl border border-border shadow-2xl bg-[#181b24] p-4 md:p-12 flex flex-col gap-6 md:gap-8">
-          {/* Header */}
-          <div className={`flex items-stretch gap-3 md:gap-4 border-b border-border/40 pb-4 md:pb-6 ${content.alignClass}`}>
-            <div className="w-1 md:w-1.5 bg-secondary rounded-full" />
-            <div>
-              <span className="text-[10px] md:text-xs font-bold text-secondary uppercase tracking-wider">{content.badge}</span>
-              <h2 className="text-xl sm:text-2xl md:text-4xl font-black text-white mt-1 leading-tight">
-                {content.title1}
-              </h2>
-            </div>
+    <div className="container py-4 md:py-8" id="gallery-slider">
+      <div
+        className="max-w-5xl mx-auto rounded-2xl md:rounded-3xl border border-border/30 shadow-2xl bg-[#181b24] p-3 md:p-5 flex flex-col gap-4 relative"
+        onMouseEnter={stopAutoplay}
+        onMouseLeave={startAutoplay}
+      >
+        {/* Slider Viewport */}
+        <div className="relative group/slider overflow-hidden w-full rounded-xl md:rounded-2xl">
+
+          {/* Slides Track */}
+          <div
+            ref={trackRef}
+            className="flex"
+            style={{
+              transform: isRtl
+                ? `translateX(${translatePercent}%)`
+                : `translateX(-${translatePercent}%)`,
+              transition: isTransitioning
+                ? "transform 0.7s cubic-bezier(0.16, 1, 0.3, 1)"
+                : "none",
+            }}
+          >
+            {extendedItems.map((src, idx) => (
+              <div key={idx} className="w-full shrink-0">
+                <div 
+                  className="overflow-hidden rounded-xl md:rounded-2xl cursor-zoom-in"
+                  onClick={() => setActiveImage(src)}
+                >
+                  <img
+                    src={src}
+                    alt={`Gallery image ${(idx % totalSlides) + 1}`}
+                    width={1200}
+                    height={750}
+                    loading="lazy"
+                    className="w-full aspect-[16/10] object-cover transition-transform duration-700 hover:scale-[1.02]"
+                  />
+                </div>
+              </div>
+            ))}
           </div>
 
-          {/* Two Images Side-by-Side */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {content.items1.map(renderGalleryItem)}
-          </div>
+          {/* Navigation Arrows */}
+          <button
+            onClick={handlePrev}
+            className="absolute top-1/2 -translate-y-1/2 left-3 md:left-5 z-20 p-2.5 md:p-3.5 rounded-full bg-black/50 backdrop-blur-sm text-white hover:bg-secondary transition-all duration-300 shadow-lg md:opacity-0 md:group-hover/slider:opacity-100 cursor-pointer"
+            aria-label="Previous Slide"
+          >
+            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+          </button>
+          <button
+            onClick={handleNext}
+            className="absolute top-1/2 -translate-y-1/2 right-3 md:right-5 z-20 p-2.5 md:p-3.5 rounded-full bg-black/50 backdrop-blur-sm text-white hover:bg-secondary transition-all duration-300 shadow-lg md:opacity-0 md:group-hover/slider:opacity-100 cursor-pointer"
+            aria-label="Next Slide"
+          >
+            <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+          </button>
+        </div>
+
+        {/* Dots */}
+        <div className="flex justify-center items-center gap-2">
+          {Array.from({ length: totalSlides }).map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => handleDotClick(idx)}
+              className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                displayDotIndex === idx
+                  ? "w-7 bg-secondary"
+                  : "w-2 bg-white/20 hover:bg-white/40"
+              }`}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
+          ))}
         </div>
       </div>
 
-      {/* Slide 8b: شحنات وتوريدات العملاء - الجزء الثاني */}
-      <div className="container py-8 md:py-12" id="gallery-part-2">
-        <div className="rounded-2xl md:rounded-3xl border border-border shadow-2xl bg-[#181b24] p-4 md:p-12 flex flex-col gap-6 md:gap-8">
-          {/* Header */}
-          <div className={`flex items-stretch gap-3 md:gap-4 border-b border-border/40 pb-4 md:pb-6 ${content.alignClass}`}>
-            <div className="w-1 md:w-1.5 bg-secondary rounded-full" />
-            <div>
-              <span className="text-[10px] md:text-xs font-bold text-secondary uppercase tracking-wider">{content.badge}</span>
-              <h2 className="text-xl sm:text-2xl md:text-4xl font-black text-white mt-1 leading-tight">
-                {content.title2}
-              </h2>
-            </div>
-          </div>
-
-          {/* Two Images Side-by-Side */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {content.items2.map(renderGalleryItem)}
-          </div>
+      {/* Fullscreen Lightbox Modal */}
+      {activeImage && (
+        <div 
+          className="fixed inset-0 bg-black/95 z-[9999] flex items-center justify-center cursor-zoom-out p-4 md:p-8 animate-fade-in"
+          onClick={() => setActiveImage(null)}
+        >
+          {/* Close Button */}
+          <button 
+            className="absolute top-4 right-4 text-white hover:text-secondary p-2 bg-black/50 hover:bg-black/80 rounded-full transition-all cursor-pointer z-[10000]"
+            onClick={(e) => {
+              e.stopPropagation();
+              setActiveImage(null);
+            }}
+            aria-label="Close Lightbox"
+          >
+            <X className="w-7 h-7" />
+          </button>
+          
+          <img 
+            src={activeImage} 
+            alt="Pallet detail expanded view" 
+            className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl select-none"
+            onClick={(e) => e.stopPropagation()}
+          />
         </div>
-      </div>
-
+      )}
     </div>
   );
 }

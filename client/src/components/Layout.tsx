@@ -231,19 +231,6 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
-            {/* Global Search Button */}
-            <button
-              onClick={() => setIsSearchOpen(true)}
-              className="flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-border bg-background/50 hover:bg-muted text-xs font-semibold text-muted-foreground transition-all duration-300 shadow-sm"
-              title={isEn ? "Search (Ctrl + K)" : "البحث (Ctrl + K)"}
-            >
-              <Search className="w-3.5 h-3.5" />
-              <span>{isEn ? "Search..." : "بحث..."}</span>
-              <kbd className="hidden lg:inline-flex h-4 select-none items-center gap-0.5 rounded border border-border bg-muted px-1.5 font-mono text-[9px] font-medium text-muted-foreground">
-                Ctrl K
-              </kbd>
-            </button>
-
             {/* Language Switcher */}
             <a 
               href={toggleLangPath()} 
@@ -263,15 +250,6 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
 
           {/* Mobile Menu Toggle */}
           <div className="flex items-center gap-2 md:hidden">
-            {/* Mobile Search Button */}
-            <button
-              onClick={() => setIsSearchOpen(true)}
-              className="p-2 text-muted-foreground hover:text-primary transition-colors"
-              aria-label="Search"
-            >
-              <Search className="w-5.5 h-5.5" />
-            </button>
-
             {/* Mobile Language Switcher */}
             <a 
               href={toggleLangPath()} 

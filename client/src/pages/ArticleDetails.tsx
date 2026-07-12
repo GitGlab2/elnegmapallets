@@ -1,8 +1,38 @@
 import { articles } from "@/data/articles";
 import { articlesEn } from "@/data/articles-en";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calendar, Clock } from "lucide-react";
 import { TableOfContents, ArticleContactCard, ArticleShareWidget, RelatedArticles } from "@/components/ArticleSidebarWidgets";
+
+function formatBlogDate(dateStr: string, isEn: boolean): string {
+  const parts = dateStr.split("-");
+  if (parts.length !== 3) return dateStr;
+  const year = parts[0];
+  const monthIdx = parseInt(parts[1], 10) - 1;
+  
+  const arMonths = [
+    "يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو",
+    "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"
+  ];
+  
+  const enMonths = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+  
+  if (isEn) {
+    return `${enMonths[monthIdx]} ${year}`;
+  } else {
+    const toEasternNumerals = (str: string) => {
+      const easternMap: Record<string, string> = {
+        '0': '٠', '1': '١', '2': '٢', '3': '٣', '4': '٤',
+        '5': '٥', '6': '٦', '7': '٧', '8': '٨', '9': '٩'
+      };
+      return str.split('').map(c => easternMap[c] || c).join('');
+    };
+    return `${arMonths[monthIdx]} ${toEasternNumerals(year)}`;
+  }
+}
 
 export default function ArticleDetails({ slug, lang = "ar" }: { slug: string; lang?: "ar" | "en" }) {
   const isEn = lang === "en";
@@ -155,9 +185,6 @@ export default function ArticleDetails({ slug, lang = "ar" }: { slug: string; la
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 md:p-12 items-center">
             {/* Title & Metadata */}
             <div className={`lg:col-span-7 flex flex-col gap-5 ${config.alignClass}`}>
-              <span className="bg-secondary/20 border border-secondary/30 text-secondary w-fit px-3 py-1.5 rounded-full text-xs font-bold">
-                {article.category}
-              </span>
               <h1 className="text-2xl md:text-4xl lg:text-5xl font-black leading-tight text-white">
                 {article.title}
               </h1>
@@ -165,6 +192,20 @@ export default function ArticleDetails({ slug, lang = "ar" }: { slug: string; la
               <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                 {article.description}
               </p>
+
+              <div className="flex flex-wrap items-center gap-3.5 mt-2">
+                <span className="bg-secondary/20 border border-secondary/30 text-secondary w-fit px-3 py-1.5 rounded-full text-xs font-bold">
+                  {article.category}
+                </span>
+                <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                  <Calendar className="w-3.5 h-3.5 text-secondary" />
+                  {formatBlogDate(article.date, isEn)}
+                </span>
+                <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                  <Clock className="w-3.5 h-3.5 text-secondary" />
+                  {article.readTime}
+                </span>
+              </div>
             </div>
 
             {/* Main Image */}

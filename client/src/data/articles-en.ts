@@ -9,7 +9,7 @@ const rawArticlesEn: Article[] = [
     date: "2026-07-12",
     author: "Logistics Division - El Negma Pallets",
     readTime: "7 mins",
-    image: "/images/articles/wooden-crates-pallet-collars-export.png",
+    image: "/images/sections/international-standards.webp",
     category: "Export & Shipping Logistics",
     categoryId: "export",
     keywords: [
