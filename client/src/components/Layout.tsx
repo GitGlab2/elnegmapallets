@@ -64,12 +64,12 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
     { name: "About Us", path: "/en#about-section", isAnchor: true },
     { name: "Products", path: "/en#products-section", isAnchor: true },
     { name: "Contact Us", path: "/en#contact-section", isAnchor: true },
-    { name: "Articles & Info", path: "/en/articles", isAnchor: false },
+    { name: "Blog", path: "/en/articles", isAnchor: false },
   ] : [
     { name: "من نحن", path: "/#about-section", isAnchor: true },
     { name: "المنتجات", path: "/#products-section", isAnchor: true },
     { name: "تواصل معنا", path: "/#contact-section", isAnchor: true },
-    { name: "المقالات والمعلومات", path: "/articles", isAnchor: false },
+    { name: "المدونة", path: "/articles", isAnchor: false },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string, isAnchor: boolean) => {

@@ -1,7 +1,7 @@
 import { Article } from "./articles-types";
 import { palletSizeArticlesEn } from "./pallet-size-articles";
 
-export const articlesEn: Article[] = [
+const rawArticlesEn: Article[] = [
   {
     slug: "wooden-crates-pallet-collars-export",
     title: "Open vs. Closed Wooden Crates for Shipping: Which to Choose?",
@@ -1843,3 +1843,24 @@ export const articlesEn: Article[] = [
   },
   ...palletSizeArticlesEn,
 ];
+
+function getDeterministicOldDate(slug: string): string {
+  let hash = 0;
+  for (let i = 0; i < slug.length; i++) {
+    hash = slug.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  const year = 2024 + Math.abs(hash % 2); // 2024 or 2025
+  const month = 1 + Math.abs((hash >> 2) % 12); // 1 to 12
+  const day = 1 + Math.abs((hash >> 4) % 28); // 1 to 28
+  
+  const yyyy = year.toString();
+  const mm = month < 10 ? `0${month}` : month.toString();
+  const dd = day < 10 ? `0${day}` : day.toString();
+  
+  return `${yyyy}-${mm}-${dd}`;
+}
+
+export const articlesEn = rawArticlesEn.map(article => ({
+  ...article,
+  date: getDeterministicOldDate(article.slug)
+}));

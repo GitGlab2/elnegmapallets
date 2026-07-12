@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ArticlesList from "@/pages/ArticlesList";
 
 export const metadata: Metadata = {
-  title: "Logistics Insights & Articles | El Negma Pallets Manufacturer",
-  description: "Your comprehensive guide and specialized articles in packaging logistics, exporting products with wooden and plastic pallets, ISPM-15, and supply chain design.",
-  keywords: ["logistics articles", "wooden pallets Egypt", "shipping on pallets", "packaging standards", "ISPM-15", "pallet manufacturing"],
+  title: "El Negma Pallets Blog | Shipping & Export Crates Guides",
+  description: "The official blog of El Negma Pallets. Expert articles on logistics, shipping, wooden crates, pallet customization, and packaging standards in Egypt.",
+  keywords: ["pallet blog", "wooden pallets Egypt", "shipping on pallets", "packaging standards", "ISPM-15", "pallet manufacturing"],
   alternates: {
     canonical: "https://elnegmapallets.com/en/articles/",
     languages: {

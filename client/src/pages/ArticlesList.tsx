@@ -7,7 +7,6 @@ import {
   BookOpen,
   ArrowLeft,
   ArrowRight,
-  Check,
   ChevronDown,
   Phone,
   Package,
@@ -18,19 +17,48 @@ import {
   Factory,
   Calendar,
   Clock,
+  Search,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const CATEGORY_PREVIEW_LIMIT = 6;
-const ARTICLE_PAGE_SIZE = 9;
+const ARTICLE_PAGE_SIZE = 7; // 1 featured + 6 grid
+
+function formatBlogDate(dateStr: string, isEn: boolean): string {
+  const parts = dateStr.split("-");
+  if (parts.length !== 3) return dateStr;
+  const year = parts[0];
+  const monthIdx = parseInt(parts[1], 10) - 1;
+  
+  const arMonths = [
+    "يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو",
+    "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"
+  ];
+  
+  const enMonths = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+  
+  if (isEn) {
+    return `${enMonths[monthIdx]} ${year}`;
+  } else {
+    const toEasternNumerals = (str: string) => {
+      const easternMap: Record<string, string> = {
+        '0': '٠', '1': '١', '2': '٢', '3': '٣', '4': '٤',
+        '5': '٥', '6': '٦', '7': '٧', '8': '٨', '9': '٩'
+      };
+      return str.split('').map(c => easternMap[c] || c).join('');
+    };
+    return `${arMonths[monthIdx]} ${toEasternNumerals(year)}`;
+  }
+}
 
 export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
   const isEn = lang === "en";
   const currentArticles = isEn ? articlesEn : articles;
   const [activeCategory, setActiveCategory] = useState("all");
-  const [showAllCategories, setShowAllCategories] = useState(false);
-  const [visibleArticleCount, setVisibleArticleCount] =
-    useState(ARTICLE_PAGE_SIZE);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [visibleArticleCount, setVisibleArticleCount] = useState(ARTICLE_PAGE_SIZE);
 
   const handleCategoryChange = (categoryId: string) => {
     setActiveCategory(categoryId);
@@ -39,86 +67,71 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
 
   const categories = {
     ar: [
-      { id: "all", name: "الكل", icon: LayoutGrid },
-      { id: "export", name: "أدلة التصدير والشحن", icon: Globe },
-      { id: "compliance", name: "المعالجة والتعقيم", icon: ShieldCheck },
-      { id: "procurement", name: "أسعار الشراء والمواصفات", icon: Tag },
-      { id: "industry", name: "متطلبات الصناعات", icon: Factory },
-      {
-        id: "sizes",
-        name: "أبعاد ومقاسات البالتات",
-        icon: Package,
-      },
+      { id: "all", name: "كل التصنيفات", icon: LayoutGrid },
+      { id: "export", name: "شحن وتصدير", icon: Globe },
+      { id: "compliance", name: "معالجة وتعقيم", icon: ShieldCheck },
+      { id: "procurement", name: "أسعار ومواصفات", icon: Tag },
+      { id: "industry", name: "متطلبات صناعية", icon: Factory },
+      { id: "sizes", name: "أبعاد ومقاسات", icon: Package },
     ],
     en: [
-      { id: "all", name: "All", icon: LayoutGrid },
+      { id: "all", name: "All Categories", icon: LayoutGrid },
       { id: "export", name: "Export & Shipping", icon: Globe },
-      { id: "compliance", name: "Sterilization & HT", icon: ShieldCheck },
+      { id: "compliance", name: "Compliance & HT", icon: ShieldCheck },
       { id: "procurement", name: "Specs & Pricing", icon: Tag },
-      { id: "industry", name: "Industry Specs", icon: Factory },
-      {
-        id: "sizes",
-        name: "Pallet Sizes & Specs",
-        icon: Package,
-      },
+      { id: "industry", name: "Industrial Needs", icon: Factory },
+      { id: "sizes", name: "Pallet Sizes", icon: Package },
     ],
   }[lang];
 
   const content = {
     ar: {
-      badge: "المعرفة واللوجستيات",
-      title: "المقالات والدراسات اللوجستية",
+      badge: "المدونة الرسمية",
+      title: "مدونة شركة النجمة للبالتات الخشبية",
       description:
-        "نشارككم خبرتنا الممتدة لأكثر من 18 عاماً في تصنيع وتوريد البالتات. اكتشف أدلة التصدير، معايير الجمارك، والمواصفات الفنية للبالتات الخشبية والبلاستيكية لتطوير سلاسل إمدادك.",
-      author: "الكاتب:",
+        "أدلة لوجستية ومقالات متخصصة في التعبئة والتغليف، التصدير، معايير الجمارك، وتصميم سلاسل التوريد في مصر والشرق الأوسط.",
       readMore: "اقرأ المقال",
-      ctaTitle: "هل تحتاج إلى استشارة لوجستية؟",
+      ctaTitle: "هل تحتاج للتواصل مع المصنع؟",
       ctaDesc:
-        "نوفر في شركة النجمة بالتات خشبية مصممة خصيصاً لتناسب مواصفات شحناتك وسعة حاوياتك لمنع التلف وتقليل تكلفة النقل. اتصل بخبرائنا الآن للحصول على استشارة مجانية.",
-      ctaCall: "اتصل الآن",
-      ctaContact: "تواصل معنا",
+        "نحن هنا لتوريد البالتات الخشبية والصناديق لجميع محافظات مصر والتصدير الدولي بمطابقة معايير الجودة العالمية.",
+      ctaCall: "اتصل بنا",
+      ctaContact: "واتساب",
       fontClass: "font-['Cairo']",
       dir: "rtl" as const,
-      palletSizesTitle: "دليل مقاسات وأبعاد البالتات الخشبية",
-      palletSizesDesc:
-        "اكتشف أبعاد ومواصفات بالتات اليورو القياسية، بالتات الموالح والتصدير الزراعي، بالتات الكيماويات CP9، والبالتة الأمريكية GMA المعتمدة للشحن الدولي.",
-      palletSizesBtn: "عرض دليل المقاسات بالكامل",
-      filterTitle: "تصفّح المقالات حسب الموضوع",
-      libraryEyebrow: "مكتبة المعرفة",
-      articlesLabel: "مقال",
-      showMoreCategories: "عرض كل التصنيفات",
-      hideExtraCategories: "إخفاء التصنيفات الإضافية",
-      loadMoreArticles: "عرض مقالات أكثر",
-      emptyState: "لا توجد مقالات ضمن هذا التصنيف حاليًا.",
+      searchPlaceholder: "ابحث في المدونة...",
+      featuredLabel: "مقال مميز",
+      readTimeLabel: "قراءة",
+      emptyState: "لا توجد مقالات تطابق بحثك حاليًا.",
+      sidebarTitleCategories: "الأقسام والتصنيفات",
+      sidebarTitleSearch: "البحث في المدونة",
+      sidebarTitleContact: "التواصل السريع",
+      loadMore: "عرض المزيد من المقالات",
     },
     en: {
-      badge: "Knowledge & Logistics",
-      title: "Logistics Insights & Articles",
+      badge: "Official Blog",
+      title: "El Negma Wooden Pallets Blog",
       description:
-        "We share our 18+ years of experience in pallet manufacturing and supply. Discover export guides, customs standards, and technical specifications for wood and plastic pallets to optimize your supply chain.",
-      author: "Author:",
+        "Logistics insights, export guides, packaging standards, and supply chain design in Egypt and the Middle East.",
       readMore: "Read Article",
-      ctaTitle: "Need a Logistics Consultation?",
+      ctaTitle: "Need to contact the factory?",
       ctaDesc:
-        "At El Negma, we provide custom wooden pallets designed specifically to match your shipment requirements and container capacity to prevent damage and reduce shipping costs. Contact our experts today for a free consultation.",
-      ctaCall: "Call Now",
-      ctaContact: "Contact Us",
+        "We manufacture and supply wooden pallets and crates matching international quality and phytosanitary standards.",
+      ctaCall: "Call Us",
+      ctaContact: "WhatsApp",
       fontClass: "font-sans",
       dir: "ltr" as const,
-      palletSizesTitle: "Standard Wooden Pallet Sizes & Specs Guide",
-      palletSizesDesc:
-        "Explore dimensions, load capacities, and stuffing details for Euro pallets, Citrus/Industrial, CP9 Chemical, and US GMA pallets.",
-      palletSizesBtn: "View Full Sizing Guide",
-      filterTitle: "Browse articles by topic",
-      libraryEyebrow: "Knowledge library",
-      articlesLabel: "articles",
-      showMoreCategories: "Show all categories",
-      hideExtraCategories: "Hide extra categories",
-      loadMoreArticles: "Load more articles",
-      emptyState: "There are no articles in this category yet.",
+      searchPlaceholder: "Search the blog...",
+      featuredLabel: "Featured Article",
+      readTimeLabel: "read",
+      emptyState: "No articles found matching your search.",
+      sidebarTitleCategories: "Categories",
+      sidebarTitleSearch: "Search Blog",
+      sidebarTitleContact: "Quick Contact",
+      loadMore: "Load More Articles",
     },
   }[lang];
 
+  // Count articles per category
   const categoryCounts = currentArticles.reduce<Record<string, number>>(
     (counts, article) => {
       counts[article.categoryId] = (counts[article.categoryId] ?? 0) + 1;
@@ -126,275 +139,283 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
     },
     {}
   );
-  const filterCategories = categories.filter(
-    category => category.id === "all" || (categoryCounts[category.id] ?? 0) > 0
+
+  // Filter categories that actually have articles
+  const activeCategoriesList = categories.filter(
+    cat => cat.id === "all" || (categoryCounts[cat.id] ?? 0) > 0
   );
-  const visibleCategories = showAllCategories
-    ? filterCategories
-    : filterCategories.slice(0, CATEGORY_PREVIEW_LIMIT);
+
+  // Search filter
+  const searchedArticles = searchQuery
+    ? currentArticles.filter(
+        article =>
+          article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          article.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          article.keywords.some(kw => kw.toLowerCase().includes(searchQuery.toLowerCase()))
+      )
+    : currentArticles;
+
+  // Category filter
   const filteredArticles =
     activeCategory === "all"
-      ? currentArticles
-      : currentArticles.filter(
-          article => article.categoryId === activeCategory
-        );
+      ? searchedArticles
+      : searchedArticles.filter(article => article.categoryId === activeCategory);
+
   const displayedArticles = filteredArticles.slice(0, visibleArticleCount);
-  const remainingArticleCount = Math.max(
-    filteredArticles.length - displayedArticles.length,
-    0
-  );
+  const remainingCount = Math.max(filteredArticles.length - displayedArticles.length, 0);
+
+  // Featured is always the first matching article
+  const featuredArticle = displayedArticles[0];
+  const gridArticles = displayedArticles.slice(1);
 
   return (
     <div
-      className={`min-h-screen bg-[#181b24] text-white py-12 md:py-20 ${content.fontClass}`}
+      className={`min-h-screen bg-[#181b24] text-white py-12 md:py-16 ${content.fontClass}`}
       dir={content.dir}
     >
-      <div className="container max-w-6xl">
-        {/* Header Section */}
-        <div className="flex flex-col items-center text-center gap-4 mb-16 max-w-3xl mx-auto animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/30 text-secondary text-sm font-bold">
-            <BookOpen className="w-4 h-4" />
-            {content.badge}
+      {/* Blog Hero Banner */}
+      <div className="container max-w-6xl mb-12">
+        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#202534] via-[#1c1f2a] to-[#202534] p-8 md:p-12 text-center border border-border/30 shadow-2xl">
+          <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center gap-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary/15 border border-secondary/30 text-secondary text-xs font-bold uppercase tracking-wider">
+              <BookOpen className="w-3.5 h-3.5" />
+              {content.badge}
+            </div>
+            <h1 className="text-3xl md:text-5xl font-black leading-tight text-white">
+              {content.title}
+            </h1>
+            <p className="text-sm md:text-base text-muted-foreground max-w-2xl">
+              {content.description}
+            </p>
           </div>
-          <h1 className="text-3xl md:text-5xl font-black leading-tight tracking-tight text-white">
-            {content.title}
-          </h1>
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-            {content.description}
-          </p>
         </div>
-        {/* Article category directory */}
-        <section
-          className="mb-12 animate-fade-in"
-          aria-labelledby="article-categories-heading"
-        >
-          <div className="rounded-[1.75rem] border border-border/70 bg-[#1c1f2a]/90 p-3 shadow-2xl backdrop-blur-md sm:p-5">
-            <div className="mb-4 flex flex-col gap-3 border-b border-border/30 px-2 pb-4 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <p className="mb-1 text-xs font-bold uppercase tracking-[0.18em] text-secondary">
-                  {content.libraryEyebrow}
-                </p>
-                <h2
-                  id="article-categories-heading"
-                  className="text-xl font-black text-white sm:text-2xl"
-                >
-                  {content.filterTitle}
-                </h2>
-              </div>
-              <p
-                className="text-sm font-semibold text-muted-foreground"
-                aria-live="polite"
-              >
-                <span className="text-white">{filteredArticles.length}</span>{" "}
-                {content.articlesLabel}
-              </p>
-            </div>
+      </div>
 
-            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
-              {visibleCategories.map(category => {
-                const isActive = activeCategory === category.id;
-                const categoryCount =
-                  category.id === "all"
-                    ? currentArticles.length
-                    : (categoryCounts[category.id] ?? 0);
-                const Icon = category.icon;
-
-                return (
-                  <button
-                    key={category.id}
-                    type="button"
-                    onClick={() => handleCategoryChange(category.id)}
-                    aria-pressed={isActive}
-                    className={`group relative flex min-h-20 items-center gap-3 overflow-hidden rounded-2xl border px-3 py-3 text-start transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/80 ${
-                      isActive
-                        ? "border-secondary/70 bg-secondary/15 shadow-lg shadow-secondary/10"
-                        : "border-border/50 bg-[#181b24]/60 hover:-translate-y-0.5 hover:border-secondary/50 hover:bg-white/[0.04]"
-                    }`}
+      {/* Main Grid Layout */}
+      <div className="container max-w-6xl">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          {/* Main Content Column (70%) */}
+          <main className="lg:col-span-8 space-y-8">
+            {filteredArticles.length > 0 ? (
+              <>
+                {/* 1. Featured Article Card (Horizontal Layout) */}
+                {featuredArticle && activeCategory === "all" && !searchQuery && (
+                  <a
+                    href={isEn ? `/en/articles/${featuredArticle.slug}/` : `/articles/${featuredArticle.slug}/`}
+                    className="flex flex-col md:flex-row gap-6 p-5 bg-[#1c1f2a] border border-border/40 hover:border-secondary/50 rounded-2xl transition-all duration-300 group shadow-lg transform hover:-translate-y-1 block"
                   >
-                    <span
-                      className={`grid h-10 w-10 shrink-0 place-items-center rounded-xl border transition-colors ${
-                        isActive
-                          ? "border-secondary/50 bg-secondary text-white"
-                          : "border-border/50 bg-white/[0.03] text-muted-foreground group-hover:border-secondary/30 group-hover:text-white"
-                      }`}
-                    >
-                      <Icon className="h-5 w-5" aria-hidden="true" />
-                    </span>
-                    <span className="flex min-w-0 flex-1 flex-col gap-1">
-                      <span className="text-sm font-bold leading-snug text-white">
-                        {category.name}
+                    {/* Featured Image */}
+                    <div className="relative w-full md:w-80 shrink-0 aspect-[16/10] md:aspect-[4/3] rounded-xl overflow-hidden bg-muted">
+                      <img
+                        src={featuredArticle.image}
+                        alt={featuredArticle.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="eager"
+                      />
+                      <span className="absolute top-3 right-3 bg-secondary text-white text-[10px] uppercase font-bold px-2.5 py-1 rounded-md shadow">
+                        {content.featuredLabel}
                       </span>
-                      <span className="text-xs font-medium text-muted-foreground">
-                        {categoryCount} {content.articlesLabel}
-                      </span>
-                    </span>
-                    {isActive && (
-                      <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-secondary text-white">
-                        <Check className="h-3.5 w-3.5" aria-hidden="true" />
-                      </span>
-                    )}
-                  </button>
-                );
-              })}
-            </div>
-
-            {filterCategories.length > CATEGORY_PREVIEW_LIMIT && (
-              <div className="mt-4 flex justify-center">
-                <button
-                  type="button"
-                  onClick={() => setShowAllCategories(isOpen => !isOpen)}
-                  className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold text-secondary transition-colors hover:bg-secondary/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/80"
-                >
-                  {showAllCategories
-                    ? content.hideExtraCategories
-                    : content.showMoreCategories}
-                  <ChevronDown
-                    className={`h-4 w-4 transition-transform ${showAllCategories ? "rotate-180" : ""}`}
-                    aria-hidden="true"
-                  />
-                </button>
-              </div>
-            )}
-          </div>
-        </section>
-
-        {/* Articles Grid */}
-        {filteredArticles.length > 0 ? (
-          <div className="mb-16">
-            <div
-              className={`flex flex-col gap-4 ${remainingArticleCount > 0 ? "mb-8" : ""}`}
-            >
-              {displayedArticles.map((article, idx) => (
-                <a
-                  key={article.slug}
-                  href={
-                    isEn
-                      ? `/en/articles/${article.slug}/`
-                      : `/articles/${article.slug}/`
-                  }
-                  className="flex flex-col md:flex-row gap-5 p-4 md:p-5 bg-[#1c1f2a]/80 border border-white/5 hover:border-secondary/30 rounded-2xl transition-all duration-300 group items-center md:items-stretch"
-                  style={{ animationDelay: `${idx * 80}ms` }}
-                >
-                  {/* Image Thumbnail — compact 4:3 */}
-                  <div className="relative w-full md:w-56 shrink-0 aspect-[16/10] md:aspect-[4/3] rounded-xl overflow-hidden bg-muted">
-                    <img
-                      src={article.image}
-                      alt={article.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div
-                    className={`flex flex-col flex-1 ${isEn ? "text-left" : "text-right"} justify-between gap-3`}
-                  >
-                    <div>
-                      {/* Title */}
-                      <h2 className="text-lg md:text-xl font-black text-white mb-2 leading-snug group-hover:text-accent transition-colors line-clamp-2">
-                        {article.title}
-                      </h2>
-
-                      {/* Short Description */}
-                      <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
-                        {article.description}
-                      </p>
                     </div>
 
-                    {/* Footer: Meta + Read Link */}
-                    <div className="flex items-center justify-between gap-4">
-                      <div className="flex items-center gap-3 text-xs text-muted-foreground font-semibold">
-                        <span className="flex items-center gap-1">
-                          <Calendar className="w-3.5 h-3.5 text-secondary/70" />
-                          {article.date}
+                    {/* Featured Text Content */}
+                    <div className="flex flex-col justify-between flex-1 gap-4">
+                      <div className="space-y-2">
+                        <span className="text-secondary text-xs font-bold">
+                          {featuredArticle.category}
                         </span>
-                        <span className="flex items-center gap-1">
-                          <Clock className="w-3.5 h-3.5 text-secondary/70" />
-                          {article.readTime}
+                        <h2 className="text-xl md:text-2xl font-black text-white leading-snug group-hover:text-accent transition-colors">
+                          {featuredArticle.title}
+                        </h2>
+                        <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                          {featuredArticle.description}
+                        </p>
+                      </div>
+
+                      {/* Meta Footer */}
+                      <div className="flex items-center justify-between border-t border-border/20 pt-4">
+                        <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                          <span className="flex items-center gap-1">
+                            <Calendar className="w-3.5 h-3.5 text-secondary" />
+                            {formatBlogDate(featuredArticle.date, isEn)}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <Clock className="w-3.5 h-3.5 text-secondary" />
+                            {featuredArticle.readTime}
+                          </span>
+                        </div>
+                        <span className="inline-flex items-center gap-1 text-xs font-bold text-secondary group-hover:text-accent transition-colors">
+                          {content.readMore}
+                          {isEn ? <ArrowRight className="w-3.5 h-3.5" /> : <ArrowLeft className="w-3.5 h-3.5" />}
                         </span>
                       </div>
-                      <span
-                        className="inline-flex items-center gap-1 text-sm font-bold text-secondary group-hover:text-accent transition-colors whitespace-nowrap"
-                      >
-                        {isEn ? "Read Full Article" : "اقرأ المقال بالكامل"}
-                        {isEn ? (
-                          <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                        ) : (
-                          <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-                        )}
-                      </span>
                     </div>
-                  </div>
-                </a>
-              ))}
-            </div>
+                  </a>
+                )}
 
-            {remainingArticleCount > 0 && (
-              <div className="flex flex-col items-center gap-3 rounded-2xl border border-border/40 bg-muted/10 p-5 text-center sm:flex-row sm:justify-between sm:text-start">
-                <p className="text-sm text-muted-foreground">
-                  {displayedArticles.length} / {filteredArticles.length}{" "}
-                  {content.articlesLabel}
-                </p>
-                <Button
-                  type="button"
-                  variant="outline"
-                  onClick={() =>
-                    setVisibleArticleCount(count => count + ARTICLE_PAGE_SIZE)
-                  }
-                  className="border-secondary/50 bg-secondary/10 font-bold text-white hover:border-secondary hover:bg-secondary hover:text-white"
-                >
-                  {content.loadMoreArticles}
-                  <span className="ms-2 rounded-full bg-white/10 px-2 py-0.5 text-xs">
-                    +{Math.min(ARTICLE_PAGE_SIZE, remainingArticleCount)}
-                  </span>
-                </Button>
+                {/* 2. Grid of Regular Cards (2 Columns) */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {(activeCategory !== "all" || searchQuery ? displayedArticles : gridArticles).map((article) => (
+                    <a
+                      key={article.slug}
+                      href={isEn ? `/en/articles/${article.slug}/` : `/articles/${article.slug}/`}
+                      className="flex flex-col bg-[#1c1f2a] border border-border/40 hover:border-secondary/50 rounded-2xl overflow-hidden transition-all duration-300 group shadow-lg transform hover:-translate-y-1"
+                    >
+                      {/* Card Image */}
+                      <div className="relative aspect-[16/10] overflow-hidden bg-muted">
+                        <img
+                          src={article.image}
+                          alt={article.title}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                        <span className="absolute bottom-3 right-3 bg-[#181b24]/80 backdrop-blur-md border border-border/30 text-white text-[10px] font-bold px-2 py-0.5 rounded">
+                          {article.category}
+                        </span>
+                      </div>
+
+                      {/* Card Body */}
+                      <div className="p-5 flex flex-col justify-between flex-1 gap-4">
+                        <div className="space-y-2">
+                          <h3 className="text-lg font-bold text-white leading-snug group-hover:text-accent transition-colors line-clamp-2">
+                            {article.title}
+                          </h3>
+                          <p className="text-xs text-muted-foreground leading-relaxed line-clamp-3">
+                            {article.description}
+                          </p>
+                        </div>
+
+                        {/* Card Footer */}
+                        <div className="flex items-center justify-between border-t border-border/10 pt-4 mt-2">
+                          <div className="flex items-center gap-3 text-[11px] text-muted-foreground">
+                            <span className="flex items-center gap-1">
+                              <Calendar className="w-3.5 h-3.5 text-secondary/70" />
+                              {formatBlogDate(article.date, isEn)}
+                            </span>
+                            <span className="flex items-center gap-1">
+                              <Clock className="w-3.5 h-3.5 text-secondary/70" />
+                              {article.readTime}
+                            </span>
+                          </div>
+                          <span className="inline-flex items-center gap-1 text-xs font-bold text-secondary group-hover:text-accent transition-colors">
+                            {content.readMore}
+                            {isEn ? <ArrowRight className="w-3.5 h-3.5" /> : <ArrowLeft className="w-3.5 h-3.5" />}
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+
+                {/* Load More Button */}
+                {remainingCount > 0 && (
+                  <div className="flex justify-center pt-4">
+                    <Button
+                      type="button"
+                      variant="outline"
+                      onClick={() => setVisibleArticleCount(prev => prev + 6)}
+                      className="border-secondary/40 bg-secondary/15 hover:bg-secondary text-white font-bold px-6 py-2.5 rounded-full shadow transition-all duration-300"
+                    >
+                      {content.loadMore} (+{remainingCount})
+                    </Button>
+                  </div>
+                )}
+              </>
+            ) : (
+              <div className="rounded-2xl border border-dashed border-border/50 bg-[#1c1f2a]/50 p-12 text-center text-muted-foreground shadow-inner">
+                {content.emptyState}
               </div>
             )}
-          </div>
-        ) : (
-          <div className="mb-16 rounded-3xl border border-dashed border-border/60 bg-muted/10 px-6 py-12 text-center text-muted-foreground">
-            {content.emptyState}
-          </div>
-        )}
+          </main>
 
-        {/* Call To Action Widget */}
-        <div className="relative rounded-3xl overflow-hidden bg-[#59331f] text-white p-8 md:p-12 text-center border border-border/40 max-w-4xl mx-auto shadow-xl shadow-primary/10">
-          <div className="absolute inset-0 bg-[url('/images/sections/logistics-truck.webp')] bg-cover bg-center opacity-5 mix-blend-overlay" />
-          <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center gap-6">
-            <h2 className="text-2xl md:text-3xl font-black text-accent">
-              {content.ctaTitle}
-            </h2>
-            <p className="text-sm md:text-base text-white/90 leading-relaxed">
-              {content.ctaDesc}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 w-full justify-center mt-2">
-              <a href="tel:01080012261" className="w-full sm:w-auto">
-                <Button
-                  size="lg"
-                  className="w-full text-base font-bold h-12 px-8 bg-secondary hover:bg-secondary/90 text-white"
-                >
-                  {isEn ? (
-                    <Phone className="mr-2 w-4 h-4" />
-                  ) : (
-                    <Phone className="ml-2 w-4 h-4" />
-                  )}
-                  {content.ctaCall}
-                </Button>
-              </a>
-              <a
-                href={isEn ? "/en#contact-section" : "/#contact-section"}
-                className="w-full sm:w-auto"
-              >
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="w-full text-base font-bold h-12 px-8 bg-transparent border-white/30 hover:bg-white/10 text-white"
-                >
-                  {content.ctaContact}
-                </Button>
-              </a>
+          {/* Sidebar Column (30%) */}
+          <aside className="lg:col-span-4 space-y-8">
+            
+            {/* Widget 1: Blog Search */}
+            <div className="bg-[#1c1f2a] border border-border/40 p-5 rounded-2xl shadow-lg">
+              <h3 className="text-sm font-bold uppercase tracking-wider text-secondary mb-3 border-b border-border/20 pb-2">
+                {content.sidebarTitleSearch}
+              </h3>
+              <div className="relative">
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    setVisibleArticleCount(ARTICLE_PAGE_SIZE);
+                  }}
+                  placeholder={content.searchPlaceholder}
+                  className="w-full text-sm bg-[#181b24] border border-border/50 rounded-xl py-2.5 pl-3 pr-10 focus:border-secondary focus:outline-none text-white placeholder-muted-foreground transition-colors"
+                />
+                <Search className={`absolute w-4 h-4 text-muted-foreground top-3.5 ${isEn ? "right-3" : "left-3"}`} />
+              </div>
             </div>
-          </div>
+
+            {/* Widget 2: Blog Categories */}
+            <div className="bg-[#1c1f2a] border border-border/40 p-5 rounded-2xl shadow-lg">
+              <h3 className="text-sm font-bold uppercase tracking-wider text-secondary mb-3 border-b border-border/20 pb-2">
+                {content.sidebarTitleCategories}
+              </h3>
+              <div className="flex flex-col gap-1.5">
+                {activeCategoriesList.map((cat) => {
+                  const isActive = activeCategory === cat.id;
+                  const total =
+                    cat.id === "all"
+                      ? currentArticles.length
+                      : (categoryCounts[cat.id] ?? 0);
+                  const Icon = cat.icon;
+
+                  return (
+                    <button
+                      key={cat.id}
+                      onClick={() => handleCategoryChange(cat.id)}
+                      className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 text-right ${
+                        isActive
+                          ? "bg-secondary text-white shadow-md shadow-secondary/15"
+                          : "text-muted-foreground hover:bg-[#181b24] hover:text-white"
+                      }`}
+                    >
+                      <div className="flex items-center gap-2.5">
+                        <Icon className={`w-4 h-4 ${isActive ? "text-white" : "text-secondary"}`} />
+                        <span>{cat.name}</span>
+                      </div>
+                      <span className={`text-[10px] px-2 py-0.5 rounded-md ${isActive ? "bg-white/20 text-white" : "bg-white/[0.04] text-muted-foreground"}`}>
+                        {total}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Widget 3: Quick CTA */}
+            <div className="bg-[#59331f] text-white border border-border/40 p-6 rounded-2xl shadow-lg relative overflow-hidden">
+              <div className="absolute inset-0 bg-[url('/images/sections/logistics-truck.webp')] bg-cover bg-center opacity-5 mix-blend-overlay" />
+              <div className="relative z-10 space-y-4">
+                <h4 className="text-lg font-black text-accent leading-snug">
+                  {content.ctaTitle}
+                </h4>
+                <p className="text-xs text-white/80 leading-relaxed">
+                  {content.ctaDesc}
+                </p>
+                <div className="flex flex-col gap-2 pt-2">
+                  <a href="tel:01080012261" className="w-full">
+                    <Button className="w-full text-xs font-bold h-10 bg-secondary hover:bg-secondary/90 text-white">
+                      <Phone className="w-3.5 h-3.5 ml-1.5" />
+                      {content.ctaCall} (01080012261)
+                    </Button>
+                  </a>
+                  <a href="https://wa.me/201080012261" target="_blank" rel="noopener noreferrer" className="w-full">
+                    <Button variant="outline" className="w-full text-xs font-bold h-10 bg-transparent border-white/20 hover:bg-white/10 text-white">
+                      {content.ctaContact}
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </aside>
+
         </div>
       </div>
     </div>
