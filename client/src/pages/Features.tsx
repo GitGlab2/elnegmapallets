@@ -21,10 +21,6 @@ export default function Features({ lang = "ar" }: { lang?: "ar" | "en" }) {
           icon: <Search className="w-5 h-5 text-secondary shrink-0" />
         },
         {
-          title: "ضمان الجودة والاستلام على المواصفة",
-          icon: <ShieldAlert className="w-5 h-5 text-secondary shrink-0" />
-        },
-        {
           title: "قسم فني متخصص لعمل المواصفات مجاناً",
           icon: <BadgeAlert className="w-5 h-5 text-secondary shrink-0" />
         },
@@ -48,10 +44,6 @@ export default function Features({ lang = "ar" }: { lang?: "ar" | "en" }) {
         {
           title: "Free shipping and sample inspection for bulk orders",
           icon: <Search className="w-5 h-5 text-secondary shrink-0" />
-        },
-        {
-          title: "Quality assurance and alignment with agreed specs",
-          icon: <ShieldAlert className="w-5 h-5 text-secondary shrink-0" />
         },
         {
           title: "Specialized technical department to create custom designs for free",

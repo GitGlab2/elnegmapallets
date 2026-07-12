@@ -40,6 +40,9 @@ export default function Pricing({ lang = "ar" }: { lang?: "ar" | "en" }) {
   const { discount, benefit } = getDiscountDetails(quantity, lang);
   const isEn = lang === "en";
 
+  // قم بتغيير هذه القيمة إلى true لتفعيل عرض خصم العملاء الجدد لفترات مؤقتة لزيادة مصداقية العروض
+  const SHOW_PROMO_OFFER = false;
+
   const content = {
     ar: {
       title1: "أنظمة الأسعار",
@@ -186,12 +189,14 @@ export default function Pricing({ lang = "ar" }: { lang?: "ar" | "en" }) {
               {content.desc}
             </p>
 
-            <div className={`p-4 md:p-6 rounded-xl md:rounded-2xl bg-secondary/10 border border-secondary/20 ${content.alignClass}`}>
-              <h4 className="font-bold text-secondary text-base md:text-lg mb-1 md:mb-2">{content.offerTitle}</h4>
-              <p className="text-xs md:text-base text-white/70 leading-relaxed">
-                {content.offerDesc}
-              </p>
-            </div>
+            {SHOW_PROMO_OFFER && (
+              <div className={`p-4 md:p-6 rounded-xl md:rounded-2xl bg-secondary/10 border border-secondary/20 ${content.alignClass}`}>
+                <h4 className="font-bold text-secondary text-base md:text-lg mb-1 md:mb-2">{content.offerTitle}</h4>
+                <p className="text-xs md:text-base text-white/70 leading-relaxed">
+                  {content.offerDesc}
+                </p>
+              </div>
+            )}
           </motion.div>
 
         </div>

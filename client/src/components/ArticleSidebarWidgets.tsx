@@ -1,9 +1,88 @@
 "use client";
 
-import { TocItem } from "@/data/articles-types";
+import { TocItem, Article } from "@/data/articles-types";
 import { Button } from "@/components/ui/button";
-import { Phone, MessageSquare, MapPin } from "lucide-react";
+import { Phone, MessageSquare, MapPin, Calendar, Clock, ArrowLeft, ArrowRight } from "lucide-react";
 import ShareButton from "./ShareButton";
+
+// ── Related Articles Widget ────────────────────────────────────────────────────
+
+interface RelatedArticlesProps {
+  currentSlug: string;
+  currentCategoryId: string;
+  allArticles: Article[];
+  lang?: "ar" | "en";
+}
+
+function formatShortDate(dateStr: string, isEn: boolean): string {
+  const parts = dateStr.split("-");
+  if (parts.length !== 3) return dateStr;
+  const year = parts[0];
+  const monthIdx = parseInt(parts[1], 10) - 1;
+  const arMonths = ["يناير","فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر","نوفمبر","ديسمبر"];
+  const enMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  if (isEn) return `${enMonths[monthIdx]} ${year}`;
+  const toEastern = (s: string) => s.split("").map(c => ({"0":"٠","1":"١","2":"٢","3":"٣","4":"٤","5":"٥","6":"٦","7":"٧","8":"٨","9":"٩"}[c] ?? c)).join("");
+  return `${arMonths[monthIdx]} ${toEastern(year)}`;
+}
+
+export function RelatedArticles({ currentSlug, currentCategoryId, allArticles, lang = "ar" }: RelatedArticlesProps) {
+  const isEn = lang === "en";
+
+  // First: same category. Then: fill up with others if less than 4.
+  const sameCat = allArticles.filter(a => a.slug !== currentSlug && a.categoryId === currentCategoryId);
+  const others  = allArticles.filter(a => a.slug !== currentSlug && a.categoryId !== currentCategoryId);
+  const related = [...sameCat, ...others].slice(0, 4);
+
+  if (related.length === 0) return null;
+
+  const basePath = isEn ? "/en/articles" : "/articles";
+
+  return (
+    <div className="bg-[#1c1f2a] border border-border/40 rounded-2xl p-5 shadow-lg">
+      <h3 className="text-sm font-bold uppercase tracking-wider text-secondary mb-4 border-b border-border/20 pb-2">
+        {isEn ? "Related Articles" : "مقالات ذات صلة"}
+      </h3>
+      <div className="flex flex-col gap-3">
+        {related.map(article => (
+          <a
+            key={article.slug}
+            href={`${basePath}/${article.slug}/`}
+            className="flex gap-3 group items-start hover:bg-white/5 rounded-xl p-2 -mx-2 transition-colors"
+          >
+            <div className="w-16 h-16 shrink-0 rounded-lg overflow-hidden bg-muted">
+              <img
+                src={article.image}
+                alt={article.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+            <div className="flex flex-col gap-1 min-w-0">
+              <h4 className="text-xs font-bold text-white group-hover:text-secondary transition-colors leading-snug line-clamp-2">
+                {article.title}
+              </h4>
+              <div className="flex items-center gap-2 text-[10px] text-muted-foreground">
+                <span className="flex items-center gap-0.5">
+                  <Calendar className="w-2.5 h-2.5 text-secondary/70" />
+                  {formatShortDate(article.date, isEn)}
+                </span>
+                <span className="flex items-center gap-0.5">
+                  <Clock className="w-2.5 h-2.5 text-secondary/70" />
+                  {article.readTime}
+                </span>
+              </div>
+            </div>
+            {isEn
+              ? <ArrowRight className="w-3.5 h-3.5 shrink-0 mt-1 text-secondary/50 group-hover:text-secondary transition-colors self-center" />
+              : <ArrowLeft  className="w-3.5 h-3.5 shrink-0 mt-1 text-secondary/50 group-hover:text-secondary transition-colors self-center" />
+            }
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 interface ToCProps {
   items: TocItem[];

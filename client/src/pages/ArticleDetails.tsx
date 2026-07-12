@@ -2,7 +2,7 @@ import { articles } from "@/data/articles";
 import { articlesEn } from "@/data/articles-en";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { TableOfContents, ArticleContactCard, ArticleShareWidget } from "@/components/ArticleSidebarWidgets";
+import { TableOfContents, ArticleContactCard, ArticleShareWidget, RelatedArticles } from "@/components/ArticleSidebarWidgets";
 
 export default function ArticleDetails({ slug, lang = "ar" }: { slug: string; lang?: "ar" | "en" }) {
   const isEn = lang === "en";
@@ -192,6 +192,12 @@ export default function ArticleDetails({ slug, lang = "ar" }: { slug: string; la
           {/* Left/Right Column: Sidebar Widgets */}
           <aside className="lg:col-span-4 flex flex-col gap-8">
             <TableOfContents items={tableOfContents} lang={lang} />
+            <RelatedArticles
+              currentSlug={slug}
+              currentCategoryId={article.categoryId}
+              allArticles={currentArticles}
+              lang={lang}
+            />
             <ArticleContactCard lang={lang} />
             <ArticleShareWidget title={article.title} description={article.description} lang={lang} />
           </aside>
