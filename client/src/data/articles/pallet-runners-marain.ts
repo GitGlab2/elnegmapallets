@@ -7,7 +7,7 @@ export const palletRunnersMarainArticle: Article = {
   date: "2026-07-10",
   author: "قسم الإنتاج والتصنيع - مصنع النجمة",
   readTime: "5 دقائق",
-  image: "/images/articles/pallet-runners-marain.webp",
+  image: "/images/articles/pallet-runners-marain.jpg",
   category: "مقاسات وأبعاد البالتات",
   categoryId: "sizes",
   keywords: [

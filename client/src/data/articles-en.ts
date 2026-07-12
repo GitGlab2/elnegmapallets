@@ -1074,7 +1074,7 @@ const rawArticlesEn: Article[] = [
     date: "2026-07-10",
     author: "Production & Manufacturing - El Negma",
     readTime: "6 mins",
-    image: "/images/articles/pallet-types-dokum-stringer.webp",
+    image: "/images/articles/pallet-types-dokum-stringer.jpg",
     category: "Pallet Sizes & Specs",
     categoryId: "sizes",
     keywords: [
@@ -1180,7 +1180,7 @@ const rawArticlesEn: Article[] = [
     date: "2026-07-10",
     author: "Production & Quality - El Negma",
     readTime: "5 mins",
-    image: "/images/articles/pallet-runners-marain.webp",
+    image: "/images/articles/pallet-runners-marain.jpg",
     category: "Pallet Sizes & Specs",
     categoryId: "sizes",
     keywords: [

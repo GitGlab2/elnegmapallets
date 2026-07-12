@@ -7,7 +7,7 @@ export const palletTypesDokumStringerArticle: Article = {
   date: "2026-07-10",
   author: "قسم الإنتاج والتصنيع - مصنع النجمة",
   readTime: "6 دقائق",
-  image: "/images/articles/pallet-types-dokum-stringer.webp",
+  image: "/images/articles/pallet-types-dokum-stringer.jpg",
   category: "مقاسات وأبعاد البالتات",
   categoryId: "sizes",
   keywords: [

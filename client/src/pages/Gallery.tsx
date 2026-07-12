@@ -98,7 +98,7 @@ export default function Gallery({ lang = "ar" }: { lang?: "ar" | "en" }) {
   return (
     <div className="container py-4 md:py-8" id="gallery-slider">
       <div
-        className="max-w-5xl mx-auto rounded-2xl md:rounded-3xl border border-border/30 shadow-2xl bg-[#181b24] p-3 md:p-5 flex flex-col gap-4 relative"
+        className="max-w-2xl mx-auto rounded-2xl md:rounded-3xl border border-border/30 shadow-2xl bg-[#181b24] p-3 md:p-5 flex flex-col gap-4 relative"
         onMouseEnter={stopAutoplay}
         onMouseLeave={startAutoplay}
       >
@@ -128,9 +128,9 @@ export default function Gallery({ lang = "ar" }: { lang?: "ar" | "en" }) {
                     src={src}
                     alt={`Gallery image ${(idx % totalSlides) + 1}`}
                     width={1200}
-                    height={750}
+                    height={1200}
                     loading="lazy"
-                    className="w-full aspect-[16/10] object-cover transition-transform duration-700 hover:scale-[1.02]"
+                    className="w-full aspect-square object-cover transition-transform duration-700 hover:scale-[1.02]"
                   />
                 </div>
               </div>

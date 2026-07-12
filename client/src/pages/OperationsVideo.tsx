@@ -43,8 +43,8 @@ export default function OperationsVideo({ lang = "ar" }: { lang?: "ar" | "en" })
     : "";
 
   return (
-    <div className="container py-8 md:py-12" id="operations-video" ref={containerRef}>
-      <div className="rounded-2xl md:rounded-3xl border border-border shadow-2xl bg-[#181b24] p-4 md:p-8 lg:p-16 flex flex-col items-center gap-4 md:gap-8 text-center relative overflow-hidden">
+    <div className="container px-2 sm:px-4 py-8 md:py-12" id="operations-video" ref={containerRef}>
+      <div className="w-full rounded-2xl md:rounded-3xl border border-border shadow-2xl bg-[#181b24] p-2 sm:p-4 md:p-8 lg:p-16 flex flex-col items-center gap-4 md:gap-8 text-center relative overflow-hidden">
         
         {/* Wave Decoration in background */}
         <div className="absolute inset-0 z-0 pointer-events-none opacity-15">
@@ -65,7 +65,7 @@ export default function OperationsVideo({ lang = "ar" }: { lang?: "ar" | "en" })
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="relative z-10 w-full max-w-4xl aspect-video rounded-xl md:rounded-[24px] overflow-hidden border-2 md:border-4 border-secondary shadow-[0_8px_30px_rgba(177,101,251,0.25)] md:shadow-[0_15px_50px_rgba(177,101,251,0.25)] bg-[#0f1116]"
+          className="relative z-10 w-full max-w-5xl aspect-video rounded-xl md:rounded-[24px] overflow-hidden border-2 md:border-4 border-secondary shadow-[0_8px_30px_rgba(177,101,251,0.25)] md:shadow-[0_15px_50px_rgba(177,101,251,0.25)] bg-[#0f1116]"
         >
           {isVisible ? (
             <iframe 
