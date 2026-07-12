@@ -2,13 +2,9 @@
 
 import Script from "next/script";
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXXXX";
+const GA_MEASUREMENT_ID = "G-BMJGG7RM12";
 
 export default function GoogleAnalytics() {
-  // Don't render in development or if no real GA ID is configured
-  if (GA_MEASUREMENT_ID === "G-XXXXXXXXXX") {
-    return null;
-  }
 
   return (
     <>
