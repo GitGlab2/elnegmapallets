@@ -93,25 +93,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, lang 
       }
     });
 
-    // 2. Search Pallet Sizes
-    const activeSizes = isEn ? palletSizesEn : palletSizesAr;
-    activeSizes.forEach((sz) => {
-      const matchTitle = sz.title.toLowerCase().includes(searchTerm);
-      const matchSubtitle = sz.subtitle?.toLowerCase().includes(searchTerm) || false;
-      const matchDesc = sz.description.toLowerCase().includes(searchTerm);
-      const matchDimensions = sz.dimensions.toLowerCase().includes(searchTerm);
-      const matchKeywords = sz.keywords?.some((k) => k.toLowerCase().includes(searchTerm));
-
-      if (matchTitle || matchSubtitle || matchDesc || matchDimensions || matchKeywords) {
-        tempResults.push({
-          title: sz.title,
-          description: sz.subtitle || sz.description,
-          url: isEn ? `/en/pallet-sizes/${sz.slug}` : `/pallet-sizes/${sz.slug}`,
-          category: "pallets",
-          badge: isEn ? "Product Spec" : "مواصفات منتج"
-        });
-      }
-    });
+    // 2. Search Pallet Sizes (Removed since they are indexed as regular articles)
 
     setResults(tempResults);
     setSelectedIndex(0);

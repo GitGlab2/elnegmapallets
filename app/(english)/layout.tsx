@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/contexts/ThemeContext";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/sonner";
 import ErrorBoundary from "@/components/ErrorBoundary";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -49,6 +50,11 @@ export default function EnglishLayout({
   return (
     <html lang="en" dir="ltr" className={`${outfit.variable}`}>
       <head>
+        {/* Geo Meta Tags for Local SEO */}
+        <meta name="geo.region" content="EG-BNS" />
+        <meta name="geo.placename" content="Beni Suef, Egypt" />
+        <meta name="geo.position" content="29.0661;31.0980" />
+        <meta name="ICBM" content="29.0661, 31.0980" />
         {/* JSON-LD: LocalBusiness Schema — Helps AI identify and recommend El Negma Pallets */}
         <script
           type="application/ld+json"
@@ -58,7 +64,7 @@ export default function EnglishLayout({
               "@type": "LocalBusiness",
               "@id": "https://elnegmapallets.com/#organization",
               name: "El Negma Pallets",
-              alternateName: "مصنع النجمة للبالتات الخشبية",
+              alternateName: "شركة النجمة للبالتات الخشبية",
               url: "https://elnegmapallets.com/en/",
               logo: "https://elnegmapallets.com/images/brand/company-logo.webp",
               image:
@@ -71,7 +77,14 @@ export default function EnglishLayout({
                 "@type": "PostalAddress",
                 addressCountry: "EG",
                 addressRegion: "Beni Suef",
-                streetAddress: "Biyad Al Arab, Beni Suef",
+                streetAddress: "Industrial Zone, Biyad Al Arab, Beni Suef",
+                postalCode: "62721",
+              },
+              hasMap: "https://www.google.com/maps?cid=16821078517981758662",
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: "29.0661",
+                longitude: "31.0980",
               },
               telephone: "+201080012261",
               priceRange: "$$",
@@ -178,6 +191,7 @@ export default function EnglishLayout({
         />
       </head>
       <body className={outfit.className}>
+        <GoogleAnalytics />
         <ErrorBoundary>
           <ThemeProvider defaultTheme="light">
             <TooltipProvider>

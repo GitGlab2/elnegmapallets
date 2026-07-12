@@ -17,12 +17,22 @@ import { palletSizeArticlesAr } from "./pallet-size-articles";
 import { palletTypesDokumStringerArticle } from "./articles/pallet-types-dokum-stringer";
 import { palletRunnersMarainArticle } from "./articles/pallet-runners-marain";
 import { palletBlockSolidArticle } from "./articles/pallet-block-solid";
+import { bestPalletFactoryEgyptArticle } from "./articles/best-pallet-factory-egypt";
+import { wholesalePalletsEgyptArticle } from "./articles/wholesale-pallets-egypt";
+import { woodVsPlasticPalletsArticle } from "./articles/wood-vs-plastic-pallets";
+import { palletsPotatoVegetablesExportArticle } from "./articles/pallets-potato-vegetables-export";
+import { palletsFactoriesWarehousesArticle } from "./articles/pallets-factories-warehouses";
 
 export type { Article, TocItem } from "./articles-types";
 
 export const articles: Article[] = [
   palletPricesEgyptArticle,
   buyingPalletsGuideArticle,
+  bestPalletFactoryEgyptArticle,
+  wholesalePalletsEgyptArticle,
+  woodVsPlasticPalletsArticle,
+  palletsPotatoVegetablesExportArticle,
+  palletsFactoriesWarehousesArticle,
   woodTypesForPalletsArticle,
   palletTypesDokumStringerArticle,
   palletRunnersMarainArticle,

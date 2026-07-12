@@ -102,17 +102,11 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
       if (pathname.startsWith("/en/articles")) {
         return pathname.replace("/en/articles", "/articles");
       }
-      if (pathname.startsWith("/en/pallet-sizes")) {
-        return pathname.replace("/en/pallet-sizes", "/pallet-sizes");
-      }
       return "/";
     } else {
       if (pathname === "/") return "/en";
       if (pathname.startsWith("/articles")) {
         return pathname.replace("/articles", "/en/articles");
-      }
-      if (pathname.startsWith("/pallet-sizes")) {
-        return pathname.replace("/pallet-sizes", "/en/pallet-sizes");
       }
       return "/en";
     }
@@ -129,8 +123,8 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
       footerQuickLinks: "روابط سريعة",
       footerProducts: "المنتجات",
       footerProductsList: [
-        { name: "بالتة 100 × 120", path: "/pallet-sizes/120x100-industrial-pallet", isAnchor: false },
-        { name: "بالتة يورو (Euro Pallet)", path: "/pallet-sizes/120x80-euro-pallet", isAnchor: false },
+        { name: "بالتة 100 × 120", path: "/articles/pallet-size-120x100-industrial-pallet", isAnchor: false },
+        { name: "بالتة يورو (Euro Pallet)", path: "/articles/pallet-size-120x80-euro-pallet", isAnchor: false },
         { name: "تصميمات مخصصة", path: "/#contact-section", isAnchor: true },
         { name: "معالجة حرارية (HT)", path: "/articles/heat-treatment-vs-methyl-bromide", isAnchor: false }
       ],
@@ -153,8 +147,8 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
       footerQuickLinks: "Quick Links",
       footerProducts: "Products",
       footerProductsList: [
-        { name: "Pallet 100 × 120", path: "/en/pallet-sizes/120x100-industrial-pallet", isAnchor: false },
-        { name: "Euro Pallet (EPAL)", path: "/en/pallet-sizes/120x80-euro-pallet", isAnchor: false },
+        { name: "Pallet 100 × 120", path: "/en/articles/pallet-size-120x100-industrial-pallet", isAnchor: false },
+        { name: "Euro Pallet (EPAL)", path: "/en/articles/pallet-size-120x80-euro-pallet", isAnchor: false },
         { name: "Custom Designs", path: "/en#contact-section", isAnchor: true },
         { name: "Heat Treatment (HT)", path: "/en/articles/heat-treatment-vs-methyl-bromide", isAnchor: false }
       ],

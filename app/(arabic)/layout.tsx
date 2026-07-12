@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/contexts/ThemeContext";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/sonner";
 import ErrorBoundary from "@/components/ErrorBoundary";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const cairo = Cairo({
   subsets: ["arabic"],
@@ -61,6 +62,11 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" className={`${cairo.variable}`}>
       <head>
+        {/* Geo Meta Tags for Local SEO */}
+        <meta name="geo.region" content="EG-BNS" />
+        <meta name="geo.placename" content="Beni Suef, Egypt" />
+        <meta name="geo.position" content="29.0661;31.0980" />
+        <meta name="ICBM" content="29.0661, 31.0980" />
         <link
           rel="preload"
           as="image"
@@ -86,7 +92,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "@id": "https://elnegmapallets.com/#organization",
-              name: "مصنع النجمة للبالتات الخشبية",
+              name: "شركة النجمة للبالتات الخشبية",
               alternateName: "El Negma Pallets",
               url: "https://elnegmapallets.com",
               logo: "https://elnegmapallets.com/images/brand/company-logo.webp",
@@ -100,7 +106,14 @@ export default function RootLayout({
                 "@type": "PostalAddress",
                 addressCountry: "EG",
                 addressRegion: "Beni Suef",
-                streetAddress: "بياض العرب، بني سويف",
+                streetAddress: "المنطقة الصناعية، بياض العرب، بني سويف",
+                postalCode: "62721",
+              },
+              hasMap: "https://www.google.com/maps?cid=16821078517981758662",
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: "29.0661",
+                longitude: "31.0980",
               },
               telephone: "+201080012261",
               priceRange: "$$",
@@ -216,6 +229,7 @@ export default function RootLayout({
         />
       </head>
       <body className={cairo.className}>
+        <GoogleAnalytics />
         <ErrorBoundary>
           <ThemeProvider defaultTheme="light">
             <TooltipProvider>
