@@ -3,14 +3,14 @@ import { Article } from "../articles-types";
 export const datesFumigationAlternativesArticle: Article = {
   slug: "dates-fumigation-alternatives",
   title: "بدائل بروميد الميثيل في تبخير التمور للحجر الزراعي والتصدير",
-  description: "استخدام غاز فوسفيد الهيدروجين (الفوسفين PH3) كبديل آمن وصديق للأوزون لتعقيم التمور الجافة ونصف الجافة في مصر.",
+  description: "استخدام غاز فوسفيد الهيدروجين (الفوسفين PH3) كبديل آمن وصديق للأوزون لتبخير التمور الجافة ونصف الجافة في مصر.",
   date: "2026-07-08",
   author: "إدارة السلامة الغذائية - شركة النجمة",
   readTime: "3 دقائق",
   image: "/images/articles/dates-fumigation-alternatives.webp",
-  category: "تعقيم المواد الغذائية",
+  category: "تبخير المواد الغذائية",
   categoryId: "compliance",
-  keywords: ["تعقيم التمور في مصر", "بدائل بروميد الميثيل", "غاز الفوسفين PH3", "تبخير التمور الجافة", "لوجستيات تصدير التمور"],
+  keywords: ["تبخير التمور في مصر", "بدائل بروميد الميثيل", "غاز الفوسفين PH3", "تبخير التمور الجافة", "لوجستيات تصدير التمور"],
   toc: [
     { title: "الحاجة لبدائل غاز بروميد الميثيل", target: "#dates-fumigation" },
     { title: "غاز فوسفيد الهيدروجين (الفوسفين PH3)", target: "#phosphine-alternatives" },
@@ -19,7 +19,7 @@ export const datesFumigationAlternativesArticle: Article = {
   content: `
     <div class="space-y-6 text-right leading-relaxed text-gray-200">
       <section class="border-r-4 border-secondary pr-4 bg-muted/20 p-4 rounded-l-lg">
-        <h2 id="dates-fumigation" class="text-xl font-bold text-accent mb-2">تعقيم التمور وحظر غاز بروميد الميثيل</h2>
+        <h2 id="dates-fumigation" class="text-xl font-bold text-accent mb-2">تبخير التمور وحظر غاز بروميد الميثيل</h2>
         <p class="text-sm text-gray-300">
           يمثل قطاع التمور في مصر، وخاصة التمور الجافة ونصف الجافة في صعيد مصر كأصناف "الجنديلة" و"السكوتي"، ركيزة واعدة للصادرات الغذائية. 
           تتطلب هذه الثمار حماية فائقة ضد الآفات الحشرية الحاضنة داخلها أثناء التخزين الطويل والشحن. 

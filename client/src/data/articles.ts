@@ -1,6 +1,5 @@
 import { Article } from "./articles-types";
 import { palletPricesEgyptArticle } from "./articles/pallet-prices-egypt";
-import { buyingPalletsGuideArticle } from "./articles/buying-pallets-guide";
 import { woodTypesForPalletsArticle } from "./articles/wood-types-for-pallets";
 import { palletsFoodPharmaceuticalArticle } from "./articles/pallets-food-pharmaceutical";
 import { palletsWarehouseStorageArticle } from "./articles/pallets-warehouse-storage";
@@ -43,7 +42,6 @@ function getDeterministicOldDate(slug: string): string {
 const rawArticles: Article[] = [
   woodenCratesPalletCollarsExportArticle,
   palletPricesEgyptArticle,
-  buyingPalletsGuideArticle,
   bestPalletFactoryEgyptArticle,
   wholesalePalletsEgyptArticle,
   woodVsPlasticPalletsArticle,

@@ -8,9 +8,9 @@ export const heatTreatmentVsMethylBromideArticle: Article = {
   author: "إدارة البيئة والجودة - شركة النجمة",
   readTime: "4 دقائق",
   image: "/images/articles/heat-treatment-vs-methyl-bromide.webp",
-  category: "طرق تعقيم البالتات",
+  category: "طرق تبخير ومعالجة البالتات",
   categoryId: "compliance",
-  keywords: ["معالجة حرارية HT", "التبخير ببروميد الميثيل MB", "تعقيم البالتات الخشبية", "بروتوكول مونتريال للأوزون", "أفران تعقيم الخشب", "المعالجة الحرارية للبالتات في مصر", "فرن تبخير خشب", "الفرق بين المعالجة والتبخير"],
+  keywords: ["معالجة حرارية HT", "التبخير ببروميد الميثيل MB", "تبخير ومعالجة البالتات الخشبية", "بروتوكول مونتريال للأوزون", "أفران معالجة الخشب", "المعالجة الحرارية للبالتات في مصر", "فرن تبخير خشب", "الفرق بين المعالجة والتبخير"],
   toc: [
     { title: "المعالجة الحرارية (Heat Treatment - HT)", target: "#heat-treatment" },
     { title: "التبخير ببروميد الميثيل (Methyl Bromide - MB)", target: "#methyl-bromide" },
@@ -39,7 +39,7 @@ export const heatTreatmentVsMethylBromideArticle: Article = {
       </section>
 
       <section>
-        <h2 id="comparison-table" class="text-xl font-bold text-white border-b border-border pb-1">3. مقارنة سريعة بين طريقتي التعقيم HT و MB</h2>
+        <h2 id="comparison-table" class="text-xl font-bold text-white border-b border-border pb-1">3. مقارنة سريعة بين طريقتي المعالجة والتبخير HT و MB</h2>
         <div class="overflow-x-auto border border-border rounded-xl mt-3">
           <table class="w-full text-right text-xs text-gray-300">
             <thead class="bg-primary/40 text-white border-b border-border">
@@ -56,7 +56,7 @@ export const heatTreatmentVsMethylBromideArticle: Article = {
                 <td class="px-4 py-2">غاز كيميائي سام ومخترق للأنسجة</td>
               </tr>
               <tr class="hover:bg-muted/30">
-                <td class="px-4 py-2 font-bold text-accent">مدة التعقيم</td>
+                <td class="px-4 py-2 font-bold text-accent">مدة المعالجة</td>
                 <td class="px-4 py-2">30 - 60 دقيقة فقط</td>
                 <td class="px-4 py-2">24 - 48 ساعة (شاملة التهوية)</td>
               </tr>

@@ -7,7 +7,7 @@ export const palletBlockSolidArticle: Article = {
   date: "2026-07-10",
   author: "قسم الإنتاج والتصنيع - مصنع النجمة",
   readTime: "5 دقائق",
-  image: "/images/articles/pallet-block-solid.webp",
+  image: "/images/articles/pallet-block-solid-detail.jpg",
   category: "مقاسات وأبعاد البالتات",
   categoryId: "sizes",
   keywords: [

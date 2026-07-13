@@ -54,7 +54,12 @@ function formatBlogDate(dateStr: string, isEn: boolean): string {
 }
 
 function normalizeArabic(text: string): string {
-  return text
+  const easternNumbers = ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"];
+  let normalized = text;
+  for (let i = 0; i < 10; i++) {
+    normalized = normalized.replace(new RegExp(easternNumbers[i], "g"), i.toString());
+  }
+  return normalized
     .replace(/[أإآ]/g, "ا")
     .replace(/ة/g, "ه")
     .replace(/[ىي]/g, "ي") // Normalize both to 'ي'
@@ -77,7 +82,7 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
     ar: [
       { id: "all", name: "كل التصنيفات", icon: LayoutGrid },
       { id: "export", name: "شحن وتصدير", icon: Globe },
-      { id: "compliance", name: "معالجة وتعقيم", icon: ShieldCheck },
+      { id: "compliance", name: "معالجة وتبخير", icon: ShieldCheck },
       { id: "procurement", name: "أسعار ومواصفات", icon: Tag },
       { id: "industry", name: "متطلبات صناعية", icon: Factory },
       { id: "sizes", name: "أبعاد ومقاسات", icon: Package },

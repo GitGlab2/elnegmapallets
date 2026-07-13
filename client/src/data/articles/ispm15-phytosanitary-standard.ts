@@ -10,7 +10,7 @@ export const ispm15PhytosanitaryStandardArticle: Article = {
   image: "/images/articles/ispm15-phytosanitary-standard.webp",
   category: "معايير الصحة النباتية",
   categoryId: "compliance",
-  keywords: ["معيار ISPM 15", "ختم الصحة النباتية", "ختم IPPC للبالتات", "تعقيم خشب التصدير", "الحجر الزراعي للبالتات", "شهادة تبخير البالتات", "القمحة على البالتات", "ختم وزارة الزراعة للتصدير", "ISPM-15 مصر"],
+  keywords: ["معيار ISPM 15", "ختم الصحة النباتية", "ختم IPPC للبالتات", "تبخير ومعالجة خشب التصدير", "الحجر الزراعي للبالتات", "شهادة تبخير البالتات", "القمحة على البالتات", "ختم وزارة الزراعة للتصدير", "ISPM-15 مصر"],
   toc: [
     { title: "ما هو معيار ISPM 15؟", target: "#what-is-ispm15" },
     { title: "أهمية الختم الدولي ومكوناته", target: "#ippc-stamp" },
@@ -32,7 +32,7 @@ export const ispm15PhytosanitaryStandardArticle: Article = {
       </section>
 
       <section>
-        <h2 id="ippc-stamp" class="text-xl font-bold text-white border-b border-border pb-1">مكونات الختم الدولي للتعقيم (ختم القمح)</h2>
+        <h2 id="ippc-stamp" class="text-xl font-bold text-white border-b border-border pb-1">مكونات الختم الدولي للمعالجة والتبخير (ختم القمح)</h2>
         <p class="text-sm text-gray-300 mb-2">
           تُمهر البالتات الخشبية المعالجة بختم دولي واضح وحراري باللون الأسود أو البني على جانبين متقابلين، ويحتوي الختم على أربعة رموز رئيسية للتتبع الجمركي:
         </p>

@@ -9,6 +9,7 @@ export default function Gallery({ lang = "ar" }: { lang?: "ar" | "en" }) {
     "/images/gallery/client-gallery-3.webp",
     "/images/gallery/client-gallery-2.webp",
     "/images/gallery/client-gallery-1.webp",
+    "/images/gallery/warehouse-stacked-pallets.jpg",
   ];
 
   const totalSlides = items.length;
