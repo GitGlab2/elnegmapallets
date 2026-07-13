@@ -53,6 +53,14 @@ function formatBlogDate(dateStr: string, isEn: boolean): string {
   }
 }
 
+function normalizeArabic(text: string): string {
+  return text
+    .replace(/[أإآ]/g, "ا")
+    .replace(/ة/g, "ه")
+    .replace(/[ىي]/g, "ي") // Normalize both to 'ي'
+    .replace(/[\u064B-\u065F]/g, ""); // Remove diacritics
+}
+
 export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
   const isEn = lang === "en";
   const currentArticles = isEn ? articlesEn : articles;
@@ -148,10 +156,19 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
   // Search filter
   const searchedArticles = searchQuery
     ? currentArticles.filter(
-        article =>
-          article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          article.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          article.keywords.some(kw => kw.toLowerCase().includes(searchQuery.toLowerCase()))
+        article => {
+          const normalizeForSearch = (str: string) => {
+            const lower = str.toLowerCase();
+            return lang === "ar" ? normalizeArabic(lower) : lower;
+          };
+          const query = normalizeForSearch(searchQuery);
+          return (
+            normalizeForSearch(article.title).includes(query) ||
+            normalizeForSearch(article.description).includes(query) ||
+            article.keywords.some(kw => normalizeForSearch(kw).includes(query)) ||
+            normalizeForSearch(article.content).includes(query)
+          );
+        }
       )
     : currentArticles;
 
@@ -174,7 +191,7 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
       dir={content.dir}
     >
       {/* Blog Hero Banner */}
-      <div className="container max-w-6xl mb-12">
+      <div className="container max-w-7xl mb-12">
         <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#202534] via-[#1c1f2a] to-[#202534] p-8 md:p-12 text-center border border-border/30 shadow-2xl">
           <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center gap-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary/15 border border-secondary/30 text-secondary text-xs font-bold uppercase tracking-wider">
@@ -192,7 +209,7 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
       </div>
 
       {/* Main Grid Layout */}
-      <div className="container max-w-6xl">
+      <div className="container max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Main Content Column (70%) */}

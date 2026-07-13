@@ -1,7 +1,7 @@
 import { articles } from "@/data/articles";
 import { articlesEn } from "@/data/articles-en";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, Calendar, Clock } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calendar, Clock, Phone } from "lucide-react";
 import { TableOfContents, ArticleContactCard, ArticleShareWidget, RelatedArticles } from "@/components/ArticleSidebarWidgets";
 
 function formatBlogDate(dateStr: string, isEn: boolean): string {
@@ -164,7 +164,7 @@ export default function ArticleDetails({ slug, lang = "ar" }: { slug: string; la
         }
       `}} />
 
-      <div className="container max-w-6xl">
+      <div className="container max-w-7xl">
         
         {/* Back Link */}
         <div className="mb-8">
@@ -228,6 +228,31 @@ export default function ArticleDetails({ slug, lang = "ar" }: { slug: string; la
               className="article-body"
               dangerouslySetInnerHTML={{ __html: article.content }}
             />
+
+            {/* Bottom Call to Action Card */}
+            <div className="mt-12 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-[#202534] to-[#1c1f2a] border border-secondary/30 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 text-right">
+              <div className="flex flex-col gap-2 flex-1">
+                <h3 className="text-lg md:text-xl font-bold text-white">
+                  {isEn ? "Do you need wooden pallets for your business?" : "هل تحتاج بالتات خشبية لعملك؟"}
+                </h3>
+                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                  {isEn 
+                    ? "Our team is ready to help you choose the right specifications and provide a competitive quote." 
+                    : "فريق شركة النجمة جاهز لمساعدتك في اختيار المواصفة الصحيحة وتقديم عرض سعر تنافسي."}
+                </p>
+              </div>
+              <div className="shrink-0 w-full md:w-auto">
+                <a
+                  href="https://wa.me/201080012261"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#8b2626] hover:bg-[#a63030] text-white font-bold text-sm rounded-xl transition-all shadow-lg hover:shadow-red-900/30 cursor-pointer"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>{isEn ? "Request a Quote Now" : "اطلب عرض سعر الآن"}</span>
+                </a>
+              </div>
+            </div>
           </main>
 
           {/* Left/Right Column: Sidebar Widgets */}
