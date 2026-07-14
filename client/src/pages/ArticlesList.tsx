@@ -215,6 +215,49 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
 
       {/* Main Grid Layout */}
       <div className="container max-w-7xl">
+        {/* Mobile Search & Categories (Visible only on mobile/tablet) */}
+        <div className="mb-8 lg:hidden px-4">
+          <div className="flex flex-col gap-4">
+            {/* Mobile Search Input */}
+            <div className="relative">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  setVisibleArticleCount(ARTICLE_PAGE_SIZE);
+                }}
+                placeholder={content.searchPlaceholder}
+                className="w-full text-sm bg-[#1c1f2a] border border-border/40 rounded-xl py-3 pl-4 pr-10 focus:border-secondary focus:outline-none text-white placeholder-muted-foreground transition-colors shadow-lg"
+              />
+              <Search className={`absolute w-5 h-5 text-muted-foreground top-3.5 ${isEn ? "right-3.5" : "left-3.5"}`} />
+            </div>
+
+            {/* Mobile Categories Wrap */}
+            <div className="flex flex-wrap gap-2 justify-start">
+              {activeCategoriesList.map((cat) => {
+                const isActive = activeCategory === cat.id;
+                const Icon = cat.icon;
+
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => handleCategoryChange(cat.id)}
+                    className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold transition-all duration-200 ${
+                      isActive
+                        ? "bg-secondary text-white shadow-md shadow-secondary/20"
+                        : "bg-[#1c1f2a] border border-border/30 text-muted-foreground hover:text-white"
+                    }`}
+                  >
+                    <Icon className="w-3.5 h-3.5" />
+                    <span>{cat.name}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Main Content Column (70%) */}
@@ -348,10 +391,38 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
                 {content.emptyState}
               </div>
             )}
+
+            {/* Mobile CTA (Visible only on mobile/tablet at the end of the articles list) */}
+            <div className="lg:hidden mt-8">
+              <div className="bg-[#59331f] text-white border border-border/40 p-6 rounded-2xl shadow-lg relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/images/sections/logistics-truck.webp')] bg-cover bg-center opacity-5 mix-blend-overlay" />
+                <div className="relative z-10 space-y-4">
+                  <h4 className="text-lg font-black text-accent leading-snug">
+                    {content.ctaTitle}
+                  </h4>
+                  <p className="text-xs text-white/80 leading-relaxed">
+                    {content.ctaDesc}
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-2 pt-2">
+                    <a href="tel:01080012261" className="w-full sm:w-1/2">
+                      <Button className="w-full text-xs font-bold h-10 bg-secondary hover:bg-secondary/90 text-white">
+                        <Phone className="w-3.5 h-3.5 ml-1.5" />
+                        {content.ctaCall} (01080012261)
+                      </Button>
+                    </a>
+                    <a href="https://wa.me/201080012261" target="_blank" rel="noopener noreferrer" className="w-full sm:w-1/2">
+                      <Button variant="outline" className="w-full text-xs font-bold h-10 bg-transparent border-white/20 hover:bg-white/10 text-white">
+                        {content.ctaContact}
+                      </Button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </main>
 
           {/* Sidebar Column (30%) */}
-          <aside className="lg:col-span-4 space-y-8">
+          <aside className="hidden lg:block lg:col-span-4 space-y-8">
             
             {/* Widget 1: Blog Search */}
             <div className="bg-[#1c1f2a] border border-border/40 p-5 rounded-2xl shadow-lg">

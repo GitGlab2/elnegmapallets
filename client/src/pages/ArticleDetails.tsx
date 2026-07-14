@@ -224,6 +224,11 @@ export default function ArticleDetails({ slug, lang = "ar" }: { slug: string; la
           
           {/* Right/Left Column: Article Content */}
           <main className="lg:col-span-8 flex flex-col bg-muted/10 border border-border/20 rounded-3xl p-6 md:p-10 shadow-lg">
+            {/* Mobile Table of Contents (Visible only on mobile/tablet at the start of the article) */}
+            <div className="lg:hidden mb-8">
+              <TableOfContents items={tableOfContents} lang={lang} />
+            </div>
+
             <div 
               className="article-body"
               dangerouslySetInnerHTML={{ __html: article.content }}
@@ -253,19 +258,30 @@ export default function ArticleDetails({ slug, lang = "ar" }: { slug: string; la
                 </a>
               </div>
             </div>
+
+            {/* Mobile Share Widget (Visible only on mobile/tablet right below the CTA card) */}
+            <div className="lg:hidden mt-6">
+              <ArticleShareWidget title={article.title} description={article.description} lang={lang} />
+            </div>
           </main>
 
           {/* Left/Right Column: Sidebar Widgets */}
           <aside className="lg:col-span-4 flex flex-col gap-8">
-            <TableOfContents items={tableOfContents} lang={lang} />
+            <div className="hidden lg:block">
+              <TableOfContents items={tableOfContents} lang={lang} />
+            </div>
             <RelatedArticles
               currentSlug={slug}
               currentCategoryId={article.categoryId}
               allArticles={currentArticles}
               lang={lang}
             />
-            <ArticleContactCard lang={lang} />
-            <ArticleShareWidget title={article.title} description={article.description} lang={lang} />
+            <div className="hidden lg:block">
+              <ArticleContactCard lang={lang} />
+            </div>
+            <div className="hidden lg:block">
+              <ArticleShareWidget title={article.title} description={article.description} lang={lang} />
+            </div>
           </aside>
 
         </div>

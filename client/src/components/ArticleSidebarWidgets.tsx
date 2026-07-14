@@ -170,15 +170,7 @@ interface ShareProps {
 }
 
 export function ArticleShareWidget({ title, description, lang = "ar" }: ShareProps) {
-  const isEn = lang === "en";
   return (
-    <div className="bg-muted/10 border border-border/20 rounded-2xl p-6 shadow-md flex flex-col gap-4 text-center">
-      <h4 className="font-bold text-sm text-gray-300">
-        {isEn ? "Share Now" : "شاركه الان"}
-      </h4>
-      <div className="flex justify-center">
-        <ShareButton title={title} description={description} />
-      </div>
-    </div>
+    <ShareButton title={title} description={description} lang={lang} className="w-full" />
   );
 }
