@@ -10,6 +10,11 @@ export type ArticleCategoryId =
   | "industry"
   | "sizes";
 
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
 export interface Article {
   slug: string;
   title: string;
@@ -23,4 +28,5 @@ export interface Article {
   keywords: string[];
   content: string;
   toc?: TocItem[];
+  faq?: FaqItem[];
 }

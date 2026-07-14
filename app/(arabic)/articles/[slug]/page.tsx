@@ -109,6 +109,19 @@ export default async function Page({ params }: Props) {
     ]
   };
 
+  const faqData = article?.faq?.length ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": article.faq.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer,
+      },
+    })),
+  } : null;
+
   return (
     <>
       {structuredData && (
@@ -127,7 +140,16 @@ export default async function Page({ params }: Props) {
           }}
         />
       )}
+      {faqData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqData).replace(/</g, "\\u003c"),
+          }}
+        />
+      )}
       <ArticleDetails slug={slug} lang="ar" />
     </>
   );
 }
+
