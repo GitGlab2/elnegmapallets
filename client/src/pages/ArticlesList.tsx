@@ -20,6 +20,7 @@ import {
   Search,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { matchSearchQuery } from "@/utils/search";
 
 const ARTICLE_PAGE_SIZE = 7; // 1 featured + 6 grid
 
@@ -53,19 +54,6 @@ function formatBlogDate(dateStr: string, isEn: boolean): string {
   }
 }
 
-function normalizeArabic(text: string): string {
-  const easternNumbers = ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"];
-  let normalized = text;
-  for (let i = 0; i < 10; i++) {
-    normalized = normalized.replace(new RegExp(easternNumbers[i], "g"), i.toString());
-  }
-  return normalized
-    .replace(/[أإآ]/g, "ا")
-    .replace(/ة/g, "ه")
-    .replace(/[ىي]/g, "ي") // Normalize both to 'ي'
-    .replace(/[\u064B-\u065F]/g, ""); // Remove diacritics
-}
-
 export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
   const isEn = lang === "en";
   const currentArticles = isEn ? articlesEn : articles;
@@ -84,7 +72,7 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
       { id: "export", name: "شحن وتصدير", icon: Globe },
       { id: "compliance", name: "معالجة وتبخير", icon: ShieldCheck },
       { id: "procurement", name: "أسعار ومواصفات", icon: Tag },
-      { id: "industry", name: "متطلبات صناعية", icon: Factory },
+      { id: "industry", name: "متمتطلبات صناعية", icon: Factory },
       { id: "sizes", name: "أبعاد ومقاسات", icon: Package },
     ],
     en: [
@@ -158,22 +146,14 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
     cat => cat.id === "all" || (categoryCounts[cat.id] ?? 0) > 0
   );
 
-  // Search filter
+  // Search filter using advanced token-based spell-tolerant utility
   const searchedArticles = searchQuery
-    ? currentArticles.filter(
-        article => {
-          const normalizeForSearch = (str: string) => {
-            const lower = str.toLowerCase();
-            return lang === "ar" ? normalizeArabic(lower) : lower;
-          };
-          const query = normalizeForSearch(searchQuery);
-          return (
-            normalizeForSearch(article.title).includes(query) ||
-            normalizeForSearch(article.description).includes(query) ||
-            article.keywords.some(kw => normalizeForSearch(kw).includes(query)) ||
-            normalizeForSearch(article.content).includes(query)
-          );
-        }
+    ? currentArticles.filter(article =>
+        matchSearchQuery(
+          searchQuery,
+          [article.title, article.description, article.keywords, article.content],
+          lang
+        )
       )
     : currentArticles;
 

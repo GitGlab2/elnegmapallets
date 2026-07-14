@@ -2,8 +2,8 @@ import { Article } from "../articles-types";
 
 export const wholesalePalletsEgyptArticle: Article = {
   slug: "wholesale-pallets-egypt",
-  title: "بالتات خشب للبيع جملة في مصر: أسعار الجملة وأفضل موردي طبالي الخشب",
-  description: "دليلك الكامل لشراء بالتات خشبية جملة في مصر بأسعار المصنع مباشرة. تعرف على مزايا الشراء بالجملة، أسعار الكميات، وكيفية التعاقد مع مصنع النجمة للتوريد الموسمي.",
+  title: "بالتات خشب للبيع بكميات كبيرة في مصر: أسعار الكميات وأفضل موردي طبالي الخشب",
+  description: "دليلك الكامل لشراء بالتات خشبية بكميات في مصر بأسعار المصنع مباشرة. تعرف على مزايا شراء الكميات، أسعار وتوريد الكميات، وكيفية التعاقد مع مصنع النجمة للتوريد الموسمي.",
   date: "2026-07-12",
   author: "إدارة المبيعات والتوريد - مصنع النجمة",
   readTime: "5 دقائق",
@@ -11,26 +11,26 @@ export const wholesalePalletsEgyptArticle: Article = {
   category: "أسعار السوق والتوريد",
   categoryId: "procurement",
   keywords: [
-    "بالتات خشب للبيع جملة",
-    "بالتات خشب جملة مصر",
-    "طبالي خشب بالجملة",
-    "أسعار بالتات خشب جملة",
+    "بالتات خشب للبيع بكميات كبيرة",
+    "بالتات خشب كميات مصر",
+    "طبالي خشب بكميات كبيرة",
+    "أسعار بالتات خشب للكميات",
     "توريد بالتات خشبية",
     "بالتات خشب بسعر المصنع"
   ],
   toc: [
-    { title: "لماذا الشراء بالجملة من المصنع مباشرة؟", target: "#why-wholesale" },
+    { title: "لماذا الشراء بكميات من المصنع مباشرة؟", target: "#why-wholesale" },
     { title: "مزايا عقود التوريد الموسمية للبالتات", target: "#seasonal-contracts" },
-    { title: "القطاعات الأكثر طلباً للبالتات بالجملة في مصر", target: "#top-sectors" },
-    { title: "كيف تحصل على أفضل سعر جملة؟", target: "#best-price-tips" },
+    { title: "القطاعات الأكثر طلباً للبالتات بكميات كبيرة في مصر", target: "#top-sectors" },
+    { title: "كيف تحصل على أفضل سعر للكميات الكبيرة؟", target: "#best-price-tips" },
     { title: "عروض مصنع النجمة للكميات", target: "#elnegma-offers" }
   ],
   content: `
     <div class="space-y-6 text-right leading-relaxed text-gray-200">
       <section class="border-r-4 border-secondary pr-4 bg-muted/20 p-4 rounded-l-lg">
-        <h2 id="why-wholesale" class="text-xl font-bold text-accent mb-2">1. لماذا الشراء بالجملة من المصنع مباشرة؟</h2>
+        <h2 id="why-wholesale" class="text-xl font-bold text-accent mb-2">1. لماذا الشراء بكميات من المصنع مباشرة؟</h2>
         <p class="text-sm text-gray-300">
-          عندما تبحث عن <strong>بالتات خشب للبيع جملة</strong> في مصر، فأنت بالتأكيد تبحث عن أفضل قيمة مقابل السعر. الشراء المباشر من <strong>مصنع بالتات خشبية</strong> يوفر لك مزايا لا يمكن أن يوفرها الوسطاء أو التجار:
+          عندما تبحث عن <strong>بالتات خشب للبيع بكميات كبيرة</strong> في مصر، فأنت بالتأكيد تبحث عن أفضل قيمة مقابل السعر. الشراء المباشر من <strong>مصنع بالتات خشبية</strong> يوفر لك مزايا لا يمكن أن يوفرها الوسطاء أو التجار:
         </p>
         <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pr-2">
           <li><strong>سعر المصنع مباشرة:</strong> بدون هوامش ربح الوسطاء التي قد تصل إلى 15-25% من سعر البالتة.</li>
@@ -54,9 +54,9 @@ export const wholesalePalletsEgyptArticle: Article = {
       </section>
 
       <section>
-        <h2 id="top-sectors" class="text-xl font-bold text-white border-b border-border pb-1">3. القطاعات الأكثر طلباً للبالتات بالجملة في مصر</h2>
+        <h2 id="top-sectors" class="text-xl font-bold text-white border-b border-border pb-1">3. القطاعات الأكثر طلباً للبالتات بكميات كبيرة في مصر</h2>
         <p class="text-sm text-gray-300">
-          تتركز طلبات <strong>توريد بالتات خشبية</strong> بالجملة في القطاعات التالية:
+          تتركز طلبات <strong>توريد بالتات خشبية</strong> بكميات كبيرة في القطاعات التالية:
         </p>
         <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pr-2">
           <li><strong>قطاع تصدير الموالح والفواكه:</strong> يحتاج آلاف البالتات موسمياً بمقاس 120×100 سم مع معالجة حرارية إلزامية للتصدير لأوروبا والخليج.</li>
@@ -68,9 +68,9 @@ export const wholesalePalletsEgyptArticle: Article = {
       </section>
 
       <section>
-        <h2 id="best-price-tips" class="text-xl font-bold text-white border-b border-border pb-1">4. كيف تحصل على أفضل سعر جملة للبالتات؟</h2>
+        <h2 id="best-price-tips" class="text-xl font-bold text-white border-b border-border pb-1">4. كيف تحصل على أفضل سعر للكميات الكبيرة؟</h2>
         <p class="text-sm text-gray-300">
-          للحصول على أفضل <strong>أسعار بالتات خشب جملة</strong>، اتبع هذه النصائح:
+          للحصول على أفضل <strong>أسعار بالتات خشب للكميات</strong>، اتبع هذه النصائح:
         </p>
         <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pr-2">
           <li><strong>اطلب كميات أكبر:</strong> كلما زادت الكمية، انخفض سعر الوحدة. الطلبيات فوق 500 بالتة تحصل عادةً على خصومات مميزة.</li>
@@ -81,20 +81,17 @@ export const wholesalePalletsEgyptArticle: Article = {
       </section>
 
       <section>
-        <h2 id="elnegma-offers" class="text-xl font-bold text-white border-b border-border pb-1">5. عروض مصنع النجمة للكميات والتوريد بالجملة</h2>
+        <h2 id="elnegma-offers" class="text-xl font-bold text-white border-b border-border pb-1">5. عروض مصنع النجمة للتوريد والكميات الكبيرة</h2>
         <p class="text-sm text-gray-300">
-          يقدم <strong>مصنع النجمة للبالتات الخشبية</strong> عروضاً مميزة للشراء بالجملة تشمل:
+          يقدم <strong>مصنع النجمة للبالتات الخشبية</strong> عروضاً مميزة لشراء الكميات تشمل:
         </p>
         <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pr-2">
-          <li>أسعار تنافسية للكميات فوق 200 بالتة بخصومات تصاعدية</li>
+          <li>أسعار تنافسية للكميات فوق 2000 بالتة بخصومات تصاعدية</li>
           <li>عقود توريد موسمية بأسعار ثابتة ومواعيد تسليم مضمونة</li>
           <li>شهادات المعالجة الحرارية ISPM-15 مجاناً مع كل طلبية تصدير</li>
           <li>إمكانية التوصيل لجميع المحافظات المصرية</li>
           <li>استشارات فنية مجانية لاختيار المقاس الأنسب لنوع شحنتك</li>
         </ul>
-        <p class="text-sm text-gray-300 mt-3">
-          للاستفسار عن أسعار الجملة والعروض الخاصة، تواصل معنا على <strong>01080012261</strong> — فريق المبيعات جاهز لخدمتك وتقديم عرض سعر مخصص لاحتياجاتك.
-        </p>
       </section>
     </div>
   `

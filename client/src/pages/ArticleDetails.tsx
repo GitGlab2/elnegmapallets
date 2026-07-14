@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { articles } from "@/data/articles";
 import { articlesEn } from "@/data/articles-en";
 import { notFound } from "next/navigation";
@@ -42,6 +45,57 @@ export default function ArticleDetails({ slug, lang = "ar" }: { slug: string; la
   if (!article) {
     notFound();
   }
+
+  useEffect(() => {
+    const slider = document.getElementById("calc-qty-slider") as HTMLInputElement | null;
+    const qtyDisplay = document.getElementById("calc-qty-display");
+    const discountDisplay = document.getElementById("calc-discount-display");
+    const benefitsDisplay = document.getElementById("calc-benefits-display");
+
+    if (!slider) return;
+
+    const updateCalculator = () => {
+      const val = parseInt(slider.value, 10);
+      
+      if (qtyDisplay) {
+        qtyDisplay.textContent = isEn 
+          ? `${val.toLocaleString("en-US")} Pallets`
+          : `${val.toLocaleString("ar-EG")} بالتة`;
+      }
+
+      let discount = "0%";
+      let benefits = isEn 
+        ? "ISPM-15 Certified HT Treatment"
+        : "معالجة HT معتمدة للتصدير";
+
+      if (val >= 3000 && val < 5000) {
+        discount = "1%";
+        benefits = isEn 
+          ? "Free HT Treatment for Export"
+          : "معالجة HT مجانية للتصدير";
+      } else if (val >= 5000 && val < 7000) {
+        discount = "2%";
+        benefits = isEn 
+          ? "Free HT + Discounted Shipping"
+          : "معالجة HT مجانية + شحن مخفض";
+      } else if (val >= 7000) {
+        discount = "3%";
+        benefits = isEn 
+          ? "Free Shipping + Free HT Treatment"
+          : "شحن مجاني + معالجة HT مجانية للتصدير";
+      }
+
+      if (discountDisplay) discountDisplay.textContent = discount;
+      if (benefitsDisplay) benefitsDisplay.textContent = benefits;
+    };
+
+    slider.addEventListener("input", updateCalculator);
+    updateCalculator(); // Initialize on mount
+
+    return () => {
+      slider.removeEventListener("input", updateCalculator);
+    };
+  }, [article, isEn]);
 
   // Define Table of Contents items dynamically from metadata
   const tableOfContents = article.toc || (isEn ? [

@@ -5,6 +5,7 @@ import { articles } from "../data/articles";
 import { articlesEn } from "../data/articles-en";
 import { palletSizesAr } from "../data/pallet-sizes";
 import { palletSizesEn } from "../data/pallet-sizes-en";
+import { matchSearchQuery } from "@/utils/search";
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -78,11 +79,13 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, lang 
     // 1. Search Articles
     const activeArticles = isEn ? articlesEn : articles;
     activeArticles.forEach((art) => {
-      const matchTitle = art.title.toLowerCase().includes(searchTerm);
-      const matchDesc = art.description.toLowerCase().includes(searchTerm);
-      const matchKeywords = art.keywords?.some((k) => k.toLowerCase().includes(searchTerm));
+      const isMatched = matchSearchQuery(
+        query,
+        [art.title, art.description, art.keywords, art.content],
+        lang
+      );
       
-      if (matchTitle || matchDesc || matchKeywords) {
+      if (isMatched) {
         tempResults.push({
           title: art.title,
           description: art.description,
