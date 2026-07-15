@@ -212,29 +212,6 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
               />
               <Search className={`absolute w-5 h-5 text-muted-foreground top-3.5 ${isEn ? "right-3.5" : "left-3.5"}`} />
             </div>
-
-            {/* Mobile Categories Wrap */}
-            <div className="flex flex-wrap gap-2 justify-start">
-              {activeCategoriesList.map((cat) => {
-                const isActive = activeCategory === cat.id;
-                const Icon = cat.icon;
-
-                return (
-                  <button
-                    key={cat.id}
-                    onClick={() => handleCategoryChange(cat.id)}
-                    className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold transition-all duration-200 ${
-                      isActive
-                        ? "bg-secondary text-white shadow-md shadow-secondary/20"
-                        : "bg-[#1c1f2a] border border-border/30 text-muted-foreground hover:text-white"
-                    }`}
-                  >
-                    <Icon className="w-3.5 h-3.5" />
-                    <span>{cat.name}</span>
-                  </button>
-                );
-              })}
-            </div>
           </div>
         </div>
 
