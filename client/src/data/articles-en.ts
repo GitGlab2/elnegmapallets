@@ -305,64 +305,7 @@ const rawArticlesEn: Article[] = [
     `,
   },
 
-  {
-    slug: "ispm15-phytosanitary-standard",
-    title: "ISPM-15 Phytosanitary Standard for Wood Packaging Guidelines",
-    description:
-      "Learn about the international standard for wood packaging material (ISPM-15), including heat treatment requirements and IPPC stamp codes.",
-    date: "2026-06-02",
-    author: "Quality & Compliance - El Negma",
-    readTime: "3 mins",
-    image: "/images/articles/ispm15-phytosanitary-standard.webp",
-    category: "Customs Regulations",
-    categoryId: "compliance",
-    keywords: [
-      "ISPM-15 standard",
-      "IPPC stamp code",
-      "wood packaging treatment",
-      "customs quarantine",
-      "pallet debarking",
-    ],
-    toc: [
-      { title: "What is ISPM-15?", target: "#what-is-ispm15" },
-      { title: "IPPC Stamp Breakdown", target: "#stamp-breakdown" },
-      { title: "Exemptions from ISPM-15", target: "#exemptions" },
-    ],
-    content: `
-      <div class="space-y-6 text-left leading-relaxed text-gray-200">
-        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
-          <h2 id="what-is-ispm15" class="text-xl font-bold text-accent mb-2">1. What is the ISPM-15 Standard?</h2>
-          <p class="text-sm text-gray-300">
-            ISPM-15 (International Standards for Phytosanitary Measures No. 15) is an international quarantine standard designed by the IPPC to prevent the spread of forest pests and plant diseases across borders through wooden packaging materials. It applies to raw wood packaging exceeding 6 mm in thickness (such as pallets, crates, and dunnage).
-          </p>
-        </section>
 
-        <section>
-          <h2 id="stamp-breakdown" class="text-xl font-bold text-white border-b border-border pb-1">2. IPPC Stamp Markings Breakdown</h2>
-          <p class="text-sm text-gray-300">
-            Compliant wooden pallets must be permanently stamped on two opposite sides with the IPPC logo (the "wheat stamp"). The stamp contains:
-          </p>
-          <ul class="list-disc list-inside text-xs text-gray-300 space-y-1 mt-2 pl-2">
-            <li><strong>XX (Country Code):</strong> E.g., EG for Egypt, DE for Germany.</li>
-            <li><strong>000 (Facility Code):</strong> Unique registration number of the certified wood treatment facility.</li>
-            <li><strong>YY (Treatment Method):</strong> E.g., HT for Heat Treatment, MB for Methyl Bromide.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 id="exemptions" class="text-xl font-bold text-white border-b border-border pb-1">3. Materials Exempt from ISPM-15</h2>
-          <p class="text-sm text-gray-300">
-            Alternative materials that undergo high heat, pressure, and chemical bonding during manufacturing are exempt from ISPM-15:
-          </p>
-          <ul class="list-disc list-inside text-xs text-gray-300 space-y-1 mt-2 pl-2">
-            <li>Plastic pallets (completely exempt and biological pest-free).</li>
-            <li>Processed engineered wood (Plywood, OSB, and compressed wood block pallets).</li>
-            <li>Cardboard, paperboard, and steel packaging.</li>
-          </ul>
-        </section>
-      </div>
-    `,
-  },
   {
     slug: "heat-treatment-vs-methyl-bromide",
     title: "Heat Treatment (HT) vs Methyl Bromide (MB) Fumigation",
@@ -763,54 +706,7 @@ const rawArticlesEn: Article[] = [
       </div>
     `,
   },
-  {
-    slug: "dates-fumigation-alternatives",
-    title: "Dates Fumigation: Safe Phosphine Alternatives under Quarantine",
-    description:
-      "Modern alternatives to methyl bromide for date fumigation, focusing on phosphine gas and climate-controlled warehouse protocols.",
-    date: "2026-06-09",
-    author: "Agronomy Research - El Negma",
-    readTime: "3 mins",
-    image: "/images/articles/dates-fumigation-alternatives.webp",
-    category: "Agricultural Technology",
-    categoryId: "compliance",
-    keywords: [
-      "date fumigation Egypt",
-      "phosphine gas treatment",
-      "methyl bromide alternatives",
-      "storing dried dates",
-      "agricultural pest control",
-    ],
-    toc: [
-      { title: "The Need for Safe Fumigation", target: "#need-safe" },
-      { title: "Phosphine Gas (PH3) Treatment", target: "#phosphine-gas" },
-      { title: "Cold Storage Stacking Methods", target: "#dates-stacking" },
-    ],
-    content: `
-      <div class="space-y-6 text-left leading-relaxed text-gray-200">
-        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
-          <h2 id="need-safe" class="text-xl font-bold text-accent mb-2">1. Why We Need Safe Fumigation</h2>
-          <p class="text-sm text-gray-300">
-            Export dates (such as dried and semi-dried Egyptian dates) are susceptible to store pests. While Methyl Bromide was used in the past, its ozone-depleting nature and chemical residues make it non-compliant with modern global food safety protocols.
-          </p>
-        </section>
 
-        <section>
-          <h2 id="phosphine-gas" class="text-xl font-bold text-white border-b border-border pb-1">2. Phosphine Gas (PH3) Treatment</h2>
-          <p class="text-sm text-gray-300">
-            Phosphine gas (Aluminum Phosphide tablets) is the leading eco-friendly alternative. It penetrates deeply into packed date boxes, leaving zero toxic chemical residues on the fruit. It is highly active at temperatures between 20°C and 35°C.
-          </p>
-        </section>
-
-        <section>
-          <h2 id="dates-stacking" class="text-xl font-bold text-white border-b border-border pb-1">3. Cold Storage & Stacking Protocols</h2>
-          <p class="text-sm text-gray-300">
-            To ensure complete gas penetration, date boxes must be stacked on ventilated wooden pallets, leaving symmetrical channels inside the fumigation chamber.
-          </p>
-        </section>
-      </div>
-    `,
-  },
   {
     slug: "pallets-food-pharmaceutical",
     title:

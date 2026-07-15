@@ -3,14 +3,14 @@ import { palletPricesEgyptArticle } from "./articles/pallet-prices-egypt";
 import { woodTypesForPalletsArticle } from "./articles/wood-types-for-pallets";
 import { palletsFoodPharmaceuticalArticle } from "./articles/pallets-food-pharmaceutical";
 import { palletsWarehouseStorageArticle } from "./articles/pallets-warehouse-storage";
-import { ispm15PhytosanitaryStandardArticle } from "./articles/ispm15-phytosanitary-standard";
+// Deleted ispm15PhytosanitaryStandardArticle
 import { heatTreatmentVsMethylBromideArticle } from "./articles/heat-treatment-vs-methyl-bromide";
 import { newWoodenPalletsQualityStandardsArticle } from "./articles/new-wooden-pallets-quality-standards";
 import { containerStuffingPhysicsArticle } from "./articles/container-stuffing-physics";
 import { exportingCitrusAgriculturalProductsArticle } from "./articles/exporting-citrus-agricultural-products";
 import { exportingCeramicsHeavyMaterialsArticle } from "./articles/exporting-ceramics-heavy-materials";
 import { exportingChemicalsSafelyArticle } from "./articles/exporting-chemicals-safely";
-import { datesFumigationAlternativesArticle } from "./articles/dates-fumigation-alternatives";
+// Deleted datesFumigationAlternativesArticle
 import { palletDimensionsStandardsArticle } from "./articles/pallet-dimensions-standards";
 import { palletSizeArticlesAr } from "./pallet-size-articles";
 import { palletTypesDokumStringerArticle } from "./articles/pallet-types-dokum-stringer";
@@ -55,14 +55,14 @@ const rawArticles: Article[] = [
   palletBlockSolidArticle,
   palletsFoodPharmaceuticalArticle,
   palletsWarehouseStorageArticle,
-  ispm15PhytosanitaryStandardArticle,
+  // Deleted ispm15PhytosanitaryStandardArticle
   heatTreatmentVsMethylBromideArticle,
   newWoodenPalletsQualityStandardsArticle,
   containerStuffingPhysicsArticle,
   exportingCitrusAgriculturalProductsArticle,
   exportingCeramicsHeavyMaterialsArticle,
   exportingChemicalsSafelyArticle,
-  datesFumigationAlternativesArticle,
+  // Deleted datesFumigationAlternativesArticle
   palletDimensionsStandardsArticle,
   heatTreatmentHtPalletsArticle,
   methylBromideFumigationPalletsArticle,
