@@ -145,7 +145,7 @@ export default function ArticleDetails({ slug, lang = "ar" }: { slug: string; la
       {/* Scoped CSS Styles for Article Body rendering */}
       <style dangerouslySetInnerHTML={{ __html: `
         .article-body h2 {
-          font-size: 1.5rem;
+          font-size: 1.65rem;
           font-weight: 800;
           color: #ffffff;
           margin-top: 2.5rem;
@@ -155,7 +155,7 @@ export default function ArticleDetails({ slug, lang = "ar" }: { slug: string; la
           scroll-margin-top: 100px;
         }
         .article-body h3 {
-          font-size: 1.25rem;
+          font-size: 1.35rem;
           font-weight: 700;
           color: #d4a976;
           margin-top: 1.75rem;
@@ -165,7 +165,7 @@ export default function ArticleDetails({ slug, lang = "ar" }: { slug: string; la
         .article-body p {
           margin-bottom: 1.25rem;
           color: #e2e8f0;
-          font-size: 1rem;
+          font-size: 1.1rem !important;
           line-height: 1.85;
           text-align: justify;
         }
@@ -183,7 +183,8 @@ export default function ArticleDetails({ slug, lang = "ar" }: { slug: string; la
         }
         .article-body li {
           margin-bottom: 0.5rem;
-          line-height: 1.7;
+          line-height: 1.8;
+          font-size: 1.05rem !important;
         }
         .article-body strong {
           color: #d4a976;
@@ -218,7 +219,7 @@ export default function ArticleDetails({ slug, lang = "ar" }: { slug: string; la
         }
       `}} />
 
-      <div className="container max-w-7xl">
+      <div className="container max-w-[1440px]">
         
         {/* Back Link */}
         <div className="mb-8">
@@ -277,7 +278,7 @@ export default function ArticleDetails({ slug, lang = "ar" }: { slug: string; la
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           
           {/* Right/Left Column: Article Content */}
-          <main className="lg:col-span-8 flex flex-col bg-muted/10 border border-border/20 rounded-3xl p-6 md:p-10 shadow-lg">
+          <main className="lg:col-span-9 flex flex-col bg-muted/10 border border-border/20 rounded-3xl p-6 md:p-10 shadow-lg">
             {/* Mobile Table of Contents (Visible only on mobile/tablet at the start of the article) */}
             <div className="lg:hidden mb-8">
               <TableOfContents items={tableOfContents} lang={lang} />
@@ -320,7 +321,7 @@ export default function ArticleDetails({ slug, lang = "ar" }: { slug: string; la
           </main>
 
           {/* Left/Right Column: Sidebar Widgets */}
-          <aside className="lg:col-span-4 flex flex-col gap-8">
+          <aside className="lg:col-span-3 flex flex-col gap-8">
             <div className="hidden lg:block">
               <TableOfContents items={tableOfContents} lang={lang} />
             </div>

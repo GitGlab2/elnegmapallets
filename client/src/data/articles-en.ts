@@ -1802,7 +1802,7 @@ const rawArticlesEn: Article[] = [
             Despite the global shift toward heat treatment, chemical MB fumigation is still required in certain scenarios:
           </p>
           <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
-            <li><strong>Destination Country Demands:</strong> Customs in countries like Australia, New Zealand, and parts of Southeast Asia mandate MB fumigation for specific goods.</li>
+            <li><strong>Destination Country Demands:</strong> Customs in certain international destinations and import hubs mandate MB fumigation for specific categories of goods to ensure maximum biological containment.</li>
             <li><strong>Thick Timber Sections:</strong> The gas penetrates deep sections of heavy-duty timber packaging where heat might not distribute evenly.</li>
             <li><strong>Lack of Heat Chambers:</strong> It provides a convenient localized quarantine solution in ports without kiln facilities.</li>
           </ul>
