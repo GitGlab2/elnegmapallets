@@ -1780,6 +1780,155 @@ const rawArticlesEn: Article[] = [
     `
   },
 
+  {
+    slug: "heat-treatment-ht-pallets",
+    title: "Heat Treatment for Wooden Pallets (HT): Requirements & Export Benefits",
+    description: "Your technical guide to understanding heat treatment (HT) for wooden pallets under the ISPM-15 standard, and how timber is processed for pest-free export.",
+    date: "2026-07-13",
+    author: "Quality & Compliance - El Negma Pallets",
+    readTime: "4 mins",
+    image: "/images/articles/heat-treatment-vs-methyl-bromide.webp",
+    category: "Fumigation & Pallet Treatment",
+    categoryId: "compliance",
+    keywords: [
+      "heat treatment for pallets",
+      "HT pallet stamp",
+      "ISPM-15 heat treatment",
+      "kiln dried wood pallets",
+      "IPP HT stamp Egypt",
+      "wooden packaging treatment"
+    ],
+    toc: [
+      { title: "What is Heat Treatment (HT)?", target: "#what-is-ht" },
+      { title: "How Does Heat Treatment Work in Kilns?", target: "#how-ht-works" },
+      { title: "Advantages of Heat Treated Pallets", target: "#ht-advantages" },
+      { title: "Compliance Requirements for Global Export", target: "#ht-compliance" }
+    ],
+    content: `
+      <div class="space-y-6 text-left leading-relaxed text-gray-200">
+        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
+          <h2 id="what-is-ht" class="text-xl font-bold text-accent mb-2">What is Heat Treatment (HT)?</h2>
+          <p class="text-sm text-gray-300">
+            <strong>Heat Treatment (HT)</strong>, internationally represented by the <strong>HT</strong> stamp code, is one of the safest and most eco-friendly methods for sanitizing wooden packaging. This process is mandated by the International Plant Protection Convention (IPPC) under the ISPM-15 guidelines to ensure that solid timber used in global logistics is free from wood-boring pests, fungi, and agricultural diseases.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="how-ht-works" class="text-xl font-bold text-white border-b border-border pb-1">How Does Heat Treatment Work in Kilns?</h2>
+          <p class="text-sm text-gray-300">
+            Heat treatment involves exposing raw timber packaging to a strictly monitored heating cycle inside industrial kilns:
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Core Wood Temperature:</strong> The temperature of the thickest part of the wooden boards (the core) must reach at least <strong>56°C</strong>.</li>
+            <li><strong>Minimum Duration:</strong> This core temperature must be maintained continuously for at least <strong>30 minutes</strong> to ensure the destruction of all insect life stages (eggs, larvae, pupae, and adults).</li>
+            <li><strong>Moisture Reduction:</strong> The high temperatures in the kiln also help reduce wood moisture content below 19%, preventing mold and fungal growth during shipping.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="ht-advantages" class="text-xl font-bold text-white border-b border-border pb-1">Advantages of Heat Treated Pallets</h2>
+          <p class="text-sm text-gray-300">
+            Heat treatment offers significant operational and environmental advantages:
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>100% Eco-Friendly:</strong> No chemical additives or toxic gases are used. It preserves the ozone layer and simplifies timber recycling.</li>
+            <li><strong>Safe for Food & Pharma:</strong> Since it leaves no chemical residues, HT pallets are the standard choice for shipping food and pharmaceutical products.</li>
+            <li><strong>Better Mechanical Strength:</strong> Thermal drying reduces the weight of the pallet by extracting excess moisture, cutting cargo weight costs and strengthening the structure.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="ht-compliance" class="text-xl font-bold text-white border-b border-border pb-1">Compliance Requirements for Global Export</h2>
+          <p class="text-sm text-gray-300">
+            To satisfy international customs, HT pallets must meet two main criteria:
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>The IPPC Stamp:</strong> Each pallet must be stamped with the official IPPC logo, country code, manufacturer registration number, and the <strong>HT</strong> symbol.</li>
+            <li><strong>Phytosanitary Certification:</strong> Official certificates are issued by agricultural quarantine authorities based on the electronically recorded kiln data.</li>
+          </ul>
+          <p class="text-sm text-gray-300 mt-3">
+            At <strong>El Negma Pallets Factory</strong>, we operate advanced, electronically controlled heat treatment chambers that ensure full compliance with the ISPM-15 standard, delivering certified pallets ready for direct export.
+          </p>
+        </section>
+      </div>
+    `
+  },
+
+  {
+    slug: "methyl-bromide-fumigation-pallets",
+    title: "Methyl Bromide Fumigation for Wooden Pallets (MB): Uses & Regulations",
+    description: "A comprehensive guide on Methyl Bromide (MB) chemical fumigation for wooden packaging, compliance with quarantine codes, and environmental regulations.",
+    date: "2026-07-13",
+    author: "Quality & Compliance - El Negma Pallets",
+    readTime: "4 mins",
+    image: "/images/articles/heat-treatment-vs-methyl-bromide.webp",
+    category: "Fumigation & Pallet Treatment",
+    categoryId: "compliance",
+    keywords: [
+      "methyl bromide fumigation",
+      "MB pallet treatment",
+      "chemical pallet sterilization",
+      "ISPM-15 MB stamp",
+      "customs quarantine pallets",
+      "fumigated wood packaging"
+    ],
+    toc: [
+      { title: "What is Methyl Bromide Fumigation (MB)?", target: "#what-is-mb" },
+      { title: "How Chemical Fumigation is Executed", target: "#how-mb-works" },
+      { title: "When is Methyl Bromide Fumigation Required?", target: "#when-to-use-mb" },
+      { title: "Environmental and Safety Controls", target: "#safety-precautions" }
+    ],
+    content: `
+      <div class="space-y-6 text-left leading-relaxed text-gray-200">
+        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
+          <h2 id="what-is-mb" class="text-xl font-bold text-accent mb-2">What is Methyl Bromide Fumigation (MB)?</h2>
+          <p class="text-sm text-gray-300">
+            <strong>Methyl Bromide Fumigation</strong>, represented by the <strong>MB</strong> stamp code, is a highly effective chemical treatment method for wood packaging. Methyl Bromide is an odorless, colorless gas that penetrates deep into solid timber, quickly eradicating wood-boring insects, nematodes, and fungi to comply with the ISPM-15 agricultural quarantine standards.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="how-mb-works" class="text-xl font-bold text-white border-b border-border pb-1">How Chemical Fumigation is Executed</h2>
+          <p class="text-sm text-gray-300">
+            The chemical fumigation process follows strict protocols to ensure complete safety and pest eradication:
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Enclosure & Sealing:</strong> The wood pallets are stacked and covered with gas-tight tarpaulins, completely sealed from the outside environment.</li>
+            <li><strong>Gas Injection:</strong> Methyl Bromide gas is injected at precise dosage levels determined by temperature and timber thickness.</li>
+            <li><strong>Exposure Period:</strong> The pallets remain exposed to the gas at a constant concentration for at least <strong>24 continuous hours</strong>.</li>
+            <li><strong>Aeration:</strong> The enclosure is carefully opened to let the gas dissipate safely before workers handle the wood.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="when-to-use-mb" class="text-xl font-bold text-white border-b border-border pb-1">When is Methyl Bromide Fumigation Required?</h2>
+          <p class="text-sm text-gray-300">
+            Despite the global shift toward heat treatment, chemical MB fumigation is still required in certain scenarios:
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Destination Country Demands:</strong> Customs in countries like Australia, New Zealand, and parts of Southeast Asia mandate MB fumigation for specific goods.</li>
+            <li><strong>Thick Timber Sections:</strong> The gas penetrates deep sections of heavy-duty timber packaging where heat might not distribute evenly.</li>
+            <li><strong>Lack of Heat Chambers:</strong> It provides a convenient localized quarantine solution in ports without kiln facilities.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="safety-precautions" class="text-xl font-bold text-white border-b border-border pb-1">Environmental and Safety Controls</h2>
+          <p class="text-sm text-gray-300">
+            Because Methyl Bromide is an ozone-depleting substance under the Montreal Protocol, its use is strictly regulated:
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>The MB Stamp:</strong> Pallets treated with gas must bear the <strong>MB</strong> symbol in their IPPC stamp.</li>
+            <li><strong>Authorized Providers:</strong> Fumigation must be performed only by certified quarantine agencies who issue the official phytosanitary certificate.</li>
+          </ul>
+          <p class="text-sm text-gray-300 mt-3">
+            At <strong>El Negma Pallets</strong>, we collaborate with certified agricultural quarantine providers to deliver compliant MB-treated pallets along with all official documentation, ensuring smooth customs clearance for your cargo.
+          </p>
+        </section>
+      </div>
+    `
+  },
+
   ...palletSizeArticlesEn,
 ];
 

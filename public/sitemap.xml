@@ -194,6 +194,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://elnegmapallets.com/articles/heat-treatment-ht-pallets/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/articles/methyl-bromide-fumigation-pallets/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- English Articles -->
   <url>
@@ -322,6 +334,18 @@
   <url>
     <loc>https://elnegmapallets.com/en/articles/pallets-factories-warehouses/</loc>
     <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/en/articles/heat-treatment-ht-pallets/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/en/articles/methyl-bromide-fumigation-pallets/</loc>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
