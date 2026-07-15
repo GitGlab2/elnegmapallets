@@ -72,7 +72,7 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
       { id: "export", name: "شحن وتصدير", icon: Globe },
       { id: "compliance", name: "معالجة وتبخير", icon: ShieldCheck },
       { id: "procurement", name: "أسعار ومواصفات", icon: Tag },
-      { id: "industry", name: "متمتطلبات صناعية", icon: Factory },
+      { id: "industry", name: "متطلبات صناعية", icon: Factory },
       { id: "sizes", name: "أبعاد ومقاسات", icon: Package },
     ],
     en: [

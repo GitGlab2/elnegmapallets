@@ -53,7 +53,7 @@ export const palletPricesEgyptArticle: Article = {
       <section class="border-r-4 border-secondary pr-4 bg-muted/20 p-4 rounded-l-lg">
         <h2 id="egypt-market-2026" class="text-xl font-bold text-accent mb-2">1. سوق طبالي الخشب في مصر لعام 2026</h2>
         <p class="text-sm text-gray-300">
-          شهد سوق <strong>طبالي الخشب للبيع</strong> في مصر نمواً متزايداً تماشياً مع الطثقة الكبيرة في الصادرات الزراعية والصناعية المصرية. يبحث العديد من مديري المشتريات ومسؤولي الخدمات اللوجستية باستمرار عن <strong>أسعار البالتات الخشبية في مصر</strong> لتأمين عمليات التخزين والشحن بأفضل تكلفة ممكنة دون التضحية بمعايير الأمان والسلامة.
+          شهد سوق <strong>طبالي الخشب للبيع</strong> في مصر نمواً متزايداً تماشياً مع الطفرة الكبيرة في الصادرات الزراعية والصناعية المصرية. يبحث العديد من مديري المشتريات ومسؤولي الخدمات اللوجستية باستمرار عن <strong>أسعار البالتات الخشبية في مصر</strong> لتأمين عمليات التخزين والشحن بأفضل تكلفة ممكنة دون التضحية بمعايير الأمان والسلامة.
         </p>
       </section>
 
@@ -65,7 +65,7 @@ export const palletPricesEgyptArticle: Article = {
         <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pr-2">
           <li><strong>نوع الخشب المستخدم:</strong> تستخدم مصانع البالتات أخشاباً مثل خشب الموسكي، الخشب الأبيض السويدي، أو الأخشاب الصلبة (Hardwood). يؤثر مصدر الخشب وسماكته بشكل مباشر على السعر النهائي للبالتة. اقرأ المزيد في مقالنا عن <a href="/articles/wood-types-for-pallets/" class="text-secondary hover:underline font-bold">أنواع الأخشاب المستخدمة في تصنيع البالتات</a>.</li>
           <li><strong>حالة البالتة (جديدة أم مستعملة):</strong> تتميز البالتات الخشبية الجديدة بمتانة فائقة وعمر افتراضي طويل وملاءمة كاملة للتصدير. بينما تُستخدم البالتات المستعملة غالباً للتخزين الداخلي منخفض التكلفة.</li>
-          <li><strong>المعالجة الحرارية (ISPM-15):</strong> تتطلب شحنات التصدير الدولي معالجة البالتات حرارياً (HT) وختمها بختم وزارة الزراعة المعتمد (القمحة). تعرف على التفاصيل في <a href="/articles/ispm15-phytosanitary-standard/" class="text-secondary hover:underline font-bold">دليل معيار ISPM-15 للبالتات</a>.</li>
+          <li><strong>المعالجة الحرارية (ISPM-15):</strong> تتطلب شحنات التصدير الدولي معالجة البالتات حرارياً (HT) وختمها بختم وزارة الزراعة المعتمد (القمحة). تعرف على التفاصيل في <a href="/articles/heat-treatment-ht-pallets/" class="text-secondary hover:underline font-bold">دليل المعالجة الحرارية للبالتات الخشبية HT</a>.</li>
           <li><strong>الكمية المطلوبة:</strong> تقدم الشركات الكبرى مثل <strong>مصنع النجمة للبالتات</strong> خصومات خاصة وتنافسية عند طلب كميات ضخمة. تعرف على <a href="/articles/wholesale-pallets-egypt/" class="text-secondary hover:underline font-bold">عروض البالتات للكميات الكبيرة</a>.</li>
         </ul>
       </section>

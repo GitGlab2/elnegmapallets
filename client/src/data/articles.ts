@@ -24,6 +24,9 @@ import { palletsFactoriesWarehousesArticle } from "./articles/pallets-factories-
 import { woodenCratesPalletCollarsExportArticle } from "./articles/wooden-crates-pallet-collars-export";
 import { heatTreatmentHtPalletsArticle } from "./articles/heat-treatment-ht-pallets";
 import { methylBromideFumigationPalletsArticle } from "./articles/methyl-bromide-fumigation-pallets";
+import { wholesalePallets10thRamadanArticle } from "./articles/wholesale-pallets-10th-ramadan";
+import { wholesalePallets6thOctoberArticle } from "./articles/wholesale-pallets-6th-october";
+import { wholesalePalletsSadatCityArticle } from "./articles/wholesale-pallets-sadat-city";
 
 function getDeterministicOldDate(slug: string): string {
   let hash = 0;
@@ -66,6 +69,9 @@ const rawArticles: Article[] = [
   palletDimensionsStandardsArticle,
   heatTreatmentHtPalletsArticle,
   methylBromideFumigationPalletsArticle,
+  wholesalePallets10thRamadanArticle,
+  wholesalePallets6thOctoberArticle,
+  wholesalePalletsSadatCityArticle,
   ...palletSizeArticlesAr,
 ];
 

@@ -1824,7 +1824,186 @@ const rawArticlesEn: Article[] = [
       </div>
     `
   },
+  {
+    slug: "wholesale-pallets-10th-ramadan",
+    title: "Wooden Pallets Supply in 10th of Ramadan City: B2B Industrial Contracts",
+    description: "An industrial procurement guide for supplying new wooden pallets and crates to factories in the 10th of Ramadan industrial zone, securing supply chains.",
+    date: "2026-07-15",
+    author: "Corporate Services - El Negma Pallets",
+    readTime: "4 mins",
+    image: "/images/articles/pallets-warehouse-storage.webp",
+    category: "Industrial Requirements",
+    categoryId: "industry",
+    keywords: [
+      "wooden pallets 10th of Ramadan",
+      "pallet factory Sharkia",
+      "B2B pallet supply Egypt",
+      "bulk wooden pallets",
+      "new industrial pallets"
+    ],
+    toc: [
+      { title: "Securing Pallet Supply Chains in 10th of Ramadan", target: "#securing-supply" },
+      { title: "Annual B2B Supply Contracts for Factories", target: "#annual-contracts" },
+      { title: "Technical Specifications for Industrial Pallets", target: "#specs-industrial" },
+      { title: "Why El Negma is the Trusted Supply Partner", target: "#why-elnegma" }
+    ],
+    content: `
+      <div class="space-y-6 text-left leading-relaxed text-gray-200">
+        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
+          <h2 id="securing-supply" class="text-xl font-bold text-accent mb-2">1. Securing Pallet Supply Chains in 10th of Ramadan</h2>
+          <p class="text-sm text-gray-300">
+            As one of the largest industrial cities in the Middle East, the 10th of Ramadan City hosts hundreds of manufacturing facilities in food, textile, chemical, and building material sectors. This massive output demands a continuous flow of high-quality wooden pallets to secure internal handling and overseas shipping, preventing any assembly line downtime.
+          </p>
+        </section>
 
+        <section>
+          <h2 id="annual-contracts" class="text-xl font-bold text-white border-b border-border pb-1">2. Annual B2B Supply Contracts for Factories</h2>
+          <p class="text-sm text-gray-300">
+            Fluctuating timber prices and supply chain gaps represent real operational risks for major manufacturers. Annual supply contracts stabilize pricing and ensure guaranteed monthly quotas of custom-built new pallets.
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Scheduled Deliveries:</strong> Scheduled drop-offs prevent warehouse clutter and optimize inventory space.</li>
+            <li><strong>Price Stabilization:</strong> A flexible long-term pricing model protects your budget from sudden raw wood market price spikes.</li>
+            <li><strong>Volume Discount Threshold:</strong> Our premium B2B contract terms and discounts are activated starting from a minimum of <strong>2,000 pallets</strong> per order.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="specs-industrial" class="text-xl font-bold text-white border-b border-border pb-1">3. Technical Specifications for Industrial Pallets</h2>
+          <p class="text-sm text-gray-300">
+            Pallet requirements vary significantly by sector. Food and pharmaceutical companies demand fully heat-treated, biological pest-free pallets to prevent mold. In contrast, chemical and heavy textile manufacturers require robust structures capable of supporting static loads on high-bay automated racking systems.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="why-elnegma" class="text-xl font-bold text-white border-b border-border pb-1">4. Why El Negma is the Trusted Supply Partner</h2>
+          <p class="text-sm text-gray-300">
+            At <strong>El Negma Pallets Factory</strong>, we build new wooden pallets using high-grade imported lumber. We provide certified heat treatment (HT) and MB fumigation services fully compliant with the ISPM-15 standard, ensuring your export cargo clears international customs smoothly without any quarantine penalties.
+          </p>
+        </section>
+      </div>
+    `
+  },
+  {
+    slug: "wholesale-pallets-6th-october",
+    title: "Wooden Pallets Supply in 6th of October City: Annual Corporate Contracts",
+    description: "Corporate logistics guide for supplying new wooden pallets and packaging solutions for factories and businesses in the 6th of October industrial zone.",
+    date: "2026-07-15",
+    author: "Corporate Services - El Negma Pallets",
+    readTime: "4 mins",
+    image: "/images/articles/pallet-prices-egypt.webp",
+    category: "Industrial Requirements",
+    categoryId: "industry",
+    keywords: [
+      "wooden pallets 6th of October",
+      "pallet factory Giza",
+      "corporate pallet supply Egypt",
+      "bulk wooden packaging",
+      "new warehouse pallets"
+    ],
+    toc: [
+      { title: "High-Volume Pallet Demand in 6th of October City", target: "#demand-6th" },
+      { title: "Securing Buffer Stock with Annual Contracts", target: "#buffer-stock" },
+      { title: "Quality Standards for High-Bay Racking Pallets", target: "#quality-specs" },
+      { title: "Choosing El Negma as Your Logistics Partner", target: "#why-elnegma-oct" }
+    ],
+    content: `
+      <div class="space-y-6 text-left leading-relaxed text-gray-200">
+        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
+          <h2 id="demand-6th" class="text-xl font-bold text-accent mb-2">1. High-Volume Pallet Demand in 6th of October City</h2>
+          <p class="text-sm text-gray-300">
+            The 6th of October industrial zones host prime food processing, engineering, pharmaceutical, and consumer goods factories in Egypt. This high density of high-output businesses requires highly robust wooden pallets to support internal material flow and export shipping operations.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="buffer-stock" class="text-xl font-bold text-white border-b border-border pb-1">2. Securing Buffer Stock with Annual Contracts</h2>
+          <p class="text-sm text-gray-300">
+            Pallet shortages can halt manufacturing operations. El Negma provides robust annual B2B agreements, maintaining a consistent safety buffer stock delivered exactly when needed to secure your logistics flow.
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Reliable Dispatch:</strong> Timely deliveries managed by our dedicated shipping fleet.</li>
+            <li><strong>Stable Costing:</strong> Fixed pricing schemes tailored to your annual production volume.</li>
+            <li><strong>Minimum Order volume:</strong> Discount rates are active for bulk orders starting from <strong>2,000 pallets</strong>.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="quality-specs" class="text-xl font-bold text-white border-b border-border pb-1">3. Quality Standards for High-Bay Racking Pallets</h2>
+          <p class="text-sm text-gray-300">
+            Modern warehouse racking systems require tight dimensional tolerances. Even minor deformations can cause automated crane jams. We build pallets using precise hydraulic assembly jigs, ensuring zero defects and maximum structural integrity.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="why-elnegma-oct" class="text-xl font-bold text-white border-b border-border pb-1">4. Choosing El Negma as Your Logistics Partner</h2>
+          <p class="text-sm text-gray-300">
+            We provide new wooden pallets made from clean, structural timber, fully compliant with global ISPM-15 standards. Every delivery is supported by official phytosanitary certificates, guaranteeing smooth custom checks in target export markets.
+          </p>
+        </section>
+      </div>
+    `
+  },
+  {
+    slug: "wholesale-pallets-sadat-city",
+    title: "Wooden Pallets Supply in Sadat City & Menofia: Industrial Procurement Guide",
+    description: "Procurement guide for new wooden pallets and packaging dunnage for factories in Sadat City and Menofia industrial zones, featuring long-term B2B contract solutions.",
+    date: "2026-07-15",
+    author: "Corporate Services - El Negma Pallets",
+    readTime: "4 mins",
+    image: "/images/articles/buying-pallets-guide.webp",
+    category: "Industrial Requirements",
+    categoryId: "industry",
+    keywords: [
+      "wooden pallets Sadat City",
+      "pallet factory Menofia",
+      "industrial wood packaging",
+      "racking pallets Egypt",
+      "timber shipping platforms"
+    ],
+    toc: [
+      { title: "Sadat City's Role in National Logistics", target: "#logistics-role" },
+      { title: "Buffer Stock & Long-Term Agreements", target: "#buffer-stock-sadat" },
+      { title: "Heavy Duty Specs for Heavy Industrial Sectors", target: "#heavy-duty-specs" },
+      { title: "Strategic Proximity & Delivery Advantages", target: "#proximity-advantage" }
+    ],
+    content: `
+      <div class="space-y-6 text-left leading-relaxed text-gray-200">
+        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
+          <h2 id="logistics-role" class="text-xl font-bold text-accent mb-2">1. Sadat City's Role in National Logistics</h2>
+          <p class="text-sm text-gray-300">
+            Sadat City in Menofia is a vital agricultural and heavy industrial hub in Egypt, containing prominent steel, ceramic, and food processing plants. This dynamic commercial mix demands a steady supply of heavy-duty wooden platforms to carry export and domestic freight.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="buffer-stock-sadat" class="text-xl font-bold text-white border-b border-border pb-1">2. Buffer Stock & Long-Term Agreements</h2>
+          <p class="text-sm text-gray-300">
+            To avoid supply interruptions, factories rely on structured corporate agreements. El Negma provides reliable logistics scheduling, ensuring that your pallet supplies match your monthly production run rate.
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Flexible Deliveries:</strong> Scheduled drop-offs directly to your warehouse floor.</li>
+            <li><strong>Stable Timber Costing:</strong> Annual pricing schemes that shield your procurement budget from inflation.</li>
+            <li><strong>Wholesale Contract Benefits:</strong> Premium pricing and benefits apply for orders starting from <strong>2,000 pallets</strong>.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="heavy-duty-specs" class="text-xl font-bold text-white border-b border-border pb-1">3. Heavy Duty Specs for Heavy Industrial Sectors</h2>
+          <p class="text-sm text-gray-300">
+            Heavy industries like ceramics and steel require thick-decked runner or block pallets that handle extreme vibrations and massive static loads. We select specific timber grades and utilize ring-shank nails to prevent structural loosening over time.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="proximity-advantage" class="text-xl font-bold text-white border-b border-border pb-1">4. Strategic Proximity & Delivery Advantages</h2>
+          <p class="text-sm text-gray-300">
+            With our primary production plant located in the Bayad El Arab industrial zone (Beni Suef), we are strategically positioned to dispatch rapid, cost-effective deliveries to all major industrial hubs in Egypt, including Sadat City and Giza.
+          </p>
+        </section>
+      </div>
+    `
+  },
   ...palletSizeArticlesEn,
 ];
 
