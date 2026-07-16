@@ -8,7 +8,7 @@ export const heatTreatmentVsMethylBromideArticle: Article = {
   author: "إدارة البيئة والجودة - شركة النجمة",
   readTime: "4 دقائق",
   image: "/images/articles/heat-treatment-vs-methyl-bromide.webp",
-  category: "مقارنة طرق التعقيم",
+  category: "مقارنة طرق المعالجة والتبخير",
   categoryId: "compliance",
   keywords: ["معالجة حرارية HT", "التبخير ببروميد الميثيل MB", "تبخير ومعالجة البالتات الخشبية", "بروتوكول مونتريال للأوزون", "أفران معالجة الخشب", "المعالجة الحرارية للبالتات في مصر", "فرن تبخير خشب", "الفرق بين المعالجة والتبخير"],
   toc: [

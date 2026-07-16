@@ -132,13 +132,11 @@ const rawArticlesEn: Article[] = [
   },
   {
     slug: "pallet-prices-egypt",
-    title:
-      "Wooden Pallet Prices in Egypt 2026: Wooden Platforms for Sale & Best Buying Places",
-    description:
-      "Your complete guide to wooden pallet prices in Egypt for 2026, factors determining new and used pallet costs, and specifications of certified wooden pallet factories.",
+    title: "Wooden Pallet Prices in Egypt: Cost Drivers & Procurement Cost Reduction",
+    description: "Your B2B guide to understanding wooden pallet pricing in Egypt, dynamic cost determinants, comparing new vs. used, and practical strategies for logistics budget optimization.",
     date: "2026-07-09",
-    author: "Commercial Analysis - El Negma Pallets",
-    readTime: "4 mins",
+    author: "Logistics & Commercial Analysis",
+    readTime: "5 mins",
     image: "/images/articles/pallet-prices-egypt.webp",
     category: "Market Prices & Supply",
     categoryId: "procurement",
@@ -146,71 +144,77 @@ const rawArticlesEn: Article[] = [
       "wooden pallet prices in Egypt",
       "wooden platforms for sale",
       "buy wooden pallets",
-      "wooden pallet factory",
-      "places to buy pallets",
-      "euro pallet price",
+      "pallet manufacturing cost",
+      "used pallets price Egypt",
+      "timber price fluctuations"
     ],
     toc: [
-      {
-        title: "The Egyptian Pallet Market in 2026",
-        target: "#egypt-market-2026",
-      },
-      {
-        title: "Factors Determining Wooden Pallet Prices",
-        target: "#price-factors",
-      },
-      {
-        title: "Common Sizes and Estimated Prices in Egypt",
-        target: "#common-sizes-prices",
-      },
-      {
-        title: "Where to Buy & How to Choose a Factory",
-        target: "#where-to-buy",
-      },
+      { title: "Introduction to Timber Pricing Dynamics", target: "#pricing-dynamics" },
+      { title: "Four Engineering Parameters of Cost", target: "#cost-drivers" },
+      { title: "Financial Trade-offs: New vs. Used", target: "#new-vs-used-financials" }
     ],
     content: `
       <div class="space-y-6 text-left leading-relaxed text-gray-200">
         <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
-          <h2 id="egypt-market-2026" class="text-xl font-bold text-accent mb-2">1. The Egyptian Pallet Market in 2026</h2>
+          <h2 id="pricing-dynamics" class="text-xl font-bold text-accent mb-2">1. Introduction to Timber Pricing Dynamics</h2>
           <p class="text-sm text-gray-300">
-            The market for <strong>wooden platforms for sale</strong> in Egypt has experienced steady growth, aligning with the large expansion of Egyptian agricultural and industrial exports. Procurement managers and supply chain directors are constantly searching for current <strong>wooden pallet prices in Egypt</strong> to secure storage and shipping processes at the best possible cost without compromising on security and safety standards.
+            The market for <strong>wooden pallet prices in Egypt</strong> is subject to multiple commercial variables that prevent fixed and permanent price listings. Since raw timber (such as Swedish redwood and Baltic whitewood) is imported, pallet pricing is directly linked to global timber indices, ocean freight rates, and currency exchange rates. Understanding these underlying cost structures enables procurement managers to make informed decisions and build precise logistics budgets.
           </p>
         </section>
 
         <section>
-          <h2 id="price-factors" class="text-xl font-bold text-white border-b border-border pb-1">2. Factors Determining Wooden Pallet Prices</h2>
+          <h2 id="cost-drivers" class="text-xl font-bold text-white border-b border-border pb-1">2. Four Engineering Parameters of Cost</h2>
           <p class="text-sm text-gray-300">
-            Several key factors determine the price of a wooden pallet when planning to <strong>buy wooden pallets</strong> for your company or factory:
+            When evaluating quotations for wooden pallet supply, logistics engineers calculate pricing based on four main parameters:
           </p>
-          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
-            <li><strong>Timber Species:</strong> Pallet factories use woods like Musk pine, Swedish white wood, or hardwoods. The source and thickness of the timber directly affect the final pallet price.</li>
-            <li><strong>Condition (New vs. Used):</strong> New wooden pallets offer superior durability, long operational life, and full compliance for international export. Used pallets are generally chosen for lower-cost internal warehousing.</li>
-            <li><strong>ISPM-15 Heat Treatment:</strong> Export shipments require timber packaging to be heat treated (HT) and stamped with the approved IPPC logo, adding a minor treatment cost while preventing customs rejection at international ports.</li>
-            <li><strong>Order Volume:</strong> Large suppliers like <strong>El Negma Pallets Factory</strong> offer custom volume discounts for bulk orders during peak agricultural export seasons.</li>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-3 mt-2 pl-2">
+            <li><strong>Timber Volume (Board Foot / Cubic Meter):</strong> The thickness of the deck boards (e.g., from 18 mm to 22 mm) and their layout directly determine the volume of wood consumed. This is the single largest component of the pallet cost.</li>
+            <li><strong>Timber Species (Sowad vs. Bayad):</strong> Imported Swedish pine (Sowad) is more durable and resistant to warping but carries a higher price than Baltic whitewood (Bayad), which serves as a highly economical choice for light-to-medium loads.</li>
+            <li><strong>Fastener Specifications:</strong> Automated assembly using screw-shank or ring-shank nails increases structural integrity, reducing long-term cargo damage and packaging failures, though it has a higher initial assembly cost compared to standard nails.</li>
+            <li><strong>Quarantine Compliance (ISPM-15):</strong> International shipments mandate that wooden packaging be heat-treated (HT) in certified chambers and stamped, a step that adds a minor process cost but guarantees customs acceptance.</li>
           </ul>
         </section>
 
         <section>
-          <h2 id="common-sizes-prices" class="text-xl font-bold text-white border-b border-border pb-1">3. Common Sizes and Pallet Prices in Egypt</h2>
+          <h2 id="new-vs-used-financials" class="text-xl font-bold text-white border-b border-border pb-1">3. Financial Trade-offs: New vs. Used</h2>
           <p class="text-sm text-gray-300">
-            Specifications and prices vary depending on dimensions and load capacities:
+            Companies choose between new and used pallets based on budget constraints and application requirements:
           </p>
-          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
-            <li><strong>Euro Pallet (120 × 80 cm):</strong> The standard approved European dimension for heavy cargo (up to 1,500 kg dynamic load).</li>
-            <li><strong>Industrial Pallet (120 × 100 cm):</strong> Also known as the citrus or Middle East pallet, highly requested for shipping agricultural goods.</li>
-            <li><strong>Chemical Square Pallet (114 × 114 cm):</strong> Specially engineered for chemical drums and evenly distributed industrial weights.</li>
-          </ul>
+          <div class="overflow-x-auto border border-border rounded-xl mt-3">
+            <table class="w-full text-left text-xs text-gray-300">
+              <thead class="bg-primary/40 text-white border-b border-border">
+                <tr>
+                  <th class="p-3">Parameter</th>
+                  <th class="p-3">New Wooden Pallets</th>
+                  <th class="p-3">Used Wooden Pallets</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-border/40">
+                <tr>
+                  <td class="p-3 font-bold bg-muted/10">Structural Safety</td>
+                  <td class="p-3 text-green-400">Excellent, free from defects and hidden stress fractures</td>
+                  <td class="p-3 text-yellow-500">Variable, may have hair-line splits or protruding nails</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold bg-muted/10">Export Compliance</td>
+                  <td class="p-3 text-green-400">Fully sanitized and certified (HT stamp)</td>
+                  <td class="p-3 text-red-400">Not recommended for international export (unverifiable quarantine history)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold bg-muted/10">Service Lifespan</td>
+                  <td class="p-3">Long, suitable for multiple dynamic handling cycles</td>
+                  <td class="p-3">Short, limited to the condition of its prior usages</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold bg-muted/10">Total Lifecycle Cost</td>
+                  <td class="p-3">Higher initial outlay, but yields lower repair and replacement rates</td>
+                  <td class="p-3">Lower purchase cost, but carries risks of cargo breakage or assembly line stops</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
-
-        <section>
-          <h2 id="where-to-buy" class="text-xl font-bold text-white border-b border-border pb-1">4. Places to Buy Pallets & Choosing the Right Supplier</h2>
-          <p class="text-sm text-gray-300">
-            When looking for <strong>places to buy pallets</strong>, look beyond pricing to find a supplier that commits to delivery schedules, dimensional tolerances, and certified heat treatment. 
-          </p>
-          <p class="text-sm text-gray-300 mt-2">
-            <strong>El Negma Pallets Factory</strong> (located in Biyad Al Arab, Beni Suef) is a key partner for major exporters in Egypt. We supply new wooden pallets manufactured to strict engineering standards, with automated production lines that guarantee bulk orders are fulfilled on schedule with certified HT stamps.
-          </p>
-        </section>
+        
       </div>
     `,
   },
@@ -1095,7 +1099,7 @@ const rawArticlesEn: Article[] = [
     date: "2026-07-10",
     author: "Technical Support - El Negma",
     readTime: "5 mins",
-    image: "/images/articles/pallet-block-solid.webp",
+    image: "/images/articles/pallet-block-solid-detail.jpg",
     category: "Pallet Sizes & Specs",
     categoryId: "sizes",
     keywords: [
@@ -1111,7 +1115,7 @@ const rawArticlesEn: Article[] = [
       { title: "What is a Solid Deck Pallet (Sadd)?", target: "#what-is-solid" },
       { title: "Solid Deck vs. Open/Gapped Deck Pallets", target: "#solid-vs-gapped" },
       { title: "Technical Components & Anatomy", target: "#solid-components" },
-      { title: "Industrial Applications in Egypt", target: "#solid-applications" },
+      { title: "Industrial Applications in Egypt", target: "#sنوع الخشب المستخدم: تستخدم مصانع البالتات أخشاباً مثل خشب الموسكي، الخشب الأبيض السويدي، أو الأخشاب الصلبةzolid-applications" },
       { title: "Pros and Cons of Solid Deck Pallets", target: "#solid-pros-cons" }
     ],
     content: `
@@ -1319,8 +1323,7 @@ const rawArticlesEn: Article[] = [
       { title: "Why Buy Wholesale Directly from the Factory?", target: "#why-wholesale" },
       { title: "Benefits of Seasonal Pallet Supply Contracts", target: "#seasonal-contracts" },
       { title: "Sectors with the Highest Bulk Pallet Demand", target: "#top-sectors" },
-      { title: "How to Secure the Best Wholesale Price", target: "#best-price-tips" },
-      { title: "El Negma Pallets Wholesale Offers", target: "#elnegma-offers" }
+      { title: "El Negma Pallets Bulk Supply Solutions", target: "#elnegma-offers" }
     ],
     content: `
       <div class="space-y-6 text-left leading-relaxed text-gray-200">
@@ -1362,31 +1365,17 @@ const rawArticlesEn: Article[] = [
         </section>
 
         <section>
-          <h2 id="best-price-tips" class="text-xl font-bold text-white border-b border-border pb-1">4. How to Secure the Best Wholesale Price</h2>
+          <h2 id="elnegma-offers" class="text-xl font-bold text-white border-b border-border pb-1">4. El Negma Pallets Bulk Supply Solutions</h2>
           <p class="text-sm text-gray-300">
-            Follow these tips to get the best <strong>wholesale wooden pallet pricing</strong>:
+            <strong>El Negma Pallets Factory</strong> offers high-capacity supply solutions engineered for major industrial hubs and agricultural exporters in Egypt:
           </p>
           <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
-            <li><strong>Increase Order Size:</strong> Unit costs decrease as quantity increases. Orders over 500 pallets typically unlock maximum discount rates.</li>
-            <li><strong>Order Pre-Season:</strong> Booking your requirements 1-2 months before peak export seasons ensures better rates and timely delivery.</li>
-            <li><strong>Standardize Your Specifications:</strong> Ordering a single standard design is much more cost-effective than requesting multiple custom configurations.</li>
+            <li>Structured volume discounts and competitive contractual rates starting at a minimum order of 2,000 pallets.</li>
+            <li>Annual and seasonal supply contracts that lock in unit prices and secure production queues during high-demand export peaks.</li>
+            <li>Fully sanitized wooden packaging treated in certified HT chambers compliant with the international ISPM-15 standard, complete with official quarantine documentation.</li>
+            <li>Comprehensive logistical support with door-to-door shipping to all industrial zones and ports in Egypt.</li>
+            <li>Technical design consultation to optimize board thickness and configuration for maximum loading safety at the lowest lifecycle cost.</li>
           </ul>
-        </section>
-
-        <section>
-          <h2 id="elnegma-offers" class="text-xl font-bold text-white border-b border-border pb-1">5. El Negma Pallets Wholesale & Volume Offers</h2>
-          <p class="text-sm text-gray-300">
-            <strong>El Negma Pallets</strong> provides specialized wholesale solutions, including:
-          </p>
-          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
-            <li>Competitive volume-based discounts for orders over 200 units</li>
-            <li>Seasonal contracts with fixed pricing and guaranteed delivery schedules</li>
-            <li>Free ISPM-15 heat-treatment certification documentation with all export orders</li>
-            <li>Nationwide logistics and delivery to any packaging station or factory in Egypt</li>
-          </ul>
-          <p class="text-sm text-gray-300 mt-3">
-            To inquire about our wholesale catalog and request a bulk quote, contact us at <strong>+201080012261</strong>.
-          </p>
         </section>
       </div>
     `
@@ -1639,7 +1628,7 @@ const rawArticlesEn: Article[] = [
             Substandard pallets pose severe safety risks in factories. When procuring warehouse pallets, check for:
           </p>
           <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
-            <li><strong>No Protruding Nails:</strong> Protruding nails puncture bags and injure workers. Automated manufacturing ensures nails are flush and countersunk.</li>
+            <li><strong>No Protruding Nails:</strong> Protruding nails puncture bags and injure workers. Precision manufacturing using templates ensures nails are flush and countersunk.</li>
             <li><strong>Splinter-Free Boards:</strong> Sanded or chamfered deck boards prevent bag tearing and manual handling injuries.</li>
             <li><strong>Stiffness and Racking Load:</strong> Ensure the pallet is rated for the racking weight limit to prevent sudden structural failure.</li>
           </ul>
@@ -2015,11 +2004,11 @@ function getDeterministicOldDate(slug: string): string {
   const year = 2024 + Math.abs(hash % 2); // 2024 or 2025
   const month = 1 + Math.abs((hash >> 2) % 12); // 1 to 12
   const day = 1 + Math.abs((hash >> 4) % 28); // 1 to 28
-  
+
   const yyyy = year.toString();
   const mm = month < 10 ? `0${month}` : month.toString();
   const dd = day < 10 ? `0${day}` : day.toString();
-  
+
   return `${yyyy}-${mm}-${dd}`;
 }
 
