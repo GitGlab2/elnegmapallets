@@ -86,9 +86,6 @@ export const palletPricesEgyptArticle: Article = {
         <p class="text-sm text-gray-300">
           عند تحديد <strong>أماكن بيع بالتات خشب</strong>، يجب ألا تبحث عن الأرخص فقط، بل عن المورد الذي يلتزم بمواعيد التسليم ودقة المقاسات وشهادات التبخير والمعالجة الرسمية. اقرأ دليلنا الشامل عن <a href="/articles/best-pallet-factory-egypt/" class="text-secondary hover:underline font-bold">كيف تختار أفضل مصنع بالتات خشبية في مصر</a>.
         </p>
-        <p class="text-sm text-gray-300 mt-2">
-          يعد <strong>مصنع النجمة للبالتات الخشبية</strong> (الواقع في بياض العرب، بني سويف) شريكاً رئيسياً لكبرى الشركات المصدرة والمصانع في مصر. نحن نوفر طبالي خشبية جديدة مطابقة لأعلى المعايير الهندسية تضمن تلبية الطلبيات الضخمة في أوقات قياسية مع توفير شهادات المعالجة الحرارية المعتمدة.
-        </p>
       </section>
 
       <section class="bg-muted/20 p-5 rounded-xl border border-border/50">
