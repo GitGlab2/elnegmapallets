@@ -4,8 +4,8 @@ export const newWoodenPalletsQualityStandardsArticle: Article = {
   slug: "new-wooden-pallets-quality-standards",
   title: "لماذا يجب اختيار البالتات الخشبية الجديدة بدلاً من البالتات المستعملة للتصدير؟",
   description: "شرح للمخاطر اللوجستية والجمركية لاستخدام البالتات المستعملة في شحنات التصدير، ومزايا الاعتماد على البالتات الخشبية الجديدة من شركة النجمة.",
-  date: "2026-05-24",
-  author: "إدارة رقابة الجودة - شركة النجمة",
+  date: "2024-11-22",
+  author: "",
   readTime: "4 دقائق",
   image: "/images/articles/new-wooden-pallets-quality-standards.webp",
   category: "البالتات الخشبية الجديدة",
@@ -14,7 +14,7 @@ export const newWoodenPalletsQualityStandardsArticle: Article = {
   toc: [
     { title: "المخاطر الهيكلية للبالتات المستعملة", target: "#structural-risks" },
     { title: "المخاطر الصحية وقوانين الجمارك", target: "#customs-risks" },
-    { title: "مزايا البالتات الخشبية الجديدة من شركة النجمة", target: "#advantages-new" }
+    { title: "مزايا الاعتماد على البالتات الخشبية الجديدة", target: "#advantages-new" }
   ],
   content: `
     <div class="space-y-6 text-right leading-relaxed text-gray-200">
@@ -37,13 +37,13 @@ export const newWoodenPalletsQualityStandardsArticle: Article = {
       </section>
 
       <section>
-        <h2 id="advantages-new" class="text-xl font-bold text-white border-b border-border pb-1">ثالثاً: مزايا الاعتماد على البالتات الخشبية الجديدة من شركة النجمة</h2>
+        <h2 id="advantages-new" class="text-xl font-bold text-white border-b border-border pb-1">ثالثاً: مزايا الاعتماد على البالتات الخشبية الجديدة</h2>
         <p class="text-sm text-gray-300">
-          يتخصص مصنع **شركة النجمة** حصرياً في تصنيع **البالتات الخشبية الجديدة تماماً** بمواصفات قياسية أوربية وأمريكية، لضمان أعلى مستويات الأمان اللوجستي:
+          يُنصح بالاعتماد على البالتات الخشبية الجديدة تماماً بمواصفات قياسية أوربية وأمريكية، لضمان أعلى مستويات الأمان اللوجستي:
         </p>
         <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pr-2">
-          <li><strong>أخشاب بكر جديدة:</strong> نستخدم أخشاب صنوبر وموسكي جديدة وخالية تماماً من العيوب الهيكلية لضمان أقصى حمولة ديناميكية تصل لـ 1500 كجم.</li>
-          <li><strong>معالجة حرارية معتمدة وجديدة:</strong> تخضع بالتاتنا لمعالجة حرارية HT حديثة في أفران معتمدة ومختومة بختم الحجر الزراعي بوضوح تام، مما يضمن قبولها الفوري في كافة الموانئ العالمية.</li>
+          <li><strong>أخشاب بكر جديدة:</strong> استخدام أخشاب صنوبر وموسكي جديدة وخالية تماماً من العيوب الهيكلية لضمان أقصى حمولة ديناميكية تصل لـ 1500 كجم.</li>
+          <li><strong>معالجة حرارية معتمدة وجديدة:</strong> خضوع البالتات لمعالجة حرارية HT حديثة في أفران معتمدة ومختومة بختم الحجر الزراعي بوضوح تام، مما يضمن قبولها الفوري في كافة الموانئ العالمية.</li>
           <li><strong>نظافة بيولوجية مطلقة:</strong> البالتات الجديدة خالية تماماً من أي روائح أو زيوت أو عفن، وهو شرط أساسي لتصدير الموالح والمواد الغذائية والأدوية.</li>
         </ul>
       </section>

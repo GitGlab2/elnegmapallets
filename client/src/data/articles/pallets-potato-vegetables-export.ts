@@ -4,8 +4,8 @@ export const palletsPotatoVegetablesExportArticle: Article = {
   slug: "pallets-potato-vegetables-export",
   title: "بالتات خشبية لتصدير البطاطس والخضروات من مصر: المقاسات والمواصفات المطلوبة",
   description: "دليل متخصص في اختيار البالتات الخشبية المناسبة لتصدير البطاطس والبصل والفاصوليا والخضروات المصرية. تعرف على المقاسات المعتمدة ومتطلبات المعالجة الحرارية لكل سوق.",
-  date: "2026-07-12",
-  author: "قسم الاستشارات اللوجستية - مصنع النجمة",
+  date: "2024-10-22",
+  author: "",
   readTime: "6 دقائق",
   image: "/images/articles/exporting-citrus-agricultural-products.webp",
   category: "التصدير واللوجستيات",
@@ -65,7 +65,7 @@ export const palletsPotatoVegetablesExportArticle: Article = {
       <section>
         <h2 id="packing-tips" class="text-xl font-bold text-white border-b border-border pb-1">4. نصائح احترافية لتعبئة الخضروات على البالتات</h2>
         <p class="text-sm text-gray-300">
-          لضمان وصول شحنتك بحالة ممتازة، اتبع هذه النصائح من خبراء <strong>مصنع النجمة للبالتات</strong>:
+           لضمان وصول شحنتك بحالة ممتازة، يوصي خبراء اللوجستيات الزراعية باتباع هذه الممارسات الاحترافية:
         </p>
         <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pr-2">
           <li><strong>لا تتجاوز ارتفاع 1.6 متر:</strong> الارتفاع المثالي للبالتة محملة بالخضروات لضمان استقرار الحمولة وعدم تلف المنتجات السفلية.</li>
@@ -88,7 +88,7 @@ export const palletsPotatoVegetablesExportArticle: Article = {
           <li><strong>الطماطم:</strong> على مدار السنة مع ذروة في ديسمبر - أبريل</li>
         </ul>
         <p class="text-sm text-gray-300 mt-3">
-          ننصح بالتعاقد مع <strong>مصنع النجمة للبالتات</strong> قبل بداية الموسم بشهر على الأقل لضمان توفر الكميات المطلوبة والحصول على أفضل سعر. تواصل معنا على <strong>01080012261</strong> لحجز كميتك.
+          يُنصح بالتعاقد مع مورد البالتات قبل بداية الموسم بشهر على الأقل لضمان توفر الكميات المطلوبة وتفادي ضغط الطلب في ذروة موسم التصدير.
         </p>
       </section>
     </div>

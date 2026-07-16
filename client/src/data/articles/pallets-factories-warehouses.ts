@@ -4,8 +4,8 @@ export const palletsFactoriesWarehousesArticle: Article = {
   slug: "pallets-factories-warehouses",
   title: "بالتات خشبية للمصانع والمخازن: الدليل الكامل لاختيار البالتات المناسبة",
   description: "كل ما تحتاج معرفته عن اختيار البالتات الخشبية للمصانع والمخازن في مصر. تعرف على المقاسات المثالية لكل نوع مخزن، القدرة التحميلية، ومعايير السلامة المطلوبة.",
-  date: "2026-07-12",
-  author: "قسم الاستشارات الصناعية - مصنع النجمة",
+  date: "2024-11-25",
+  author: "",
   readTime: "5 دقائق",
   image: "/images/articles/pallets-warehouse-storage.webp",
   category: "صناعة البالتات",
@@ -23,7 +23,7 @@ export const palletsFactoriesWarehousesArticle: Article = {
     { title: "أنواع المخازن وبالتاتها المناسبة", target: "#warehouse-types" },
     { title: "معايير السلامة للبالتات في المصانع", target: "#safety-standards" },
     { title: "كيف تحسب عدد البالتات المطلوبة لمخزنك؟", target: "#calculate-quantity" },
-    { title: "حلول مصنع النجمة للمصانع والمخازن", target: "#elnegma-solutions" }
+    { title: "معايير اختيار البالتات وحلول التوريد للمصانع والمخازن", target: "#elnegma-solutions" }
   ],
   content: `
     <div class="space-y-6 text-right leading-relaxed text-gray-200">
@@ -85,20 +85,17 @@ export const palletsFactoriesWarehousesArticle: Article = {
       </section>
 
       <section>
-        <h2 id="elnegma-solutions" class="text-xl font-bold text-white border-b border-border pb-1">5. حلول مصنع النجمة للمصانع والمخازن</h2>
+        <h2 id="elnegma-solutions" class="text-xl font-bold text-white border-b border-border pb-1">5. معايير اختيار البالتات وحلول التوريد للمصانع والمخازن</h2>
         <p class="text-sm text-gray-300">
-          يقدم <strong>مصنع النجمة للبالتات الخشبية</strong> حلول توريد متكاملة للمصانع والمخازن تشمل:
+          تعتمد كفاءة العمليات التشغيلية في المصانع الكبرى على اختيار موردين يمتلكون القدرة على توفير بالتات خشبية عالية الجودة تتسم بالآتي:
         </p>
         <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pr-2">
-          <li>جميع المقاسات القياسية والمخصصة حسب نظام الأرفف لديك</li>
-          <li>بالتات بمدخل رباعي (4-way entry) لتوافق كامل مع جميع أنواع الرافعات</li>
-          <li>قدرات تحميلية مخصصة (من 500 كجم حتى 2000 كجم ديناميكي)</li>
-          <li>عقود توريد دورية بأسعار ثابتة ومواعيد تسليم مضمونة</li>
-          <li>استشارات فنية مجانية لتحديد المقاس والمواصفات الأنسب لمصنعك</li>
+          <li>توافر جميع المقاسات القياسية والمخصصة حسب نظام الأرفف والمستودعات</li>
+          <li>تصاميم بمدخل رباعي (4-way entry) لتوافق كامل مع جميع أنواع الرافعات الشوكية</li>
+          <li>قدرات تحميلية مخصصة ومحسوبة بدقة هندسية (من 500 كجم حتى 2000 كجم ديناميكي)</li>
+          <li>عقود توريد دورية بأسعار مستقرة ومواعيد تسليم مجدولة لتجنب نقص المخزون</li>
+          <li>توفير استشارات فنية ودراسات حالة لتحديد المواصفات الأنسب لخطوط الإنتاج والتوزيع</li>
         </ul>
-        <p class="text-sm text-gray-300 mt-3">
-          تواصل معنا الآن على <strong>01080012261</strong> للحصول على عرض سعر مخصص لمصنعك أو مخزنك.
-        </p>
       </section>
     </div>
   `

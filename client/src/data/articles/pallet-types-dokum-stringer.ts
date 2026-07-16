@@ -4,8 +4,8 @@ export const palletTypesDokumStringerArticle: Article = {
   slug: "pallet-types-dokum-stringer",
   title: "بالتة الدكم الخشبية: الدليل الشامل للمواصفات والاستخدامات في مصر",
   description: "تعرّف على بالتة الدكم (Stringer Pallet) الخشبية — أكثر أنواع البالتات شيوعاً في مصر والعالم. دليل كامل للمواصفات الفنية، الأبعاد، الاستخدامات الصناعية، والفرق بين بالتة الدكم وبالتة البلوك.",
-  date: "2026-07-10",
-  author: "قسم الإنتاج والتصنيع - مصنع النجمة",
+  date: "2024-11-10",
+  author: "",
   readTime: "6 دقائق",
   image: "/images/articles/pallet-types-dokum-stringer.jpg",
   category: "مقاسات وأبعاد البالتات",
@@ -53,7 +53,7 @@ export const palletTypesDokumStringerArticle: Article = {
 
       <section>
         <h2 id="dokum-specs" class="text-xl font-bold text-white border-b border-border pb-1">3. المواصفات الفنية والأبعاد الشائعة</h2>
-        <p class="text-sm text-gray-300">أشهر مقاسات بالتات الدكم المُصنعة في مصنع النجمة:</p>
+        <p class="text-sm text-gray-300">أشهر مقاسات بالتات الدكم الشائعة في الاستخدام الصناعي واللوجستي:</p>
         <div class="overflow-x-auto mt-3">
           <table class="w-full text-xs text-gray-300 border border-border/40">
             <thead class="bg-muted/30">
@@ -104,7 +104,7 @@ export const palletTypesDokumStringerArticle: Article = {
           <li><strong>شحن الأجهزة الكهربائية:</strong> تُستخدم بالتات الدكم المخصصة لنقل الغسالات والثلاجات والمكيفات.</li>
         </ul>
         <p class="text-sm text-gray-300 mt-3">
-          <strong>مصنع النجمة للبالتات الخشبية</strong> يُصنع بالتات الدكم من أخشاب السويد والبياض الطبيعي بمعالجة حرارية HT معتمدة بختم ISPM-15 لجميع أغراض التصدير. تواصل معنا لطلب عرض سعر مخصص.
+          يُنصح بالتركيز على جودة الخشب وسلامة التثبيت بالمسامير الحلزونية وتوافر المعالجة الحرارية (HT) المعتمدة دولياً لضمان سلامة عمليات الشحن البري والبحري.
         </p>
       </section>
     </div>

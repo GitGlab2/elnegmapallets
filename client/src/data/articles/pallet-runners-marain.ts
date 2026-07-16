@@ -4,8 +4,8 @@ export const palletRunnersMarainArticle: Article = {
   slug: "pallet-runners-marain",
   title: "المراين الخشبية: العنصر الأساسي في صناعة البالتات — مواصفات وأنواع",
   description: "كل ما تحتاج معرفته عن المراين (Stringers/Runners) الخشبية — العوارض الحاملة التي تمنح البالتة قوتها الهيكلية. أنواعها، مقاساتها، أخشابها المناسبة، ودورها الحيوي في تصنيع البالتات في مصر.",
-  date: "2026-07-10",
-  author: "قسم الإنتاج والتصنيع - مصنع النجمة",
+  date: "2024-11-20",
+  author: "",
   readTime: "5 دقائق",
   image: "/images/articles/pallet-runners-marain.jpg",
   category: "مقاسات وأبعاد البالتات",
@@ -53,7 +53,7 @@ export const palletRunnersMarainArticle: Article = {
 
       <section>
         <h2 id="runner-specs" class="text-xl font-bold text-white border-b border-border pb-1">3. المواصفات الفنية والأبعاد</h2>
-        <p class="text-sm text-gray-300">أبعاد المراين الأكثر طلباً في مصنع النجمة:</p>
+        <p class="text-sm text-gray-300">أبعاد المراين الأكثر طلباً واستخداماً في المنصات الخشبية:</p>
         <div class="overflow-x-auto mt-3">
           <table class="w-full text-xs text-gray-300 border border-border/40">
             <thead class="bg-muted/30">
@@ -96,7 +96,7 @@ export const palletRunnersMarainArticle: Article = {
           <li><strong>سمك المسمار وعمق التثبيت:</strong> المسامير الحلزونية بطول 60-75 مم هي الأنسب لتثبيت الألواح في المراين.</li>
         </ul>
         <p class="text-sm text-gray-300 mt-3">
-          <strong>مصنع النجمة</strong> يختار المراين بعناية من أخشاب مستوردة مجففة ومعالجة حرارياً، مع فحص جودة لكل مرين قبل التجميع. تواصل معنا للحصول على أفضل جودة بالتات في مصر.
+          تعتمد جودة المنصات الخشبية في النهاية على الانتقاء الدقيق للمراين الخشبية وفحصها خلوها من العيوب الهيكلية لضمان أقصى قدرة تحميل ميكانيكية ممكنة.
         </p>
       </section>
     </div>

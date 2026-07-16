@@ -5,8 +5,8 @@ export const palletDimensionsStandardsArticle: Article = {
   title: "دليل أبعاد ومقاسات الباليتات القياسية والأوروبية المعتمدة دولياً",
   description:
     "شرح تفصيلي لأبعاد ومقاسات الباليتات الأوروبية (Euro Pallet) والبالتات القياسية (Standard GMA) وتصنيفات الأيزو ISO 6780 للتداول الدولي.",
-  date: "2026-04-12",
-  author: "إدارة الدعم الفني - شركة النجمة",
+  date: "2024-10-12",
+  author: "",
   readTime: "4 دقائق",
   image: "/images/articles/pallet-dimensions-standards.webp",
   category: "مقاسات وأبعاد البالتات",
