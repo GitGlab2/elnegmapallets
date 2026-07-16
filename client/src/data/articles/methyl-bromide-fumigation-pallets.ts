@@ -8,7 +8,7 @@ export const methylBromideFumigationPalletsArticle: Article = {
   author: "إدارة الجودة والبيئة - مصنع النجمة",
   readTime: "4 دقائق",
   image: "/images/articles/heat-treatment-vs-methyl-bromide.webp",
-  category: "طرق تبخير ومعالجة البالتات",
+  category: "التبخير بغاز بروميد الميثيل",
   categoryId: "compliance",
   keywords: [
     "التبخير ببروميد الميثيل",

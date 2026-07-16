@@ -315,7 +315,7 @@ const rawArticlesEn: Article[] = [
     author: "Quarantine Dept - El Negma",
     readTime: "4 mins",
     image: "/images/articles/heat-treatment-vs-methyl-bromide.webp",
-    category: "Pallet Treatment",
+    category: "Treatment Comparison",
     categoryId: "compliance",
     keywords: [
       "heat treatment HT",
@@ -1684,7 +1684,7 @@ const rawArticlesEn: Article[] = [
     author: "Quality & Compliance - El Negma Pallets",
     readTime: "4 mins",
     image: "/images/articles/heat-treatment-vs-methyl-bromide.webp",
-    category: "Fumigation & Pallet Treatment",
+    category: "Heat Treatment (HT)",
     categoryId: "compliance",
     keywords: [
       "heat treatment for pallets",
@@ -1758,7 +1758,7 @@ const rawArticlesEn: Article[] = [
     author: "Quality & Compliance - El Negma Pallets",
     readTime: "4 mins",
     image: "/images/articles/heat-treatment-vs-methyl-bromide.webp",
-    category: "Fumigation & Pallet Treatment",
+    category: "Methyl Bromide (MB)",
     categoryId: "compliance",
     keywords: [
       "methyl bromide fumigation",

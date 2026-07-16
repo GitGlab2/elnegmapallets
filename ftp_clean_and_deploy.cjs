@@ -36,6 +36,15 @@ async function deploy() {
     console.log("Connection established. Navigating to /public_html...");
     await client.cd("/public_html");
 
+    // Clean up any failed upload temp files
+    try {
+      await client.remove(".in.out.zip.");
+      console.log("Removed existing temporary file .in.out.zip.");
+    } catch (e) {}
+    try {
+      await client.remove("out.zip");
+    } catch (e) {}
+
     console.log("Uploading unzip.php...");
     await client.uploadFrom(path.join(__dirname, "unzip.php"), "unzip.php");
 
