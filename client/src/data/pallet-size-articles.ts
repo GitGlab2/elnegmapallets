@@ -8,7 +8,7 @@ type Language = "ar" | "en";
 const copy = {
   ar: {
     category: "مقاسات وأبعاد البالتات",
-    author: "فريق النجمة الفني",
+    author: "",
     readTime: "4 دقائق للقراءة",
     dimensions: "الأبعاد",
     specifications: "المواصفات الأساسية",
@@ -31,7 +31,7 @@ const copy = {
   },
   en: {
     category: "Pallet Sizes & Specs",
-    author: "El Negma Technical Team",
+    author: "",
     readTime: "4 min read",
     dimensions: "Dimensions",
     specifications: "Key specifications",
