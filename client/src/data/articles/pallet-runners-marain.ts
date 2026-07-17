@@ -7,7 +7,7 @@ export const palletRunnersMarainArticle: Article = {
   date: "2024-11-20",
   author: "",
   readTime: "5 دقائق",
-  image: "/images/articles/pallet-runners-marain.jpg",
+  image: "/images/articles/pallet-runners-marain.webp",
   category: "مقاسات وأبعاد البالتات",
   categoryId: "sizes",
   keywords: [

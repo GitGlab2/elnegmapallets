@@ -895,7 +895,7 @@ const rawArticlesEn: Article[] = [
     date: "2026-07-10",
     author: "",
     readTime: "6 mins",
-    image: "/images/articles/pallet-types-dokum-stringer.jpg",
+    image: "/images/articles/pallet-types-dokum-stringer.webp",
     category: "Pallet Sizes & Specs",
     categoryId: "sizes",
     keywords: [
@@ -1001,7 +1001,7 @@ const rawArticlesEn: Article[] = [
     date: "2026-07-10",
     author: "",
     readTime: "5 mins",
-    image: "/images/articles/pallet-runners-marain.jpg",
+    image: "/images/articles/pallet-runners-marain.webp",
     category: "Pallet Sizes & Specs",
     categoryId: "sizes",
     keywords: [
@@ -1099,7 +1099,7 @@ const rawArticlesEn: Article[] = [
     date: "2026-07-10",
     author: "",
     readTime: "5 mins",
-    image: "/images/articles/pallet-block-solid-detail.jpg",
+    image: "/images/articles/pallet-block-solid.webp",
     category: "Pallet Sizes & Specs",
     categoryId: "sizes",
     keywords: [
@@ -1199,7 +1199,7 @@ const rawArticlesEn: Article[] = [
     date: "2026-07-12",
     author: "",
     readTime: "5 mins",
-    image: "/images/articles/best-pallet-factory.png",
+    image: "/images/articles/best-pallet-factory.webp",
     category: "Procurement & Customs Guides",
     categoryId: "procurement",
     keywords: [
@@ -1993,6 +1993,196 @@ const rawArticlesEn: Article[] = [
       </div>
     `
   },
+  {
+  "slug": "ispm-15-guide-egypt",
+  "title": "The Complete Guide to ISPM-15 Standard in Egypt: What Exporters Need to Know",
+  "description": "The ultimate reference guide for the ISPM-15 international phytosanitary standard in Egypt. Learn about technical requirements, plant quarantine procedures, IPPC markings, and documents needed for hassle-free shipping.",
+  "date": "2024-09-15",
+  "author": "",
+  "readTime": "7 mins",
+  "image": "/images/articles/heat-treatment-vs-methyl-bromide.webp",
+  "category": "Compliance & HT",
+  "categoryId": "compliance",
+  "keywords": [
+    "ISPM-15 Egypt",
+    "ISPM 15 standard",
+    "IPPC stamp wooden pallets",
+    "pallet fumigation certificate",
+    "plant quarantine export requirements",
+    "phytosanitary wooden packaging"
+  ],
+  "toc": [
+    {
+      "title": "What is ISPM-15 and Why is it Internationally Enforced?",
+      "target": "#what-is-ispm15"
+    },
+    {
+      "title": "Which Wooden Packaging Materials Must Comply?",
+      "target": "#covered-materials"
+    },
+    {
+      "title": "Approved Treatment Methods Under ISPM-15",
+      "target": "#approved-treatments"
+    },
+    {
+      "title": "The IPPC Stamp: Components and How to Read It",
+      "target": "#ippc-mark"
+    },
+    {
+      "title": "How to Obtain an ISPM-15 Certificate in Egypt",
+      "target": "#egypt-procedures"
+    },
+    {
+      "title": "Countries Requiring Strict ISPM-15 Enforcement",
+      "target": "#enforcing-countries"
+    },
+    {
+      "title": "Consequences of Non-Compliance During Export",
+      "target": "#non-compliance"
+    },
+    {
+      "title": "Frequently Asked Questions About ISPM-15",
+      "target": "#faq"
+    }
+  ],
+  "content": "\n      <div class=\"space-y-6 text-left leading-relaxed text-gray-200\">\n        <section class=\"border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg\">\n          <h2 id=\"what-is-ispm15\" class=\"text-xl font-bold text-accent mb-2\">What is ISPM-15 and Why is it Internationally Enforced?</h2>\n          <p class=\"text-sm text-gray-300\">\n            <strong>ISPM-15</strong> (International Standards for Phytosanitary Measures No. 15) is the global regulatory framework established by the <strong>International Plant Protection Convention (IPPC)</strong>, a part of the FAO. It regulates wooden packaging material (WPM) used in international trade to prevent the transcontinental spread of destructive forest pests, such as the Asian Longhorned Beetle (ALB) and Pine Wood Nematode, which have previously caused billions of dollars in ecological damage.\n          </p>\n          <p class=\"text-sm text-gray-300 mt-2\">\n            The standard mandates that raw wood packaging must be treated to eliminate all stages of insects and pathogens before entering the international market.\n          </p>\n        </section>\n\n        <section>\n          <h2 id=\"covered-materials\" class=\"text-xl font-bold text-white border-b border-border pb-1\">Which Wooden Packaging Materials Must Comply?</h2>\n          <p class=\"text-sm text-gray-300 mt-2\">\n            ISPM-15 applies to all raw, non-processed wooden packaging materials thicker than 6 mm, including:\n          </p>\n          <ul class=\"list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2\">\n            <li><strong>Wooden Pallets:</strong> Block and stringer configurations, 2-way and 4-way entries.</li>\n            <li><strong>Wooden Crates and Boxes:</strong> Heavy machinery packaging, custom boxes, and industrial frames.</li>\n            <li><strong>Dunnage:</strong> Timber used to secure cargo inside shipping containers.</li>\n            <li><strong>Pallet Collars:</strong> Hinged wooden borders placed on top of standard pallets.</li>\n          </ul>\n          <div class=\"bg-muted/30 border border-border/40 rounded-lg p-3 mt-3\">\n            <p class=\"text-xs text-gray-400\">\n              <strong>Exemption Note:</strong> Processed wood products such as plywood, particleboard, and oriented strand board (OSB) are exempt from ISPM-15 because their manufacturing processes involve high temperature and pressure, which naturally eliminate pests.\n            </p>\n          </div>\n        </section>\n\n        <section>\n          <h2 id=\"approved-treatments\" class=\"text-xl font-bold text-white border-b border-border pb-1\">Approved Treatment Methods Under ISPM-15</h2>\n          <p class=\"text-sm text-gray-300 mt-2\">\n            The standard officially recognizes two primary treatment modalities for timber platforms:\n          </p>\n          <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 mt-3\">\n            <div class=\"bg-muted/20 border border-border/30 rounded-lg p-4\">\n              <h3 class=\"text-sm font-bold text-secondary mb-2\">Heat Treatment (HT)</h3>\n              <ul class=\"list-disc list-inside text-xs text-gray-300 space-y-1\">\n                <li>Heats the wood core to at least <strong>56°C</strong> for <strong>30 continuous minutes</strong>.</li>\n                <li>100% eco-friendly with zero chemical residues.</li>\n                <li>Accepted by all importing nations.</li>\n                <li>Code: <strong>HT</strong></li>\n              </ul>\n            </div>\n            <div class=\"bg-muted/20 border border-border/30 rounded-lg p-4\">\n              <h3 class=\"text-sm font-bold text-secondary mb-2\">Methyl Bromide (MB) Fumigation</h3>\n              <ul class=\"list-disc list-inside text-xs text-gray-300 space-y-1\">\n                <li>Gaseous chemical fumigation under strict atmospheric parameters.</li>\n                <li>Banned in the European Union, Canada, and Australia due to environmental risks.</li>\n                <li>Code: <strong>MB</strong></li>\n              </ul>\n            </div>\n          </div>\n          <p class=\"text-sm text-gray-300 mt-3\">\n            Heat Treatment (HT) is highly recommended for all exports to ensure hassle-free customs clearance in all international markets.\n          </p>\n        </section>\n\n        <section>\n          <h2 id=\"ippc-mark\" class=\"text-xl font-bold text-white border-b border-border pb-1\">The IPPC Stamp: Components and How to Read It</h2>\n          <p class=\"text-sm text-gray-300 mt-2\">\n            Following treatment, the timber is stamped with the internationally recognized IPPC logo, which serves as a phytosanitary passport. The stamp contains:\n          </p>\n          <ul class=\"list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2\">\n            <li><strong>IPPC Symbol:</strong> The wheat sheaf icon on the left.</li>\n            <li><strong>Country Code:</strong> The ISO country code (e.g., <strong>EG</strong> for Egypt).</li>\n            <li><strong>Producer/Treatment Provider ID:</strong> A unique registration number issued by the national plant protection organization (Egyptian Ministry of Agriculture).</li>\n            <li><strong>Treatment Code:</strong> Either <strong>HT</strong> (Heat Treatment) or <strong>MB</strong> (Methyl Bromide).</li>\n          </ul>\n        </section>\n\n        <section>\n          <h2 id=\"egypt-procedures\" class=\"text-xl font-bold text-white border-b border-border pb-1\">How to Obtain an ISPM-15 Certificate in Egypt</h2>\n          <p class=\"text-sm text-gray-300 mt-2\">\n            Exporters in Egypt obtain compliant wooden packaging via the following steps:\n          </p>\n          <ol class=\"list-decimal list-inside text-xs text-gray-300 space-y-3 mt-3 pl-2\">\n            <li><strong>Pallet Manufacturing:</strong> Platforms are built using raw softwood or hardwood.</li>\n            <li><strong>Treatment at Authorized Facility:</strong> The pallets are sent to an Egyptian Agricultural Ministry-certified HT kiln or MB chamber.</li>\n            <li><strong>Kiln Data Logging:</strong> Temperatures are recorded electronically via probes to verify core temperature compliance.</li>\n            <li><strong>Stamping:</strong> Pallets are branded with the official IPPC code showing the facility's registration number.</li>\n            <li><strong>Phytosanitary Certification:</strong> Plant Quarantine authorities issue a physical certificate accompanying the export documentation.</li>\n          </ol>\n        </section>\n\n        <section>\n          <h2 id=\"enforcing-countries\" class=\"text-xl font-bold text-white border-b border-border pb-1\">Countries Requiring Strict ISPM-15 Enforcement</h2>\n          <p class=\"text-sm text-gray-300 mt-2\">\n            ISPM-15 is enforced by over 180 countries. Notable regions include:\n          </p>\n          <ul class=\"list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2\">\n            <li><strong>European Union (EU):</strong> Enforces strict rules, only accepting HT pallets; chemical MB is prohibited.</li>\n            <li><strong>United States & Canada:</strong> Require strict compliance at all entry ports.</li>\n            <li><strong>Australia & New Zealand:</strong> Exceptional biosecurity inspections; wood packing is examined closely for bark and fungal rot.</li>\n            <li><strong>Gulf Cooperation Council (GCC):</strong> Imposed standard controls at port and land terminals.</li>\n          </ul>\n        </section>\n\n        <section>\n          <h2 id=\"non-compliance\" class=\"text-xl font-bold text-white border-b border-border pb-1\">Consequences of Non-Compliance During Export</h2>\n          <p class=\"text-sm text-gray-300 mt-2\">\n            Failing to use compliant wood packaging can lead to severe consequences:\n          </p>\n          <ul class=\"list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2\">\n            <li><strong>Port Rejection:</strong> Custom officials will order the shipment to be returned to the origin country at the exporter's expense.</li>\n            <li><strong>Delays & Double Treatment Fees:</strong> If available, pallets must undergo on-site treatment at steep port fees, stalling logistics.</li>\n            <li><strong>Cargo Destructive Quarantine:</strong> Wood packaging may be shredded or incinerated, risking cargo safety.</li>\n            <li><strong>Financial Penalties:</strong> High biosecurity fines can be charged to the exporting agent.</li>\n          </ul>\n        </section>\n\n        <section>\n          <h2 id=\"faq\" class=\"text-xl font-bold text-white border-b border-border pb-1\">Frequently Asked Questions About ISPM-15</h2>\n          <div class=\"space-y-4 mt-3\">\n            <div class=\"bg-muted/20 border border-border/30 rounded-lg p-3\">\n              <p class=\"text-sm font-bold text-white\">Do domestic-only pallets in Egypt need ISPM-15?</p>\n              <p class=\"text-xs text-gray-300 mt-1\">No, the rule is strictly for packaging moving across international borders. Domestic transit does not require heat treatment.</p>\n            </div>\n            <div class=\"bg-muted/20 border border-border/30 rounded-lg p-3\">\n              <p class=\"text-sm font-bold text-white\">Does the stamp expire?</p>\n              <p class=\"text-xs text-gray-300 mt-1\">No, the stamp remains valid as long as the pallet is intact. If repaired with new raw wood, the entire unit must be re-treated and re-stamped.</p>\n            </div>\n          </div>\n        </section>\n      </div>\n    "
+},
+{
+  "slug": "custom-pallet-design-specifications",
+  "title": "Custom Wooden Pallet Design: Procurement Guide for Non-Standard Dimensions",
+  "description": "An engineering-based procurement guide on designing and manufacturing custom wooden pallets. Covers structural design standards, wood species selection, load capacity calculations, and standard vs. custom comparisons.",
+  "date": "2024-10-22",
+  "author": "",
+  "readTime": "6 mins",
+  "image": "/images/articles/pallet-dimensions-standards.webp",
+  "category": "Specs & Pricing",
+  "categoryId": "procurement",
+  "keywords": [
+    "custom wooden pallet design",
+    "non-standard pallet dimensions",
+    "custom pallets Egypt",
+    "tailored wooden pallets",
+    "heavy-duty custom pallets"
+  ],
+  "toc": [
+    {
+      "title": "Why Choose Custom-Sized Pallets?",
+      "target": "#why-custom"
+    },
+    {
+      "title": "Key Engineering Standards for Custom Designs",
+      "target": "#design-criteria"
+    },
+    {
+      "title": "Selecting the Right Wood Species",
+      "target": "#wood-selection"
+    },
+    {
+      "title": "Load Capacity & Structural Safety Calculations",
+      "target": "#load-calculations"
+    },
+    {
+      "title": "Manufacturing Process: From Order to Delivery",
+      "target": "#manufacturing-stages"
+    },
+    {
+      "title": "Comparison: Standard vs. Custom Pallets",
+      "target": "#standard-vs-custom"
+    }
+  ],
+  "content": "\n      <div class=\"space-y-6 text-left leading-relaxed text-gray-200\">\n        <section class=\"border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg\">\n          <h2 id=\"why-custom\" class=\"text-xl font-bold text-accent mb-2\">Why Choose Custom-Sized Pallets?</h2>\n          <p class=\"text-sm text-gray-300\">\n            While standard platforms (like Euro 80x120 or Industrial 100x120) meet most general supply chain needs, custom dimensions are often required to prevent structural loss or product damage. Unique products with non-standard weights or geometries require custom solutions. Tailored platforms optimize container stuffing, reduce wood usage, and improve automatic handling.\n          </p>\n        </section>\n\n        <section>\n          <h2 id=\"design-criteria\" class=\"text-xl font-bold text-white border-b border-border pb-1\">Key Engineering Standards for Custom Designs</h2>\n          <p class=\"text-sm text-gray-300 mt-2\">\n            A successful custom design addresses specific geometric and structural criteria:\n          </p>\n          <ul class=\"list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2\">\n            <li><strong>Outer Dimensions (L x W):</strong> Calculated from the product dimensions with a small 2-5 cm margin to prevent cargo overhang.</li>\n            <li><strong>Total Height:</strong> Typically kept between 12-15 cm, but can be adjusted for automated lines or warehouse height clearances.</li>\n            <li><strong>Board Count & Spacing:</strong> Defines surface load distribution. Denser top deck layouts prevent thin containers from sagging.</li>\n            <li><strong>Entry Configuration:</strong> 2-way vs. 4-way forklift options, altering handling efficiency and pallet durability.</li>\n          </ul>\n        </section>\n\n        <section>\n          <h2 id=\"wood-selection\" class=\"text-xl font-bold text-white border-b border-border pb-1\">Selecting the Right Wood Species</h2>\n          <p class=\"text-sm text-gray-300 mt-2\">\n            Choosing the correct timber grade affects both cost and load capacity:\n          </p>\n          <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 mt-3\">\n            <div class=\"bg-muted/20 border border-border/30 rounded-lg p-4\">\n              <h3 class=\"text-sm font-bold text-secondary mb-2\">Softwoods (e.g. Pine)</h3>\n              <p class=\"text-xs text-gray-300\">Ideal for general shipping. Lighter, highly cost-effective, and suitable for loads up to 1,200 kg.</p>\n            </div>\n            <div class=\"bg-muted/20 border border-border/30 rounded-lg p-4\">\n              <h3 class=\"text-sm font-bold text-secondary mb-2\">Hardwoods (e.g. Beech)</h3>\n              <p class=\"text-xs text-gray-300\">Used for heavy-duty requirements. Highly durable, dense, and resistant to mechanical wear for loads above 1,500 kg.</p>\n            </div>\n          </div>\n        </section>\n\n        <section>\n          <h2 id=\"load-calculations\" class=\"text-xl font-bold text-white border-b border-border pb-1\">Load Capacity & Structural Safety Calculations</h2>\n          <p class=\"text-sm text-gray-300 mt-2\">\n            Pallet load ratings are split into distinct operational parameters:\n          </p>\n          <ul class=\"list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2\">\n            <li><strong>Dynamic Load:</strong> The maximum load capacity during forklift handling and physical transit.</li>\n            <li><strong>Static Load:</strong> The weight capacity when stacked on flat surfaces. Often double the dynamic rating.</li>\n            <li><strong>Racking Load:</strong> The weight bearing capacity when suspended on rack rails. This requires heavy-duty design and premium wood selection.</li>\n          </ul>\n        </section>\n\n        <section>\n          <h2 id=\"manufacturing-stages\" class=\"text-xl font-bold text-white border-b border-border pb-1\">Manufacturing Process: From Order to Delivery</h2>\n          <ol class=\"list-decimal list-inside text-xs text-gray-300 space-y-3 mt-3 pl-2\">\n            <li><strong>Specification Sharing:</strong> The client shares drawings, dimensions, load profiles, and target quantities.</li>\n            <li><strong>Prototype Creation:</strong> A test model is constructed to verify real-world storage and handling performance.</li>\n            <li><strong>Bulk Assembly:</strong> Automated nail lines and assembly jigs ensure dimensional precision.</li>\n            <li><strong>Sanitization & Shipping:</strong> Kiln heat treatment (HT) and IPPC markings are completed before distribution.</li>\n          </ol>\n        </section>\n\n        <section>\n          <h2 id=\"standard-vs-custom\" class=\"text-xl font-bold text-white border-b border-border pb-1\">Comparison: Standard vs. Custom Pallets</h2>\n          <div class=\"overflow-x-auto mt-3\">\n            <table class=\"w-full text-xs text-gray-300 border-collapse\">\n              <thead>\n                <tr class=\"border-b border-border/40\">\n                  <th class=\"text-left py-2 px-3 text-secondary font-bold\">Parameter</th>\n                  <th class=\"text-left py-2 px-3 text-secondary font-bold\">Standard Pallet</th>\n                  <th class=\"text-left py-2 px-3 text-secondary font-bold\">Custom Pallet</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr class=\"border-b border-border/20\">\n                  <td class=\"py-2 px-3 font-bold\">Unit Cost</td>\n                  <td class=\"py-2 px-3\">Lower (mass-produced)</td>\n                  <td class=\"py-2 px-3\">15-40% higher depending on design</td>\n                </tr>\n                <tr class=\"border-b border-border/20\">\n                  <td class=\"py-2 px-3 font-bold\">Lead Time</td>\n                  <td class=\"py-2 px-3\">Instant (off-the-shelf)</td>\n                  <td class=\"py-2 px-3\">3-7 business days average</td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n        </section>\n      </div>\n    "
+},
+{
+  "slug": "pallet-recycling-repair-reuse",
+  "title": "Wooden Pallet Recycling and Repair: A Guide to Sustainability and Cost Reduction",
+  "description": "A technical guide to wooden pallet recycling and repair for modern supply chains. Learn about inspection criteria, approved repair methods, and the economic benefits of pallet reuse programs.",
+  "date": "2024-08-12",
+  "author": "",
+  "readTime": "5 mins",
+  "image": "/images/articles/pallet-runners-marain.webp",
+  "category": "Industrial Needs",
+  "categoryId": "industry",
+  "keywords": [
+    "wooden pallet recycling",
+    "pallet repair methods",
+    "used wooden pallets",
+    "pallet maintenance",
+    "logistics cost reduction",
+    "reused shipping platforms"
+  ],
+  "toc": [
+    {
+      "title": "Economic & Environmental Benefits of Pallet Repair",
+      "target": "#economic-benefits"
+    },
+    {
+      "title": "Technical Inspection & Classification of Used Pallets",
+      "target": "#inspection-classification"
+    },
+    {
+      "title": "Standardized Engineering Methods for Pallet Repair",
+      "target": "#repair-methods"
+    },
+    {
+      "title": "Repair vs. Complete Pallet Recycling",
+      "target": "#repair-vs-recycling"
+    },
+    {
+      "title": "Safety Requirements for Reclaimed Pallets",
+      "target": "#safety-requirements"
+    },
+    {
+      "title": "Establishing B2B Pallet Management Programs",
+      "target": "#management-programs"
+    }
+  ],
+  "content": "\n      <div class=\"space-y-6 text-left leading-relaxed text-gray-200\">\n        <section class=\"border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg\">\n          <h2 id=\"economic-benefits\" class=\"text-xl font-bold text-accent mb-2\">Economic & Environmental Benefits of Pallet Repair</h2>\n          <p class=\"text-sm text-gray-300\">\n            Fluctuations in worldwide lumber prices make discarding damaged pallets a massive operational waste. Implementing structured inspection and repair cycles saves procurement capital and prevents logistics delays. Recycled platforms reduce timber consumption, supporting corporate circular economy and ESG compliance goals.\n          </p>\n        </section>\n\n        <section>\n          <h2 id=\"inspection-classification\" class=\"text-xl font-bold text-white border-b border-border pb-1\">Technical Inspection & Classification of Used Pallets</h2>\n          <p class=\"text-sm text-gray-300 mt-2\">\n            Every used platform undergoes a grading process before entering repair lines:\n          </p>\n          <ul class=\"list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2\">\n            <li><strong>Grade A (Premium):</strong> Minor blemishes, clean wood surfaces, and zero structural compromises.</li>\n            <li><strong>Grade B (Standard):</strong> Minor board splits or broken blocks, fully repairable to restore original capacity.</li>\n            <li><strong>Scrap / Reclaim:</strong> Severe structural damage. These are broken down for raw boards to mend Grade B units, or shredded for wood mulch and pellets.</li>\n          </ul>\n        </section>\n\n        <section>\n          <h2 id=\"repair-methods\" class=\"text-xl font-bold text-white border-b border-border pb-1\">Standardized Engineering Methods for Pallet Repair</h2>\n          <p class=\"text-sm text-gray-300 mt-2\">\n            Mending wood packaging requires strict adherence to assembly guidelines:\n          </p>\n          <ul class=\"list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2\">\n            <li><strong>Board Replacement:</strong> Damaged top or base slats are fully detached and replaced with fresh wood matching original specifications.</li>\n            <li><strong>Runner Reinforcement:</strong> Splitting structural runners are reinforced with sister boards to double loading resilience.</li>\n            <li><strong>Block Replacement:</strong> Shattered wood blocks are swapped, using industrial ring-shank nails to prevent loose joints.</li>\n          </ul>\n        </section>\n\n        <section>\n          <h2 id=\"repair-vs-recycling\" class=\"text-xl font-bold text-white border-b border-border pb-1\">Repair vs. Complete Pallet Recycling</h2>\n          <p class=\"text-sm text-gray-300 mt-2\">\n            Logistics managers should decide between mending and recycling:\n          </p>\n          <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 mt-3\">\n            <div class=\"bg-muted/20 border border-border/30 rounded-lg p-4\">\n              <h3 class=\"text-sm font-bold text-secondary mb-2\">Pallet Repair</h3>\n              <p class=\"text-xs text-gray-300\">Fast, low-cost maintenance targeting specific elements without full teardowns. Ideal for high-turnover warehouses.</p>\n            </div>\n            <div class=\"bg-muted/20 border border-border/30 rounded-lg p-4\">\n              <h3 class=\"text-sm font-bold text-secondary mb-2\">Full Recycling</h3>\n              <p class=\"text-xs text-gray-300\">Teardowns that harvest clean wood slats for re-assembly or turn wood fibers into eco-pellets and packaging fillers.</p>\n            </div>\n          </div>\n        </section>\n\n        <section>\n          <h2 id=\"safety-requirements\" class=\"text-xl font-bold text-white border-b border-border pb-1\">Safety Requirements for Reclaimed Pallets</h2>\n          <p class=\"text-sm text-gray-300 mt-2\">\n            To prevent accidents during storage and handling:\n          </p>\n          <ul class=\"list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2\">\n            <li><strong>De-rate Load Ratings:</strong> Reduce maximum dynamic load expectations by 10-15% on mended units.</li>\n            <li><strong>Quarantine Re-treatment:</strong> If new raw timber was used for repair, the entire pallet must undergo HT processing again before export.</li>\n          </ul>\n        </section>\n      </div>\n    "
+},
+{
+  "slug": "pallets-petrochemical-heavy-industry",
+  "title": "Wooden Pallets for Petrochemicals and Heavy Industries: Technical Standards & Max Loads",
+  "description": "Technical guide to wooden pallets for petrochemical, fertilizer, and heavy industrial sectors. Learn about load categories, safety margins, and CP (Chemical Pallet) standards.",
+  "date": "2024-07-28",
+  "author": "",
+  "readTime": "6 mins",
+  "image": "/images/pallets/chemical-pallet.webp",
+  "category": "Industrial Needs",
+  "categoryId": "industry",
+  "keywords": [
+    "petrochemical pallets",
+    "heavy-duty wooden pallets",
+    "CP pallets Egypt",
+    "fertilizer shipping pallets",
+    "industrial wooden platforms"
+  ],
+  "toc": [
+    {
+      "title": "Logistical Challenges in Shipping Heavy & Chemical Freight",
+      "target": "#heavy-industry-challenges"
+    },
+    {
+      "title": "The Standardized Chemical Pallet Series (CP Pallets)",
+      "target": "#chemical-pallets-standards"
+    },
+    {
+      "title": "Engineering Specifications for Heavy-Duty Platforms",
+      "target": "#heavy-duty-specs"
+    },
+    {
+      "title": "Safety Factors and Load-Bearing Capacity",
+      "target": "#safety-standards"
+    },
+    {
+      "title": "Phytosanitary & ISPM-15 Treatment for Petrochemical Exports",
+      "target": "#treatment-compliance"
+    },
+    {
+      "title": "Best Practices in Storage and Handling of Heavy Loads",
+      "target": "#storage-transport-best-practices"
+    }
+  ],
+  "content": "\n      <div class=\"space-y-6 text-left leading-relaxed text-gray-200\">\n        <section class=\"border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg\">\n          <h2 id=\"heavy-industry-challenges\" class=\"text-xl font-bold text-accent mb-2\">Logistical Challenges in Shipping Heavy & Chemical Freight</h2>\n          <p class=\"text-sm text-gray-300\">\n            Chemicals, fertilizers, cement, and metal ores are typically packed in massive Jumbo Bags or industrial drums. This heavy weight exerts massive concentrated loads on supporting structures. Any mechanical failure risks hazardous material spills and severe workplace accidents, necessitating specialized heavy-duty design standards.\n          </p>\n        </section>\n\n        <section>\n          <h2 id=\"chemical-pallets-standards\" class=\"text-xl font-bold text-white border-b border-border pb-1\">The Standardized Chemical Pallet Series (CP Pallets)</h2>\n          <p class=\"text-sm text-gray-300 mt-2\">\n            The European Chemical Industry Association developed the CP series (CP1 to CP9) specifically for chemical freight. The most widely used models in Egyptian industrial hubs include:\n          </p>\n          <ul class=\"list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2\">\n            <li><strong>CP1 (1000 x 1200 mm):</strong> Ideal for boxed chemicals, featuring tightly spaced top decks.</li>\n            <li><strong>CP3 (1140 x 1140 mm):</strong> A square platform designed to fit shipping containers perfectly without lateral gaps, widely used for raw plastics and polymer grains in big bags.</li>\n            <li><strong>CP9 (1140 x 1140 mm):</strong> Reinforced with a full bottom perimeter (double-deck layout), supporting vertical stacking and heavy steel drums.</li>\n          </ul>\n        </section>\n\n        <section>\n          <h2 id=\"heavy-duty-specs\" class=\"text-xl font-bold text-white border-b border-border pb-1\">Engineering Specifications for Heavy-Duty Platforms</h2>\n          <p class=\"text-sm text-gray-300 mt-2\">\n            Heavy-duty pallets rely on precise lumber selection and assembly specifications:\n          </p>\n          <ul class=\"list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2\">\n            <li><strong>Timber Thickness:</strong> Top deck boards have a thickness of 22 mm to 25 mm to withstand high bending moments.</li>\n            <li><strong>High-Density Lumber:</strong> Constructed using solid, knot-free beech wood or dense structural softwoods.</li>\n            <li><strong>Cross-Nailing Protocols:</strong> 90 mm galvanized ring-shank nails are driven in cross patterns to prevent joint loosening from container transport vibrations.</li>\n          </ul>\n        </section>\n\n        <section>\n          <h2 id=\"safety-standards\" class=\"text-xl font-bold text-white border-b border-border pb-1\">Safety Factors and Load-Bearing Capacity</h2>\n          <p class=\"text-sm text-gray-300 mt-2\">\n            In chemical logistics, structural integrity is directly linked to workplace safety:\n          </p>\n          <ul class=\"list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2\">\n            <li><strong>Reduced Slatted Gaps:</strong> Gaps between top boards are kept below 4 cm to prevent flexible bag materials from sagging or tearing.</li>\n            <li><strong>Rounded Edge Bevels:</strong> Boards are planed and rounded to prevent sharp corners from puncturing polymer bags.</li>\n            <li><strong>Recessed Fasteners:</strong> All nails are driven completely flush or below the surface to protect drums from punctures.</li>\n          </ul>\n        </section>\n      </div>\n    "
+},
   ...palletSizeArticlesEn,
 ];
 

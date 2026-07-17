@@ -7,7 +7,7 @@ export const palletBlockSolidArticle: Article = {
   date: "2024-12-05",
   author: "",
   readTime: "5 دقائق",
-  image: "/images/articles/pallet-block-solid-detail.jpg",
+  image: "/images/articles/pallet-block-solid.webp",
   category: "مقاسات وأبعاد البالتات",
   categoryId: "sizes",
   keywords: [

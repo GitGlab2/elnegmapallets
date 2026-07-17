@@ -7,7 +7,7 @@ export const bestPalletFactoryEgyptArticle: Article = {
   date: "2024-12-15",
   author: "",
   readTime: "5 دقائق",
-  image: "/images/articles/best-pallet-factory.png",
+  image: "/images/articles/best-pallet-factory.webp",
   category: "أدلة المشتريات والجمارك",
   categoryId: "procurement",
   keywords: [

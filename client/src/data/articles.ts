@@ -1,4 +1,8 @@
 import { Article } from "./articles-types";
+import { ispm15GuideEgyptArticle } from "./articles/ispm-15-guide-egypt";
+import { customPalletDesignArticle } from "./articles/custom-pallet-design-specifications";
+import { palletRecyclingRepairReuseArticle } from "./articles/pallet-recycling-repair-reuse";
+import { palletsPetrochemicalHeavyIndustryArticle } from "./articles/pallets-petrochemical-heavy-industry";
 import { palletPricesEgyptArticle } from "./articles/pallet-prices-egypt";
 import { woodTypesForPalletsArticle } from "./articles/wood-types-for-pallets";
 import { palletsFoodPharmaceuticalArticle } from "./articles/pallets-food-pharmaceutical";
@@ -72,7 +76,11 @@ const rawArticles: Article[] = [
   wholesalePallets10thRamadanArticle,
   wholesalePallets6thOctoberArticle,
   wholesalePalletsSadatCityArticle,
-  ...palletSizeArticlesAr,
+    ispm15GuideEgyptArticle,
+  customPalletDesignArticle,
+  palletRecyclingRepairReuseArticle,
+  palletsPetrochemicalHeavyIndustryArticle,
+...palletSizeArticlesAr,
 ];
 
 export const articles = rawArticles.map(article => ({

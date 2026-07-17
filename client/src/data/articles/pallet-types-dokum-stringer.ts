@@ -7,7 +7,7 @@ export const palletTypesDokumStringerArticle: Article = {
   date: "2024-11-10",
   author: "",
   readTime: "6 دقائق",
-  image: "/images/articles/pallet-types-dokum-stringer.jpg",
+  image: "/images/articles/pallet-types-dokum-stringer.webp",
   category: "مقاسات وأبعاد البالتات",
   categoryId: "sizes",
   keywords: [

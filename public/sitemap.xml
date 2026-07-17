@@ -197,6 +197,31 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://elnegmapallets.com/articles/ispm-15-guide-egypt/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/articles/custom-pallet-design-specifications/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/articles/pallet-recycling-repair-reuse/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/articles/pallets-petrochemical-heavy-industry/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- English Articles -->
   <url>
     <loc>https://elnegmapallets.com/en/articles/pallet-prices-egypt/</loc>
@@ -393,6 +418,30 @@
   <url>
     <loc>https://elnegmapallets.com/en/articles/wholesale-pallets-sadat-city/</loc>
     <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+<url>
+    <loc>https://elnegmapallets.com/en/articles/ispm-15-guide-egypt/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/en/articles/custom-pallet-design-specifications/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/en/articles/pallet-recycling-repair-reuse/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/en/articles/pallets-petrochemical-heavy-industry/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
