@@ -1,4 +1,5 @@
 import { Article } from "./articles-types";
+import { airFreightFruitExportPalletArticle } from "./articles/air-freight-fruit-export-pallets";
 import { ispm15GuideEgyptArticle } from "./articles/ispm-15-guide-egypt";
 import { customPalletDesignArticle } from "./articles/custom-pallet-design-specifications";
 import { palletRecyclingRepairReuseArticle } from "./articles/pallet-recycling-repair-reuse";
@@ -48,6 +49,7 @@ function getDeterministicOldDate(slug: string): string {
 
 // Ordered by actual creation/addition order: Newest additions at the top, older articles towards the end.
 const rawArticles: Article[] = [
+  airFreightFruitExportPalletArticle,
   ispm15GuideEgyptArticle,
   customPalletDesignArticle,
   palletRecyclingRepairReuseArticle,

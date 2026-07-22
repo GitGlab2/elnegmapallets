@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Container, Package, Calculator, ArrowRight, Truck, Info, Check } from "lucide-react";
+import { trackGA4Event } from "@/utils/analytics";
 
 interface ContainerSpec {
   name: string;
@@ -77,6 +78,16 @@ export default function ContainerCalculator({ lang = "ar" }: { lang?: "ar" | "en
     const palletName = selectedSizeIndex === 3 
       ? `مقاس مخصص (${palletLength}×${palletWidth} مم)`
       : STANDARD_PALLET_SIZES[selectedSizeIndex].name;
+
+    trackGA4Event("generate_lead", {
+      event_category: "b2b_tools",
+      event_label: "container_calculator",
+      container_type: container.name,
+      pallet_size: palletName,
+      total_pallets: totalCapacity,
+      value: 1
+    });
+    trackGA4Event("whatsapp_click", { tool: "container_calculator" });
 
     const message = `السلام عليكم ورحمة الله وبركاته،
 أود الاستفسار عن توريد طلبيات خشبية وفق حسابات الحاوية التالية:

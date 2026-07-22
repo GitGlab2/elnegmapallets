@@ -3,6 +3,73 @@ import { palletSizeArticlesEn } from "./pallet-size-articles";
 
 const rawArticlesEn: Article[] = [
   {
+    slug: "air-freight-fruit-export-pallets",
+    title: "Air Freight & Fruit Export Pallets: Complete Specification Guide for Agricultural Shipping",
+    description: "Engineering and logistics guide for Egyptian agricultural exporters. Learn about air freight pallets (99×119 cm), French specs (120×100 cm), and ISPM-15 phytosanitary treatment.",
+    date: "2024-10-18",
+    author: "",
+    readTime: "8 mins",
+    image: "/images/sections/international-standards.webp",
+    category: "Export & Shipping Logistics",
+    categoryId: "export",
+    keywords: [
+      "air freight fruit export pallets",
+      "grape export pallets",
+      "peach shipping pallets",
+      "French spec pallet 120x100",
+      "air cargo pallet 99x119",
+      "ISPM 15 heat treatment fruit export"
+    ],
+    toc: [
+      { title: "Agricultural Export Packaging Overview", target: "#introduction" },
+      { title: "1. Air Freight Pallets (99×119 cm)", target: "#air-freight" },
+      { title: "2. French Specification Pallets (120×100 cm)", target: "#french-spec" },
+      { title: "3. Middle East Standard Pallets for Sea Freight", target: "#middle-east-spec" },
+      { title: "4. ISPM-15 Phytosanitary Heat Treatment", target: "#phytosanitary" }
+    ],
+    content: `
+      <div class="space-y-6 text-left leading-relaxed text-gray-200">
+        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
+          <h2 id="introduction" class="text-xl font-bold text-accent mb-2">Agricultural Export Packaging Overview</h2>
+          <p class="text-sm text-gray-300">
+            Egypt is a premier global exporter of citrus, grapes, peaches, and fresh produce. Protecting these delicate crops requires selecting specialized <strong>air freight and maritime export wooden pallets</strong> designed to withstand transport stress while complying with international import regulations.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="air-freight" class="text-lg font-bold text-white mb-2">1. Air Freight Pallets (99×119 cm)</h2>
+          <p class="text-sm text-gray-300 mb-3">
+            Air cargo pallets measuring <strong>99 × 119 cm</strong> are engineered specifically for rapid air transport of high-value produce like fresh grapes and peaches destined for European distribution:
+          </p>
+          <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
+            <li><strong>Lightweight Design:</strong> Optimized timber thickness reduces tare weight to lower air freight fees.</li>
+            <li><strong>Load Capacity:</strong> 750 kg dynamic load for air transit, extendable to 1,250 kg for fast reefer shipping.</li>
+            <li><strong>Cooling Airflow:</strong> Precision slat spacing enables cold air circulation inside cargo bays.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="french-spec" class="text-lg font-bold text-white mb-2">2. French Specification Pallets (120×100 cm)</h2>
+          <p class="text-sm text-gray-300 mb-3">
+            The <strong>French spec pallet (120 × 100 cm)</strong> is the industry standard for shipping produce to French retail chains and European distribution hubs:
+          </p>
+          <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
+            <li><strong>Truck Compatibility:</strong> Fits reefer trailers perfectly with zero wasted cargo space.</li>
+            <li><strong>High Load Rating:</strong> Supports up to 1,250 kg dynamic load and 3,000 kg static racking load.</li>
+            <li><strong>Moisture Resistance:</strong> Constructed from seasoned timber resistant to condensation during cold storage.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="phytosanitary" class="text-lg font-bold text-white mb-2">3. ISPM-15 Phytosanitary Heat Treatment</h2>
+          <p class="text-sm text-gray-300">
+            We provide ISPM-15 compliant heat-treated (HT) wooden pallets ready for direct export, certified with official stamps for hassle-free customs clearance worldwide.
+          </p>
+        </section>
+      </div>
+    `
+  },
+  {
     slug: "wooden-crates-pallet-collars-export",
     title: "Open vs. Closed Wooden Crates for Shipping: Which to Choose?",
     description: "A comprehensive comparison between open and closed wooden crates and pallet collars used in export and international shipping. Learn about custom packaging designs and ISPM-15 compliance.",

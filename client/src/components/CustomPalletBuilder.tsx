@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import { ShieldCheck, Send, CheckCircle2, Sliders, AlertCircle } from "lucide-react";
 
+import { trackGA4Event } from "@/utils/analytics";
+
 export default function CustomPalletBuilder({ lang = "ar" }: { lang?: "ar" | "en" }) {
   const isEn = lang === "en";
   const [palletType, setPalletType] = useState<string>("block_4way");
@@ -64,6 +66,17 @@ export default function CustomPalletBuilder({ lang = "ar" }: { lang?: "ar" | "en
     const selectedDimLabel = dimensions === "custom" ? `مقاس خاص (${customDimensions})` : dimensions;
     const selectedTreatmentObj = treatmentOptions.find((t) => t.id === woodTreatment);
     const selectedIndustryObj = industries.find((i) => i.id === industry);
+
+    trackGA4Event("generate_lead", {
+      event_category: "b2b_tools",
+      event_label: "custom_pallet_builder",
+      pallet_type: palletType,
+      quantity: quantity,
+      wood_treatment: woodTreatment,
+      industry: industry,
+      value: 1
+    });
+    trackGA4Event("whatsapp_click", { tool: "custom_pallet_builder" });
 
     const message = `السلام عليكم ورحمة الله وبركاته،
 يرجى إفادتنا بعرض سعر مخصص وتوصية فنية لطلب توريد كميات وفق التوصيف الفني التالي:
