@@ -18,6 +18,8 @@ import {
   Calendar,
   Clock,
   Search,
+  Calculator,
+  Wrench,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { matchSearchQuery } from "@/utils/search";
@@ -436,6 +438,29 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
                   );
                 })}
               </div>
+            </div>
+
+            {/* Widget 2.5: Interactive B2B Tools Button Widget */}
+            <div className="bg-gradient-to-br from-[#202534] to-[#1c1f2a] border border-border/50 p-5 rounded-2xl shadow-lg space-y-3">
+              <div className="flex items-center gap-2 text-secondary text-xs font-bold">
+                <Wrench className="w-4 h-4" />
+                <span>أدوات وحاسبات هندسية</span>
+              </div>
+              <h4 className="text-sm font-bold text-white leading-snug">
+                {isEn ? "Pallet & Container Calculator" : "حاسبة استيعاب الحاويات ومخصص البالتات"}
+              </h4>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                {isEn 
+                  ? "Calculate pallet loading efficiency for 20ft & 40ft containers and specify custom B2B pallet dimensions."
+                  : "احسب عدد البالتات الأمثل للحاويات وقم بتخصيص المواصفات الفنية لشحناتك المباشرة."}
+              </p>
+              <a
+                href={isEn ? "/en/articles/tools/" : "/articles/tools/"}
+                className="inline-flex items-center justify-between w-full bg-secondary hover:bg-secondary/90 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition-all shadow-md"
+              >
+                <span>{isEn ? "Open Interactive Tools" : "افتح الأدوات التفاعلية"}</span>
+                {isEn ? <ArrowRight className="w-3.5 h-3.5" /> : <ArrowLeft className="w-3.5 h-3.5" />}
+              </a>
             </div>
 
             {/* Widget 3: Quick CTA */}

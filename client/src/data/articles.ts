@@ -7,14 +7,12 @@ import { palletPricesEgyptArticle } from "./articles/pallet-prices-egypt";
 import { woodTypesForPalletsArticle } from "./articles/wood-types-for-pallets";
 import { palletsFoodPharmaceuticalArticle } from "./articles/pallets-food-pharmaceutical";
 import { palletsWarehouseStorageArticle } from "./articles/pallets-warehouse-storage";
-// Deleted ispm15PhytosanitaryStandardArticle
 import { heatTreatmentVsMethylBromideArticle } from "./articles/heat-treatment-vs-methyl-bromide";
 import { newWoodenPalletsQualityStandardsArticle } from "./articles/new-wooden-pallets-quality-standards";
 import { containerStuffingPhysicsArticle } from "./articles/container-stuffing-physics";
 import { exportingCitrusAgriculturalProductsArticle } from "./articles/exporting-citrus-agricultural-products";
 import { exportingCeramicsHeavyMaterialsArticle } from "./articles/exporting-ceramics-heavy-materials";
 import { exportingChemicalsSafelyArticle } from "./articles/exporting-chemicals-safely";
-// Deleted datesFumigationAlternativesArticle
 import { palletDimensionsStandardsArticle } from "./articles/pallet-dimensions-standards";
 import { palletSizeArticlesAr } from "./pallet-size-articles";
 import { palletTypesDokumStringerArticle } from "./articles/pallet-types-dokum-stringer";
@@ -48,43 +46,41 @@ function getDeterministicOldDate(slug: string): string {
   return `${yyyy}-${mm}-${dd}`;
 }
 
+// Ordered by actual creation/addition order: Newest additions at the top, older articles towards the end.
 const rawArticles: Article[] = [
+  ispm15GuideEgyptArticle,
+  customPalletDesignArticle,
+  palletRecyclingRepairReuseArticle,
+  palletsPetrochemicalHeavyIndustryArticle,
   woodenCratesPalletCollarsExportArticle,
-  palletPricesEgyptArticle,
   bestPalletFactoryEgyptArticle,
   wholesalePalletsEgyptArticle,
   woodVsPlasticPalletsArticle,
   palletsPotatoVegetablesExportArticle,
   palletsFactoriesWarehousesArticle,
+  heatTreatmentHtPalletsArticle,
+  methylBromideFumigationPalletsArticle,
+  wholesalePallets10thRamadanArticle,
+  wholesalePallets6thOctoberArticle,
+  wholesalePalletsSadatCityArticle,
+  palletPricesEgyptArticle,
   woodTypesForPalletsArticle,
   palletTypesDokumStringerArticle,
   palletRunnersMarainArticle,
   palletBlockSolidArticle,
   palletsFoodPharmaceuticalArticle,
   palletsWarehouseStorageArticle,
-  // Deleted ispm15PhytosanitaryStandardArticle
   heatTreatmentVsMethylBromideArticle,
   newWoodenPalletsQualityStandardsArticle,
   containerStuffingPhysicsArticle,
   exportingCitrusAgriculturalProductsArticle,
   exportingCeramicsHeavyMaterialsArticle,
   exportingChemicalsSafelyArticle,
-  // Deleted datesFumigationAlternativesArticle
   palletDimensionsStandardsArticle,
-  heatTreatmentHtPalletsArticle,
-  methylBromideFumigationPalletsArticle,
-  wholesalePallets10thRamadanArticle,
-  wholesalePallets6thOctoberArticle,
-  wholesalePalletsSadatCityArticle,
-    ispm15GuideEgyptArticle,
-  customPalletDesignArticle,
-  palletRecyclingRepairReuseArticle,
-  palletsPetrochemicalHeavyIndustryArticle,
-...palletSizeArticlesAr,
+  ...palletSizeArticlesAr,
 ];
 
 export const articles = rawArticles.map(article => ({
   ...article,
-  date: getDeterministicOldDate(article.slug)
+  date: article.date || getDeterministicOldDate(article.slug)
 }));
-

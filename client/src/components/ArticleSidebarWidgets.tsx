@@ -174,3 +174,26 @@ export function ArticleShareWidget({ title, description, lang = "ar" }: SharePro
     <ShareButton title={title} description={description} lang={lang} className="w-full" />
   );
 }
+
+export function ArticleToolsCard({ lang = "ar" }: { lang?: "ar" | "en" }) {
+  const isEn = lang === "en";
+  return (
+    <div className="bg-[#1c1f2a] border border-border/40 rounded-2xl p-5 shadow-lg flex flex-col gap-3">
+      <h3 className="text-xs font-bold uppercase tracking-wider text-secondary border-b border-border/20 pb-2">
+        {isEn ? "Interactive Tools" : "أدوات وحاسبات هندسية"}
+      </h3>
+      <p className="text-xs text-muted-foreground leading-relaxed">
+        {isEn
+          ? "Calculate pallet capacity per container (20ft/40ft) and specify technical pallet requirements."
+          : "احسب عدد البالتات واستيعاب الحاويات للشحن، وقم بتحديد المواصفات الفنية لشحنتك."}
+      </p>
+      <a
+        href={isEn ? "/en/articles/tools/" : "/articles/tools/"}
+        className="w-full inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary/90 text-white font-bold text-xs py-2.5 rounded-xl transition-all shadow"
+      >
+        <span>{isEn ? "Open Container Calculator" : "حاسبة الحاويات والبالتات"}</span>
+        {isEn ? <ArrowRight className="w-3.5 h-3.5" /> : <ArrowLeft className="w-3.5 h-3.5" />}
+      </a>
+    </div>
+  );
+}

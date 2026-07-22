@@ -5,7 +5,7 @@ import { articles } from "@/data/articles";
 import { articlesEn } from "@/data/articles-en";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, Calendar, Clock, Phone } from "lucide-react";
-import { TableOfContents, ArticleContactCard, ArticleShareWidget, RelatedArticles } from "@/components/ArticleSidebarWidgets";
+import { TableOfContents, ArticleContactCard, ArticleShareWidget, RelatedArticles, ArticleToolsCard } from "@/components/ArticleSidebarWidgets";
 
 function formatBlogDate(dateStr: string, isEn: boolean): string {
   const parts = dateStr.split("-");
@@ -331,6 +331,9 @@ export default function ArticleDetails({ slug, lang = "ar" }: { slug: string; la
               allArticles={currentArticles}
               lang={lang}
             />
+            <div className="hidden lg:block">
+              <ArticleToolsCard lang={lang} />
+            </div>
             <div className="hidden lg:block">
               <ArticleContactCard lang={lang} />
             </div>
