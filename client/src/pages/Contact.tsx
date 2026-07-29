@@ -72,9 +72,9 @@ export default function Contact({ lang = "ar" }: { lang?: "ar" | "en" }) {
             >
               <div className="flex items-stretch gap-4 mb-8 justify-start">
                 <div className="w-1.5 bg-secondary rounded-full" />
-                <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
+                <h1 className="text-4xl md:text-5xl font-black text-white leading-tight">
                   {content.title}
-                </h2>
+                </h1>
               </div>
 
               {/* Direct links list matching Slide 17 style */}

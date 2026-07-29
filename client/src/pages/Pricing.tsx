@@ -181,9 +181,9 @@ export default function Pricing({ lang = "ar" }: { lang?: "ar" | "en" }) {
             <div className="flex items-stretch gap-3 md:gap-4 mb-4 md:mb-6 justify-start">
               <div className="w-1 md:w-1.5 bg-secondary rounded-full" />
               <div>
-                <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-white leading-tight mb-1 md:mb-2">
+                <h1 className="text-2xl sm:text-3xl md:text-5xl font-black text-white leading-tight mb-1 md:mb-2">
                   {content.title1}<br />{content.title2}
-                </h2>
+                </h1>
               </div>
             </div>
 

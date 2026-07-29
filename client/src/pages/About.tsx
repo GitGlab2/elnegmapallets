@@ -76,9 +76,9 @@ export default function About({ lang = "ar" }: { lang?: "ar" | "en" }) {
           >
             <div className="flex items-stretch gap-4 mb-6 justify-start">
               <div className="w-1.5 bg-secondary rounded-full" />
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight">
                 {content.title}
-              </h2>
+              </h1>
             </div>
 
             <p className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed mb-4 md:mb-6">

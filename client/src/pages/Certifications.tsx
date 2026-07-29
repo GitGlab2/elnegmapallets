@@ -107,9 +107,9 @@ export function CertificationsList({ lang = "ar" }: { lang?: "ar" | "en" }) {
 
             <div className="flex items-stretch gap-3 md:gap-4 justify-start">
               <div className="w-1 md:w-1.5 bg-secondary rounded-full" />
-              <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-white leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl font-black text-white leading-tight">
                 {content.title}
-              </h2>
+              </h1>
             </div>
           </motion.div>
 

@@ -96,8 +96,24 @@ export default function Gallery({ lang = "ar" }: { lang?: "ar" | "en" }) {
   const isRtl = lang === "ar";
   const displayDotIndex = currentIndex >= totalSlides ? 0 : currentIndex;
 
+  const h1Title = isRtl
+    ? "معرض صور مصنع البالتات الخشبية وخطوط الإنتاج"
+    : "Factory Gallery & Wooden Pallet Production Lines";
+
   return (
-    <div className="container py-4 md:py-8" id="gallery-slider">
+    <div className="container py-8 md:py-12" id="gallery-slider">
+      {/* Page Header with Clean H1 */}
+      <div className="max-w-3xl mx-auto text-center mb-8">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground mb-3 leading-tight">
+          {h1Title}
+        </h1>
+        <p className="text-sm md:text-base text-muted-foreground">
+          {isRtl 
+            ? "صور حية لإنتاج وتجميع وتخزين البالتات الخشبية المعالجة حرارياً بختم ISPM-15 بمصنع النجمة."
+            : "Live photos of wooden pallet manufacturing processes, container loading, and storage at El Negma factory."}
+        </p>
+      </div>
+
       <div
         className="max-w-2xl mx-auto rounded-2xl md:rounded-3xl border border-border/30 shadow-2xl bg-[#181b24] p-3 md:p-5 flex flex-col gap-4 relative"
         onMouseEnter={stopAutoplay}

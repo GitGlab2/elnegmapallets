@@ -137,9 +137,9 @@ export default function Clients({ lang = "ar" }: { lang?: "ar" | "en" }) {
         >
           <div className="flex items-stretch gap-3 md:gap-4 mb-4 md:mb-6 justify-start">
             <div className="w-1.5 md:w-2 bg-secondary rounded-full" />
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-[#181b24] leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-black text-[#181b24] leading-tight">
               {content.title}
-            </h2>
+            </h1>
           </div>
 
           <p className="text-sm md:text-lg text-gray-600 leading-relaxed mb-6">
