@@ -68,6 +68,14 @@
   RewriteEngine On
   RewriteBase /
 
+  # 301 Redirect HTTP to HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://elnegmapallets.com/$1 [R=301,L]
+
+  # 301 Redirect www to non-www
+  RewriteCond %{HTTP_HOST} ^www\.elnegmapallets\.com$ [NC]
+  RewriteRule ^(.*)$ https://elnegmapallets.com/$1 [R=301,L]
+
   # Don't rewrite Google verification file
   RewriteRule ^google[a-z0-9]+\.html$ - [L]
 
@@ -90,3 +98,8 @@ ErrorDocument 404 /404.html
   Header set X-Frame-Options "SAMEORIGIN"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
+
+# Block deployment helper scripts from public access
+<FilesMatch "^(unzip|deploy)\.php$">
+  Require all denied
+</FilesMatch>

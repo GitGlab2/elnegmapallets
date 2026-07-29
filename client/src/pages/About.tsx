@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 
 export default function About({ lang = "ar" }: { lang?: "ar" | "en" }) {

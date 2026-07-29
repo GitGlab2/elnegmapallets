@@ -61,15 +61,17 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
   }, [pathname]);
 
   const navItems = isEn ? [
-    { name: "About Us", path: "/en#about-section", isAnchor: true },
-    { name: "Products", path: "/en#products-section", isAnchor: true },
-    { name: "Contact Us", path: "/en#contact-section", isAnchor: true },
-    { name: "Blog", path: "/en/articles", isAnchor: false },
+    { name: "About Us", path: "/en/#about-section", isAnchor: true },
+    { name: "Products", path: "/en/products/", isAnchor: false },
+    { name: "Services", path: "/en/services/", isAnchor: false },
+    { name: "Blog", path: "/en/articles/", isAnchor: false },
+    { name: "Contact Us", path: "/en/contact/", isAnchor: false },
   ] : [
     { name: "من نحن", path: "/#about-section", isAnchor: true },
-    { name: "المنتجات", path: "/#products-section", isAnchor: true },
-    { name: "تواصل معنا", path: "/#contact-section", isAnchor: true },
-    { name: "المدونة", path: "/articles", isAnchor: false },
+    { name: "المنتجات", path: "/products/", isAnchor: false },
+    { name: "الخدمات", path: "/services/", isAnchor: false },
+    { name: "المدونة", path: "/articles/", isAnchor: false },
+    { name: "تواصل معنا", path: "/contact/", isAnchor: false },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string, isAnchor: boolean) => {
@@ -133,12 +135,20 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
       switcherText: "English",
       footerDesc: "الشركة رقم 1 في مصر لتصنيع البالتات الخشبية. خبرة تزيد عن 18 عامًا في خدمة كبرى الشركات والمصانع.",
       footerQuickLinks: "روابط سريعة",
-      footerProducts: "المنتجات",
+      footerProducts: "منتجات البالتات",
       footerProductsList: [
-        { name: "بالتة 100 × 120", path: "/articles/pallet-size-120x100-industrial-pallet", isAnchor: false },
-        { name: "بالتة يورو (Euro Pallet)", path: "/articles/pallet-size-120x80-euro-pallet", isAnchor: false },
-        { name: "تصميمات مخصصة", path: "/#contact-section", isAnchor: true },
-        { name: "معالجة حرارية (HT)", path: "/articles/heat-treatment-vs-methyl-bromide", isAnchor: false }
+        { name: "بالتة يورو (120×80)", path: "/products/120x80-euro-pallet/", isAnchor: false },
+        { name: "بالتة صناعية (120×100)", path: "/products/120x100-industrial-pallet/", isAnchor: false },
+        { name: "بالتة كيماويات (114×114)", path: "/products/114x114-chemical-pallet/", isAnchor: false },
+        { name: "بالتة مربعة (120×120)", path: "/products/120x120-heavy-pallet/", isAnchor: false },
+        { name: "بالتة GMA أمريكية", path: "/products/121x101-gma-pallet/", isAnchor: false }
+      ],
+      footerServices: "خدمات المصنع",
+      footerServicesList: [
+        { name: "معالجة حرارية ISPM-15", path: "/services/heat-treatment-ht/", isAnchor: false },
+        { name: "توريد كميات للمصانع", path: "/services/bulk-supply/", isAnchor: false },
+        { name: "تصنيع هندسي مخصص", path: "/services/custom-manufacturing/", isAnchor: false },
+        { name: "صناديق خشبية وإطارات", path: "/services/wooden-crates-collars/", isAnchor: false }
       ],
       footerContact: "تواصل معنا",
       footerAddress: "بني سويف - المنطقة الصناعية بياض العرب (بجوار علوم إدارية)",
@@ -157,12 +167,20 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
       switcherText: "العربية",
       footerDesc: "The #1 company in Egypt for wooden pallets manufacturing. Over 18 years of experience serving major companies and factories.",
       footerQuickLinks: "Quick Links",
-      footerProducts: "Products",
+      footerProducts: "Pallet Products",
       footerProductsList: [
-        { name: "Pallet 100 × 120", path: "/en/articles/pallet-size-120x100-industrial-pallet", isAnchor: false },
-        { name: "Euro Pallet (EPAL)", path: "/en/articles/pallet-size-120x80-euro-pallet", isAnchor: false },
-        { name: "Custom Designs", path: "/en#contact-section", isAnchor: true },
-        { name: "Heat Treatment (HT)", path: "/en/articles/heat-treatment-vs-methyl-bromide", isAnchor: false }
+        { name: "Euro Pallet (120x80)", path: "/en/products/120x80-euro-pallet/", isAnchor: false },
+        { name: "Industrial Pallet (120x100)", path: "/en/products/120x100-industrial-pallet/", isAnchor: false },
+        { name: "Chemical Pallet (114x114)", path: "/en/products/114x114-chemical-pallet/", isAnchor: false },
+        { name: "Heavy Duty Pallet (120x120)", path: "/en/products/120x120-heavy-pallet/", isAnchor: false },
+        { name: "GMA American Pallet", path: "/en/products/121x101-gma-pallet/", isAnchor: false }
+      ],
+      footerServices: "Services",
+      footerServicesList: [
+        { name: "ISPM-15 Heat Treatment", path: "/en/services/heat-treatment-ht/", isAnchor: false },
+        { name: "Bulk Industrial Supply", path: "/en/services/bulk-supply/", isAnchor: false },
+        { name: "Custom Pallet Engineering", path: "/en/services/custom-manufacturing/", isAnchor: false },
+        { name: "Export Wooden Crates", path: "/en/services/wooden-crates-collars/", isAnchor: false }
       ],
       footerContact: "Contact Us",
       footerAddress: "Beni Suef - Bayad Al-Arab Industrial Zone, Egypt",
@@ -339,7 +357,7 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
       {/* Footer */}
       <footer className="bg-muted/30 border-t border-border mt-20">
         <div className="container py-12 md:py-16">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
             <div className="col-span-1 md:col-span-1">
               <div className="flex items-center gap-3 mb-4">
                 <img 
@@ -410,6 +428,24 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
                     >
                       <span className="text-muted-foreground hover:text-primary transition-colors text-sm cursor-pointer">
                         {prod.name}
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-bold text-lg mb-4 text-foreground">{content.footerServices}</h3>
+              <ul className="space-y-3">
+                {content.footerServicesList.map((srv, index) => (
+                  <li key={index}>
+                    <a 
+                      href={srv.path}
+                      onClick={(e) => handleNavClick(e, srv.path, srv.isAnchor)}
+                    >
+                      <span className="text-muted-foreground hover:text-primary transition-colors text-sm cursor-pointer">
+                        {srv.name}
                       </span>
                     </a>
                   </li>

@@ -33,11 +33,11 @@ export const metadata: Metadata = {
     icon: "/images/brand/company-logo.webp",
   },
   alternates: {
-    canonical: "https://elnegmapallets.com/en",
+    canonical: "https://elnegmapallets.com/en/",
     languages: {
-      "ar": "https://elnegmapallets.com",
-      "en": "https://elnegmapallets.com/en",
-      "x-default": "https://elnegmapallets.com",
+      "ar-EG": "https://elnegmapallets.com/",
+      "en": "https://elnegmapallets.com/en/",
+      "x-default": "https://elnegmapallets.com/",
     },
   },
   openGraph: {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     description:
       "18+ years of experience manufacturing high-quality ISPM-15 heat-treated wooden pallets for export and local markets across Egypt and the Middle East.",
     images: ["/images/brand/company-logo.webp"],
-    url: "https://elnegmapallets.com/en",
+    url: "https://elnegmapallets.com/en/",
     siteName: "El Negma Pallets",
     locale: "en_US",
   },

@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "sitemap": "tsx scripts/generate-sitemap.ts",
+    "build": "tsx scripts/generate-sitemap.ts && next build",
     "start": "next start",
     "check": "tsc --noEmit",
     "format": "prettier --write ."

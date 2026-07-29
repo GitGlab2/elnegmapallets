@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Award, Globe2, Flame } from "lucide-react";
 

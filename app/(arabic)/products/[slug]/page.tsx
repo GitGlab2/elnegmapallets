@@ -14,6 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!product) {
     return {
       title: "المنتج غير موجود | شركة النجمة",
+      robots: { index: false },
     };
   }
   const productUrl = `${SITE_URL}/products/${slug}/`;
@@ -67,17 +68,6 @@ export default async function Page({ params }: Props) {
     brand: {
       "@type": "Brand",
       name: "شركة النجمة للبالتات الخشبية",
-    },
-    offers: {
-      "@type": "Offer",
-      url: productUrl,
-      priceCurrency: "EGP",
-      availability: "https://schema.org/InStock",
-      itemCondition: "https://schema.org/NewCondition",
-      seller: {
-        "@type": "Organization",
-        name: "شركة النجمة لتصنيع البالتات الخشبية",
-      },
     },
   };
 

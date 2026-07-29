@@ -14,6 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!product) {
     return {
       title: "Product Not Found | El Negma Pallets",
+      robots: { index: false },
     };
   }
   const productUrl = `${SITE_URL}/en/products/${slug}/`;
@@ -67,17 +68,6 @@ export default async function Page({ params }: Props) {
     brand: {
       "@type": "Brand",
       name: "El Negma Pallets",
-    },
-    offers: {
-      "@type": "Offer",
-      url: productUrl,
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      itemCondition: "https://schema.org/NewCondition",
-      seller: {
-        "@type": "Organization",
-        name: "El Negma Pallets Manufacturing",
-      },
     },
   };
 
