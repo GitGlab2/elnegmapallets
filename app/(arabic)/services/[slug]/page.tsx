@@ -62,9 +62,7 @@ export default async function Page({ params }: Props) {
     name: service.title,
     serviceType: service.category,
     provider: {
-      "@type": "LocalBusiness",
-      name: "شركة النجمة للبالتات الخشبية",
-      url: SITE_URL,
+      "@id": "https://elnegmapallets.com/#organization",
     },
     areaServed: {
       "@type": "Country",

@@ -56,6 +56,15 @@ export default async function Page({ params }: Props) {
     ? new URL(product.image, SITE_URL).toString()
     : undefined;
 
+  const parseNum = (val: any): number | undefined => {
+    if (typeof val === "number" && !isNaN(val)) return Math.round(val);
+    if (typeof val === "string") {
+      const parsed = parseFloat(val.replace(/[^0-9.]/g, ""));
+      return isNaN(parsed) ? undefined : Math.round(parsed);
+    }
+    return undefined;
+  };
+
   const productSchema = product && {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -69,6 +78,72 @@ export default async function Page({ params }: Props) {
       "@type": "Brand",
       name: "El Negma Pallets",
     },
+    manufacturer: {
+      "@id": "https://elnegmapallets.com/#organization",
+    },
+    ...(parseNum(product.specs?.width) !== undefined && {
+      width: {
+        "@type": "QuantitativeValue",
+        value: parseNum(product.specs.width),
+        unitCode: "MMT",
+      },
+    }),
+    ...(parseNum(product.specs?.length) !== undefined && {
+      depth: {
+        "@type": "QuantitativeValue",
+        value: parseNum(product.specs.length),
+        unitCode: "MMT",
+      },
+    }),
+    ...(parseNum(product.specs?.height) !== undefined && {
+      height: {
+        "@type": "QuantitativeValue",
+        value: parseNum(product.specs.height),
+        unitCode: "MMT",
+      },
+    }),
+    ...(parseNum(product.specs?.weight) !== undefined && {
+      weight: {
+        "@type": "QuantitativeValue",
+        value: parseNum(product.specs.weight),
+        unitCode: "KGM",
+      },
+    }),
+    ...(product.specs?.woodType && {
+      material: product.specs.woodType,
+    }),
+    additionalProperty: [
+      ...(parseNum(product.loads?.static) !== undefined
+        ? [
+            {
+              "@type": "PropertyValue",
+              name: "Static Load Capacity",
+              value: parseNum(product.loads.static),
+              unitCode: "KGM",
+            },
+          ]
+        : []),
+      ...(parseNum(product.loads?.dynamic) !== undefined
+        ? [
+            {
+              "@type": "PropertyValue",
+              name: "Dynamic Load Capacity",
+              value: parseNum(product.loads.dynamic),
+              unitCode: "KGM",
+            },
+          ]
+        : []),
+      ...(parseNum(product.loads?.racking) !== undefined
+        ? [
+            {
+              "@type": "PropertyValue",
+              name: "Racking Load Capacity",
+              value: parseNum(product.loads.racking),
+              unitCode: "KGM",
+            },
+          ]
+        : []),
+    ],
   };
 
   const breadcrumbData = product && {

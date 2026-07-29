@@ -62,9 +62,7 @@ export default async function Page({ params }: Props) {
     name: service.title,
     serviceType: service.category,
     provider: {
-      "@type": "LocalBusiness",
-      name: "El Negma Pallets Manufacturing",
-      url: `${SITE_URL}/en/`,
+      "@id": "https://elnegmapallets.com/#organization",
     },
     areaServed: {
       "@type": "Country",

@@ -177,7 +177,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={cairo.className}>
+      <body className={cairo.className} suppressHydrationWarning>
         <GoogleAnalytics />
         <ErrorBoundary>
           <ThemeProvider defaultTheme="light">
