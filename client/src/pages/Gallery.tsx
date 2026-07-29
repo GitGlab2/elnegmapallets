@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, X, ArrowLeft, ArrowRight, Package, ShieldCheck, Truck } from "lucide-react";
+import Link from "next/link";
 
 interface GalleryItem {
   src: string;
@@ -156,8 +157,9 @@ export default function Gallery({ lang = "ar" }: { lang?: "ar" | "en" }) {
         </p>
       </div>
 
+      {/* Main Interactive Carousel */}
       <div
-        className="max-w-2xl mx-auto rounded-2xl md:rounded-3xl border border-border/30 shadow-2xl bg-[#181b24] p-3 md:p-5 flex flex-col gap-4 relative"
+        className="max-w-2xl mx-auto rounded-2xl md:rounded-3xl border border-border/30 shadow-2xl bg-[#181b24] p-3 md:p-5 flex flex-col gap-4 relative mb-12"
         onMouseEnter={stopAutoplay}
         onMouseLeave={startAutoplay}
       >
@@ -178,6 +180,7 @@ export default function Gallery({ lang = "ar" }: { lang?: "ar" | "en" }) {
             }}
           >
             {extendedItems.map((item, idx) => {
+              const isClone = idx === totalSlides;
               const realIndex = idx % totalSlides;
               return (
                 <div key={idx} className="w-full shrink-0">
@@ -188,16 +191,19 @@ export default function Gallery({ lang = "ar" }: { lang?: "ar" | "en" }) {
                     >
                       <img
                         src={item.src}
-                        alt={getAlt(item)}
+                        alt={isClone ? "" : getAlt(item)}
+                        aria-hidden={isClone ? "true" : undefined}
                         width={1200}
                         height={1200}
                         loading="lazy"
                         className="w-full aspect-square object-cover transition-transform duration-700 hover:scale-[1.02]"
                       />
                     </div>
-                    <figcaption className="text-center text-xs md:text-sm text-gray-300/90 mt-2.5 px-2 leading-relaxed">
-                      {getCaption(item)}
-                    </figcaption>
+                    {!isClone && (
+                      <figcaption className="text-center text-xs md:text-sm text-gray-300/90 mt-2.5 px-2 leading-relaxed">
+                        {getCaption(item)}
+                      </figcaption>
+                    )}
                   </figure>
                 </div>
               );
@@ -235,6 +241,108 @@ export default function Gallery({ lang = "ar" }: { lang?: "ar" | "en" }) {
               aria-label={`Go to slide ${idx + 1}`}
             />
           ))}
+        </div>
+      </div>
+
+      {/* Static Indexable Image Grid & Substantive Industry Content */}
+      <div className="max-w-4xl mx-auto space-y-12">
+
+        {/* Static Accessible Grid for Crawlers & Fast Visual Browsing */}
+        <div className="space-y-4">
+          <h2 className="text-xl md:text-2xl font-bold text-foreground border-b border-border/40 pb-3">
+            {isRtl ? "صور حية من خطوط التجميع والمستودعات" : "Live Photos from Assembly Lines & Warehouses"}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {items.map((item, idx) => (
+              <figure key={idx} className="m-0 bg-[#181b24] p-3 rounded-2xl border border-border/30 shadow-md flex flex-col justify-between">
+                <div 
+                  className="overflow-hidden rounded-xl cursor-zoom-in aspect-square mb-3"
+                  onClick={() => setActiveImageIndex(idx)}
+                >
+                  <img
+                    src={item.src}
+                    alt={getAlt(item)}
+                    width={600}
+                    height={600}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
+                <figcaption className="text-xs md:text-sm text-gray-300 leading-relaxed text-center px-1">
+                  {getCaption(item)}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+
+        {/* Rich Substantive B2B Text Content */}
+        <div className="bg-[#181b24] p-6 md:p-10 rounded-2xl md:rounded-3xl border border-border/30 shadow-xl space-y-8">
+          
+          {/* Paragraph 1: Manufacturing Lines & Capacity */}
+          <div className="space-y-3">
+            <h3 className="text-lg md:text-xl font-bold text-secondary flex items-center gap-2">
+              <Package className="w-5 h-5 shrink-0" />
+              {isRtl ? "خطوط الإنتاج والتصنيع الفني بمقاييس عالمية" : "World-Class Manufacturing Lines & Technical Capacity"}
+            </h3>
+            <p className="text-sm md:text-base text-gray-300 leading-relaxed">
+              {isRtl 
+                ? "تمتد عمليات التصنيع داخل مصنع شركة النجمة بالمنطقة الصناعية ببياض العرب في بني سويف على مدار أكثر من 18 عاماً من الخبرة المتراكمة. نعتمد على خطوط تقطيع وتجميع متطورة تضمن دقة الأبعاد الهندسية لكل بالتة خشبية، بدءاً من اختيار ألواح خشب السويد والبياض عالي الكثافة، وصولاً إلى تثبيت المسامير المضلعة الحلزونية لضمان التماسك الهيكلي واستدامة الأحمال الشاقة في المنشآت الصناعية الكبرى."
+                : "Manufacturing operations at El Negma factory in Bayad El Arab Industrial Zone, Beni Suef, draw on over 18 years of accumulated technical expertise. We operate advanced cutting and assembly lines that guarantee precise geometric dimensions for every wooden pallet, using high-density Swedish and White pine timber secured with ring-shank nails to ensure structural integrity under heavy industrial loading conditions."}
+            </p>
+          </div>
+
+          {/* Paragraph 2: ISPM-15 Heat Treatment & Quality Standards */}
+          <div className="space-y-3">
+            <h3 className="text-lg md:text-xl font-bold text-secondary flex items-center gap-2">
+              <ShieldCheck className="w-5 h-5 shrink-0" />
+              {isRtl ? "معايير التعقيم الحراري ISPM-15 والتطابق الجمركي" : "ISPM-15 Heat Treatment Standards & Customs Compliance"}
+            </h3>
+            <p className="text-sm md:text-base text-gray-300 leading-relaxed">
+              {isRtl
+                ? "نوفر بالتات خشبية معالجة حرارياً (HT) متوافقة تماماً مع المعيار الدولي رقم 15 لحماية النباتات (ISPM-15)، وهو المتطلب الإلزامي لتصدير الشحنات عبر الموانئ البحرية والجوية الدولية. تتم عملية المعالجة في محطات تعقيم معتمدة لرفع درجة حرارة لب الخشب إلى 56 درجة مئوية لمدة 30 دقيقة على الأقل، مما يقضي على كافة الحشرات والآفات الخشبية، وتُختم البالتات بختم IPPC الرسمي المعتمد لتسهيل الإفراج الجمركي المباشر."
+                : "We supply heat-treated (HT) wooden pallets fully compliant with ISPM-15 international phytosanitary standards, mandatory for all export shipments through international seaports and airports. Thermal treatment is performed in certified treatment facilities, elevating the wood core temperature to 56°C for at least 30 minutes to eradicate all wood pests, followed by official IPPC stamping for instant customs clearance."}
+            </p>
+          </div>
+
+          {/* Paragraph 3: Bulk Storage, Container Loading & Supply Chain */}
+          <div className="space-y-3">
+            <h3 className="text-lg md:text-xl font-bold text-secondary flex items-center gap-2">
+              <Truck className="w-5 h-5 shrink-0" />
+              {isRtl ? "قدرات التخزين والرص للحاويات والتوريد الفوري" : "Bulk Storage Capacity, Container Loading & Rapid Logistics"}
+            </h3>
+            <p className="text-sm md:text-base text-gray-300 leading-relaxed">
+              {isRtl
+                ? "يمتلك المصنع مساحات تخزين مغطاة ومفتوحة تتسع لآلاف البالتات الجاهزة للتوريد السريع، مما يلبي احتياجات قطاعات الأغذية والكيماويات والأسمنت والسيراميك والمنتجات الهندسية. يتم تخطيط رص البالتات داخل حاويات التصدير (20 قدم و40 قدم) بدقة هندسية تحقق أقصى استغلال للمساحة المتاحة وحماية الشحنات من الاهتزاز أثناء النقل البحري والبري."
+                : "Our facility maintains extensive indoor and outdoor storage space accommodating thousands of pallets ready for immediate dispatch, serving food, chemical, cement, ceramics, and engineering sectors. Container stuffing plans for 20ft and 40ft export containers are engineered for maximum space utilization and cargo stability during maritime and overland transit."}
+            </p>
+          </div>
+
+          {/* Internal Navigation Section Links */}
+          <div className="pt-6 border-t border-border/30 flex flex-wrap items-center justify-between gap-4">
+            <div className="flex flex-wrap items-center gap-3">
+              <Link 
+                href={isRtl ? "/products/" : "/en/products/"}
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-secondary text-white font-bold text-sm hover:bg-secondary/90 transition-colors shadow-md"
+              >
+                {isRtl ? "تصفح جميع المقاسات والمنتجات" : "View All Pallet Sizes"}
+                {isRtl ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
+              </Link>
+              <Link 
+                href={isRtl ? "/services/" : "/en/services/"}
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 text-white font-bold text-sm hover:bg-white/20 transition-colors border border-white/10"
+              >
+                {isRtl ? "خدمات المعالجة والتصنيع" : "Services & Processing"}
+              </Link>
+            </div>
+            <Link 
+              href={isRtl ? "/quote/" : "/en/quote/"}
+              className="inline-flex items-center gap-2 text-secondary font-bold text-sm hover:underline"
+            >
+              {isRtl ? "طلب عرض سعر خاص بالكميات" : "Request Custom Quote"}
+              {isRtl ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
+            </Link>
+          </div>
         </div>
       </div>
 
