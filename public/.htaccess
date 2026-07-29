@@ -98,8 +98,3 @@ ErrorDocument 404 /404.html
   Header set X-Frame-Options "SAMEORIGIN"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
-
-# Block deployment helper scripts from public access
-<FilesMatch "^(unzip|deploy)\.php$">
-  Require all denied
-</FilesMatch>
