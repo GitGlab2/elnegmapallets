@@ -38,6 +38,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: service.description,
       images: [{ url: imageUrl, alt: service.title }],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: service.title,
+      description: service.description,
+      images: [imageUrl],
+    },
   };
 }
 

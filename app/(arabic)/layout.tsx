@@ -33,7 +33,6 @@ export const metadata: Metadata = {
     "بياض العرب",
     "بني سويف",
   ],
-  authors: [{ name: "شركة النجمة لتصنيع البالتات الخشبية" }],
   icons: {
     icon: "/images/brand/company-logo.webp",
   },
