@@ -102,11 +102,23 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
       if (pathname.startsWith("/en/articles")) {
         return pathname.replace("/en/articles", "/articles");
       }
+      if (pathname.startsWith("/en/products")) {
+        return pathname.replace("/en/products", "/products");
+      }
+      if (pathname.startsWith("/en/services")) {
+        return pathname.replace("/en/services", "/services");
+      }
       return "/";
     } else {
       if (pathname === "/") return "/en";
       if (pathname.startsWith("/articles")) {
         return pathname.replace("/articles", "/en/articles");
+      }
+      if (pathname.startsWith("/products")) {
+        return pathname.replace("/products", "/en/products");
+      }
+      if (pathname.startsWith("/services")) {
+        return pathname.replace("/services", "/en/services");
       }
       return "/en";
     }

@@ -40,6 +40,23 @@ export const metadata: Metadata = {
       "x-default": "https://elnegmapallets.com",
     },
   },
+  openGraph: {
+    type: "website",
+    title: "El Negma Pallets | #1 Wooden Pallets Manufacturer in Egypt",
+    description:
+      "18+ years of experience manufacturing high-quality ISPM-15 heat-treated wooden pallets for export and local markets across Egypt and the Middle East.",
+    images: ["/images/brand/company-logo.webp"],
+    url: "https://elnegmapallets.com/en",
+    siteName: "El Negma Pallets",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "El Negma Pallets | #1 Wooden Pallets Manufacturer in Egypt",
+    description:
+      "18+ years of experience manufacturing high-quality ISPM-15 heat-treated wooden pallets for export and local markets.",
+    images: ["/images/brand/company-logo.webp"],
+  },
 };
 
 export default function EnglishLayout({

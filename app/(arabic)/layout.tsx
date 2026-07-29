@@ -51,6 +51,16 @@ export const metadata: Metadata = {
     description:
       "الشركة رقم 1 في مصر - خبرة 18 عامًا في تصنيع البالتات عالية الجودة والمعالجة الحرارية للتصدير.",
     images: ["/images/brand/company-logo.webp"],
+    url: "https://elnegmapallets.com",
+    siteName: "شركة النجمة للبالتات الخشبية",
+    locale: "ar_EG",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "شركة النجمة لتصنيع البالتات الخشبية | الشركة رقم 1 في مصر",
+    description:
+      "خبرة 18 عامًا في تصنيع البالتات عالية الجودة والمعالجة الحرارية HT للتصدير والسوق المحلي.",
+    images: ["/images/brand/company-logo.webp"],
   },
 };
 

@@ -14,29 +14,139 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Section Lists & Tools -->
+  <!-- Product & Service Catalogs (B2B Multi-Page Architecture) -->
   <url>
-    <loc>https://elnegmapallets.com/articles/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://elnegmapallets.com/products/</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/en/products/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/products/120x80-euro-pallet/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://elnegmapallets.com/en/articles/</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://elnegmapallets.com/en/products/120x80-euro-pallet/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://elnegmapallets.com/articles/tools/</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://elnegmapallets.com/products/120x100-industrial-pallet/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://elnegmapallets.com/en/articles/tools/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://elnegmapallets.com/en/products/120x100-industrial-pallet/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/products/114x114-chemical-pallet/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/en/products/114x114-chemical-pallet/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/products/120x120-heavy-pallet/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/en/products/120x120-heavy-pallet/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/products/121x101-gma-pallet/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/en/products/121x101-gma-pallet/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Service Landing Pages -->
+  <url>
+    <loc>https://elnegmapallets.com/services/</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/en/services/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/services/heat-treatment-ht/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/en/services/heat-treatment-ht/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/services/bulk-supply/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/en/services/bulk-supply/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/services/custom-manufacturing/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/en/services/custom-manufacturing/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/services/wooden-crates-collars/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/en/services/wooden-crates-collars/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
@@ -319,6 +429,12 @@
   </url>
   <url>
     <loc>https://elnegmapallets.com/en/articles/exporting-chemicals-safely/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elnegmapallets.com/en/articles/pallet-dimensions-standards/</loc>
     <lastmod>2026-07-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
