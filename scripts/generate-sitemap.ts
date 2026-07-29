@@ -3,6 +3,7 @@ import path from "path";
 import { palletSizesAr } from "../client/src/data/pallet-sizes";
 import { servicesAr } from "../client/src/data/services";
 import { articles } from "../client/src/data/articles";
+import { articlesEn } from "../client/src/data/articles-en";
 
 const SITE_URL = "https://elnegmapallets.com";
 const today = new Date().toISOString().slice(0, 10);
@@ -18,9 +19,15 @@ type SitemapEntry = {
   enPath: string;
   priority: string;
   changefreq: string;
+  lastmod?: string;
   images?: ImageEntry[];
   enImages?: ImageEntry[];
 };
+
+// Build a lookup map: slug → English title (for image tags on /en/ article URLs)
+const enTitleMap = new Map<string, string>(
+  articlesEn.map(a => [a.slug, a.title])
+);
 
 // Gallery images with descriptive metadata
 const galleryImages: ImageEntry[] = [
@@ -132,6 +139,17 @@ const entries: SitemapEntry[] = [
     enPath: `/en/articles/${a.slug}/`,
     priority: "0.7",
     changefreq: "monthly",
+    lastmod: a.date,
+    images: [{
+      loc: `${SITE_URL}${a.image}`,
+      title: a.title,
+      caption: `${a.title} — مصنع النجمة للبالتات الخشبية`,
+    }] as ImageEntry[],
+    enImages: [{
+      loc: `${SITE_URL}${a.image}`,
+      title: enTitleMap.get(a.slug) ?? a.title,
+      caption: `${enTitleMap.get(a.slug) ?? a.title} — El Negma Wooden Pallets Factory`,
+    }] as ImageEntry[],
   })),
 ];
 
@@ -167,7 +185,7 @@ function generateSitemapXml() {
     // Arabic URL entry
     xml += `  <url>\n`;
     xml += `    <loc>${arUrl}</loc>\n`;
-    xml += `    <lastmod>${today}</lastmod>\n`;
+    xml += `    <lastmod>${entry.lastmod ?? today}</lastmod>\n`;
     xml += `    <changefreq>${entry.changefreq}</changefreq>\n`;
     xml += `    <priority>${entry.priority}</priority>\n`;
     xml += `    <xhtml:link rel="alternate" hreflang="ar-EG" href="${arUrl}" />\n`;
@@ -181,7 +199,7 @@ function generateSitemapXml() {
     // English URL entry
     xml += `  <url>\n`;
     xml += `    <loc>${enUrl}</loc>\n`;
-    xml += `    <lastmod>${today}</lastmod>\n`;
+    xml += `    <lastmod>${entry.lastmod ?? today}</lastmod>\n`;
     xml += `    <changefreq>${entry.changefreq}</changefreq>\n`;
     xml += `    <priority>${entry.priority}</priority>\n`;
     xml += `    <xhtml:link rel="alternate" hreflang="ar-EG" href="${arUrl}" />\n`;
@@ -197,7 +215,10 @@ function generateSitemapXml() {
 
   const sitemapPath = path.join(process.cwd(), "public/sitemap.xml");
   writeFileSync(sitemapPath, xml, "utf-8");
-  console.log(`✅ Automated sitemap generated successfully with ${entries.length * 2} URLs!`);
+  const articleCount = articles.length;
+  console.log(`✅ Sitemap generated: ${entries.length * 2} URLs total`);
+  console.log(`   • Static + product + service pages: ${(entries.length - articleCount) * 2} URLs (lastmod = today)`);
+  console.log(`   • Article pages: ${articleCount * 2} URLs (lastmod = real article date)`);
 }
 
 generateSitemapXml();

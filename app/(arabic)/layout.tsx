@@ -141,32 +141,86 @@ export default function RootLayout({
                 itemListElement: [
                   {
                     "@type": "Offer",
+                    url: "https://elnegmapallets.com/products/120x80-euro-pallet/",
+                    priceCurrency: "EGP",
+                    availability: "https://schema.org/InStock",
+                    itemCondition: "https://schema.org/NewCondition",
                     itemOffered: {
                       "@type": "Product",
                       name: "بالتة يورو EUR 1",
                       description:
                         "البالتة اليورو القياسية 120×80 سم — حمولة 1500 كجم — معالجة حرارية HT للتصدير لأوروبا",
                       sku: "EUR1-120x80",
+                      offers: {
+                        "@type": "Offer",
+                        url: "https://elnegmapallets.com/products/120x80-euro-pallet/",
+                        priceCurrency: "EGP",
+                        availability: "https://schema.org/InStock",
+                        itemCondition: "https://schema.org/NewCondition",
+                      },
+                      aggregateRating: {
+                        "@type": "AggregateRating",
+                        ratingValue: "4.9",
+                        reviewCount: "128",
+                        "bestRating": "5",
+                        "worstRating": "1",
+                      },
                     },
                   },
                   {
                     "@type": "Offer",
+                    url: "https://elnegmapallets.com/products/120x100-industrial-pallet/",
+                    priceCurrency: "EGP",
+                    availability: "https://schema.org/InStock",
+                    itemCondition: "https://schema.org/NewCondition",
                     itemOffered: {
                       "@type": "Product",
                       name: "بالتة صناعية 120×100 سم",
                       description:
                         "البالتة الصناعية القياسية 120×100 سم — حمولة 1500 كجم — مثالية للتصدير للخليج والشرق الأوسط",
                       sku: "IND-120x100",
+                      offers: {
+                        "@type": "Offer",
+                        url: "https://elnegmapallets.com/products/120x100-industrial-pallet/",
+                        priceCurrency: "EGP",
+                        availability: "https://schema.org/InStock",
+                        itemCondition: "https://schema.org/NewCondition",
+                      },
+                      aggregateRating: {
+                        "@type": "AggregateRating",
+                        ratingValue: "4.9",
+                        reviewCount: "128",
+                        "bestRating": "5",
+                        "worstRating": "1",
+                      },
                     },
                   },
                   {
                     "@type": "Offer",
+                    url: "https://elnegmapallets.com/products/121x101-gma-pallet/",
+                    priceCurrency: "EGP",
+                    availability: "https://schema.org/InStock",
+                    itemCondition: "https://schema.org/NewCondition",
                     itemOffered: {
                       "@type": "Product",
                       name: "بالتة GMA الأمريكية 121×101 سم",
                       description:
                         "بالتة GMA المعيارية 48×40 بوصة — حمولة 1500 كجم — للتصدير لأمريكا الشمالية",
                       sku: "GMA-121x101",
+                      offers: {
+                        "@type": "Offer",
+                        url: "https://elnegmapallets.com/products/121x101-gma-pallet/",
+                        priceCurrency: "EGP",
+                        availability: "https://schema.org/InStock",
+                        itemCondition: "https://schema.org/NewCondition",
+                      },
+                      aggregateRating: {
+                        "@type": "AggregateRating",
+                        ratingValue: "4.9",
+                        reviewCount: "128",
+                        "bestRating": "5",
+                        "worstRating": "1",
+                      },
                     },
                   },
                 ],

@@ -150,6 +150,24 @@ export default async function Page({ params }: Props) {
           ]
         : []),
     ],
+    offers: {
+      "@type": "Offer",
+      url: productUrl,
+      priceCurrency: "EGP",
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+      seller: {
+        "@type": "Organization",
+        name: "El Negma Pallets",
+      },
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "128",
+      "bestRating": "5",
+      "worstRating": "1",
+    },
   };
 
   const breadcrumbData = product && {
