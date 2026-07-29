@@ -100,30 +100,12 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
 
   const toggleLangPath = () => {
     if (isEn) {
-      if (pathname === "/en") return "/";
-      if (pathname.startsWith("/en/articles")) {
-        return pathname.replace("/en/articles", "/articles");
-      }
-      if (pathname.startsWith("/en/products")) {
-        return pathname.replace("/en/products", "/products");
-      }
-      if (pathname.startsWith("/en/services")) {
-        return pathname.replace("/en/services", "/services");
-      }
-      return "/";
-    } else {
-      if (pathname === "/") return "/en";
-      if (pathname.startsWith("/articles")) {
-        return pathname.replace("/articles", "/en/articles");
-      }
-      if (pathname.startsWith("/products")) {
-        return pathname.replace("/products", "/en/products");
-      }
-      if (pathname.startsWith("/services")) {
-        return pathname.replace("/services", "/en/services");
-      }
-      return "/en";
+      if (pathname === "/en" || pathname === "/en/") return "/";
+      const arPath = pathname.replace(/^\/en/, "");
+      return arPath === "" ? "/" : arPath;
     }
+    if (pathname === "/") return "/en/";
+    return `/en${pathname}`;
   };
 
   const content = {
@@ -135,6 +117,14 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
       switcherText: "English",
       footerDesc: "الشركة رقم 1 في مصر لتصنيع البالتات الخشبية. خبرة تزيد عن 18 عامًا في خدمة كبرى الشركات والمصانع.",
       footerQuickLinks: "روابط سريعة",
+      footerQuickLinksList: [
+        { name: "من نحن", path: "/about/", isAnchor: false },
+        { name: "الشهادات والاعتمادات", path: "/certificates/", isAnchor: false },
+        { name: "معرض الصور", path: "/gallery/", isAnchor: false },
+        { name: "عملاؤنا والقطاعات", path: "/clients/", isAnchor: false },
+        { name: "طلب عرض سعر", path: "/quote/", isAnchor: false },
+        { name: "تواصل معنا", path: "/contact/", isAnchor: false },
+      ],
       footerProducts: "منتجات البالتات",
       footerProductsList: [
         { name: "بالتة يورو (120×80)", path: "/products/120x80-euro-pallet/", isAnchor: false },
@@ -167,6 +157,14 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
       switcherText: "العربية",
       footerDesc: "The #1 company in Egypt for wooden pallets manufacturing. Over 18 years of experience serving major companies and factories.",
       footerQuickLinks: "Quick Links",
+      footerQuickLinksList: [
+        { name: "About Us", path: "/en/about/", isAnchor: false },
+        { name: "Certifications", path: "/en/certificates/", isAnchor: false },
+        { name: "Factory Gallery", path: "/en/gallery/", isAnchor: false },
+        { name: "Clients & Industries", path: "/en/clients/", isAnchor: false },
+        { name: "Request a Quote", path: "/en/quote/", isAnchor: false },
+        { name: "Contact Us", path: "/en/contact/", isAnchor: false },
+      ],
       footerProducts: "Pallet Products",
       footerProductsList: [
         { name: "Euro Pallet (120x80)", path: "/en/products/120x80-euro-pallet/", isAnchor: false },
@@ -228,7 +226,7 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
 
           <nav className="hidden md:flex items-center gap-6">
             {navItems.map((item) => {
-              const isArticles = item.path === "/articles" || item.path === "/en/articles";
+              const isArticles = item.path.replace(/\/$/, "").endsWith("/articles");
               if (isArticles) {
                 return (
                   <a 
@@ -302,7 +300,7 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
         {isMenuOpen && (
           <div className="md:hidden border-t border-border bg-background p-4 flex flex-col gap-4 animate-in slide-in-from-top-5">
             {navItems.map((item) => {
-              const isArticles = item.path === "/articles" || item.path === "/en/articles";
+              const isArticles = item.path.replace(/\/$/, "").endsWith("/articles");
               if (isArticles) {
                 return (
                   <a 
@@ -402,8 +400,8 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
             <div>
               <h3 className="font-bold text-lg mb-4 text-foreground">{content.footerQuickLinks}</h3>
               <ul className="space-y-3">
-                {navItems.map((item) => (
-                  <li key={item.path}>
+                {content.footerQuickLinksList.map((item, index) => (
+                  <li key={index}>
                     <a 
                       href={item.path}
                       onClick={(e) => handleNavClick(e, item.path, item.isAnchor)}
