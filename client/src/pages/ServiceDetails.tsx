@@ -97,7 +97,7 @@ export default function ServiceDetails({ slug, lang = "ar" }: { slug: string; la
               <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-gray-100 border border-gray-100">
                 <img
                   src={service.image}
-                  alt={service.title}
+                  alt={`${service.title} — ${service.subtitle}`}
                   className="w-full h-full object-cover"
                 />
               </div>

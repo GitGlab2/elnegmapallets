@@ -3,13 +3,51 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
+interface GalleryItem {
+  src: string;
+  altAr: string;
+  altEn: string;
+  captionAr: string;
+  captionEn: string;
+}
+
 export default function Gallery({ lang = "ar" }: { lang?: "ar" | "en" }) {
-  const items = [
-    "/images/gallery/client-gallery-4.webp",
-    "/images/gallery/client-gallery-3.webp",
-    "/images/gallery/client-gallery-2.webp",
-    "/images/gallery/client-gallery-1.webp",
-    "/images/gallery/warehouse-stacked-pallets.webp",
+  const items: GalleryItem[] = [
+    {
+      src: "/images/gallery/client-gallery-4.webp",
+      altAr: "بالتات خشبية لقطاع الكيماويات مرصوصة داخل مخزن مصنع النجمة ببني سويف",
+      altEn: "Wooden pallets for chemical sector stacked inside El Negma factory warehouse in Beni Suef",
+      captionAr: "بالتات مصنّعة لتوريدات قطاع الكيماويات — تكديس مخزني جاهز للشحن",
+      captionEn: "Pallets manufactured for chemical industry supply — warehouse stacking ready for shipment",
+    },
+    {
+      src: "/images/gallery/client-gallery-3.webp",
+      altAr: "أكوام بالتات خشبية متعددة الأحجام داخل مستودع كبير لتوريد قطاع الأسمنت والسيراميك",
+      altEn: "Multiple pallet stacks of varying sizes in a large warehouse for cement and ceramics sector supply",
+      captionAr: "مستودع التخزين الرئيسي — بالتات جاهزة لتوريدات الأسمنت والسيراميك",
+      captionEn: "Main storage warehouse — pallets ready for cement and ceramics sector deliveries",
+    },
+    {
+      src: "/images/gallery/client-gallery-2.webp",
+      altAr: "رافعة شوكية تنقل ألواح خشبية داخل مصنع النجمة ببني سويف وبجوارها بالتات مرصوصة",
+      altEn: "Forklift transporting timber boards inside El Negma factory with stacked pallets alongside",
+      captionAr: "خط الإنتاج والنقل الداخلي — رافعة شوكية تغذّي محطات التجميع",
+      captionEn: "Production line and internal transport — forklift feeding assembly stations",
+    },
+    {
+      src: "/images/gallery/client-gallery-1.webp",
+      altAr: "بالتة خشبية مكشوفة القاعدة من إنتاج مصنع النجمة لقطاع الفاكهة والأغذية",
+      altEn: "Open-bottom wooden pallet manufactured by El Negma for fruit and food export sector",
+      captionAr: "بالتة مخصصة لقطاع الفاكهة والأغذية — تصميم يسمح بالتهوية والتبريد",
+      captionEn: "Pallet designed for fruit and food sector — open base allows ventilation and cooling",
+    },
+    {
+      src: "/images/gallery/warehouse-stacked-pallets.webp",
+      altAr: "بالتات خشبية مكدسة بارتفاعات متعددة في مستودع مصنع النجمة جاهزة للتوريد",
+      altEn: "Wooden pallets stacked at multiple heights in El Negma factory warehouse ready for delivery",
+      captionAr: "طاقة تخزينية كبيرة — بالتات جاهزة للتوريد الفوري للشركات والمصانع",
+      captionEn: "Large storage capacity — pallets ready for immediate delivery to companies and factories",
+    },
   ];
 
   const totalSlides = items.length;
@@ -19,10 +57,15 @@ export default function Gallery({ lang = "ar" }: { lang?: "ar" | "en" }) {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
-  const [activeImage, setActiveImage] = useState<string | null>(null);
+  const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
   
   const autoplayRef = useRef<NodeJS.Timeout | null>(null);
   const trackRef = useRef<HTMLDivElement>(null);
+
+  const isRtl = lang === "ar";
+
+  const getAlt = (item: GalleryItem) => isRtl ? item.altAr : item.altEn;
+  const getCaption = (item: GalleryItem) => isRtl ? item.captionAr : item.captionEn;
 
   const stopAutoplay = useCallback(() => {
     if (autoplayRef.current) {
@@ -61,16 +104,16 @@ export default function Gallery({ lang = "ar" }: { lang?: "ar" | "en" }) {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
-        setActiveImage(null);
+        setActiveImageIndex(null);
       }
     };
-    if (activeImage) {
+    if (activeImageIndex !== null) {
       window.addEventListener("keydown", handleKeyDown);
     }
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [activeImage]);
+  }, [activeImageIndex]);
 
   const handleNext = () => {
     stopAutoplay();
@@ -93,7 +136,6 @@ export default function Gallery({ lang = "ar" }: { lang?: "ar" | "en" }) {
   };
 
   const translatePercent = currentIndex * 100;
-  const isRtl = lang === "ar";
   const displayDotIndex = currentIndex >= totalSlides ? 0 : currentIndex;
 
   const h1Title = isRtl
@@ -135,23 +177,31 @@ export default function Gallery({ lang = "ar" }: { lang?: "ar" | "en" }) {
                 : "none",
             }}
           >
-            {extendedItems.map((src, idx) => (
-              <div key={idx} className="w-full shrink-0">
-                <div 
-                  className="overflow-hidden rounded-xl md:rounded-2xl cursor-zoom-in"
-                  onClick={() => setActiveImage(src)}
-                >
-                  <img
-                    src={src}
-                    alt={`Gallery image ${(idx % totalSlides) + 1}`}
-                    width={1200}
-                    height={1200}
-                    loading="lazy"
-                    className="w-full aspect-square object-cover transition-transform duration-700 hover:scale-[1.02]"
-                  />
+            {extendedItems.map((item, idx) => {
+              const realIndex = idx % totalSlides;
+              return (
+                <div key={idx} className="w-full shrink-0">
+                  <figure className="m-0">
+                    <div 
+                      className="overflow-hidden rounded-xl md:rounded-2xl cursor-zoom-in"
+                      onClick={() => setActiveImageIndex(realIndex)}
+                    >
+                      <img
+                        src={item.src}
+                        alt={getAlt(item)}
+                        width={1200}
+                        height={1200}
+                        loading="lazy"
+                        className="w-full aspect-square object-cover transition-transform duration-700 hover:scale-[1.02]"
+                      />
+                    </div>
+                    <figcaption className="text-center text-xs md:text-sm text-gray-300/90 mt-2.5 px-2 leading-relaxed">
+                      {getCaption(item)}
+                    </figcaption>
+                  </figure>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Navigation Arrows */}
@@ -189,29 +239,34 @@ export default function Gallery({ lang = "ar" }: { lang?: "ar" | "en" }) {
       </div>
 
       {/* Fullscreen Lightbox Modal */}
-      {activeImage && (
+      {activeImageIndex !== null && (
         <div 
           className="fixed inset-0 bg-black/95 z-[9999] flex items-center justify-center cursor-zoom-out p-4 md:p-8 animate-fade-in"
-          onClick={() => setActiveImage(null)}
+          onClick={() => setActiveImageIndex(null)}
         >
           {/* Close Button */}
           <button 
             className="absolute top-4 right-4 text-white hover:text-secondary p-2 bg-black/50 hover:bg-black/80 rounded-full transition-all cursor-pointer z-[10000]"
             onClick={(e) => {
               e.stopPropagation();
-              setActiveImage(null);
+              setActiveImageIndex(null);
             }}
             aria-label="Close Lightbox"
           >
             <X className="w-7 h-7" />
           </button>
           
-          <img 
-            src={activeImage} 
-            alt="Pallet detail expanded view" 
-            className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl select-none"
-            onClick={(e) => e.stopPropagation()}
-          />
+          <figure className="m-0 flex flex-col items-center">
+            <img 
+              src={items[activeImageIndex].src} 
+              alt={getAlt(items[activeImageIndex])} 
+              className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl select-none"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <figcaption className="text-center text-sm md:text-base text-gray-300/90 mt-3 px-4 leading-relaxed max-w-2xl">
+              {getCaption(items[activeImageIndex])}
+            </figcaption>
+          </figure>
         </div>
       )}
     </div>

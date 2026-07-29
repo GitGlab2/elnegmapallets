@@ -115,7 +115,10 @@ export default function ProductDetails({ slug, lang = "ar" }: { slug: string; la
               <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-[#181b24]/5 border border-gray-100 flex items-center justify-center p-4">
                 <img
                   src={product.image}
-                  alt={product.title}
+                  alt={isEn
+                    ? `${product.title} ${product.dimensions} ISPM-15 heat treated wooden pallet`
+                    : `${product.title} مقاس ${product.dimensions} خشب معالج حرارياً ISPM-15`
+                  }
                   className="max-h-full max-w-full object-contain filter drop-shadow-md"
                 />
               </div>

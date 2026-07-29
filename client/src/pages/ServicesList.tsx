@@ -105,7 +105,7 @@ export default function ServicesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
                   <div className="aspect-[4/3] w-full bg-[#181b24] relative overflow-hidden border-b border-border/40">
                     <img
                       src={item.image}
-                      alt={item.title}
+                      alt={`${item.title} — ${item.subtitle}`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#181b24] via-transparent to-transparent z-10" />

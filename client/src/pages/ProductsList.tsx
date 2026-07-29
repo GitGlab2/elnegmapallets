@@ -112,7 +112,7 @@ export default function ProductsList({ lang = "ar" }: { lang?: "ar" | "en" }) {
                     <div className="absolute inset-0 bg-gradient-to-t from-[#181b24] via-transparent to-transparent z-10" />
                     <img
                       src={item.image}
-                      alt={item.title}
+                      alt={`${item.title} — ${item.dimensions}`}
                       className="max-h-full max-w-full object-contain filter drop-shadow-2xl group-hover:scale-105 transition-transform duration-500 z-0"
                     />
                     

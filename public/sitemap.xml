@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://elnegmapallets.com/</loc>
     <lastmod>2026-07-29</lastmod>
@@ -81,6 +82,31 @@
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://elnegmapallets.com/gallery/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elnegmapallets.com/en/gallery/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elnegmapallets.com/gallery/" />
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/gallery/client-gallery-4.webp</image:loc>
+      <image:title>بالتات خشبية لقطاع الكيماويات</image:title>
+      <image:caption>بالتات مصنّعة لتوريدات قطاع الكيماويات مرصوصة داخل مخزن مصنع النجمة ببني سويف</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/gallery/client-gallery-3.webp</image:loc>
+      <image:title>مستودع بالتات الأسمنت والسيراميك</image:title>
+      <image:caption>أكوام بالتات خشبية متعددة الأحجام داخل مستودع كبير لتوريد قطاع الأسمنت والسيراميك</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/gallery/client-gallery-2.webp</image:loc>
+      <image:title>رافعة شوكية داخل مصنع النجمة</image:title>
+      <image:caption>رافعة شوكية تنقل ألواح خشبية داخل مصنع النجمة ببني سويف وبجوارها بالتات مرصوصة</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/gallery/client-gallery-1.webp</image:loc>
+      <image:title>بالتة خشبية لقطاع الفاكهة والأغذية</image:title>
+      <image:caption>بالتة خشبية مكشوفة القاعدة من إنتاج مصنع النجمة لقطاع الفاكهة والأغذية</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/gallery/warehouse-stacked-pallets.webp</image:loc>
+      <image:title>بالتات مكدسة جاهزة للتوريد</image:title>
+      <image:caption>بالتات خشبية مكدسة بارتفاعات متعددة في مستودع مصنع النجمة جاهزة للتوريد</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://elnegmapallets.com/en/gallery/</loc>
@@ -90,6 +116,31 @@
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://elnegmapallets.com/gallery/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elnegmapallets.com/en/gallery/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elnegmapallets.com/gallery/" />
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/gallery/client-gallery-4.webp</image:loc>
+      <image:title>Wooden pallets for chemical sector</image:title>
+      <image:caption>Wooden pallets for chemical sector stacked inside El Negma factory warehouse in Beni Suef</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/gallery/client-gallery-3.webp</image:loc>
+      <image:title>Cement and ceramics sector pallet warehouse</image:title>
+      <image:caption>Multiple pallet stacks of varying sizes in a large warehouse for cement and ceramics sector supply</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/gallery/client-gallery-2.webp</image:loc>
+      <image:title>Forklift inside El Negma factory</image:title>
+      <image:caption>Forklift transporting timber boards inside El Negma factory with stacked pallets alongside</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/gallery/client-gallery-1.webp</image:loc>
+      <image:title>Wooden pallet for fruit and food export</image:title>
+      <image:caption>Open-bottom wooden pallet manufactured by El Negma for fruit and food export sector</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/gallery/warehouse-stacked-pallets.webp</image:loc>
+      <image:title>Stacked pallets ready for delivery</image:title>
+      <image:caption>Wooden pallets stacked at multiple heights in El Negma factory warehouse ready for delivery</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://elnegmapallets.com/clients/</loc>
@@ -207,6 +258,11 @@
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://elnegmapallets.com/products/120x80-euro-pallet/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elnegmapallets.com/en/products/120x80-euro-pallet/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elnegmapallets.com/products/120x80-euro-pallet/" />
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/pallets/euro-pallet.webp</image:loc>
+      <image:title>البالتة اليورو القياسية EUR 1</image:title>
+      <image:caption>البالتة اليورو القياسية EUR 1 مقاس 1200 × 800 مم (120 × 80 سم) خشب معالج حرارياً ISPM-15</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://elnegmapallets.com/en/products/120x80-euro-pallet/</loc>
@@ -216,6 +272,11 @@
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://elnegmapallets.com/products/120x80-euro-pallet/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elnegmapallets.com/en/products/120x80-euro-pallet/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elnegmapallets.com/products/120x80-euro-pallet/" />
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/pallets/euro-pallet.webp</image:loc>
+      <image:title>البالتة اليورو القياسية EUR 1</image:title>
+      <image:caption>البالتة اليورو القياسية EUR 1 1200 × 800 مم (120 × 80 سم) ISPM-15 heat treated wooden pallet</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://elnegmapallets.com/products/120x100-industrial-pallet/</loc>
@@ -225,6 +286,11 @@
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://elnegmapallets.com/products/120x100-industrial-pallet/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elnegmapallets.com/en/products/120x100-industrial-pallet/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elnegmapallets.com/products/120x100-industrial-pallet/" />
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/pallets/industrial-pallet.webp</image:loc>
+      <image:title>البالتة الصناعية القياسية / بالتة الموالح</image:title>
+      <image:caption>البالتة الصناعية القياسية / بالتة الموالح مقاس 1200 × 1000 مم (120 × 100 سم) خشب معالج حرارياً ISPM-15</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://elnegmapallets.com/en/products/120x100-industrial-pallet/</loc>
@@ -234,6 +300,11 @@
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://elnegmapallets.com/products/120x100-industrial-pallet/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elnegmapallets.com/en/products/120x100-industrial-pallet/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elnegmapallets.com/products/120x100-industrial-pallet/" />
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/pallets/industrial-pallet.webp</image:loc>
+      <image:title>البالتة الصناعية القياسية / بالتة الموالح</image:title>
+      <image:caption>البالتة الصناعية القياسية / بالتة الموالح 1200 × 1000 مم (120 × 100 سم) ISPM-15 heat treated wooden pallet</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://elnegmapallets.com/products/114x114-chemical-pallet/</loc>
@@ -243,6 +314,11 @@
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://elnegmapallets.com/products/114x114-chemical-pallet/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elnegmapallets.com/en/products/114x114-chemical-pallet/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elnegmapallets.com/products/114x114-chemical-pallet/" />
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/pallets/chemical-pallet.webp</image:loc>
+      <image:title>بالتة الكيماويات القياسية CP9</image:title>
+      <image:caption>بالتة الكيماويات القياسية CP9 مقاس 1140 × 1140 مم (114 × 114 سم) خشب معالج حرارياً ISPM-15</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://elnegmapallets.com/en/products/114x114-chemical-pallet/</loc>
@@ -252,6 +328,11 @@
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://elnegmapallets.com/products/114x114-chemical-pallet/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elnegmapallets.com/en/products/114x114-chemical-pallet/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elnegmapallets.com/products/114x114-chemical-pallet/" />
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/pallets/chemical-pallet.webp</image:loc>
+      <image:title>بالتة الكيماويات القياسية CP9</image:title>
+      <image:caption>بالتة الكيماويات القياسية CP9 1140 × 1140 مم (114 × 114 سم) ISPM-15 heat treated wooden pallet</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://elnegmapallets.com/products/120x120-heavy-pallet/</loc>
@@ -261,6 +342,11 @@
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://elnegmapallets.com/products/120x120-heavy-pallet/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elnegmapallets.com/en/products/120x120-heavy-pallet/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elnegmapallets.com/products/120x120-heavy-pallet/" />
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/pallets/square-heavy-pallet.webp</image:loc>
+      <image:title>البالتة المربعة الثقيلة 120 × 120</image:title>
+      <image:caption>البالتة المربعة الثقيلة 120 × 120 مقاس 1200 × 1200 مم (120 × 120 سم) خشب معالج حرارياً ISPM-15</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://elnegmapallets.com/en/products/120x120-heavy-pallet/</loc>
@@ -270,6 +356,11 @@
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://elnegmapallets.com/products/120x120-heavy-pallet/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elnegmapallets.com/en/products/120x120-heavy-pallet/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elnegmapallets.com/products/120x120-heavy-pallet/" />
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/pallets/square-heavy-pallet.webp</image:loc>
+      <image:title>البالتة المربعة الثقيلة 120 × 120</image:title>
+      <image:caption>البالتة المربعة الثقيلة 120 × 120 1200 × 1200 مم (120 × 120 سم) ISPM-15 heat treated wooden pallet</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://elnegmapallets.com/products/121x101-gma-pallet/</loc>
@@ -279,6 +370,11 @@
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://elnegmapallets.com/products/121x101-gma-pallet/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elnegmapallets.com/en/products/121x101-gma-pallet/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elnegmapallets.com/products/121x101-gma-pallet/" />
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/pallets/gma-pallet.webp</image:loc>
+      <image:title>البالتة الأمريكية القياسية GMA</image:title>
+      <image:caption>البالتة الأمريكية القياسية GMA مقاس 1219 × 1016 مم (48 × 40 بوصة) خشب معالج حرارياً ISPM-15</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://elnegmapallets.com/en/products/121x101-gma-pallet/</loc>
@@ -288,6 +384,11 @@
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://elnegmapallets.com/products/121x101-gma-pallet/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elnegmapallets.com/en/products/121x101-gma-pallet/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elnegmapallets.com/products/121x101-gma-pallet/" />
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/pallets/gma-pallet.webp</image:loc>
+      <image:title>البالتة الأمريكية القياسية GMA</image:title>
+      <image:caption>البالتة الأمريكية القياسية GMA 1219 × 1016 مم (48 × 40 بوصة) ISPM-15 heat treated wooden pallet</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://elnegmapallets.com/services/heat-treatment-ht/</loc>
@@ -297,6 +398,11 @@
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://elnegmapallets.com/services/heat-treatment-ht/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elnegmapallets.com/en/services/heat-treatment-ht/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elnegmapallets.com/services/heat-treatment-ht/" />
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/sections/quality-certification.webp</image:loc>
+      <image:title>المعالجة الحرارية وشواهد ISPM-15 للتصدير</image:title>
+      <image:caption>المعالجة الحرارية وشواهد ISPM-15 للتصدير — نوفر بالتات معقمة ومطابقة للمواصفات الدولية الجمركية لجميع دول العالم</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://elnegmapallets.com/en/services/heat-treatment-ht/</loc>
@@ -306,6 +412,11 @@
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://elnegmapallets.com/services/heat-treatment-ht/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elnegmapallets.com/en/services/heat-treatment-ht/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elnegmapallets.com/services/heat-treatment-ht/" />
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/sections/quality-certification.webp</image:loc>
+      <image:title>المعالجة الحرارية وشواهد ISPM-15 للتصدير</image:title>
+      <image:caption>المعالجة الحرارية وشواهد ISPM-15 للتصدير — نوفر بالتات معقمة ومطابقة للمواصفات الدولية الجمركية لجميع دول العالم</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://elnegmapallets.com/services/bulk-supply/</loc>
@@ -315,6 +426,11 @@
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://elnegmapallets.com/services/bulk-supply/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elnegmapallets.com/en/services/bulk-supply/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elnegmapallets.com/services/bulk-supply/" />
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/gallery/client-delivery-pallet.webp</image:loc>
+      <image:title>توريد الطلبيات الكبرى وتجهيز المصانع</image:title>
+      <image:caption>توريد الطلبيات الكبرى وتجهيز المصانع — قدرة إنتاجية عالية لتلبية احتياجات خطوط الإنتاج والمصانع الكبرى في جميع المحافظات</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://elnegmapallets.com/en/services/bulk-supply/</loc>
@@ -324,6 +440,11 @@
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://elnegmapallets.com/services/bulk-supply/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elnegmapallets.com/en/services/bulk-supply/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elnegmapallets.com/services/bulk-supply/" />
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/gallery/client-delivery-pallet.webp</image:loc>
+      <image:title>توريد الطلبيات الكبرى وتجهيز المصانع</image:title>
+      <image:caption>توريد الطلبيات الكبرى وتجهيز المصانع — قدرة إنتاجية عالية لتلبية احتياجات خطوط الإنتاج والمصانع الكبرى في جميع المحافظات</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://elnegmapallets.com/services/custom-manufacturing/</loc>
@@ -333,6 +454,11 @@
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://elnegmapallets.com/services/custom-manufacturing/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elnegmapallets.com/en/services/custom-manufacturing/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elnegmapallets.com/services/custom-manufacturing/" />
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/sections/factory-image.webp</image:loc>
+      <image:title>التصنيع الهندسي المخصص حسب الطلب</image:title>
+      <image:caption>التصنيع الهندسي المخصص حسب الطلب — تصميم وتصنيع بالتات بمقاسات وأحمال خاصة تتناسب مع خطوط الإنتاج والآلات المعقدة</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://elnegmapallets.com/en/services/custom-manufacturing/</loc>
@@ -342,6 +468,11 @@
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://elnegmapallets.com/services/custom-manufacturing/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elnegmapallets.com/en/services/custom-manufacturing/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elnegmapallets.com/services/custom-manufacturing/" />
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/sections/factory-image.webp</image:loc>
+      <image:title>التصنيع الهندسي المخصص حسب الطلب</image:title>
+      <image:caption>التصنيع الهندسي المخصص حسب الطلب — تصميم وتصنيع بالتات بمقاسات وأحمال خاصة تتناسب مع خطوط الإنتاج والآلات المعقدة</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://elnegmapallets.com/services/wooden-crates-collars/</loc>
@@ -351,6 +482,11 @@
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://elnegmapallets.com/services/wooden-crates-collars/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elnegmapallets.com/en/services/wooden-crates-collars/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elnegmapallets.com/services/wooden-crates-collars/" />
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/sections/products-image.webp</image:loc>
+      <image:title>الصناديق الخشبية وإطارات البالتات (Pallet Collars)</image:title>
+      <image:caption>الصناديق الخشبية وإطارات البالتات (Pallet Collars) — حماية قصوى للبضائع الثمينة والقطع الهندسية الحساسة أثناء الشحن الدولي</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://elnegmapallets.com/en/services/wooden-crates-collars/</loc>
@@ -360,6 +496,11 @@
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://elnegmapallets.com/services/wooden-crates-collars/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elnegmapallets.com/en/services/wooden-crates-collars/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elnegmapallets.com/services/wooden-crates-collars/" />
+    <image:image>
+      <image:loc>https://elnegmapallets.com/images/sections/products-image.webp</image:loc>
+      <image:title>الصناديق الخشبية وإطارات البالتات (Pallet Collars)</image:title>
+      <image:caption>الصناديق الخشبية وإطارات البالتات (Pallet Collars) — حماية قصوى للبضائع الثمينة والقطع الهندسية الحساسة أثناء الشحن الدولي</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://elnegmapallets.com/articles/air-freight-fruit-export-pallets/</loc>
