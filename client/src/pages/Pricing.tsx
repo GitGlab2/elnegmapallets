@@ -166,31 +166,6 @@ export default function Pricing({ lang = "ar" }: { lang?: "ar" | "en" }) {
                   <span className="text-[10px] md:text-xs font-bold text-white block mt-0.5 md:mt-1 leading-snug">{benefit}</span>
                 </div>
               </div>
-
-              {/* ملاحظة توضيحية وتأكيد التواصل عبر الواتساب والهاتف */}
-              <div className="mt-4 pt-3 border-t border-border/30 text-center flex flex-col items-center gap-2">
-                <p className="text-[11px] md:text-xs text-gray-400 leading-relaxed">
-                  {isEn 
-                    ? "Note: This is a visual estimate for volume discount tiers. Official quotes are provided directly via WhatsApp or phone call based on your exact technical specifications."
-                    : "ملاحظة توضيحية: هذا الرسم لمحتوى الخصومات التقديرية حسب حجم الكميات. يتم إصدار عرض السعر الرسمي المخصص بعد تحديد المواصفات الفنية المباشرة عبر الواتساب أو الهاتف."}
-                </p>
-                <div className="flex gap-3 mt-1">
-                  <a 
-                    href="https://wa.me/201080012261" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-400 border border-emerald-500/30 text-xs font-bold transition-all"
-                  >
-                    {isEn ? "WhatsApp Quote" : "عرض سعر عبر الواتساب"}
-                  </a>
-                  <a 
-                    href="tel:01080012261" 
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-secondary/20 hover:bg-secondary/30 text-secondary border border-secondary/30 text-xs font-bold transition-all"
-                  >
-                    {isEn ? "Call Sales" : "اتصال بالمبيعات"}
-                  </a>
-                </div>
-              </div>
             </div>
 
           </motion.div>

@@ -1,8 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight, Phone, Globe2, Award } from "lucide-react";
-import Link from "next/link";
+import { Phone, ArrowLeft, ArrowRight } from "lucide-react";
 
 // Eager imports — أقسام حصرية للصفحة الرئيسية فقط
 import AdvantagesSlide from "./AdvantagesSlide";
@@ -15,6 +14,7 @@ import Pricing from "./Pricing";
 import Commitments from "./Commitments";
 import Achievements from "./Achievements";
 import FutureVision from "./FutureVision";
+import Contact from "./Contact";
 
 export default function Home({ lang = "ar" }: { lang?: "ar" | "en" }) {
   const isEn = lang === "en";
@@ -185,39 +185,9 @@ export default function Home({ lang = "ar" }: { lang?: "ar" | "en" }) {
         <FutureVision lang={lang} />
       </section>
 
-      {/* تواصل معنا — تيزر يشير إلى صفحة /contact/ (المحتوى الكامل هناك) */}
+      {/* تواصل معنا — قسم التواصل والمعلومات المباشرة */}
       <section id="contact-section" className="scroll-mt-24">
-        <div className="container py-8 md:py-12">
-          <div className="rounded-2xl md:rounded-3xl border border-border shadow-xl bg-[#181b24] p-6 md:p-12 flex flex-col items-center gap-6 text-center">
-            <h2 className="text-2xl md:text-3xl font-black text-white">
-              {isEn ? "Get in Touch" : "تواصل معنا"}
-            </h2>
-            <p className="text-white/70 text-sm md:text-base max-w-lg leading-relaxed">
-              {isEn
-                ? "Ready to discuss your pallet requirements? Our team responds quickly for volume quotes and supply contracts."
-                : "جاهز لمناقشة احتياجاتك من البالتات؟ فريقنا يرد بسرعة على طلبات الكميات وعقود التوريد."}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:01080012261">
-                <Button size="lg" className="font-bold px-8 h-14 bg-secondary hover:bg-secondary/90 text-white">
-                  <Phone className={`w-5 h-5 ${isEn ? "mr-2" : "ml-2"}`} />
-                  01080012261
-                </Button>
-              </a>
-              <a href="https://wa.me/201080012261" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="outline" className="font-bold px-8 h-14 bg-transparent border-white/30 hover:bg-white/10 text-white">
-                  {isEn ? "WhatsApp Chat" : "واتساب مباشر"}
-                </Button>
-              </a>
-            </div>
-            <Link
-              href={isEn ? "/en/contact/" : "/contact/"}
-              className="text-secondary font-bold text-sm hover:underline mt-1"
-            >
-              {isEn ? "View full contact details & factory location →" : "← جميع بيانات التواصل والموقع الجغرافي للمصنع"}
-            </Link>
-          </div>
-        </div>
+        <Contact lang={lang} />
       </section>
 
       {/* Bottom Call to Action banner */}

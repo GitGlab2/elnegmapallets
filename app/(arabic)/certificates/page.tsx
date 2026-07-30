@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CertificationsList } from "@/pages/Certifications";
+import { CertificationsList, QualityCertImage } from "@/pages/Certifications";
 
 export const metadata: Metadata = {
   title: "الشهادات واعتمادات التبخير الحراري ISPM-15 | شركة النجمة",
@@ -17,8 +17,9 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="py-8">
+    <div className="py-8 flex flex-col gap-6">
       <CertificationsList lang="ar" />
+      <QualityCertImage lang="ar" />
     </div>
   );
 }

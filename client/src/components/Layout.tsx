@@ -100,7 +100,7 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
 
   const navData = {
     ar: {
-      quoteBtn: "طلب عرض سعر",
+      blogBtn: "المدونة",
       callBtn: "اتصل الآن",
       company: {
         title: "الشركة",
@@ -112,12 +112,11 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
         ]
       },
       directItems: [
-        { name: "المدونة", path: "/articles/", isBlog: true },
-        { name: "تواصل معنا", path: "/contact/" },
+        { name: "تواصل معنا", path: "/#contact-section", isAnchor: true },
       ]
     },
     en: {
-      quoteBtn: "Request a Quote",
+      blogBtn: "Blog",
       callBtn: "Call Now",
       company: {
         title: "Company",
@@ -129,8 +128,7 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
         ]
       },
       directItems: [
-        { name: "Blog", path: "/en/articles/", isBlog: true },
-        { name: "Contact Us", path: "/en/contact/" },
+        { name: "Contact Us", path: "/en/#contact-section", isAnchor: true },
       ]
     }
   }[lang];
@@ -149,8 +147,8 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
         { name: "الشهادات والاعتمادات", path: "/certificates/", isAnchor: false },
         { name: "معرض الصور", path: "/gallery/", isAnchor: false },
         { name: "عملاؤنا والقطاعات", path: "/clients/", isAnchor: false },
-        { name: "طلب عرض سعر", path: "/quote/", isAnchor: false },
-        { name: "تواصل معنا", path: "/contact/", isAnchor: false },
+        { name: "أنظمة الأسعار والعروض", path: "/#pricing-section", isAnchor: true },
+        { name: "تواصل معنا", path: "/#contact-section", isAnchor: true },
       ],
       footerProducts: "منتجات البالتات",
       footerProductsList: [
@@ -189,8 +187,8 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
         { name: "Certifications", path: "/en/certificates/", isAnchor: false },
         { name: "Factory Gallery", path: "/en/gallery/", isAnchor: false },
         { name: "Clients & Sectors", path: "/en/clients/", isAnchor: false },
-        { name: "Request a Quote", path: "/en/quote/", isAnchor: false },
-        { name: "Contact Us", path: "/en/contact/", isAnchor: false },
+        { name: "Pricing Systems", path: "/en/#pricing-section", isAnchor: true },
+        { name: "Contact Us", path: "/en/#contact-section", isAnchor: true },
       ],
       footerProducts: "Pallet Products",
       footerProductsList: [
@@ -288,28 +286,14 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
               </div>
             </div>
 
-            {/* الروابط المباشرة (المنتجات، الخدمات، المدونة، تواصل معنا) */}
-            {navData.directItems.map((item) => {
-              if (item.isBlog) {
-                return (
-                  <a
-                    key={item.path}
-                    href={item.path}
-                    className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-primary/40 bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all duration-300 shadow-sm"
-                  >
-                    <BookOpen className="w-4 h-4" />
-                    <span className="text-sm font-black">{item.name}</span>
-                  </a>
-                );
-              }
-              return (
-                <a key={item.path} href={item.path}>
-                  <span className="text-sm font-bold transition-colors hover:text-primary cursor-pointer relative py-2 text-muted-foreground">
-                    {item.name}
-                  </span>
-                </a>
-              );
-            })}
+            {/* الروابط المباشرة (تواصل معنا) */}
+            {navData.directItems.map((item) => (
+              <a key={item.path} href={item.path}>
+                <span className="text-sm font-bold transition-colors hover:text-primary cursor-pointer relative py-2 text-muted-foreground">
+                  {item.name}
+                </span>
+              </a>
+            ))}
           </nav>
 
           {/* Action Buttons: Quote CTA + Call Button */}
@@ -323,10 +307,10 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
               <span>{content.switcherText}</span>
             </a>
 
-            {/* زر طلب عرض سعر بارز */}
-            <a href={isEn ? "/en/quote/" : "/quote/"}>
+            {/* زر المدونة بارز بدل زر طلب عرض سعر */}
+            <a href={isEn ? "/en/articles/" : "/articles/"}>
               <Button variant="outline" className="font-bold border-secondary/50 text-secondary hover:bg-secondary hover:text-white transition-all shadow-md">
-                {navData.quoteBtn}
+                {navData.blogBtn}
               </Button>
             </a>
             
@@ -407,11 +391,7 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
                 href={item.path} 
                 onClick={() => setIsMenuOpen(false)}
               >
-                <span
-                  className={`block p-3 min-h-[44px] rounded-lg text-base font-bold transition-colors cursor-pointer hover:bg-muted ${
-                    item.isBlog ? "text-primary bg-primary/10 border border-primary/20" : "text-muted-foreground"
-                  }`}
-                >
+                <span className="block p-3 min-h-[44px] rounded-lg text-base font-bold transition-colors cursor-pointer hover:bg-muted text-muted-foreground">
                   {item.name}
                 </span>
               </a>
@@ -419,9 +399,9 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
 
             {/* أزرار الإجراءات للموبايل */}
             <div className="pt-2 flex flex-col gap-2">
-              <a href={isEn ? "/en/quote/" : "/quote/"} className="w-full block" onClick={() => setIsMenuOpen(false)}>
+              <a href={isEn ? "/en/articles/" : "/articles/"} className="w-full block" onClick={() => setIsMenuOpen(false)}>
                 <Button variant="outline" className="w-full min-h-[44px] font-bold border-secondary/50 text-secondary hover:bg-secondary hover:text-white">
-                  {navData.quoteBtn}
+                  {navData.blogBtn}
                 </Button>
               </a>
               <a href="tel:01080012261" className="w-full block">

@@ -126,31 +126,51 @@ export default function Clients({ lang = "ar" }: { lang?: "ar" | "en" }) {
   }[lang];
 
   return (
-    <div className="container py-8 md:py-16" id="clients">
+    <div className="flex flex-col gap-12">
       
-      {/* Top Header Card */}
-      <div className="rounded-2xl md:rounded-3xl border border-border shadow-2xl bg-[#181b24] p-6 md:p-12 mb-8 md:mb-12 text-center relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none opacity-10">
-          <svg className="w-full h-full text-secondary" viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="500" cy="200" r="300" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="8 8" />
-          </svg>
-        </div>
+      {/* Top Hero Banner with Background Image */}
+      <div className="relative w-full h-[280px] sm:h-[360px] md:h-[440px] flex items-center justify-center overflow-hidden border-b border-border/40">
+        {/* Background Image - صورة هيدر القطاعات والعملاء */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 scale-105"
+          style={{ backgroundImage: "url('/images/sections/clients-hero-bg.png')" }}
+        />
+        {/* Dark Overlay Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#181b24] via-[#181b24]/80 to-black/60" />
 
-        <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center gap-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/20 border border-secondary/40 text-secondary font-bold text-xs md:text-sm">
+        {/* Hero Content */}
+        <div className="container relative z-10 text-center flex flex-col items-center gap-4 px-4">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/20 border border-secondary/40 text-secondary font-bold text-xs md:text-sm backdrop-blur-md"
+          >
             <Network className="w-4 h-4" />
             <span>{content.subtitle}</span>
-          </div>
+          </motion.div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-3xl sm:text-4xl md:text-6xl font-black text-white leading-tight drop-shadow-lg max-w-4xl"
+          >
             {content.title}
-          </h1>
+          </motion.h1>
 
-          <p className="text-sm md:text-lg text-white/80 leading-relaxed max-w-2xl">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-sm md:text-lg text-gray-200 max-w-2xl font-medium leading-relaxed"
+          >
             {content.desc}
-          </p>
+          </motion.p>
         </div>
       </div>
+
+      <div className="container py-4 pb-16" id="clients">
 
       {/* Hierarchical Tree Map Layout */}
       <div className="relative flex flex-col items-center">
@@ -241,6 +261,7 @@ export default function Clients({ lang = "ar" }: { lang?: "ar" | "en" }) {
         </motion.div>
 
       </div>
+    </div>
     </div>
   );
 }

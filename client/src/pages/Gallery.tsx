@@ -144,18 +144,38 @@ export default function Gallery({ lang = "ar" }: { lang?: "ar" | "en" }) {
     : "Factory Gallery & Wooden Pallet Production Lines";
 
   return (
-    <div className="container py-8 md:py-12" id="gallery-slider">
-      {/* Page Header with Clean H1 */}
-      <div className="max-w-3xl mx-auto text-center mb-8">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground mb-3 leading-tight">
-          {h1Title}
-        </h1>
-        <p className="text-sm md:text-base text-muted-foreground">
-          {isRtl 
-            ? "صور حية لإنتاج وتجميع وتخزين البالتات الخشبية المعالجة حرارياً بختم ISPM-15 بمصنع النجمة."
-            : "Live photos of wooden pallet manufacturing processes, container loading, and storage at El Negma factory."}
-        </p>
+    <div className="flex flex-col gap-12">
+      
+      {/* Top Hero Banner with Background Image */}
+      <div className="relative w-full h-[280px] sm:h-[360px] md:h-[440px] flex items-center justify-center overflow-hidden border-b border-border/40">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 scale-105"
+          style={{ backgroundImage: "url('/images/sections/gallery-hero-bg.png')" }}
+        />
+        {/* Dark Overlay Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#181b24] via-[#181b24]/80 to-black/60" />
+
+        {/* Hero Content */}
+        <div className="container relative z-10 text-center flex flex-col items-center gap-4 px-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/20 border border-secondary/40 text-secondary font-bold text-xs md:text-sm backdrop-blur-md">
+            <Package className="w-4 h-4" />
+            <span>{isRtl ? "المستودع وخطوط الإنتاج والتخزين" : "Factory Warehouse & Production Lines"}</span>
+          </div>
+
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-white leading-tight drop-shadow-lg max-w-4xl">
+            {h1Title}
+          </h1>
+
+          <p className="text-sm md:text-lg text-gray-200 max-w-2xl font-medium leading-relaxed">
+            {isRtl 
+              ? "صور حية لعمليات تصنيع وتجميع وتخزين وتجهيز البالتات الخشبية للتوريد والتصدير بمصنع النجمة."
+              : "Live high-definition photos of manufacturing processes, container loading, and pallet storage at El Negma factory."}
+          </p>
+        </div>
       </div>
+
+      <div className="container py-4 pb-12" id="gallery-slider">
 
       {/* Main Interactive Carousel */}
       <div
@@ -318,31 +338,6 @@ export default function Gallery({ lang = "ar" }: { lang?: "ar" | "en" }) {
             </p>
           </div>
 
-          {/* Internal Navigation Section Links */}
-          <div className="pt-6 border-t border-border/30 flex flex-wrap items-center justify-between gap-4">
-            <div className="flex flex-wrap items-center gap-3">
-              <Link 
-                href={isRtl ? "/products/" : "/en/products/"}
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-secondary text-white font-bold text-sm hover:bg-secondary/90 transition-colors shadow-md"
-              >
-                {isRtl ? "تصفح جميع المقاسات والمنتجات" : "View All Pallet Sizes"}
-                {isRtl ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
-              </Link>
-              <Link 
-                href={isRtl ? "/services/" : "/en/services/"}
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 text-white font-bold text-sm hover:bg-white/20 transition-colors border border-white/10"
-              >
-                {isRtl ? "خدمات المعالجة والتصنيع" : "Services & Processing"}
-              </Link>
-            </div>
-            <Link 
-              href={isRtl ? "/quote/" : "/en/quote/"}
-              className="inline-flex items-center gap-2 text-secondary font-bold text-sm hover:underline"
-            >
-              {isRtl ? "طلب عرض سعر" : "Request a Quote"}
-              {isRtl ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
-            </Link>
-          </div>
         </div>
       </div>
 
@@ -377,6 +372,7 @@ export default function Gallery({ lang = "ar" }: { lang?: "ar" | "en" }) {
           </figure>
         </div>
       )}
+    </div>
     </div>
   );
 }

@@ -56,7 +56,53 @@ export function CertificationsList({ lang = "ar" }: { lang?: "ar" | "en" }) {
   }[lang];
 
   return (
-    <div className="container py-8 md:py-12" id="certifications">
+    <div className="flex flex-col gap-12">
+      
+      {/* Top Hero Banner with Background Image */}
+      <div className="relative w-full h-[280px] sm:h-[360px] md:h-[440px] flex items-center justify-center overflow-hidden border-b border-border/40">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 scale-105"
+          style={{ backgroundImage: "url('/images/sections/certs-hero-bg.png')" }}
+        />
+        {/* Dark Overlay Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#181b24] via-[#181b24]/80 to-black/60" />
+
+        {/* Hero Content */}
+        <div className="container relative z-10 text-center flex flex-col items-center gap-4 px-4">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/20 border border-secondary/40 text-secondary font-bold text-xs md:text-sm backdrop-blur-md"
+          >
+            <Award className="w-4 h-4" />
+            <span>{isEn ? "International ISO & Export Quality Compliance" : "اعتمادات الجودة والتبخير الحراري والتنظيم الدولي"}</span>
+          </motion.div>
+
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-3xl sm:text-4xl md:text-6xl font-black text-white leading-tight drop-shadow-lg max-w-4xl"
+          >
+            {content.title}
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-sm md:text-lg text-gray-200 max-w-3xl font-medium leading-relaxed"
+          >
+            {isEn 
+              ? "Certified Quality Management (ISO 9001), Environmental (ISO 14001), Safety (ISO 45001), and ISPM-15 Heat Treatment compliance."
+              : "شهادات الأيزو العالمية (ISO 9001، ISO 14001، ISO 45001) والمعالجة الحرارية المعتمدة ISPM-15 بختم IPPC للتصدير الدولي."}
+          </motion.p>
+        </div>
+      </div>
+
+      <div className="container py-4 pb-12" id="certifications">
       <div className="relative min-h-0 lg:min-h-[500px] rounded-2xl md:rounded-3xl overflow-hidden border border-border shadow-2xl bg-[#181b24] p-4 md:p-8 lg:p-16 flex items-center">
         
         {/* Wave Decoration */}
@@ -117,6 +163,7 @@ export function CertificationsList({ lang = "ar" }: { lang?: "ar" | "en" }) {
 
       </div>
     </div>
+    </div>
   );
 }
 
@@ -157,43 +204,5 @@ export function QualityCertImage({ lang = "ar" }: { lang?: "ar" | "en" }) {
   );
 }
 
-export function FumigationCertImage({ lang = "ar" }: { lang?: "ar" | "en" }) {
-  const isEn = lang === "en";
-  return (
-    <div className="container py-8 md:py-12" id="fumigation-certification">
-      <div className="rounded-2xl md:rounded-3xl border border-border shadow-2xl bg-[#181b24] p-4 md:p-8 lg:p-12 flex flex-col items-center gap-6 md:gap-8 text-center">
-        <div className="flex items-center gap-2 md:gap-3">
-          <div className="w-8 md:w-12 h-1 bg-secondary rounded-full" />
-          <h3 className="text-lg sm:text-xl md:text-3xl font-black text-white">
-            {isEn ? "Certified ISPM-15 Heat Treatment & Fumigation Certificate" : "نموذج شهادة التبخير والمعالجة الحرارية ISPM-15 المعتمدة"}
-          </h3>
-          <div className="w-8 md:w-12 h-1 bg-secondary rounded-full" />
-        </div>
-        
-        <p className="text-sm md:text-base text-gray-300 max-w-2xl leading-relaxed">
-          {isEn
-            ? "Official documentation accompanying exported cargo, certifying compliance with international agricultural quarantine regulations."
-            : "المستند الرسمي الصادر للشحنات الموجهة للتصدير الدولي، والذي يثبت خضوع البالتات الخشبية للتعقيم والمعالجة الحرارية وفق الدليل الفني الدولي."}
-        </p>
 
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="w-full max-w-2xl overflow-hidden rounded-2xl border border-secondary/30 shadow-xl"
-        >
-          <img 
-            src="/images/sections/fumigation-certificate.png" 
-            alt={isEn ? "Certified Fumigation Certificate" : "شهادة تبخير بالتات خشبية معتمدة"} 
-            width={1000}
-            height={700}
-            loading="lazy"
-            className="w-full max-h-[350px] md:max-h-[550px] object-cover mx-auto"
-          />
-        </motion.div>
-      </div>
-    </div>
-  );
-}
 
