@@ -1,115 +1,231 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sprout, Utensils, Tv, Hammer, Zap, FlaskConical } from "lucide-react";
+import { Sprout, Utensils, Tv, Hammer, Zap, FlaskConical, Building2, Factory, Network } from "lucide-react";
 
 export default function Clients({ lang = "ar" }: { lang?: "ar" | "en" }) {
   const isEn = lang === "en";
 
   const content = {
     ar: {
-      title: "عملاؤنا الكرام",
-      desc: "نتشرف بخدمة نخبة متميزة من الشركات الرائدة في قطاعات التصدير الزراعي، الصناعات الغذائية، الإلكترونيات، السيراميك، الكابلات، الأدوية وغيرها. شراكتنا معهم تمتد لسنوات من الثقة والتميز.",
-      caption: "نفتخر بثقة عملائنا الكرام",
+      title: "عملاؤنا والقطاعات المستهدفة",
+      subtitle: "خريطة الشراكات والقطاعات الصناعية والتصديرية التي نتشرف بخدمتها",
+      desc: "نتشرف بخدمة نخبة متميزة من كبرى الشركات والمصانع الرائدة عبر 6 قطاعات حيوية رئيسية في مصر والشرق الأوسط.",
+      rootNode: "مصنع النجمة للبالتات الخشبية",
+      rootSub: "مركز التوريد والحلول اللوجستية",
+      caption: "نفتخر بثقة عملاء كبرى الشركات",
       imgAlt: "شعارات عملاء شركة النجمة الكرام",
       alignClass: "text-right",
       oppositeAlignClass: "text-left",
-      sectors: [
+      treeCategories: [
         {
-          title: "قطاع التصدير الزراعي والخضروات",
-          desc: "نصنع بالتات مخصصة لتعبئة وشحن المنتجات الزراعية الطازجة للتصدير المحلي والدولي بأعلى درجات الأمان.",
-          icon: <Sprout className="w-5 h-5 text-secondary shrink-0" />
+          category: "قطاع الصادرات والتغذية",
+          branches: [
+            {
+              title: "قطاع التصدير الزراعي والخضروات",
+              desc: "بالتات معالجة ISPM-15 طازجة لتصدير الفاكهة والخضروات للاتحاد الأوروبي ودول الخليج بأعلى ثبات.",
+              icon: <Sprout className="w-5 h-5 text-emerald-400 shrink-0" />
+            },
+            {
+              title: "قطاع الصناعات الغذائية والمشروبات",
+              desc: "بالتات خشبية صحية ومطابقة لاشتراطات سلامة الغذاء لتخزين وتداول البضائع الغذائية بالمستودعات.",
+              icon: <Utensils className="w-5 h-5 text-amber-400 shrink-0" />
+            }
+          ]
         },
         {
-          title: "قطاع الصناعات الغذائية",
-          desc: "توفير بالتات خشبية معالجة ومطابقة للمواصفات الصحية والغذائية لتخزين وتداول الأغذية والمشروبات.",
-          icon: <Utensils className="w-5 h-5 text-secondary shrink-0" />
+          category: "قطاع الصناعات الثقيلة والبناء",
+          branches: [
+            {
+              title: "قطاع السيراميك والأسمنت والرخام",
+              desc: "بالتات خشبية ثقيلة (120×100 و 120×120) قادرة على تحمل أوزان فائقة تصل إلى 2.5 طن.",
+              icon: <Hammer className="w-5 h-5 text-purple-400 shrink-0" />
+            },
+            {
+              title: "قطاع الكابلات والكيماويات والبراميل",
+              desc: "بالتات كيماويات CP9 وبكرات كابلات فائقة المتانة مصممة للثبات المطلق أثناء الشحن البحري.",
+              icon: <Zap className="w-5 h-5 text-blue-400 shrink-0" />
+            }
+          ]
         },
         {
-          title: "قطاع الإلكترونيات والأجهزة المنزلية",
-          desc: "حلول تغليف وحماية متطورة وتوريد بالتات خفيفة وقوية مخصصة لشحن الأجهزة الإلكترونية والمنزلية الحساسة.",
-          icon: <Tv className="w-5 h-5 text-secondary shrink-0" />
-        },
-        {
-          title: "قطاع السيراميك والبناء والأسمنت",
-          desc: "بالتات خشبية فائقة التحمل ومصممة خصيصاً للأوزان الثقيلة كالسيراميك، والرخام، والأسمنت ومواد البناء.",
-          icon: <Hammer className="w-5 h-5 text-secondary shrink-0" />
-        },
-        {
-          title: "قطاع الكابلات والكيماويات والصناعات التكميلية",
-          desc: "بالتات خشبية قوية ومخصصة لنقل بكرات الكابلات الكهربائية الكبرى وبراميل الكيماويات بأعلى مستويات الثبات.",
-          icon: <Zap className="w-5 h-5 text-secondary shrink-0" />
-        },
-        {
-          title: "قطاعات متخصصة أخرى",
-          desc: "نلبي احتياجات مزارع الدواجن الكبرى، شركات الأسمدة ومصانع الأدوية بحلول لوجستية وتخزينية مرنة.",
-          icon: <FlaskConical className="w-5 h-5 text-secondary shrink-0" />
+          category: "القطاعات المتخصصة والتكنولوجية",
+          branches: [
+            {
+              title: "قطاع الإلكترونيات والأجهزة المنزلية",
+              desc: "حلول حماية وتغليف متطورة وبصمة خفيفة متينة مخصصة للأجهزة الكهربائية الحساسة.",
+              icon: <Tv className="w-5 h-5 text-cyan-400 shrink-0" />
+            },
+            {
+              title: "قطاعات الأدوية والمستلزمات والأسمدة",
+              desc: "توريد كميات دورية وعقود سنوية للمستحضرات الطبية ومزارع الدواجن وشركات الأسمدة.",
+              icon: <FlaskConical className="w-5 h-5 text-rose-400 shrink-0" />
+            }
+          ]
         }
       ]
     },
     en: {
-      title: "Our Valued Clients",
-      desc: "We are honored to serve a distinguished group of leading companies in agricultural export, food industries, electronics, ceramics, cables, pharmaceuticals, and more. Our partnership spans years of trust and quality.",
-      caption: "Proud to Have the Trust of Our Clients",
+      title: "Our Clients & Industry Sectors",
+      subtitle: "Hierarchical Map of Key Industrial & Export Sectors Served",
+      desc: "Proudly supplying top-tier factories and global exporters across 6 strategic industrial sectors in Egypt and the MENA region.",
+      rootNode: "El Negma Pallets Manufacturing",
+      rootSub: "Central Supply & Logistics Hub",
+      caption: "Trusted by Industry Leaders",
       imgAlt: "El Negma Valued Clients Logos",
       alignClass: "text-left",
       oppositeAlignClass: "text-right",
-      sectors: [
+      treeCategories: [
         {
-          title: "Agricultural & Vegetable Export",
-          desc: "We manufacture custom pallets optimized for packing and shipping fresh produce safely to local and international markets.",
-          icon: <Sprout className="w-5 h-5 text-secondary shrink-0" />
+          category: "Export & Food Sectors",
+          branches: [
+            {
+              title: "Agricultural & Vegetable Export",
+              desc: "ISPM-15 certified pallets engineered for fresh produce exports to the EU, UK, and Gulf region.",
+              icon: <Sprout className="w-5 h-5 text-emerald-400 shrink-0" />
+            },
+            {
+              title: "Food & Beverage Processing",
+              desc: "Sanitary, food-grade wooden pallets meeting strict hygiene regulations for cold storage and warehouse handling.",
+              icon: <Utensils className="w-5 h-5 text-amber-400 shrink-0" />
+            }
+          ]
         },
         {
-          title: "Food & Beverage Industries",
-          desc: "Providing treated, sanitary wood pallets compliant with food safety specifications for storage and transport.",
-          icon: <Utensils className="w-5 h-5 text-secondary shrink-0" />
+          category: "Heavy Industry & Construction",
+          branches: [
+            {
+              title: "Ceramics, Cement & Marble",
+              desc: "Heavy-duty square & industrial pallets tested for high load capacity up to 2,500 kg dynamic payload.",
+              icon: <Hammer className="w-5 h-5 text-purple-400 shrink-0" />
+            },
+            {
+              title: "Cables, Chemicals & Heavy Cargo",
+              desc: "CP9 chemical pallets and heavy cable reel platforms providing maximum tilt stability during marine shipping.",
+              icon: <Zap className="w-5 h-5 text-blue-400 shrink-0" />
+            }
+          ]
         },
         {
-          title: "Electronics & Home Appliances",
-          desc: "Advanced packaging and protection solutions, offering lightweight yet robust pallets for sensitive appliance shipments.",
-          icon: <Tv className="w-5 h-5 text-secondary shrink-0" />
-        },
-        {
-          title: "Ceramics, Construction & Cement",
-          desc: "Heavy-duty wooden pallets designed specifically to bear extreme weights like ceramics, marble, cement, and construction materials.",
-          icon: <Hammer className="w-5 h-5 text-secondary shrink-0" />
-        },
-        {
-          title: "Cables, Chemicals & Heavy Industry",
-          desc: "Strong pallets customized to transport large cable reels and chemical drums with maximum stability.",
-          icon: <Zap className="w-5 h-5 text-secondary shrink-0" />
-        },
-        {
-          title: "Other Specialized Sectors",
-          desc: "Meeting the needs of large poultry farms, fertilizer producers, and pharmaceutical factories with flexible storage layouts.",
-          icon: <FlaskConical className="w-5 h-5 text-secondary shrink-0" />
+          category: "Specialized & Tech Sectors",
+          branches: [
+            {
+              title: "Electronics & Home Appliances",
+              desc: "Precision dimensional pallets providing smooth automated conveyor flow and shock absorption for home appliances.",
+              icon: <Tv className="w-5 h-5 text-cyan-400 shrink-0" />
+            },
+            {
+              title: "Pharma, Fertilizers & Agriculture",
+              desc: "Contract manufacturing and seasonal bulk supply for major pharmaceutical laboratories and fertilizer plants.",
+              icon: <FlaskConical className="w-5 h-5 text-rose-400 shrink-0" />
+            }
+          ]
         }
       ]
     }
   }[lang];
 
   return (
-    <div className="container py-8 md:py-12" id="clients">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch rounded-2xl md:rounded-3xl overflow-hidden border border-border shadow-2xl min-h-0 lg:min-h-[680px]">
+    <div className="container py-8 md:py-16" id="clients">
+      
+      {/* Top Header Card */}
+      <div className="rounded-2xl md:rounded-3xl border border-border shadow-2xl bg-[#181b24] p-6 md:p-12 mb-8 md:mb-12 text-center relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none opacity-10">
+          <svg className="w-full h-full text-secondary" viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="500" cy="200" r="300" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="8 8" />
+          </svg>
+        </div>
+
+        <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center gap-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/20 border border-secondary/40 text-secondary font-bold text-xs md:text-sm">
+            <Network className="w-4 h-4" />
+            <span>{content.subtitle}</span>
+          </div>
+
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight">
+            {content.title}
+          </h1>
+
+          <p className="text-sm md:text-lg text-white/80 leading-relaxed max-w-2xl">
+            {content.desc}
+          </p>
+        </div>
+      </div>
+
+      {/* Hierarchical Tree Map Layout */}
+      <div className="relative flex flex-col items-center">
         
-        {/* Right Section (Dark Background, Logos Grid) - Grid span 6 */}
+        {/* Tree Root Node */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="relative z-20 flex flex-col items-center mb-8"
+        >
+          <div className="px-6 py-4 md:px-8 md:py-5 rounded-2xl bg-secondary text-white font-black text-lg md:text-xl shadow-2xl shadow-secondary/30 border border-white/20 flex items-center gap-3">
+            <Factory className="w-6 h-6 shrink-0" />
+            <div className="flex flex-col text-right">
+              <span>{content.rootNode}</span>
+              <span className="text-xs font-medium text-white/80">{content.rootSub}</span>
+            </div>
+          </div>
+          {/* Vertical Connecting Line down */}
+          <div className="w-1 h-10 md:h-12 bg-gradient-to-b from-secondary to-secondary/30 mt-2" />
+        </motion.div>
+
+        {/* Tree Categories & Branches (Grid 3 Columns) */}
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 relative z-10">
+          {content.treeCategories.map((cat, catIdx) => (
+            <motion.div 
+              key={catIdx}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: catIdx * 0.15 }}
+              className="flex flex-col rounded-2xl md:rounded-3xl border border-border/80 bg-[#181b24] p-5 md:p-6 shadow-xl relative overflow-hidden group hover:border-secondary/50 transition-all"
+            >
+              {/* Category Header (Branch Node) */}
+              <div className="flex items-center gap-3 pb-4 mb-4 border-b border-border/60">
+                <div className="p-2.5 rounded-xl bg-secondary/10 border border-secondary/30 text-secondary">
+                  <Building2 className="w-5 h-5" />
+                </div>
+                <h3 className="font-bold text-base md:text-lg text-white">{cat.category}</h3>
+              </div>
+
+              {/* Branch Leaf Cards */}
+              <div className="flex flex-col gap-4 flex-1">
+                {cat.branches.map((branch, bIdx) => (
+                  <div 
+                    key={bIdx} 
+                    className="p-4 rounded-xl bg-[#202430]/60 border border-border/40 hover:border-secondary/40 hover:bg-[#202430] transition-all flex items-start gap-3"
+                  >
+                    <div className="p-2 rounded-lg bg-white/5 border border-white/10 shrink-0 mt-0.5">
+                      {branch.icon}
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <h4 className="font-bold text-sm md:text-base text-white">{branch.title}</h4>
+                      <p className="text-xs text-gray-400 leading-relaxed">{branch.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Client Logos Banner Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="lg:col-span-6 bg-[#181b24] p-6 md:p-12 flex flex-col justify-center items-center relative overflow-hidden order-1 lg:order-2"
+          className="w-full mt-10 md:mt-16 rounded-2xl md:rounded-3xl border border-border shadow-2xl bg-[#181b24] p-6 md:p-10 flex flex-col items-center gap-6 text-center"
         >
-          {/* Wave Decoration */}
-          <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
-            <svg className="w-full h-full text-secondary" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
-              <path d="M-400,0 C-200,50 0,100 200,150 C400,200 600,250 800,300" fill="none" stroke="currentColor" strokeWidth="1"></path>
-              <path d="M-400,20 C-200,70 0,120 200,170 C400,220 600,270 800,320" fill="none" stroke="currentColor" strokeWidth="1"></path>
-            </svg>
-          </div>
-
-          <div className="relative z-10 w-full max-w-sm md:max-w-md bg-white p-3 md:p-4 rounded-2xl shadow-xl flex flex-col items-center">
+          <h3 className="text-xl md:text-2xl font-bold text-white">
+            {content.caption}
+          </h3>
+          <div className="bg-white p-4 rounded-2xl shadow-xl w-full max-w-xl">
             <picture>
               <source srcSet="/images/brand/clients-logos-grid.webp" type="image/webp" />
               <img 
@@ -118,47 +234,9 @@ export default function Clients({ lang = "ar" }: { lang?: "ar" | "en" }) {
                 width={800}
                 height={600}
                 loading="lazy"
-                className="w-full h-[200px] md:h-[320px] object-contain rounded-lg"
+                className="w-full h-[180px] md:h-[280px] object-contain rounded-lg"
               />
             </picture>
-            <div className="mt-3 md:mt-4 text-center">
-              <span className="font-bold text-[#181b24] text-sm md:text-lg">{content.caption}</span>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Left Section (White Background, Sectors) - Grid span 6 */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className={`lg:col-span-6 bg-white p-6 md:p-12 flex flex-col justify-center ${content.alignClass} order-2 lg:order-1`}
-        >
-          <div className="flex items-stretch gap-3 md:gap-4 mb-4 md:mb-6 justify-start">
-            <div className="w-1.5 md:w-2 bg-secondary rounded-full" />
-            <h1 className="text-2xl sm:text-3xl md:text-5xl font-black text-[#181b24] leading-tight">
-              {content.title}
-            </h1>
-          </div>
-
-          <p className="text-sm md:text-lg text-gray-600 leading-relaxed mb-6">
-            {content.desc}
-          </p>
-
-          {/* Grid of 6 sectors */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-            {content.sectors.map((sec, index) => (
-              <div key={index} className={`flex items-start gap-2.5 md:gap-3 ${content.alignClass} justify-start p-2 rounded-xl hover:bg-gray-50 transition-colors`}>
-                <div className="shrink-0 mt-1 p-1.5 rounded-lg bg-secondary/10 flex items-center justify-center">
-                  {sec.icon}
-                </div>
-                <div className="flex flex-col gap-0.5">
-                  <h4 className="font-bold text-xs md:text-sm text-[#181b24]">{sec.title}</h4>
-                  <p className="text-[10px] md:text-xs text-gray-500 leading-relaxed">{sec.desc}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </motion.div>
 

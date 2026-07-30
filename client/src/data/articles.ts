@@ -25,7 +25,6 @@ import { woodVsPlasticPalletsArticle } from "./articles/wood-vs-plastic-pallets"
 import { palletsPotatoVegetablesExportArticle } from "./articles/pallets-potato-vegetables-export";
 import { palletsFactoriesWarehousesArticle } from "./articles/pallets-factories-warehouses";
 import { woodenCratesPalletCollarsExportArticle } from "./articles/wooden-crates-pallet-collars-export";
-import { heatTreatmentHtPalletsArticle } from "./articles/heat-treatment-ht-pallets";
 import { methylBromideFumigationPalletsArticle } from "./articles/methyl-bromide-fumigation-pallets";
 import { wholesalePallets10thRamadanArticle } from "./articles/wholesale-pallets-10th-ramadan";
 import { wholesalePallets6thOctoberArticle } from "./articles/wholesale-pallets-6th-october";
@@ -60,7 +59,6 @@ const rawArticles: Article[] = [
   woodVsPlasticPalletsArticle,
   palletsPotatoVegetablesExportArticle,
   palletsFactoriesWarehousesArticle,
-  heatTreatmentHtPalletsArticle,
   methylBromideFumigationPalletsArticle,
   wholesalePallets10thRamadanArticle,
   wholesalePallets6thOctoberArticle,

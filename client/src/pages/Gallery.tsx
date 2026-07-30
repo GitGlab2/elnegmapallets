@@ -339,7 +339,7 @@ export default function Gallery({ lang = "ar" }: { lang?: "ar" | "en" }) {
               href={isRtl ? "/quote/" : "/en/quote/"}
               className="inline-flex items-center gap-2 text-secondary font-bold text-sm hover:underline"
             >
-              {isRtl ? "طلب عرض سعر خاص بالكميات" : "Request Custom Quote"}
+              {isRtl ? "طلب عرض سعر" : "Request a Quote"}
               {isRtl ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
             </Link>
           </div>

@@ -37,10 +37,53 @@ export default function About({ lang = "ar" }: { lang?: "ar" | "en" }) {
   }[lang];
 
   return (
-    <div className="flex flex-col gap-16">
+    <div className="flex flex-col gap-12">
       
+      {/* Top Hero Banner with Background Image */}
+      <div className="relative w-full h-[280px] sm:h-[360px] md:h-[440px] flex items-center justify-center overflow-hidden border-b border-border/40">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 scale-105"
+          style={{ backgroundImage: "url('/images/sections/about-hero-bg.png')" }}
+        />
+        {/* Dark Overlay Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#181b24] via-[#181b24]/80 to-black/60" />
+
+        {/* Hero Content */}
+        <div className="container relative z-10 text-center flex flex-col items-center gap-4 px-4">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/20 border border-secondary/40 text-secondary font-bold text-xs md:text-sm backdrop-blur-md"
+          >
+            <span>{isEn ? "Leading Pallet Factory in Egypt" : "المصنع الرائد للبالتات الخشبية في مصر"}</span>
+          </motion.div>
+
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-3xl sm:text-4xl md:text-6xl font-black text-white leading-tight drop-shadow-lg max-w-4xl"
+          >
+            {content.title}
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-sm md:text-lg text-gray-300 max-w-2xl font-medium leading-relaxed"
+          >
+            {isEn 
+              ? "Over 18 years of manufacturing excellence and international quality standards."
+              : "أكثر من 18 عاماً من التميز الصناعي والالتزام الكامل بأعلى المعايير الدولية."}
+          </motion.p>
+        </div>
+      </div>
+
       {/* Slide 2: من نحن - نبذة عن الشركة */}
-      <div className="container py-8 md:py-12" id="about-us">
+      <div className="container py-4 md:py-8" id="about-us">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-center rounded-2xl md:rounded-3xl overflow-hidden border border-border shadow-2xl bg-[#181b24] p-4 md:p-8 lg:p-16">
           
           {/* Left Side: Image (Grid span 5) */}

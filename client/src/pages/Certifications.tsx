@@ -157,39 +157,43 @@ export function QualityCertImage({ lang = "ar" }: { lang?: "ar" | "en" }) {
   );
 }
 
-export function InternationalStandardsImage({ lang = "ar" }: { lang?: "ar" | "en" }) {
+export function FumigationCertImage({ lang = "ar" }: { lang?: "ar" | "en" }) {
   const isEn = lang === "en";
   return (
-    <div className="container py-8 md:py-12" id="international-standards">
+    <div className="container py-8 md:py-12" id="fumigation-certification">
       <div className="rounded-2xl md:rounded-3xl border border-border shadow-2xl bg-[#181b24] p-4 md:p-8 lg:p-12 flex flex-col items-center gap-6 md:gap-8 text-center">
         <div className="flex items-center gap-2 md:gap-3">
           <div className="w-8 md:w-12 h-1 bg-secondary rounded-full" />
           <h3 className="text-lg sm:text-xl md:text-3xl font-black text-white">
-            {isEn ? "International Export & Safety Standards" : "المعايير الدولية للأمان والتصدير"}
+            {isEn ? "Certified ISPM-15 Heat Treatment & Fumigation Certificate" : "نموذج شهادة التبخير والمعالجة الحرارية ISPM-15 المعتمدة"}
           </h3>
           <div className="w-8 md:w-12 h-1 bg-secondary rounded-full" />
         </div>
         
+        <p className="text-sm md:text-base text-gray-300 max-w-2xl leading-relaxed">
+          {isEn
+            ? "Official documentation accompanying exported cargo, certifying compliance with international agricultural quarantine regulations."
+            : "المستند الرسمي الصادر للشحنات الموجهة للتصدير الدولي، والذي يثبت خضوع البالتات الخشبية للتعقيم والمعالجة الحرارية وفق الدليل الفني الدولي."}
+        </p>
+
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="w-full max-w-2xl"
+          className="w-full max-w-2xl overflow-hidden rounded-2xl border border-secondary/30 shadow-xl"
         >
-          <picture>
-            <source srcSet="/images/sections/international-standards.webp" type="image/webp" />
-            <img 
-              src="/images/sections/international-standards.webp" 
-              alt={isEn ? "El Negma International Standards Compliance" : "المعايير الدولية لشركة النجمة"} 
-              width={1000}
-              height={700}
-              loading="lazy"
-              className="styled-image w-full max-h-[300px] md:max-h-[500px] object-contain mx-auto"
-            />
-          </picture>
+          <img 
+            src="/images/sections/fumigation-certificate.png" 
+            alt={isEn ? "Certified Fumigation Certificate" : "شهادة تبخير بالتات خشبية معتمدة"} 
+            width={1000}
+            height={700}
+            loading="lazy"
+            className="w-full max-h-[350px] md:max-h-[550px] object-cover mx-auto"
+          />
         </motion.div>
       </div>
     </div>
   );
 }
+

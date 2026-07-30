@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, Facebook, MapPin, Mail, BookOpen, Globe, Search } from "lucide-react";
+import { Menu, X, Phone, Facebook, MapPin, Mail, BookOpen, Globe, Search, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { SearchModal } from "./SearchModal";
@@ -10,6 +10,7 @@ import { SearchModal } from "./SearchModal";
 export default function Layout({ children, lang = "ar" }: { children: React.ReactNode; lang?: "ar" | "en" }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isMobileCompanyOpen, setIsMobileCompanyOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
   const isEn = lang === "en";
@@ -19,6 +20,9 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
       if ((e.ctrlKey || e.metaKey) && e.key === "k") {
         e.preventDefault();
         setIsSearchOpen((prev) => !prev);
+      }
+      if (e.key === "Escape") {
+        setIsMenuOpen(false);
       }
     };
     window.addEventListener("keydown", handleKeyDown);
@@ -60,20 +64,6 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
     }
   }, [pathname]);
 
-  const navItems = isEn ? [
-    { name: "About Us", path: "/en/#about-section", isAnchor: true },
-    { name: "Products", path: "/en/products/", isAnchor: false },
-    { name: "Services", path: "/en/services/", isAnchor: false },
-    { name: "Blog", path: "/en/articles/", isAnchor: false },
-    { name: "Contact Us", path: "/en/contact/", isAnchor: false },
-  ] : [
-    { name: "من نحن", path: "/#about-section", isAnchor: true },
-    { name: "المنتجات", path: "/products/", isAnchor: false },
-    { name: "الخدمات", path: "/services/", isAnchor: false },
-    { name: "المدونة", path: "/articles/", isAnchor: false },
-    { name: "تواصل معنا", path: "/contact/", isAnchor: false },
-  ];
-
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string, isAnchor: boolean) => {
     if (isAnchor) {
       e.preventDefault();
@@ -107,6 +97,43 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
     if (pathname === "/") return "/en/";
     return `/en${pathname}`;
   };
+
+  const navData = {
+    ar: {
+      quoteBtn: "طلب عرض سعر",
+      callBtn: "اتصل الآن",
+      company: {
+        title: "الشركة",
+        items: [
+          { name: "من نحن", path: "/about/" },
+          { name: "الشهادات والاعتمادات", path: "/certificates/" },
+          { name: "معرض الصور", path: "/gallery/" },
+          { name: "عملاؤنا والقطاعات", path: "/clients/" },
+        ]
+      },
+      directItems: [
+        { name: "المدونة", path: "/articles/", isBlog: true },
+        { name: "تواصل معنا", path: "/contact/" },
+      ]
+    },
+    en: {
+      quoteBtn: "Request a Quote",
+      callBtn: "Call Now",
+      company: {
+        title: "Company",
+        items: [
+          { name: "About Us", path: "/en/about/" },
+          { name: "Certifications", path: "/en/certificates/" },
+          { name: "Factory Gallery", path: "/en/gallery/" },
+          { name: "Clients & Sectors", path: "/en/clients/" },
+        ]
+      },
+      directItems: [
+        { name: "Blog", path: "/en/articles/", isBlog: true },
+        { name: "Contact Us", path: "/en/contact/" },
+      ]
+    }
+  }[lang];
 
   const content = {
     ar: {
@@ -161,7 +188,7 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
         { name: "About Us", path: "/en/about/", isAnchor: false },
         { name: "Certifications", path: "/en/certificates/", isAnchor: false },
         { name: "Factory Gallery", path: "/en/gallery/", isAnchor: false },
-        { name: "Clients & Industries", path: "/en/clients/", isAnchor: false },
+        { name: "Clients & Sectors", path: "/en/clients/", isAnchor: false },
         { name: "Request a Quote", path: "/en/quote/", isAnchor: false },
         { name: "Contact Us", path: "/en/contact/", isAnchor: false },
       ],
@@ -224,33 +251,60 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
             </a>
           </div>
 
+          {/* Desktop Navigation Menu */}
           <nav className="hidden md:flex items-center gap-6">
-            {navItems.map((item) => {
-              const isArticles = item.path.replace(/\/$/, "").endsWith("/articles");
-              if (isArticles) {
-                return (
-                  <a 
-                    key={item.path} 
+
+            {/* المحور الأول: الشركة */}
+            <div className="relative group/company">
+              <button
+                className="flex items-center gap-1 text-sm font-bold text-muted-foreground hover:text-primary transition-colors cursor-pointer py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-md"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="company-dropdown"
+              >
+                {navData.company.title}
+                <ChevronDown className="w-3.5 h-3.5 transition-transform duration-200 group-hover/company:rotate-180 group-focus-within/company:rotate-180" />
+              </button>
+              {/* جميع الروابط مصدرة دائماً في الـ DOM لدعم الـ SEO ومفهرسة بالكامل */}
+              <div
+                id="company-dropdown"
+                className={`absolute top-[calc(100%+4px)] ${
+                  isEn ? "left-0" : "right-0"
+                } w-56 bg-background/98 backdrop-blur-md border border-border rounded-xl shadow-2xl shadow-black/20 opacity-0 invisible pointer-events-none group-hover/company:opacity-100 group-hover/company:visible group-hover/company:pointer-events-auto group-focus-within/company:opacity-100 group-focus-within/company:visible group-focus-within/company:pointer-events-auto transition-all duration-200 z-[60] overflow-hidden py-1.5`}
+                role="menu"
+              >
+                {navData.company.items.map((item) => (
+                  <a
+                    key={item.path}
                     href={item.path}
-                    onClick={(e) => handleNavClick(e, item.path, item.isAnchor)}
+                    role="menuitem"
+                    className={`block px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-muted/60 transition-colors ${
+                      isEn ? "text-left" : "text-right"
+                    }`}
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* الروابط المباشرة (المنتجات، الخدمات، المدونة، تواصل معنا) */}
+            {navData.directItems.map((item) => {
+              if (item.isBlog) {
+                return (
+                  <a
+                    key={item.path}
+                    href={item.path}
                     className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-primary/40 bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all duration-300 shadow-sm"
                   >
                     <BookOpen className="w-4 h-4" />
-                    <span className="text-sm font-black">
-                      {item.name}
-                    </span>
+                    <span className="text-sm font-black">{item.name}</span>
                   </a>
                 );
               }
               return (
-                <a 
-                  key={item.path} 
-                  href={item.path}
-                  onClick={(e) => handleNavClick(e, item.path, item.isAnchor)}
-                >
-                  <span
-                    className="text-sm font-bold transition-colors hover:text-primary cursor-pointer relative py-2 text-muted-foreground"
-                  >
+                <a key={item.path} href={item.path}>
+                  <span className="text-sm font-bold transition-colors hover:text-primary cursor-pointer relative py-2 text-muted-foreground">
                     {item.name}
                   </span>
                 </a>
@@ -258,7 +312,8 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
             })}
           </nav>
 
-          <div className="hidden md:flex items-center gap-4">
+          {/* Action Buttons: Quote CTA + Call Button */}
+          <div className="hidden md:flex items-center gap-3">
             {/* Language Switcher */}
             <a 
               href={toggleLangPath()} 
@@ -267,11 +322,19 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
               <Globe className="w-3.5 h-3.5" />
               <span>{content.switcherText}</span>
             </a>
+
+            {/* زر طلب عرض سعر بارز */}
+            <a href={isEn ? "/en/quote/" : "/quote/"}>
+              <Button variant="outline" className="font-bold border-secondary/50 text-secondary hover:bg-secondary hover:text-white transition-all shadow-md">
+                {navData.quoteBtn}
+              </Button>
+            </a>
             
+            {/* زر اتصل الآن */}
             <a href="tel:01080012261">
-              <Button variant="default" className="font-bold shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all">
+              <Button variant="default" className="font-bold shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all bg-secondary hover:bg-secondary/90">
                 {isEn ? <Phone className="mr-2 w-4 h-4" /> : <Phone className="ml-2 w-4 h-4" />}
-                {content.callBtn}
+                {navData.callBtn}
               </Button>
             </a>
           </div>
@@ -287,7 +350,7 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
               <span>{content.switcherText}</span>
             </a>
             <button
-              className="p-2 text-muted-foreground hover:text-primary"
+              className="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-muted-foreground hover:text-primary"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
@@ -296,53 +359,78 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
           </div>
         </div>
 
-        {/* Mobile Nav */}
+        {/* Mobile Navigation Drawer (Accordion based) */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-border bg-background p-4 flex flex-col gap-4 animate-in slide-in-from-top-5">
-            {navItems.map((item) => {
-              const isArticles = item.path.replace(/\/$/, "").endsWith("/articles");
-              if (isArticles) {
-                return (
-                  <a 
-                    key={item.path} 
-                    href={item.path} 
-                    onClick={(e) => {
-                      setIsMenuOpen(false);
-                      handleNavClick(e, item.path, item.isAnchor);
-                    }}
-                  >
-                    <span
-                      className="flex items-center justify-center gap-2 p-3 rounded-lg text-base font-black transition-colors cursor-pointer bg-primary/10 border border-primary/20 text-primary hover:bg-primary hover:text-white"
-                    >
-                      <BookOpen className="w-5 h-5" />
-                      {item.name}
-                    </span>
-                  </a>
-                );
-              }
-              return (
-                <a 
-                  key={item.path} 
-                  href={item.path} 
-                  onClick={(e) => {
-                    setIsMenuOpen(false);
-                    handleNavClick(e, item.path, item.isAnchor);
-                  }}
+          <div className="md:hidden border-t border-border bg-background p-4 flex flex-col gap-2 animate-in slide-in-from-top-5 max-h-[calc(100vh-80px)] overflow-y-auto">
+
+            {/* أكورديون الشركة */}
+            <div className="flex flex-col border-b border-border/40 pb-1">
+              <button
+                onClick={() => setIsMobileCompanyOpen(!isMobileCompanyOpen)}
+                className={`flex items-center justify-between w-full min-h-[44px] px-3 rounded-lg text-base font-bold text-muted-foreground hover:bg-muted transition-colors ${
+                  isEn ? "text-left flex-row" : "text-right flex-row-reverse"
+                }`}
+              >
+                <span>{navData.company.title}</span>
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-200 ${
+                    isMobileCompanyOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              {isMobileCompanyOpen && (
+                <div
+                  className={`mt-1 flex flex-col gap-0.5 pb-1 ${
+                    isEn ? "ml-4 pl-4 border-l border-border/50" : "mr-4 pr-4 border-r border-border/50"
+                  }`}
                 >
-                  <span
-                    className="block p-3 rounded-lg text-base font-bold transition-colors cursor-pointer hover:bg-muted text-muted-foreground"
-                  >
-                    {item.name}
-                  </span>
-                </a>
-              );
-            })}
-            <a href="tel:01080012261" className="w-full">
-              <Button className="w-full font-bold">
-                {isEn ? <Phone className="mr-2 w-4 h-4" /> : <Phone className="ml-2 w-4 h-4" />}
-                {content.callBtn}
-              </Button>
-            </a>
+                  {navData.company.items.map((item) => (
+                    <a
+                      key={item.path}
+                      href={item.path}
+                      onClick={() => { setIsMenuOpen(false); setIsMobileCompanyOpen(false); }}
+                      className={`block min-h-[44px] px-3 py-2.5 text-sm font-medium text-muted-foreground hover:text-primary rounded-lg hover:bg-muted/60 transition-colors flex items-center ${
+                        isEn ? "text-left" : "text-right"
+                      }`}
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* الروابط المباشرة للموبايل */}
+            {navData.directItems.map((item) => (
+              <a 
+                key={item.path} 
+                href={item.path} 
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <span
+                  className={`block p-3 min-h-[44px] rounded-lg text-base font-bold transition-colors cursor-pointer hover:bg-muted ${
+                    item.isBlog ? "text-primary bg-primary/10 border border-primary/20" : "text-muted-foreground"
+                  }`}
+                >
+                  {item.name}
+                </span>
+              </a>
+            ))}
+
+            {/* أزرار الإجراءات للموبايل */}
+            <div className="pt-2 flex flex-col gap-2">
+              <a href={isEn ? "/en/quote/" : "/quote/"} className="w-full block" onClick={() => setIsMenuOpen(false)}>
+                <Button variant="outline" className="w-full min-h-[44px] font-bold border-secondary/50 text-secondary hover:bg-secondary hover:text-white">
+                  {navData.quoteBtn}
+                </Button>
+              </a>
+              <a href="tel:01080012261" className="w-full block">
+                <Button className="w-full min-h-[44px] font-bold bg-secondary hover:bg-secondary/90">
+                  {isEn ? <Phone className="mr-2 w-4 h-4" /> : <Phone className="ml-2 w-4 h-4" />}
+                  {navData.callBtn}
+                </Button>
+              </a>
+            </div>
           </div>
         )}
       </header>
