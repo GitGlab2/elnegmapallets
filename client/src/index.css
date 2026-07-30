@@ -119,6 +119,11 @@
   }
 }
 
+::selection {
+  background-color: #b165fb !important;
+  color: #ffffff !important;
+}
+
 @layer components {
   /**
    * Custom container utility that centers content and adds responsive padding.
