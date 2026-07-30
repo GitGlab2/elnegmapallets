@@ -105,7 +105,7 @@ export default function Commitments({ lang = "ar" }: { lang?: "ar" | "en" }) {
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {content.commitments.map((com, index) => (
-                <div key={index} className={`flex items-start gap-4 p-4 rounded-2xl bg-[#202430]/40 border border-border/40 hover:border-secondary transition-all ${isEn ? "flex-row" : "flex-row-reverse"}`}>
+                <div key={index} className="flex items-start gap-4 p-4 rounded-2xl bg-[#202430]/40 border border-border/40 hover:border-secondary transition-all">
                   <div className="shrink-0 mt-1 p-2 rounded-xl bg-secondary/15 flex items-center justify-center">
                     {com.icon}
                   </div>

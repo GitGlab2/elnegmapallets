@@ -10,7 +10,7 @@ import { SearchModal } from "./SearchModal";
 export default function Layout({ children, lang = "ar" }: { children: React.ReactNode; lang?: "ar" | "en" }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isMobileCompanyOpen, setIsMobileCompanyOpen] = useState(false);
+  const [openMobileCat, setOpenMobileCat] = useState<string | null>(null);
   const pathname = usePathname();
   const router = useRouter();
   const isEn = lang === "en";
@@ -101,34 +101,70 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
   const navData = {
     ar: {
       blogBtn: "المدونة",
-      callBtn: "اتصل الآن",
-      company: {
-        title: "الشركة",
-        items: [
-          { name: "من نحن", path: "/about/" },
-          { name: "الشهادات والاعتمادات", path: "/certificates/" },
-          { name: "معرض الصور", path: "/gallery/" },
-          { name: "عملاؤنا والقطاعات", path: "/clients/" },
-        ]
-      },
-      directItems: [
-        { name: "تواصل معنا", path: "/#contact-section", isAnchor: true },
+      callBtn: "تواصل معنا",
+      menuCategories: [
+        {
+          id: "company",
+          title: "الشركة والاعتمادات",
+          items: [
+            { name: "من نحن", path: "/about/" },
+            { name: "الشهادات والاعتمادات الدولية", path: "/certificates/" },
+            { name: "معرض الصور وخطوط الإنتاج", path: "/gallery/" },
+            { name: "عملاؤنا والقطاعات الصناعية", path: "/clients/" },
+          ]
+        },
+        {
+          id: "services",
+          title: "المنتجات والخدمات",
+          items: [
+            { name: "بالتات التصدير المعالجة حرارياً (ISPM-15)", path: "/certificates/" },
+            { name: "عروض وتوريد الكميات", path: "/#pricing-section", isAnchor: true },
+            { name: "التوريد والتوصيل لجميع المحافظات", path: "/#achievements", isAnchor: true },
+            { name: "حلول القطاعات الزراعية والصناعية", path: "/clients/" },
+          ]
+        },
+        {
+          id: "media",
+          title: "المركز الإعلامي",
+          items: [
+            { name: "دليل ومقالات البالتات الخشبية", path: "/articles/" },
+            { name: "معايير التبخير والتصدير الدولية", path: "/articles/" },
+          ]
+        }
       ]
     },
     en: {
       blogBtn: "Blog",
-      callBtn: "Call Now",
-      company: {
-        title: "Company",
-        items: [
-          { name: "About Us", path: "/en/about/" },
-          { name: "Certifications", path: "/en/certificates/" },
-          { name: "Factory Gallery", path: "/en/gallery/" },
-          { name: "Clients & Sectors", path: "/en/clients/" },
-        ]
-      },
-      directItems: [
-        { name: "Contact Us", path: "/en/#contact-section", isAnchor: true },
+      callBtn: "Contact Us",
+      menuCategories: [
+        {
+          id: "company",
+          title: "Company & ISO",
+          items: [
+            { name: "About Us", path: "/en/about/" },
+            { name: "ISO & Global Certifications", path: "/en/certificates/" },
+            { name: "Factory & Gallery", path: "/en/gallery/" },
+            { name: "Clients & Sectors", path: "/en/clients/" },
+          ]
+        },
+        {
+          id: "services",
+          title: "Products & Services",
+          items: [
+            { name: "Heat-Treated Export Pallets", path: "/en/certificates/" },
+            { name: "Bulk Supply & Custom Specifications", path: "/en/#pricing-section", isAnchor: true },
+            { name: "Nationwide Supply Network", path: "/en/#achievements", isAnchor: true },
+            { name: "Food & Chemical Solutions", path: "/en/clients/" },
+          ]
+        },
+        {
+          id: "media",
+          title: "Knowledge Center",
+          items: [
+            { name: "Pallet Industry Guides & Articles", path: "/en/articles/" },
+            { name: "ISPM-15 Export Guidelines", path: "/en/articles/" },
+          ]
+        }
       ]
     }
   }[lang];
@@ -138,7 +174,7 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
       logoMain: "شركة النجمة",
       logoSub: "لتصنيع البالتات الخشبية",
       logoAlt: "شعار شركة النجمة",
-      callBtn: "اتصل الآن",
+      callBtn: "تواصل معنا",
       switcherText: "English",
       footerDesc: "الشركة رقم 1 في مصر لتصنيع البالتات الخشبية. خبرة تزيد عن 18 عامًا في خدمة كبرى الشركات والمصانع.",
       footerQuickLinks: "روابط سريعة",
@@ -153,10 +189,9 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
       footerProducts: "منتجات البالتات",
       footerProductsList: [
         { name: "بالتة يورو (120×80)", path: "/products/120x80-euro-pallet/", isAnchor: false },
-        { name: "بالتة صناعية (120×100)", path: "/products/120x100-industrial-pallet/", isAnchor: false },
-        { name: "بالتة كيماويات (114×114)", path: "/products/114x114-chemical-pallet/", isAnchor: false },
-        { name: "بالتة مربعة (120×120)", path: "/products/120x120-heavy-pallet/", isAnchor: false },
-        { name: "بالتة GMA أمريكية", path: "/products/121x101-gma-pallet/", isAnchor: false }
+        { name: "بالتة تصدير (120×100)", path: "/products/120x100-export-pallet/", isAnchor: false },
+        { name: "بالتات التصدير المعالجة حرارياً", path: "/certificates/", isAnchor: false },
+        { name: "البالتات الخشبية المعاد تصنيعها", path: "/#products-section", isAnchor: true },
       ],
       footerServices: "خدمات المصنع",
       footerServicesList: [
@@ -165,7 +200,7 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
         { name: "تصنيع هندسي مخصص", path: "/services/custom-manufacturing/", isAnchor: false },
         { name: "صناديق خشبية وإطارات", path: "/services/wooden-crates-collars/", isAnchor: false }
       ],
-      footerContact: "تواصل معنا",
+      footerContact: "معلومات الاتصال",
       footerAddress: "بني سويف - المنطقة الصناعية بياض العرب (بجوار علوم إدارية)",
       footerCopyright: `© ${new Date().getFullYear()} شركة النجمة لتصنيع البالتات الخشبية. جميع الحقوق محفوظة.`,
       footerDev: "تم التطوير بواسطة",
@@ -176,27 +211,26 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
     },
     en: {
       logoMain: "El Negma",
-      logoSub: "Pallet Manufacturing",
+      logoSub: "Wooden Pallets Factory",
       logoAlt: "El Negma Pallets Logo",
-      callBtn: "Call Now",
-      switcherText: "العربية",
-      footerDesc: "The #1 company in Egypt for wooden pallets manufacturing. Over 18 years of experience serving major companies and factories.",
+      callBtn: "Contact Us",
+      switcherText: "عربي",
+      footerDesc: "Egypt's #1 wooden pallet manufacturer. 18+ years serving major industrial enterprise supply chains.",
       footerQuickLinks: "Quick Links",
       footerQuickLinksList: [
         { name: "About Us", path: "/en/about/", isAnchor: false },
         { name: "Certifications", path: "/en/certificates/", isAnchor: false },
         { name: "Factory Gallery", path: "/en/gallery/", isAnchor: false },
         { name: "Clients & Sectors", path: "/en/clients/", isAnchor: false },
-        { name: "Pricing Systems", path: "/en/#pricing-section", isAnchor: true },
+        { name: "Pricing & Quotations", path: "/en/#pricing-section", isAnchor: true },
         { name: "Contact Us", path: "/en/#contact-section", isAnchor: true },
       ],
       footerProducts: "Pallet Products",
       footerProductsList: [
-        { name: "Euro Pallet (120x80)", path: "/en/products/120x80-euro-pallet/", isAnchor: false },
-        { name: "Industrial Pallet (120x100)", path: "/en/products/120x100-industrial-pallet/", isAnchor: false },
-        { name: "Chemical Pallet (114x114)", path: "/en/products/114x114-chemical-pallet/", isAnchor: false },
-        { name: "Heavy Duty Pallet (120x120)", path: "/en/products/120x120-heavy-pallet/", isAnchor: false },
-        { name: "GMA American Pallet", path: "/en/products/121x101-gma-pallet/", isAnchor: false }
+        { name: "120x80 Euro Pallet", path: "/en/products/120x80-euro-pallet/", isAnchor: false },
+        { name: "120x100 Heavy Duty Export Pallet", path: "/en/products/120x100-export-pallet/", isAnchor: false },
+        { name: "Heat-Treated ISPM-15 Pallets", path: "/en/certificates/", isAnchor: false },
+        { name: "Recycled & Custom Pallets", path: "/en/#products-section", isAnchor: true },
       ],
       footerServices: "Services",
       footerServicesList: [
@@ -205,9 +239,9 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
         { name: "Custom Pallet Engineering", path: "/en/services/custom-manufacturing/", isAnchor: false },
         { name: "Export Wooden Crates", path: "/en/services/wooden-crates-collars/", isAnchor: false }
       ],
-      footerContact: "Contact Us",
+      footerContact: "Contact Information",
       footerAddress: "Beni Suef - Bayad Al-Arab Industrial Zone, Egypt",
-      footerCopyright: `© ${new Date().getFullYear()} El Negma Pallets. All rights reserved.`,
+      footerRights: "All Rights Reserved © El Negma Wooden Pallets Co. 2026",
       footerDev: "Developed by",
       direction: "ltr" as const,
       fontClass: "font-sans",
@@ -217,30 +251,17 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
   }[lang];
 
   return (
-    <div className={`min-h-screen flex flex-col bg-background text-foreground ${content.fontClass}`} dir={content.direction}>
-      {/* Navbar */}
-      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <div className={`min-h-screen flex flex-col bg-background text-foreground antialiased selection:bg-primary selection:text-white ${content.fontClass}`} dir={content.direction}>
+      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} lang={lang} />
+
+      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 transition-all duration-200">
         <div className="container flex h-20 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <a 
-              href={isEn ? "/en" : "/"}
-              onClick={(e) => {
-                const currentRoot = isEn ? "/en" : "/";
-                if (window.location.pathname === currentRoot) {
-                  e.preventDefault();
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                } else {
-                  e.preventDefault();
-                  router.push(currentRoot);
-                }
-              }}
-            >
-              <div className="flex items-center gap-3 cursor-pointer">
-                <img 
-                  src="/images/brand/company-logo.webp" 
-                  alt={content.logoAlt} 
-                  className="w-12 h-12 object-cover rounded-lg border border-border shadow-md bg-white"
-                />
+          <div className="flex items-center gap-6">
+            <a href={isEn ? "/en/" : "/"} className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg p-1">
+              <div className="relative flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary via-primary/80 to-secondary flex items-center justify-center text-white font-black text-xl shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform duration-300">
+                  ★
+                </div>
                 <div className="flex flex-col text-left">
                   <span className="font-black text-xl leading-none text-white">{content.logoMain}</span>
                   <span className="text-xs text-muted-foreground font-medium mt-1">{content.logoSub}</span>
@@ -249,56 +270,55 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
             </a>
           </div>
 
-          {/* Desktop Navigation Menu */}
           <nav className="hidden md:flex items-center gap-6">
+            {navData.menuCategories.map((cat) => (
+              <div key={cat.id} className="relative group">
+                <button
+                  className="flex items-center gap-1.5 text-sm font-bold text-muted-foreground hover:text-white transition-colors cursor-pointer py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-md"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span>{cat.title}</span>
+                  <ChevronDown className="w-3.5 h-3.5 text-muted-foreground group-hover:text-secondary group-hover:rotate-180 transition-transform duration-200" />
+                </button>
 
-            {/* المحور الأول: الشركة */}
-            <div className="relative group/company">
-              <button
-                className="flex items-center gap-1 text-sm font-bold text-muted-foreground hover:text-primary transition-colors cursor-pointer py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-md"
-                aria-haspopup="true"
-                aria-expanded="false"
-                aria-controls="company-dropdown"
-              >
-                {navData.company.title}
-                <ChevronDown className="w-3.5 h-3.5 transition-transform duration-200 group-hover/company:rotate-180 group-focus-within/company:rotate-180" />
-              </button>
-              {/* جميع الروابط مصدرة دائماً في الـ DOM لدعم الـ SEO ومفهرسة بالكامل */}
-              <div
-                id="company-dropdown"
-                className={`absolute top-[calc(100%+4px)] ${
-                  isEn ? "left-0" : "right-0"
-                } w-56 bg-background/98 backdrop-blur-md border border-border rounded-xl shadow-2xl shadow-black/20 opacity-0 invisible pointer-events-none group-hover/company:opacity-100 group-hover/company:visible group-hover/company:pointer-events-auto group-focus-within/company:opacity-100 group-focus-within/company:visible group-focus-within/company:pointer-events-auto transition-all duration-200 z-[60] overflow-hidden py-1.5`}
-                role="menu"
-              >
-                {navData.company.items.map((item) => (
-                  <a
-                    key={item.path}
-                    href={item.path}
-                    role="menuitem"
-                    className={`block px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-muted/60 transition-colors ${
-                      isEn ? "text-left" : "text-right"
-                    }`}
-                  >
-                    {item.name}
-                  </a>
-                ))}
+                <div
+                  className={`absolute top-[calc(100%+4px)] ${
+                    isEn ? "left-0" : "right-0"
+                  } w-64 bg-[#181b24] backdrop-blur-xl border border-border/60 rounded-xl shadow-2xl shadow-black/40 opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:visible group-focus-within:pointer-events-auto transition-all duration-200 z-[60] overflow-hidden py-2`}
+                  role="menu"
+                >
+                  {cat.items.map((item: any) => (
+                    <a
+                      key={item.name}
+                      href={item.path}
+                      role="menuitem"
+                      onClick={(e) => handleNavClick(e, item.path, !!item.isAnchor)}
+                      className={`block px-4 py-2.5 text-xs md:text-sm font-semibold text-gray-300 hover:text-white hover:bg-secondary/20 transition-colors ${
+                        isEn ? "text-left" : "text-right"
+                      }`}
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
-
-            {/* الروابط المباشرة (تواصل معنا) */}
-            {navData.directItems.map((item) => (
-              <a key={item.path} href={item.path}>
-                <span className="text-sm font-bold transition-colors hover:text-primary cursor-pointer relative py-2 text-muted-foreground">
-                  {item.name}
-                </span>
-              </a>
             ))}
           </nav>
 
-          {/* Action Buttons: Quote CTA + Call Button */}
           <div className="hidden md:flex items-center gap-3">
-            {/* Language Switcher */}
+            <button
+              onClick={() => setIsSearchOpen(true)}
+              className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-border/60 bg-muted/30 hover:bg-muted text-xs font-semibold text-muted-foreground hover:text-white transition-all cursor-pointer mr-1"
+              aria-label="Search site"
+            >
+              <Search className="w-3.5 h-3.5 text-secondary" />
+              <span>{isEn ? "Search..." : "بحث..."}</span>
+              <kbd className="hidden lg:inline-block px-1.5 py-0.5 text-[10px] font-mono font-bold bg-background/80 rounded border border-border text-muted-foreground">
+                Ctrl K
+              </kbd>
+            </button>
+
             <a 
               href={toggleLangPath()} 
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border hover:bg-muted text-xs font-bold text-muted-foreground transition-all duration-300"
@@ -307,15 +327,13 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
               <span>{content.switcherText}</span>
             </a>
 
-            {/* زر المدونة بارز بدل زر طلب عرض سعر */}
             <a href={isEn ? "/en/articles/" : "/articles/"}>
               <Button variant="outline" className="font-bold border-secondary/50 text-secondary hover:bg-secondary hover:text-white transition-all shadow-md">
                 {navData.blogBtn}
               </Button>
             </a>
             
-            {/* زر اتصل الآن */}
-            <a href="tel:01080012261">
+            <a href={isEn ? "/en/#contact-section" : "/#contact-section"}>
               <Button variant="default" className="font-bold shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all bg-secondary hover:bg-secondary/90">
                 {isEn ? <Phone className="mr-2 w-4 h-4" /> : <Phone className="ml-2 w-4 h-4" />}
                 {navData.callBtn}
@@ -323,9 +341,14 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
             </a>
           </div>
 
-          {/* Mobile Menu Toggle */}
           <div className="flex items-center gap-2 md:hidden">
-            {/* Mobile Language Switcher */}
+            <button
+              onClick={() => setIsSearchOpen(true)}
+              className="p-2 text-muted-foreground hover:text-white rounded-lg hover:bg-muted"
+              aria-label="Search"
+            >
+              <Search className="w-5 h-5" />
+            </button>
             <a 
               href={toggleLangPath()} 
               className="flex items-center gap-1 px-2.5 py-1.5 rounded-full border border-border hover:bg-muted text-xs font-bold text-muted-foreground transition-all duration-300"
@@ -334,77 +357,56 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
               <span>{content.switcherText}</span>
             </a>
             <button
-              className="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-muted-foreground hover:text-primary"
+              className="p-2 text-muted-foreground hover:text-primary"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Navigation Drawer (Accordion based) */}
         {isMenuOpen && (
           <div className="md:hidden border-t border-border bg-background p-4 flex flex-col gap-2 animate-in slide-in-from-top-5 max-h-[calc(100vh-80px)] overflow-y-auto">
+            {navData.menuCategories.map((cat) => {
+              const isOpen = openMobileCat === cat.id;
+              return (
+                <div key={cat.id} className="flex flex-col border-b border-border/40 pb-2">
+                  <button
+                    onClick={() => setOpenMobileCat(isOpen ? null : cat.id)}
+                    className="flex items-center justify-between w-full min-h-[44px] px-3 rounded-lg text-base font-bold text-muted-foreground hover:bg-muted transition-colors"
+                  >
+                    <span>{cat.title}</span>
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
+                  </button>
 
-            {/* أكورديون الشركة */}
-            <div className="flex flex-col border-b border-border/40 pb-1">
-              <button
-                onClick={() => setIsMobileCompanyOpen(!isMobileCompanyOpen)}
-                className={`flex items-center justify-between w-full min-h-[44px] px-3 rounded-lg text-base font-bold text-muted-foreground hover:bg-muted transition-colors ${
-                  isEn ? "text-left flex-row" : "text-right flex-row-reverse"
-                }`}
-              >
-                <span>{navData.company.title}</span>
-                <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-200 ${
-                    isMobileCompanyOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-              {isMobileCompanyOpen && (
-                <div
-                  className={`mt-1 flex flex-col gap-0.5 pb-1 ${
-                    isEn ? "ml-4 pl-4 border-l border-border/50" : "mr-4 pr-4 border-r border-border/50"
-                  }`}
-                >
-                  {navData.company.items.map((item) => (
-                    <a
-                      key={item.path}
-                      href={item.path}
-                      onClick={() => { setIsMenuOpen(false); setIsMobileCompanyOpen(false); }}
-                      className={`block min-h-[44px] px-3 py-2.5 text-sm font-medium text-muted-foreground hover:text-primary rounded-lg hover:bg-muted/60 transition-colors flex items-center ${
-                        isEn ? "text-left" : "text-right"
-                      }`}
-                    >
-                      {item.name}
-                    </a>
-                  ))}
+                  {isOpen && (
+                    <div className="mt-1 flex flex-col gap-1 pr-4 border-r border-border/50">
+                      {cat.items.map((item: any) => (
+                        <a
+                          key={item.name}
+                          href={item.path}
+                          onClick={(e) => {
+                            setIsMenuOpen(false);
+                            handleNavClick(e, item.path, !!item.isAnchor);
+                          }}
+                          className="block min-h-[40px] px-3 py-2 text-sm font-semibold text-muted-foreground/90 hover:text-white rounded-md hover:bg-muted/60 transition-colors"
+                        >
+                          {item.name}
+                        </a>
+                      ))}
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
+              );
+            })}
 
-            {/* الروابط المباشرة للموبايل */}
-            {navData.directItems.map((item) => (
-              <a 
-                key={item.path} 
-                href={item.path} 
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <span className="block p-3 min-h-[44px] rounded-lg text-base font-bold transition-colors cursor-pointer hover:bg-muted text-muted-foreground">
-                  {item.name}
-                </span>
-              </a>
-            ))}
-
-            {/* أزرار الإجراءات للموبايل */}
             <div className="pt-2 flex flex-col gap-2">
               <a href={isEn ? "/en/articles/" : "/articles/"} className="w-full block" onClick={() => setIsMenuOpen(false)}>
                 <Button variant="outline" className="w-full min-h-[44px] font-bold border-secondary/50 text-secondary hover:bg-secondary hover:text-white">
                   {navData.blogBtn}
                 </Button>
               </a>
-              <a href="tel:01080012261" className="w-full block">
+              <a href={isEn ? "/en/#contact-section" : "/#contact-section"} className="w-full block" onClick={() => setIsMenuOpen(false)}>
                 <Button className="w-full min-h-[44px] font-bold bg-secondary hover:bg-secondary/90">
                   {isEn ? <Phone className="mr-2 w-4 h-4" /> : <Phone className="ml-2 w-4 h-4" />}
                   {navData.callBtn}
@@ -415,12 +417,10 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
         )}
       </header>
 
-      {/* Main Content */}
       <main className="flex-1">
         {children}
       </main>
 
-      {/* Footer */}
       <footer className="bg-muted/30 border-t border-border mt-20">
         <div className="container py-12 md:py-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">

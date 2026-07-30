@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, Globe2, Flame } from "lucide-react";
+import { Award, Globe2, Flame, ShieldCheck, Leaf, HardHat } from "lucide-react";
 
 export function CertificationsList({ lang = "ar" }: { lang?: "ar" | "en" }) {
   const isEn = lang === "en";
@@ -24,8 +24,23 @@ export function CertificationsList({ lang = "ar" }: { lang?: "ar" | "en" }) {
           desc: "تتوافق بالتاتنا مع جميع معايير ومواصفات الاتحاد الأوروبي للبالتات الخشبية (EPAL)، مما يضمن جودتها وقابليتها للاستخدام في الأسواق الأوروبية دون أي عوائق أو قيود جمركية."
         },
         {
+          icon: <ShieldCheck className="w-5 h-5 text-secondary shrink-0" />,
+          title: "ISO 9001:2015 — نظام إدارة الجودة:",
+          desc: "حاصلون على شهادة ISO 9001:2015 المعتمدة من هيئة ICERT الأوروبية وبتوثيق EGAC المصرية، والتي تضمن تطبيق نظام إدارة جودة شامل ومتكامل يغطي كافة مراحل الإنتاج من استلام المواد الخام حتى التوريد النهائي."
+        },
+        {
+          icon: <Leaf className="w-5 h-5 text-secondary shrink-0" />,
+          title: "ISO 14001:2015 — نظام الإدارة البيئية:",
+          desc: "حاصلون على شهادة ISO 14001:2015 لنظام الإدارة البيئية، والتي تؤكد التزام مصانعنا بالمعايير البيئية العالمية في التعامل مع الأخشاب والمخلفات الصناعية، مع تطبيق سياسات الاستدامة وتقليل الأثر البيئي."
+        },
+        {
+          icon: <HardHat className="w-5 h-5 text-secondary shrink-0" />,
+          title: "ISO 45001:2018 — نظام إدارة السلامة والصحة المهنية:",
+          desc: "حاصلون على شهادة ISO 45001:2018 لنظام السلامة والصحة المهنية، والتي تضمن توفير بيئة عمل آمنة لجميع العاملين وفقاً لأعلى المعايير الدولية، مع برامج تدريب مستمرة وإجراءات وقائية صارمة."
+        },
+        {
           icon: <Award className="w-5 h-5 text-secondary shrink-0" />,
-          title: "نظام إدارة الجودة:",
+          title: "نظام ضبط الجودة الداخلي:",
           desc: "نطبق نظام صارم لإدارة الجودة يضمن مطابقة كل منتج للمواصفات المطلوبة، مع اختبارات دورية للمواد الخام والمنتج النهائي، وتحت إشراف فريق متخصص من ضبط الجودة."
         }
       ]
@@ -47,8 +62,23 @@ export function CertificationsList({ lang = "ar" }: { lang?: "ar" | "en" }) {
           desc: "Our pallets fully comply with European Pallet Association (EPAL) guidelines, ensuring smooth transit through EU ports and zero customs delays."
         },
         {
+          icon: <ShieldCheck className="w-5 h-5 text-secondary shrink-0" />,
+          title: "ISO 9001:2015 — Quality Management System",
+          desc: "Certified by ICERT (European accreditation body) with EGAC endorsement, our ISO 9001:2015 certification covers a comprehensive quality management system spanning all production stages — from raw material inspection through final delivery."
+        },
+        {
+          icon: <Leaf className="w-5 h-5 text-secondary shrink-0" />,
+          title: "ISO 14001:2015 — Environmental Management System",
+          desc: "Our ISO 14001:2015 certification confirms our commitment to global environmental standards in timber processing and industrial waste management, with sustainability policies that minimize our environmental footprint."
+        },
+        {
+          icon: <HardHat className="w-5 h-5 text-secondary shrink-0" />,
+          title: "ISO 45001:2018 — Occupational Health & Safety",
+          desc: "Our ISO 45001:2018 certification ensures a safe working environment for all personnel under the highest international standards, with continuous training programs and strict preventive safety protocols."
+        },
+        {
           icon: <Award className="w-5 h-5 text-secondary shrink-0" />,
-          title: "Quality Control Management",
+          title: "Internal Quality Control System",
           desc: "We apply rigid QC systems monitoring every batch. Inspections cover raw pine timber testing, nail spacing compliance, and final structural performance."
         }
       ]
@@ -123,7 +153,7 @@ export function CertificationsList({ lang = "ar" }: { lang?: "ar" | "en" }) {
             className={`lg:col-span-8 flex flex-col gap-4 md:gap-6 ${content.alignClass} order-2 lg:order-1`}
           >
             {content.items.map((cert, index) => (
-              <div key={index} className={`flex items-start gap-3 md:gap-4 p-3 md:p-4 rounded-xl md:rounded-2xl bg-[#202430]/40 border border-border/40 hover:border-secondary transition-all ${isEn ? "flex-row" : "flex-row-reverse"}`}>
+              <div key={index} className="flex items-start gap-3 md:gap-4 p-3 md:p-4 rounded-xl md:rounded-2xl bg-[#202430]/40 border border-border/40 hover:border-secondary transition-all">
                 <div className="shrink-0 mt-1 p-1.5 md:p-2 rounded-lg md:rounded-xl bg-secondary/10 flex items-center justify-center">
                   <div className="[&>svg]:w-4 [&>svg]:h-4 md:[&>svg]:w-5 md:[&>svg]:h-5 flex items-center justify-center">
                     {cert.icon}
