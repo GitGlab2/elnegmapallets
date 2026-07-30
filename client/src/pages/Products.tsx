@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Package, Box, DraftingCompass, Settings } from "lucide-react";
-import Link from "next/link";
 
 export default function Products({ lang = "ar" }: { lang?: "ar" | "en" }) {
   const isEn = lang === "en";
@@ -12,34 +11,28 @@ export default function Products({ lang = "ar" }: { lang?: "ar" | "en" }) {
       desc: "نقدم مجموعة متكاملة من البالتات الخشبية المصنعة وفقًا للمواصفات العالمية والمحلية، مع مرونة في التصنيع حسب متطلبات العملاء لمختلف الصناعات والاستخدامات.",
       imgAlt: "بالتات خشبية للتصدير",
       alignClass: "text-right",
-      oppositeAlignClass: "text-left",
       items: [
         {
           dimensions: "120 × 100",
           desc: "بالتة شرق أوسط - حمولة 1250 كجم - متوافقة مع المعايير المحلية والإقليمية",
           icon: <Package className="w-6 h-6 text-secondary shrink-0" />,
-          href: "/products/120x100-industrial-pallet/"
         },
         {
           dimensions: "120 × 80",
           desc: "بالتة يورو - حمولة 1500 كجم - مطابقة لمواصفات الاتحاد الأوروبي للتصدير",
           icon: <Box className="w-6 h-6 text-secondary shrink-0" />,
-          href: "/products/120x80-euro-pallet/"
         },
         {
           dimensions: "تصميمات مخصصة",
           desc: "تصميمات مخصصة وفقاً لمتطلبات العميل - نوفر جميع الأحجام والمواصفات حسب الاحتياجات الخاصة",
           icon: <DraftingCompass className="w-6 h-6 text-secondary shrink-0" />,
-          href: "/services/custom-manufacturing/"
         },
         {
           dimensions: "تصنيع حسب الطلب",
           desc: "تصنيع البالتات وفقاً لاحتياجات العميل - مرونة كاملة في التصميم والإنتاج",
           icon: <Settings className="w-6 h-6 text-secondary shrink-0" />,
-          href: "/products/"
         }
       ],
-      btnAll: "تصفح كافة المنتجات بالتفاصيل"
     },
     en: {
       title1: "Our Products",
@@ -47,34 +40,28 @@ export default function Products({ lang = "ar" }: { lang?: "ar" | "en" }) {
       desc: "We offer a complete range of wooden pallets manufactured according to global and local specifications, with design flexibility to match client requirements for various industries.",
       imgAlt: "Wooden pallets for export",
       alignClass: "text-left",
-      oppositeAlignClass: "text-right",
       items: [
         {
           dimensions: "120 × 100 cm",
           desc: "Middle East standard pallet - 1250 kg capacity - compatible with local and regional standards.",
           icon: <Package className="w-6 h-6 text-secondary shrink-0" />,
-          href: "/en/products/120x100-industrial-pallet/"
         },
         {
           dimensions: "120 × 80 cm",
           desc: "Euro Pallet - 1500 kg capacity - compliant with EU specifications for export shipments.",
           icon: <Box className="w-6 h-6 text-secondary shrink-0" />,
-          href: "/en/products/120x80-euro-pallet/"
         },
         {
           dimensions: "Custom Designs",
           desc: "Custom designs tailored to client requirements - we provide all sizes and specifications for your project needs.",
           icon: <DraftingCompass className="w-6 h-6 text-secondary shrink-0" />,
-          href: "/en/services/custom-manufacturing/"
         },
         {
           dimensions: "On-Demand Manufacturing",
           desc: "Pallet manufacturing based on client instructions - complete flexibility in design and production.",
           icon: <Settings className="w-6 h-6 text-secondary shrink-0" />,
-          href: "/en/products/"
         }
       ],
-      btnAll: "Browse All Products & Specifications"
     }
   }[lang];
 
@@ -130,21 +117,20 @@ export default function Products({ lang = "ar" }: { lang?: "ar" | "en" }) {
             {content.desc}
           </p>
 
-          {/* List items matching Slide 4 styles */}
+          {/* Product items list */}
           <div className="flex flex-col gap-4 md:gap-6">
             {content.items.map((item, index) => (
-              <Link key={index} href={item.href} className={`group flex items-start gap-3 md:gap-4 ${content.alignClass} justify-start p-2.5 rounded-xl hover:bg-gray-50 transition duration-200`}>
-                <div className="mt-1 shrink-0 p-1.5 md:p-2 rounded-lg bg-secondary/10 group-hover:bg-secondary group-hover:text-white transition">
+              <div key={index} className={`group flex items-start gap-3 md:gap-4 ${content.alignClass} justify-start p-2.5 rounded-xl`}>
+                <div className="mt-1 shrink-0 p-1.5 md:p-2 rounded-lg bg-secondary/10">
                   {item.icon}
                 </div>
                 <div className="flex flex-col gap-0.5 md:gap-1">
-                  <h4 className="font-bold text-base md:text-lg text-secondary group-hover:text-secondary/80 leading-none flex items-center gap-1.5">
-                    <span>{item.dimensions}</span>
-                    <span className="text-xs opacity-0 group-hover:opacity-100 transition">←</span>
+                  <h4 className="font-bold text-base md:text-lg text-secondary leading-none">
+                    {item.dimensions}
                   </h4>
                   <p className="text-xs md:text-base text-gray-500 leading-relaxed">{item.desc}</p>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </motion.div>
@@ -153,3 +139,4 @@ export default function Products({ lang = "ar" }: { lang?: "ar" | "en" }) {
     </div>
   );
 }
+

@@ -141,7 +141,7 @@ export default function RootLayout({
                 itemListElement: [
                   {
                     "@type": "Offer",
-                    url: "https://elnegmapallets.com/products/120x80-euro-pallet/",
+                    url: "https://elnegmapallets.com/#products-section",
                     priceCurrency: "EGP",
                     availability: "https://schema.org/InStock",
                     itemCondition: "https://schema.org/NewCondition",
@@ -153,7 +153,7 @@ export default function RootLayout({
                       sku: "EUR1-120x80",
                       offers: {
                         "@type": "Offer",
-                        url: "https://elnegmapallets.com/products/120x80-euro-pallet/",
+                        url: "https://elnegmapallets.com/#products-section",
                         priceCurrency: "EGP",
                         availability: "https://schema.org/InStock",
                         itemCondition: "https://schema.org/NewCondition",
@@ -169,7 +169,7 @@ export default function RootLayout({
                   },
                   {
                     "@type": "Offer",
-                    url: "https://elnegmapallets.com/products/120x100-industrial-pallet/",
+                    url: "https://elnegmapallets.com/#products-section",
                     priceCurrency: "EGP",
                     availability: "https://schema.org/InStock",
                     itemCondition: "https://schema.org/NewCondition",
@@ -181,7 +181,7 @@ export default function RootLayout({
                       sku: "IND-120x100",
                       offers: {
                         "@type": "Offer",
-                        url: "https://elnegmapallets.com/products/120x100-industrial-pallet/",
+                        url: "https://elnegmapallets.com/#products-section",
                         priceCurrency: "EGP",
                         availability: "https://schema.org/InStock",
                         itemCondition: "https://schema.org/NewCondition",
@@ -197,7 +197,7 @@ export default function RootLayout({
                   },
                   {
                     "@type": "Offer",
-                    url: "https://elnegmapallets.com/products/121x101-gma-pallet/",
+                    url: "https://elnegmapallets.com/#products-section",
                     priceCurrency: "EGP",
                     availability: "https://schema.org/InStock",
                     itemCondition: "https://schema.org/NewCondition",
@@ -209,7 +209,7 @@ export default function RootLayout({
                       sku: "GMA-121x101",
                       offers: {
                         "@type": "Offer",
-                        url: "https://elnegmapallets.com/products/121x101-gma-pallet/",
+                        url: "https://elnegmapallets.com/#products-section",
                         priceCurrency: "EGP",
                         availability: "https://schema.org/InStock",
                         itemCondition: "https://schema.org/NewCondition",
