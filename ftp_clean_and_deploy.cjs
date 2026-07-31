@@ -50,22 +50,22 @@ async function deploy() {
       await client.remove(".htaccess");
     } catch (e) {}
 
-    console.log("Uploading extract_runner.php...");
-    await client.uploadFrom(path.join(__dirname, "extract_runner.php"), "extract_runner.php");
+    console.log("Uploading unzip.php...");
+    await client.uploadFrom(path.join(__dirname, "unzip.php"), "unzip.php");
 
     console.log("Uploading out.zip (this may take a moment)...");
     await client.uploadFrom(path.join(__dirname, "out.zip"), "out.zip");
 
-    console.log("Uploads complete. Triggering extraction via https://elnegmapallets.com/extract_runner.php...");
+    console.log("Uploads complete. Triggering extraction via https://elnegmapallets.com/unzip.php...");
 
-    https.get("https://elnegmapallets.com/extract_runner.php", (res) => {
+    https.get("https://elnegmapallets.com/unzip.php", (res) => {
       let data = "";
       res.on("data", (chunk) => { data += chunk; });
       res.on("end", async () => {
         console.log("Extraction Output:", data);
-        console.log("Deleting extract_runner.php from server...");
+        console.log("Deleting unzip.php from server...");
         try {
-          await client.remove("extract_runner.php");
+          await client.remove("unzip.php");
         } catch (e) {}
         client.close();
         console.log("Clean-up complete.\n🚀 Deployment successful!");

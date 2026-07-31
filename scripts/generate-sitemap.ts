@@ -1,7 +1,5 @@
 import { writeFileSync } from "fs";
 import path from "path";
-import { palletSizesAr } from "../client/src/data/pallet-sizes";
-import { servicesAr } from "../client/src/data/services";
 import { articles } from "../client/src/data/articles";
 import { articlesEn } from "../client/src/data/articles-en";
 
@@ -98,42 +96,8 @@ const entries: SitemapEntry[] = [
   },
   { path: "/clients/", enPath: "/en/clients/", priority: "0.85", changefreq: "monthly" },
   { path: "/quote/", enPath: "/en/quote/", priority: "0.85", changefreq: "monthly" },
-  { path: "/products/", enPath: "/en/products/", priority: "0.9", changefreq: "weekly" },
-  { path: "/services/", enPath: "/en/services/", priority: "0.9", changefreq: "weekly" },
   { path: "/articles/", enPath: "/en/articles/", priority: "0.85", changefreq: "weekly" },
   { path: "/articles/tools/", enPath: "/en/articles/tools/", priority: "0.85", changefreq: "weekly" },
-  ...palletSizesAr.map(p => ({
-    path: `/products/${p.slug}/`,
-    enPath: `/en/products/${p.slug}/`,
-    priority: "0.85",
-    changefreq: "monthly",
-    images: [{
-      loc: `${SITE_URL}${p.image}`,
-      title: p.title,
-      caption: `${p.title} مقاس ${p.dimensions} خشب معالج حرارياً ISPM-15`,
-    }] as ImageEntry[],
-    enImages: [{
-      loc: `${SITE_URL}${p.image}`,
-      title: p.title,
-      caption: `${p.title} ${p.dimensions} ISPM-15 heat treated wooden pallet`,
-    }] as ImageEntry[],
-  })),
-  ...servicesAr.map(s => ({
-    path: `/services/${s.slug}/`,
-    enPath: `/en/services/${s.slug}/`,
-    priority: "0.85",
-    changefreq: "monthly",
-    images: [{
-      loc: `${SITE_URL}${s.image}`,
-      title: s.title,
-      caption: `${s.title} — ${s.subtitle}`,
-    }] as ImageEntry[],
-    enImages: [{
-      loc: `${SITE_URL}${s.image}`,
-      title: s.title,
-      caption: `${s.title} — ${s.subtitle}`,
-    }] as ImageEntry[],
-  })),
   ...articles.map(a => ({
     path: `/articles/${a.slug}/`,
     enPath: `/en/articles/${a.slug}/`,
