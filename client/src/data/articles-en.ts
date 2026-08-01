@@ -525,7 +525,7 @@ const rawArticlesEn: Article[] = [
             <li><strong>40-Foot Refrigerated Container (40' Reefer):</strong> Inner Length: 11.58 m (11583 mm) | Inner Width: 2.29 m (2286 mm) | Inner Height: 2.25 m (2250 mm). Its volume is slightly reduced due to thick insulation panels and bottom T-bar flooring.</li>
           </ul>
           <div class="my-6 text-center">
-            <img src="/images/articles/dry-vs-reefer.webp" alt="Standard Dry vs Refrigerated Container Comparison" class="mx-auto rounded-xl border-2 border-secondary/20 shadow-lg max-w-full lg:max-w-xl" />
+            <img src="/images/articles/dry-vs-reefer.webp" alt="Standard Dry vs Refrigerated Container Comparison" width="1024" height="1024" loading="lazy" class="mx-auto rounded-xl border-2 border-secondary/20 shadow-lg max-w-full lg:max-w-xl" />
             <p class="text-xs text-muted-foreground mt-2">Figure 1: Engineering comparison between a standard dry container and an insulated reefer container with airflow channels</p>
           </div>
         </section>
@@ -585,7 +585,7 @@ const rawArticlesEn: Article[] = [
             <li><strong>Pinwheel Pattern (نمط الطاحونة):</strong> Pallets are oriented alternately (one lengthwise, one crosswise). This pattern utilizes the missing 5 cm and increases a 20ft container's capacity to <strong>11 Euro pallets</strong> and a 40ft container to **24 or 25 Euro pallets**.</li>
           </ul>
           <div class="my-6 text-center">
-            <img src="/images/articles/pallet-loading-layout.webp" alt="Pallet Loading Layout inside Container" class="mx-auto rounded-xl border-2 border-secondary/20 shadow-lg max-w-full lg:max-w-xl" />
+            <img src="/images/articles/pallet-loading-layout.webp" alt="Pallet Loading Layout inside Container" width="1024" height="1024" loading="lazy" class="mx-auto rounded-xl border-2 border-secondary/20 shadow-lg max-w-full lg:max-w-xl" />
             <p class="text-xs text-muted-foreground mt-2">Figure 2: Staggered pallet distribution layout to eliminate volumetric empty space inside shipping containers</p>
           </div>
         </section>

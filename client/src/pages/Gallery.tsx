@@ -151,7 +151,7 @@ export default function Gallery({ lang = "ar" }: { lang?: "ar" | "en" }) {
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 scale-105"
-          style={{ backgroundImage: "url('/images/sections/gallery-hero-bg.png')" }}
+          style={{ backgroundImage: "url('/images/sections/gallery-hero-bg.webp')" }}
         />
         {/* Dark Overlay Gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#181b24] via-[#181b24]/80 to-black/60" />

@@ -11,7 +11,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   variable: "--font-outfit",
 });
 
@@ -114,6 +114,7 @@ export default function EnglishLayout({
                 "GMA pallets",
                 "agricultural export Egypt",
               ],
+              sameAs: ["https://facebook.com/negma.wood"],
             }),
 
           }}

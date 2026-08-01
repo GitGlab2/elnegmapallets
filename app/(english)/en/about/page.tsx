@@ -16,9 +16,36 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://elnegmapallets.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About Us",
+        "item": "https://elnegmapallets.com/en/about/"
+      }
+    ]
+  };
+
   return (
-    <div className="py-8">
-      <About lang="en" />
-    </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbData).replace(/</g, "\\u003c"),
+        }}
+      />
+      <div className="py-8">
+        <About lang="en" />
+      </div>
+    </>
   );
 }

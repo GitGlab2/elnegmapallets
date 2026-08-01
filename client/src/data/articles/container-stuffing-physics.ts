@@ -33,7 +33,7 @@ export const containerStuffingPhysicsArticle: Article = {
           <li><strong>الحاوية المبردة 40 قدماً (40' Reefer):</strong> الطول الداخلي: 11.58 متر (11583 مم) | العرض الداخلي: 2.29 متر (2286 مم) | الارتفاع الداخلي: 2.25 متر (2250 مم). تتقلص مساحتها بسبب العزل الحراري السميك ونظام تدفق الهواء الأرضي (T-Floor).</li>
         </ul>
         <div class="my-6 text-center">
-          <img src="/images/articles/dry-vs-reefer.webp" alt="المقارنة الهندسية بين الحاوية الجافة والحاوية المبردة" class="mx-auto rounded-xl border-2 border-secondary/20 shadow-lg max-w-full lg:max-w-xl" />
+          <img src="/images/articles/dry-vs-reefer.webp" alt="المقارنة الهندسية بين الحاوية الجافة والحاوية المبردة" width="1024" height="1024" loading="lazy" class="mx-auto rounded-xl border-2 border-secondary/20 shadow-lg max-w-full lg:max-w-xl" />
           <p class="text-xs text-muted-foreground mt-2">الشكل 1: المقارنة الهندسية بين الحاوية الجافة القياسية (Dry) والحاوية المبردة المعزولة (Reefer) وأنظمة تدفق الهواء</p>
         </div>
       </section>
@@ -93,7 +93,7 @@ export const containerStuffingPhysicsArticle: Article = {
           <li><strong>نمط الطاحونة المتقاطع (Pinwheel Layout):</strong> يتم بالتناوب وضع بالتة بالطول وبالتة بالعرض. هذا التوزيع الهندسي المتقاطع يستغل الـ 5 سم المفقودة ويسمح بزيادة سعة الحاوية الـ 20 قدماً إلى <strong>11 بالتة أوروبية</strong> بدلاً من 10، ويقود لزيادة سعة الحاوية الـ 40 قدماً إلى **24 أو 25 بالتة**.</li>
         </ul>
         <div class="my-6 text-center">
-          <img src="/images/articles/pallet-loading-layout.webp" alt="تخطيط رص وتوزيع البالتات الخشبية داخل الحاوية" class="mx-auto rounded-xl border-2 border-secondary/20 shadow-lg max-w-full lg:max-w-xl" />
+          <img src="/images/articles/pallet-loading-layout.webp" alt="تخطيط رص وتوزيع البالتات الخشبية داخل الحاوية" width="1024" height="1024" loading="lazy" class="mx-auto rounded-xl border-2 border-secondary/20 shadow-lg max-w-full lg:max-w-xl" />
           <p class="text-xs text-muted-foreground mt-2">الشكل 2: تخطيط هندسي لتوزيع البالتات الخشبية لتقليص المساحات الميتة في الحاويات البحرية</p>
         </div>
       </section>

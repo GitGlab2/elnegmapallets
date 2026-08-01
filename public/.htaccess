@@ -104,7 +104,7 @@ ErrorDocument 404 /404.html
   </FilesMatch>
 
   # sitemap and robots: short cache
-  <FilesMatch "^(sitemap\.xml|robots\.txt|llms\.txt)$">
+  <FilesMatch "^(sitemap\.xml|robots\.txt|llms\.txt|llms-full\.txt)$">
     Header set Cache-Control "public, max-age=3600"
   </FilesMatch>
 </IfModule>
