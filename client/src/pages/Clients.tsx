@@ -245,16 +245,16 @@ export default function Clients({ lang = "ar" }: { lang?: "ar" | "en" }) {
             <h3 className="text-xl md:text-2xl font-bold text-white">
               {content.caption}
             </h3>
-            <div className="bg-white p-4 rounded-2xl shadow-xl w-full max-w-xl">
+            <div className="w-full max-w-3xl">
               <picture>
                 <source srcSet="/images/brand/clients-logos-grid.webp" type="image/webp" />
                 <img
                   src="/images/brand/clients-logos-grid.webp"
                   alt={content.imgAlt}
-                  width={800}
-                  height={600}
+                  width={1200}
+                  height={1200}
                   loading="lazy"
-                  className="w-full h-[180px] md:h-[280px] object-contain rounded-lg"
+                  className="w-full h-auto rounded-lg"
                 />
               </picture>
             </div>
