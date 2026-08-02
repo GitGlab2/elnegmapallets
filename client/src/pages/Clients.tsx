@@ -127,11 +127,11 @@ export default function Clients({ lang = "ar" }: { lang?: "ar" | "en" }) {
 
   return (
     <div className="flex flex-col gap-12">
-      
+
       {/* Top Hero Banner with Background Image */}
       <div className="relative w-full h-[280px] sm:h-[360px] md:h-[440px] flex items-center justify-center overflow-hidden border-b border-border/40">
         {/* Background Image - صورة هيدر القطاعات والعملاء */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 scale-105"
           style={{ backgroundImage: "url('/images/sections/clients-hero-bg.webp')" }}
         />
@@ -150,7 +150,7 @@ export default function Clients({ lang = "ar" }: { lang?: "ar" | "en" }) {
             <span>{content.subtitle}</span>
           </motion.div>
 
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -172,96 +172,96 @@ export default function Clients({ lang = "ar" }: { lang?: "ar" | "en" }) {
 
       <div className="container py-4 pb-16" id="clients">
 
-      {/* Hierarchical Tree Map Layout */}
-      <div className="relative flex flex-col items-center">
-        
-        {/* Tree Root Node */}
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="relative z-20 flex flex-col items-center mb-8"
-        >
-          <div className="px-6 py-4 md:px-8 md:py-5 rounded-2xl bg-secondary text-white font-black text-lg md:text-xl shadow-2xl shadow-secondary/30 border border-white/20 flex items-center gap-3">
-            <Factory className="w-6 h-6 shrink-0" />
-            <div className="flex flex-col text-right">
-              <span>{content.rootNode}</span>
-              <span className="text-xs font-medium text-white/80">{content.rootSub}</span>
+        {/* Hierarchical Tree Map Layout */}
+        <div className="relative flex flex-col items-center">
+
+          {/* Tree Root Node */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="relative z-20 flex flex-col items-center mb-8"
+          >
+            <div className="px-6 py-4 md:px-8 md:py-5 rounded-2xl bg-secondary text-white font-black text-lg md:text-xl shadow-2xl shadow-secondary/30 border border-white/20 flex items-center gap-3">
+              <Factory className="w-6 h-6 shrink-0" />
+              <div className="flex flex-col text-right">
+                <span>{content.rootNode}</span>
+                <span className="text-xs font-medium text-white/80">{content.rootSub}</span>
+              </div>
             </div>
-          </div>
-          {/* Vertical Connecting Line down */}
-          <div className="w-1 h-10 md:h-12 bg-gradient-to-b from-secondary to-secondary/30 mt-2" />
-        </motion.div>
+            {/* Vertical Connecting Line down */}
+            <div className="w-1 h-10 md:h-12 bg-gradient-to-b from-secondary to-secondary/30 mt-2" />
+          </motion.div>
 
-        {/* Tree Categories & Branches (Grid 3 Columns) */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 relative z-10">
-          {content.treeCategories.map((cat, catIdx) => (
-            <motion.div 
-              key={catIdx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: catIdx * 0.15 }}
-              className="flex flex-col rounded-2xl md:rounded-3xl border border-border/80 bg-[#181b24] p-5 md:p-6 shadow-xl relative overflow-hidden group hover:border-secondary/50 transition-all"
-            >
-              {/* Category Header (Branch Node) */}
-              <div className="flex items-center gap-3 pb-4 mb-4 border-b border-border/60">
-                <div className="p-2.5 rounded-xl bg-secondary/10 border border-secondary/30 text-secondary">
-                  <Building2 className="w-5 h-5" />
-                </div>
-                <h3 className="font-bold text-base md:text-lg text-white">{cat.category}</h3>
-              </div>
-
-              {/* Branch Leaf Cards */}
-              <div className="flex flex-col gap-4 flex-1">
-                {cat.branches.map((branch, bIdx) => (
-                  <div 
-                    key={bIdx} 
-                    className="p-4 rounded-xl bg-[#202430]/60 border border-border/40 hover:border-secondary/40 hover:bg-[#202430] transition-all flex items-start gap-3"
-                  >
-                    <div className="p-2 rounded-lg bg-white/5 border border-white/10 shrink-0 mt-0.5">
-                      {branch.icon}
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <h4 className="font-bold text-sm md:text-base text-white">{branch.title}</h4>
-                      <p className="text-xs text-gray-400 leading-relaxed">{branch.desc}</p>
-                    </div>
+          {/* Tree Categories & Branches (Grid 3 Columns) */}
+          <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 relative z-10">
+            {content.treeCategories.map((cat, catIdx) => (
+              <motion.div
+                key={catIdx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: catIdx * 0.15 }}
+                className="flex flex-col rounded-2xl md:rounded-3xl border border-border/80 bg-[#181b24] p-5 md:p-6 shadow-xl relative overflow-hidden group hover:border-secondary/50 transition-all"
+              >
+                {/* Category Header (Branch Node) */}
+                <div className="flex items-center gap-3 pb-4 mb-4 border-b border-border/60">
+                  <div className="p-2.5 rounded-xl bg-secondary/10 border border-secondary/30 text-secondary">
+                    <Building2 className="w-5 h-5" />
                   </div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
+                  <h3 className="font-bold text-base md:text-lg text-white">{cat.category}</h3>
+                </div>
 
-        {/* Client Logos Banner Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="w-full mt-10 md:mt-16 rounded-2xl md:rounded-3xl border border-border shadow-2xl bg-[#181b24] p-6 md:p-10 flex flex-col items-center gap-6 text-center"
-        >
-          <h3 className="text-xl md:text-2xl font-bold text-white">
-            {content.caption}
-          </h3>
-          <div className="bg-white p-4 rounded-2xl shadow-xl w-full max-w-xl">
-            <picture>
-              <source srcSet="/images/brand/clients-logos-grid.webp" type="image/webp" />
-              <img 
-                src="/images/brand/clients-logos-grid.webp" 
-                alt={content.imgAlt} 
-                width={800}
-                height={600}
-                loading="lazy"
-                className="w-full h-[180px] md:h-[280px] object-contain rounded-lg"
-              />
-            </picture>
+                {/* Branch Leaf Cards */}
+                <div className="flex flex-col gap-4 flex-1">
+                  {cat.branches.map((branch, bIdx) => (
+                    <div
+                      key={bIdx}
+                      className="p-4 rounded-xl bg-[#202430]/60 border border-border/40 hover:border-secondary/40 hover:bg-[#202430] transition-all flex items-start gap-3"
+                    >
+                      <div className="p-2 rounded-lg bg-white/5 border border-white/10 shrink-0 mt-0.5">
+                        {branch.icon}
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <h4 className="font-bold text-sm md:text-base text-white">{branch.title}</h4>
+                        <p className="text-xs text-gray-400 leading-relaxed">{branch.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </motion.div>
 
+          {/* Client Logos Banner Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="w-full mt-10 md:mt-16 rounded-2xl md:rounded-3xl border border-border shadow-2xl bg-[#181b24] p-6 md:p-10 flex flex-col items-center gap-6 text-center"
+          >
+            <h3 className="text-xl md:text-2xl font-bold text-white">
+              {content.caption}
+            </h3>
+            <div className="bg-white p-4 rounded-2xl shadow-xl w-full max-w-xl">
+              <picture>
+                <source srcSet="/images/brand/clients-logos-grid.webp" type="image/webp" />
+                <img
+                  src="/images/brand/clients-logos-grid.webp"
+                  alt={content.imgAlt}
+                  width={800}
+                  height={600}
+                  loading="lazy"
+                  className="w-full h-[180px] md:h-[280px] object-contain rounded-lg"
+                />
+              </picture>
+            </div>
+          </motion.div>
+
+        </div>
       </div>
-    </div>
     </div>
   );
 }
