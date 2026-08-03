@@ -51,6 +51,16 @@ export function Header({ lang, onOpenSearch, onNavClick }: HeaderProps) {
         </div>
 
         <nav className="hidden md:flex items-center gap-6">
+          {navData.mainLinks?.map((item) => (
+            <a
+              key={item.name}
+              href={item.path}
+              onClick={(e) => onNavClick(e, item.path, !!item.isAnchor)}
+              className="text-sm font-bold text-muted-foreground hover:text-white transition-colors cursor-pointer py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-md"
+            >
+              {item.name}
+            </a>
+          ))}
           {navData.menuCategories.map((cat) => (
             <div key={cat.id} className="relative group">
               <button
@@ -141,6 +151,19 @@ export function Header({ lang, onOpenSearch, onNavClick }: HeaderProps) {
 
       {isMenuOpen && (
         <div className="md:hidden border-t border-border bg-background p-4 flex flex-col gap-2 animate-in slide-in-from-top-5 max-h-[calc(100vh-80px)] overflow-y-auto">
+          {navData.mainLinks?.map((item) => (
+            <a
+              key={item.name}
+              href={item.path}
+              onClick={(e) => {
+                setIsMenuOpen(false);
+                onNavClick(e, item.path, !!item.isAnchor);
+              }}
+              className="flex items-center w-full min-h-[44px] px-3 rounded-lg text-base font-bold text-muted-foreground hover:bg-muted hover:text-white transition-colors"
+            >
+              {item.name}
+            </a>
+          ))}
           {navData.menuCategories.map((cat) => {
             const isOpen = openMobileCat === cat.id;
             return (

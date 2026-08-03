@@ -27,18 +27,14 @@ export const getNavData = (lang: "ar" | "en" = "ar") => {
             { name: "البالتة الأمريكية GMA (48 × 40)", path: "/products/121x101-gma-pallet/" },
           ]
         },
-        {
-          id: "company",
-          title: "الشركة",
-          items: [
-            { name: "من نحن", path: "/about/" },
-            { name: "الشهادات والاعتمادات", path: "/certificates/" },
-            { name: "معرض الصور", path: "/gallery/" },
-            { name: "عملاؤنا", path: "/clients/" },
-            { name: "المدونة والمقالات", path: "/articles/" },
-          ]
-        },
-      ] as NavCategory[]
+      ] as NavCategory[],
+      mainLinks: [
+        { name: "من نحن", path: "/about/" },
+        { name: "الشهادات والاعتمادات", path: "/certificates/" },
+        { name: "معرض الصور", path: "/gallery/" },
+        { name: "عملائنا", path: "/clients/" },
+        { name: "المدونة", path: "/articles/" },
+      ] as NavItem[]
     },
     en: {
       callBtn: "Contact Us",
@@ -55,18 +51,14 @@ export const getNavData = (lang: "ar" | "en" = "ar") => {
             { name: "GMA American Pallet (48 x 40)", path: "/en/products/121x101-gma-pallet/" },
           ]
         },
-        {
-          id: "company",
-          title: "Company",
-          items: [
-            { name: "About Us", path: "/en/about/" },
-            { name: "Certifications", path: "/en/certificates/" },
-            { name: "Gallery", path: "/en/gallery/" },
-            { name: "Our Clients", path: "/en/clients/" },
-            { name: "Blog & Articles", path: "/en/articles/" },
-          ]
-        },
-      ] as NavCategory[]
+      ] as NavCategory[],
+      mainLinks: [
+        { name: "About Us", path: "/en/about/" },
+        { name: "Certifications", path: "/en/certificates/" },
+        { name: "Gallery", path: "/en/gallery/" },
+        { name: "Our Clients", path: "/en/clients/" },
+        { name: "Blog", path: "/en/articles/" },
+      ] as NavItem[]
     }
   }[lang];
 };

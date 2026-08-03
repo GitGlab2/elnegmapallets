@@ -15,7 +15,7 @@ import { exportingCitrusAgriculturalProductsArticle } from "./articles/exporting
 import { exportingCeramicsHeavyMaterialsArticle } from "./articles/exporting-ceramics-heavy-materials";
 import { exportingChemicalsSafelyArticle } from "./articles/exporting-chemicals-safely";
 import { palletDimensionsStandardsArticle } from "./articles/pallet-dimensions-standards";
-import { palletSizeArticlesAr } from "./pallet-size-articles";
+
 import { palletTypesDokumStringerArticle } from "./articles/pallet-types-dokum-stringer";
 import { palletRunnersMarainArticle } from "./articles/pallet-runners-marain";
 import { palletBlockSolidArticle } from "./articles/pallet-block-solid";
@@ -77,7 +77,7 @@ const rawArticles: Article[] = [
   exportingCeramicsHeavyMaterialsArticle,
   exportingChemicalsSafelyArticle,
   palletDimensionsStandardsArticle,
-  ...palletSizeArticlesAr,
+
 ];
 
 export const articles = rawArticles.map(article => ({
