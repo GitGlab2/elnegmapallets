@@ -110,7 +110,7 @@ export default function ProductDetails({
         {/* Breadcrumb Header */}
         <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#202534] via-[#1c1f2a] to-[#202534] p-6 md:p-10 border border-border/30 shadow-2xl mb-10">
           <div className="relative z-10">
-            <nav className="flex items-center gap-2 text-xs md:text-sm text-muted-foreground mb-4 overflow-x-auto whitespace-nowrap">
+            <nav className="flex items-center gap-2 text-xs md:text-sm text-muted-foreground mb-4 flex-wrap">
               <Link href={isEn ? "/en/" : "/"} className="hover:text-white transition">
                 {content.home}
               </Link>
