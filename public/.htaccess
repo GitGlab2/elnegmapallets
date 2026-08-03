@@ -79,8 +79,8 @@
   # Don't rewrite Google verification file
   RewriteRule ^google[a-z0-9]+\.html$ - [L]
 
-  # 301 Redirects for Legacy URLs (Products & Services) to Homepage
-  RewriteRule ^products(/.*)?$ / [R=301,L]
+  # 301 Redirects for Deleted Legacy Services Pages to Homepage
+  # (Products are live again, so product URLs must NOT be redirected)
   RewriteRule ^services(/.*)?$ / [R=301,L]
 
   # Don't rewrite files or directories that exist

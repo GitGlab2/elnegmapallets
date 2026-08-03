@@ -16,6 +16,18 @@ export const getNavData = (lang: "ar" | "en" = "ar") => {
       callBtn: "تواصل معنا",
       menuCategories: [
         {
+          id: "products",
+          title: "المنتجات",
+          items: [
+            { name: "كتالوج المنتجات", path: "/products/" },
+            { name: "بالتة اليورو EUR 1 (120 × 80)", path: "/products/120x80-euro-pallet/" },
+            { name: "البالتة الصناعية / الموالح (120 × 100)", path: "/products/120x100-industrial-pallet/" },
+            { name: "بالتة الكيماويات CP9 (114 × 114)", path: "/products/114x114-chemical-pallet/" },
+            { name: "البالتة المربعة الثقيلة (120 × 120)", path: "/products/120x120-heavy-pallet/" },
+            { name: "البالتة الأمريكية GMA (48 × 40)", path: "/products/121x101-gma-pallet/" },
+          ]
+        },
+        {
           id: "company",
           title: "الشركة",
           items: [
@@ -31,6 +43,18 @@ export const getNavData = (lang: "ar" | "en" = "ar") => {
     en: {
       callBtn: "Contact Us",
       menuCategories: [
+        {
+          id: "products",
+          title: "Products",
+          items: [
+            { name: "Products Catalog", path: "/en/products/" },
+            { name: "Euro Pallet EUR 1 (120 x 80)", path: "/en/products/120x80-euro-pallet/" },
+            { name: "Industrial / Citrus Pallet (120 x 100)", path: "/en/products/120x100-industrial-pallet/" },
+            { name: "Chemical Pallet CP9 (114 x 114)", path: "/en/products/114x114-chemical-pallet/" },
+            { name: "Heavy Square Pallet (120 x 120)", path: "/en/products/120x120-heavy-pallet/" },
+            { name: "GMA American Pallet (48 x 40)", path: "/en/products/121x101-gma-pallet/" },
+          ]
+        },
         {
           id: "company",
           title: "Company",

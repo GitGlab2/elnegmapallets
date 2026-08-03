@@ -2,6 +2,8 @@ import { writeFileSync } from "fs";
 import path from "path";
 import { articles } from "../client/src/data/articles";
 import { articlesEn } from "../client/src/data/articles-en";
+import { palletSizesAr } from "../client/src/data/pallet-sizes";
+import { palletSizesEn } from "../client/src/data/pallet-sizes-en";
 
 const SITE_URL = "https://elnegmapallets.com";
 const today = new Date().toISOString().slice(0, 10);
@@ -25,6 +27,11 @@ type SitemapEntry = {
 // Build a lookup map: slug → English title (for image tags on /en/ article URLs)
 const enTitleMap = new Map<string, string>(
   articlesEn.map(a => [a.slug, a.title])
+);
+
+// Build a lookup map: slug → English title (for /en/products/ URLs)
+const productTitleEnMap = new Map<string, string>(
+  palletSizesEn.map(p => [p.slug, p.title])
 );
 
 // Gallery images with descriptive metadata
@@ -96,6 +103,23 @@ const entries: SitemapEntry[] = [
   },
   { path: "/clients/", enPath: "/en/clients/", priority: "0.85", changefreq: "monthly" },
   { path: "/quote/", enPath: "/en/quote/", priority: "0.85", changefreq: "monthly" },
+  { path: "/products/", enPath: "/en/products/", priority: "0.9", changefreq: "weekly" },
+  ...palletSizesAr.map(p => ({
+    path: `/products/${p.slug}/`,
+    enPath: `/en/products/${p.slug}/`,
+    priority: "0.7",
+    changefreq: "monthly",
+    images: [{
+      loc: `${SITE_URL}${p.image}`,
+      title: p.title,
+      caption: `${p.title} — مصنع النجمة للبالتات الخشبية`,
+    }] as ImageEntry[],
+    enImages: [{
+      loc: `${SITE_URL}${p.image}`,
+      title: productTitleEnMap.get(p.slug) ?? p.title,
+      caption: `${productTitleEnMap.get(p.slug) ?? p.title} — El Negma Wooden Pallets Factory`,
+    }] as ImageEntry[],
+  })),
   { path: "/articles/", enPath: "/en/articles/", priority: "0.85", changefreq: "weekly" },
   { path: "/articles/tools/", enPath: "/en/articles/tools/", priority: "0.85", changefreq: "weekly" },
   ...articles.map(a => ({
