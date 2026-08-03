@@ -56,10 +56,10 @@ function formatBlogDate(dateStr: string, isEn: boolean): string {
   }
 }
 
-export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
+export default function ArticlesList({ lang = "ar", initialCategory = "all" }: { lang?: "ar" | "en", initialCategory?: string }) {
   const isEn = lang === "en";
   const currentArticles = isEn ? articlesEn : articles;
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeCategory, setActiveCategory] = useState(initialCategory);
   const [searchQuery, setSearchQuery] = useState("");
   const [visibleArticleCount, setVisibleArticleCount] = useState(ARTICLE_PAGE_SIZE);
 
@@ -418,9 +418,9 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
                   const Icon = cat.icon;
 
                   return (
-                    <button
+                    <a
                       key={cat.id}
-                      onClick={() => handleCategoryChange(cat.id)}
+                      href={cat.id === "all" ? (isEn ? "/en/articles/" : "/articles/") : (isEn ? `/en/articles/category/${cat.id}/` : `/articles/category/${cat.id}/`)}
                       className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 text-right ${
                         isActive
                           ? "bg-secondary text-white shadow-md shadow-secondary/15"
@@ -434,7 +434,7 @@ export default function ArticlesList({ lang = "ar" }: { lang?: "ar" | "en" }) {
                       <span className={`text-[10px] px-2 py-0.5 rounded-md ${isActive ? "bg-white/20 text-white" : "bg-white/[0.04] text-muted-foreground"}`}>
                         {total}
                       </span>
-                    </button>
+                    </a>
                   );
                 })}
               </div>

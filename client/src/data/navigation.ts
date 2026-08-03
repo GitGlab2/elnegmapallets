@@ -27,6 +27,14 @@ export const getNavData = (lang: "ar" | "en" = "ar") => {
             { name: "البالتة الأمريكية GMA (48 × 40)", path: "/products/121x101-gma-pallet/" },
           ]
         },
+        {
+          id: "tools",
+          title: "الأدوات",
+          items: [
+            { name: "مخصص البالتات الهندسية", path: "/articles/tools/pallet-customizer/" },
+            { name: "حاسبة استيعاب الحاويات", path: "/articles/tools/container-calculator/" },
+          ]
+        },
       ] as NavCategory[],
       mainLinks: [
         { name: "من نحن", path: "/about/" },
@@ -49,6 +57,14 @@ export const getNavData = (lang: "ar" | "en" = "ar") => {
             { name: "Chemical Pallet CP9 (114 x 114)", path: "/en/products/114x114-chemical-pallet/" },
             { name: "Heavy Square Pallet (120 x 120)", path: "/en/products/120x120-heavy-pallet/" },
             { name: "GMA American Pallet (48 x 40)", path: "/en/products/121x101-gma-pallet/" },
+          ]
+        },
+        {
+          id: "tools",
+          title: "Tools",
+          items: [
+            { name: "Pallet Customizer", path: "/en/articles/tools/pallet-customizer/" },
+            { name: "Container Calculator", path: "/en/articles/tools/container-calculator/" },
           ]
         },
       ] as NavCategory[],

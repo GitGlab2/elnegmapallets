@@ -1,29 +1,28 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { Calculator, Sliders, Wrench, BookOpen, ShieldCheck } from "lucide-react";
+import ContainerCalculator from "@/components/ContainerCalculator";
+import { Calculator, BookOpen, ShieldCheck, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export default function ToolsPage({ lang = "ar" }: { lang?: "ar" | "en" }) {
+export default function ToolContainerCalculator({ lang = "ar" }: { lang?: "ar" | "en" }) {
   const isEn = lang === "en";
 
   const content = {
     ar: {
-      badge: "الأدوات التفاعلية والهندسية",
-      title: "أدوات وحاسبات البالتات والحاويات اللوجستية",
-      desc: "أدوات تفاعلية هندسية مخصصة لمسؤولي اللوجستيات والمشتريات لحساب كفاءة رص البالتات في الحاويات وتحديد التوصيف الفني المطلوب للمصنع.",
-      tabBuilder: "مُخصّص البالتات الهندسية B2B",
-      tabCalculator: "حاسبة استيعاب الحاويات",
-      backToBlog: "العودة للمدونة والمقالات",
+      badge: "أداة تفاعلية B2B",
+      title: "حاسبة استيعاب الحاويات",
+      desc: "احسب السعة التحميلية المثلى لحاويات 20 قدم و 40 قدم للبالتات الخشبية لضمان كفاءة الشحن والتصدير.",
+      backToTools: "العودة للأدوات",
+      backToBlog: "المدونة",
     },
     en: {
-      badge: "Interactive B2B Logistics Tools",
-      title: "Pallet & Container Loading Calculators",
-      desc: "Engineering tools for procurement & logistics teams to calculate container pallet loading capacity and specify technical pallet requirements.",
-      tabBuilder: "Custom B2B Pallet Specifier",
-      tabCalculator: "Container Loading Calculator",
-      backToBlog: "Back to Articles & Blog",
+      badge: "Interactive B2B Tool",
+      title: "Container Loading Calculator",
+      desc: "Calculate optimal pallet loading capacity for 20ft and 40ft containers to maximize shipping efficiency.",
+      backToTools: "Back to Tools",
+      backToBlog: "Blog",
     },
   }[lang];
 
@@ -39,17 +38,16 @@ export default function ToolsPage({ lang = "ar" }: { lang?: "ar" | "en" }) {
           className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#202534] via-[#1c1f2a] to-[#202534] p-8 md:p-12 text-center border border-border/30 shadow-2xl"
         >
           <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center gap-4">
-            
             <div className="flex flex-wrap items-center justify-center gap-3">
               <a
-                href={isEn ? "/en/articles/" : "/articles/"}
+                href={isEn ? "/en/articles/tools/" : "/articles/tools/"}
                 className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-gray-300 text-xs font-bold hover:bg-white/10 hover:border-secondary/50 transition-all"
               >
-                <BookOpen className="w-3.5 h-3.5 text-secondary" />
-                <span>{content.backToBlog}</span>
+                <Wrench className="w-3.5 h-3.5 text-secondary" />
+                <span>{content.backToTools}</span>
               </a>
               <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-secondary/15 border border-secondary/30 text-secondary text-xs font-bold shadow-sm">
-                <Wrench className="w-3.5 h-3.5 text-secondary" />
+                <Calculator className="w-3.5 h-3.5 text-secondary" />
                 <span>{content.badge}</span>
               </div>
             </div>
@@ -61,27 +59,15 @@ export default function ToolsPage({ lang = "ar" }: { lang?: "ar" | "en" }) {
             <p className="text-sm md:text-base text-muted-foreground max-w-2xl leading-relaxed">
               {content.desc}
             </p>
-
-            {/* Interactive Links */}
-            <div className="flex flex-wrap justify-center gap-4 mt-6 pt-2">
-              <a
-                href={isEn ? "/en/articles/tools/pallet-customizer/" : "/articles/tools/pallet-customizer/"}
-                className="flex items-center gap-3 px-8 py-4 rounded-2xl font-bold text-sm transition-all duration-300 cursor-pointer bg-secondary text-white shadow-xl shadow-secondary/25 hover:-translate-y-1 hover:shadow-2xl"
-              >
-                <Sliders className="w-5 h-5 text-white" />
-                <span>{content.tabBuilder}</span>
-              </a>
-
-              <a
-                href={isEn ? "/en/articles/tools/container-calculator/" : "/articles/tools/container-calculator/"}
-                className="flex items-center gap-3 px-8 py-4 rounded-2xl font-bold text-sm transition-all duration-300 cursor-pointer bg-[#1c1f2a] border border-border/30 text-gray-300 hover:border-secondary/40 hover:text-white hover:-translate-y-1 shadow-lg"
-              >
-                <Calculator className="w-5 h-5 text-accent" />
-                <span>{content.tabCalculator}</span>
-              </a>
-            </div>
-
           </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.35, delay: 0.1 }}
+        >
+          <ContainerCalculator lang={lang} />
         </motion.div>
 
         {/* Bottom Callout & Quick Links */}
@@ -109,6 +95,7 @@ export default function ToolsPage({ lang = "ar" }: { lang?: "ar" | "en" }) {
             </a>
             <a href={isEn ? "/en/articles/" : "/articles/"}>
               <Button variant="outline" className="border-border/40 hover:bg-white/5 text-white font-bold text-xs px-6 py-3 rounded-xl">
+                <BookOpen className="w-4 h-4 ml-2" />
                 {content.backToBlog}
               </Button>
             </a>
