@@ -3,73 +3,6 @@ import { Article } from "./articles-types";
 
 const rawArticlesEn: Article[] = [
   {
-    slug: "air-freight-fruit-export-pallets",
-    title: "Air Freight & Fruit Export Pallets: Complete Specification Guide for Agricultural Shipping",
-    description: "Engineering and logistics guide for Egyptian agricultural exporters. Learn about air freight pallets (99×119 cm), French specs (120×100 cm), and ISPM-15 phytosanitary treatment.",
-    date: "2024-10-18",
-    author: "",
-    readTime: "8 mins",
-    image: "/images/sections/international-standards.webp",
-    category: "Export & Shipping Logistics",
-    categoryId: "export",
-    keywords: [
-      "air freight fruit export pallets",
-      "grape export pallets",
-      "peach shipping pallets",
-      "French spec pallet 120x100",
-      "air cargo pallet 99x119",
-      "ISPM 15 heat treatment fruit export"
-    ],
-    toc: [
-      { title: "Agricultural Export Packaging Overview", target: "#introduction" },
-      { title: "1. Air Freight Pallets (99×119 cm)", target: "#air-freight" },
-      { title: "2. French Specification Pallets (120×100 cm)", target: "#french-spec" },
-      { title: "3. Middle East Standard Pallets for Sea Freight", target: "#middle-east-spec" },
-      { title: "4. ISPM-15 Phytosanitary Heat Treatment", target: "#phytosanitary" }
-    ],
-    content: `
-      <div class="space-y-6 text-left leading-relaxed text-gray-200">
-        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
-          <h2 id="introduction" class="text-xl font-bold text-accent mb-2">Agricultural Export Packaging Overview</h2>
-          <p class="text-sm text-gray-300">
-            Egypt is a premier global exporter of citrus, grapes, peaches, and fresh produce. Protecting these delicate crops requires selecting specialized <strong>air freight and maritime export wooden pallets</strong> designed to withstand transport stress while complying with international import regulations.
-          </p>
-        </section>
-
-        <section>
-          <h2 id="air-freight" class="text-lg font-bold text-white mb-2">1. Air Freight Pallets (99×119 cm)</h2>
-          <p class="text-sm text-gray-300 mb-3">
-            Air cargo pallets measuring <strong>99 × 119 cm</strong> are engineered specifically for rapid air transport of high-value produce like fresh grapes and peaches destined for European distribution:
-          </p>
-          <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
-            <li><strong>Lightweight Design:</strong> Optimized timber thickness reduces tare weight to lower air freight fees.</li>
-            <li><strong>Load Capacity:</strong> 750 kg dynamic load for air transit, extendable to 1,250 kg for fast reefer shipping.</li>
-            <li><strong>Cooling Airflow:</strong> Precision slat spacing enables cold air circulation inside cargo bays.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 id="french-spec" class="text-lg font-bold text-white mb-2">2. French Specification Pallets (120×100 cm)</h2>
-          <p class="text-sm text-gray-300 mb-3">
-            The <strong>French spec pallet (120 × 100 cm)</strong> is the industry standard for shipping produce to French retail chains and European distribution hubs:
-          </p>
-          <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
-            <li><strong>Truck Compatibility:</strong> Fits reefer trailers perfectly with zero wasted cargo space.</li>
-            <li><strong>High Load Rating:</strong> Supports up to 1,250 kg dynamic load and 3,000 kg static racking load.</li>
-            <li><strong>Moisture Resistance:</strong> Constructed from seasoned timber resistant to condensation during cold storage.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 id="phytosanitary" class="text-lg font-bold text-white mb-2">3. ISPM-15 Phytosanitary Heat Treatment</h2>
-          <p class="text-sm text-gray-300">
-            We provide ISPM-15 compliant heat-treated (HT) wooden pallets ready for direct export, certified with official stamps for hassle-free customs clearance worldwide.
-          </p>
-        </section>
-      </div>
-    `
-  },
-  {
     slug: "wooden-crates-pallet-collars-export",
     title: "Open vs. Closed Wooden Crates for Shipping: Which to Choose?",
     description: "A comprehensive comparison between open and closed wooden crates and pallet collars used in export and international shipping. Learn about custom packaging designs and ISPM-15 compliance.",
@@ -375,56 +308,6 @@ const rawArticlesEn: Article[] = [
       </div>
     `,
   },
-
-
-  {
-    slug: "heat-treatment-vs-methyl-bromide",
-    title: "Heat Treatment (HT) vs Methyl Bromide (MB) Fumigation",
-    description:
-      "A technical comparison between heat treatment kilns and chemical fumigation for wooden pallets under ISPM-15 standards.",
-    date: "2026-06-03",
-    author: "",
-    readTime: "4 mins",
-    image: "/images/articles/heat-treatment-vs-methyl-bromide.webp",
-    category: "Treatment Comparison",
-    categoryId: "compliance",
-    keywords: [
-      "heat treatment HT",
-      "methyl bromide fumigation",
-      "ISPM-15 treatment",
-      "eco-friendly pallets",
-      "fumigated pallets",
-    ],
-    toc: [
-      { title: "Heat Treatment (HT) Process", target: "#ht-process" },
-      { title: "Methyl Bromide (MB) Fumigation", target: "#mb-process" },
-      { title: "Comparative Evaluation", target: "#comparison" },
-    ],
-    content: `
-      <div class="space-y-6 text-left leading-relaxed text-gray-200">
-        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
-          <h2 id="ht-process" class="text-xl font-bold text-accent mb-2">1. Heat Treatment (HT) Process</h2>
-          <p class="text-sm text-gray-300">
-            Heat Treatment requires placing raw wood pallets in a specialized thermal chamber/kiln. The wood core must reach a minimum temperature of <strong>56°C (132.8°F) for at least 30 continuous minutes</strong>. This process denatures proteins, eradicating all life stages of wood-boring pests, while reducing moisture content to prevent mold.
-          </p>
-        </section>
-
-        <section>
-          <h2 id="mb-process" class="text-xl font-bold text-white border-b border-border pb-1">2. Methyl Bromide (MB) Fumigation</h2>
-          <p class="text-sm text-gray-300">
-            Chemical fumigation involves exposing wood to toxic Methyl Bromide gas in an airtight chamber for 24-48 hours. Although effective, it is being phased out globally under the Montreal Protocol because it depletes the ozone layer and poses serious health risks. The EU banned MB treatment for wood packaging in 2010.
-          </p>
-        </section>
-
-        <section>
-          <h2 id="comparison" class="text-xl font-bold text-white border-b border-border pb-1">3. HT vs MB: Comparison</h2>
-          <p class="text-sm text-gray-300">
-            Heat Treatment (HT) is widely recognized as the gold standard. It leaves no chemical residue, making it 100% safe for food and pharmaceutical shipments, and is accepted globally with no import restrictions.
-          </p>
-        </section>
-      </div>
-    `,
-  },
   {
     slug: "new-wooden-pallets-quality-standards",
     title: "Why Choose New Wooden Pallets for Export Shipments?",
@@ -676,54 +559,6 @@ const rawArticlesEn: Article[] = [
           <h2 id="agro-quarantine" class="text-xl font-bold text-white border-b border-border pb-1">3. Agricultural Quarantine & ISPM-15</h2>
           <p class="text-sm text-gray-300">
             Customs regulations require all agricultural wooden packaging to be officially certified under ISPM-15. Used or unstamped pallets risk immediate rejection, which can destroy the perishable harvest.
-          </p>
-        </section>
-      </div>
-    `,
-  },
-  {
-    slug: "exporting-ceramics-heavy-materials",
-    title: "Exporting Ceramics & Heavy Tiles: Stringer vs Block Pallets",
-    description:
-      "Logistics solutions for shipping heavy ceramics and marble on reinforced wooden pallets to prevent damage and handle weight.",
-    date: "2026-06-07",
-    author: "",
-    readTime: "3 mins",
-    image: "/images/articles/exporting-ceramics-heavy-materials.webp",
-    category: "Industrial Materials",
-    categoryId: "export",
-    keywords: [
-      "exporting ceramics pallets",
-      "marble wooden crates",
-      "heavy duty block pallets",
-      "industrial shipping crates",
-      "loading tiles safely",
-    ],
-    toc: [
-      { title: "Ceramics Weight Challenges", target: "#heavy-weight" },
-      { title: "Reinforced Block Pallets", target: "#block-pallets" },
-      { title: "Marble Packaging in Wooden Crates", target: "#marble-crates" },
-    ],
-    content: `
-      <div class="space-y-6 text-left leading-relaxed text-gray-200">
-        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
-          <h2 id="heavy-weight" class="text-xl font-bold text-accent mb-2">1. Heavyweight Ceramics Logistics</h2>
-          <p class="text-sm text-gray-300">
-            Ceramics and porcelain tiles are high-density materials. A single pallet stack can weigh over 1.5 to 2 tons. This extreme pressure requires solid foundation structures that won't flex or collapse under stack pressures in transit.
-          </p>
-        </section>
-
-        <section>
-          <h2 id="block-pallets" class="text-xl font-bold text-white border-b border-border pb-1">2. Reinforced Heavy-Duty Block Pallets</h2>
-          <p class="text-sm text-gray-300">
-            For ceramics, we construct reinforced block pallets (منصات الدكم الثقيلة) using thick hardwood deck boards and dense composite or wood blocks. These provide 4-way forklift entry, making loading inside container cargo spaces extremely safe.
-          </p>
-        </section>
-
-        <section>
-          <h2 id="marble-crates" class="text-xl font-bold text-white border-b border-border pb-1">3. Marble & Granite Packaging Crates</h2>
-          <p class="text-sm text-gray-300">
-            Polished marble slabs are packed vertically in thick wooden crates (A-Frames) lined with foam or rubber pads. This prevents scratching and balances the extreme weight along the center floor rails of the container.
           </p>
         </section>
       </div>
@@ -1062,204 +897,6 @@ const rawArticlesEn: Article[] = [
     `,
   },
   {
-    slug: "pallet-runners-marain",
-    title: "Wooden Runners (Marain): The Backbone of Pallet Structural Strength",
-    description: "Understand the crucial role of wooden runners (Stringers/Marain) in pallet manufacturing. Discover standard sizes, wood species, and how they determine the load capacity of wooden platforms.",
-    date: "2026-07-10",
-    author: "",
-    readTime: "5 mins",
-    image: "/images/articles/pallet-runners-marain.webp",
-    category: "Pallet Sizes & Specs",
-    categoryId: "sizes",
-    keywords: [
-      "wooden runners",
-      "marain khashab",
-      "pallet runners",
-      "stringers wood",
-      "pallet components",
-      "musk runners",
-      "wooden pallet manufacturing",
-      "runners Egypt"
-    ],
-    toc: [
-      { title: "What are Wooden Runners (Marain)?", target: "#what-are-runners" },
-      { title: "Types & Designs of Pallet Runners", target: "#runner-types" },
-      { title: "Technical Dimensions & Specifications", target: "#runner-dimensions" },
-      { title: "Best Timber Species for Runners", target: "#runner-timber" },
-      { title: "Runner Quality & Pallet Safety", target: "#runner-safety" }
-    ],
-    content: `
-      <div class="space-y-6 text-left leading-relaxed text-gray-200">
-        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
-          <h2 id="what-are-runners" class="text-xl font-bold text-accent mb-2">1. What are Wooden Runners (Marain)?</h2>
-          <p class="text-sm text-gray-300">
-            <strong>Wooden runners</strong> (known in the Egyptian industry as \"Marain\") are the thick structural timber boards running along the length of a pallet. They act as the primary load-bearing beams to which deck boards are nailed. The density, thickness, and layout of these runners dictate how much weight a pallet can safely carry without bowing or fracturing.
-          </p>
-          <p class="text-sm text-gray-300 mt-2">
-            In standard shipping platforms, a configuration of <strong>3 parallel runners</strong> is standard (one on each edge, and one centered). For wider platforms or extra heavy industrial loads, 4 or more runners are utilized.
-          </p>
-        </section>
-
-        <section>
-          <h2 id="runner-types" class="text-xl font-bold text-white border-b border-border pb-1">2. Types & Designs of Pallet Runners</h2>
-          <ul class="list-disc list-inside text-xs text-gray-300 space-y-3 mt-2 pl-2">
-            <li><strong>Solid Runners:</strong> Continuous solid wood beams. They are strong and easy to manufacture, but limit forklift entry to 2-way access.</li>
-            <li><strong>Notched Runners:</strong> Solid runners featuring pre-cut rectangular openings (notches) on the bottom edge. These notches allow forklift forks to slide through, turning a two-way layout into a partial four-way access configuration.</li>
-            <li><strong>Double/Multi-Runners:</strong> Doubling up two runners side-by-side to support extreme payloads exceeding 2,000 kg.</li>
-            <li><strong>LVL (Laminated Veneer Lumber) Runners:</strong> Engineered composite wood made of pressed wood layers. Extremely strong, highly consistent, but more expensive.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 id="runner-dimensions" class="text-xl font-bold text-white border-b border-border pb-1">3. Technical Dimensions & Specifications</h2>
-          <p class="text-sm text-gray-300">Standard runner sizes cut at El Negma sawmills:</p>
-          <div class="overflow-x-auto mt-3">
-            <table class="w-full text-xs text-gray-300 border border-border/40">
-              <thead class="bg-muted/30">
-                <tr>
-                  <th class="p-2 border border-border/40 text-left">Runner Length</th>
-                  <th class="p-2 border border-border/40 text-left">Height (Thickness)</th>
-                  <th class="p-2 border border-border/40 text-left">Width</th>
-                  <th class="p-2 border border-border/40 text-left">Target Pallet Style</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td class="p-2 border border-border/40">80 cm</td><td class="p-2 border border-border/40">70-90 mm</td><td class="p-2 border border-border/40">35-50 mm</td><td class="p-2 border border-border/40">Euro Pallet 120×80 cm</td></tr>
-                <tr><td class="p-2 border border-border/40">100 cm</td><td class="p-2 border border-border/40">70-100 mm</td><td class="p-2 border border-border/40">35-50 mm</td><td class="p-2 border border-border/40">Citrus/Industrial 120×100 cm</td></tr>
-                <tr><td class="p-2 border border-border/40">110 cm</td><td class="p-2 border border-border/40">80-100 mm</td><td class="p-2 border border-border/40">40-50 mm</td><td class="p-2 border border-border/40">Chemical CP Square Pallets</td></tr>
-                <tr><td class="p-2 border border-border/40">120 cm</td><td class="p-2 border border-border/40">70-90 mm</td><td class="p-2 border border-border/40">35-45 mm</td><td class="p-2 border border-border/40">Standard GMA/US Pallets</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section>
-          <h2 id="runner-timber" class="text-xl font-bold text-white border-b border-border pb-1">4. Best Timber Species for Runners</h2>
-          <ul class="list-disc list-inside text-xs text-gray-300 space-y-3 mt-2 pl-2">
-            <li><strong>Swedish Pine / Spruce (Softwood):</strong> The most cost-effective and common choice. Offers an excellent strength-to-weight ratio and reacts perfectly to ISPM-15 heat treatment.</li>
-            <li><strong>Beechwood (Hardwood):</strong> 30-40% stronger than pine. Excellent for multi-use industrial pallets handling heavy machinery parts. Higher price point.</li>
-            <li><strong>Musk Pine (Moski):</strong> Highly popular locally in Egypt. Slightly softer than Swedish pine, best suited for local standard pallets or single-use export shipments.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 id="runner-safety" class="text-xl font-bold text-white border-b border-border pb-1">5. Runner Quality & Pallet Safety</h2>
-          <p class="text-sm text-gray-300">
-            Because runners carry the main bending moment, a single failure can lead to catastrophic cargo drops. El Negma ensures quality by checking:
-          </p>
-          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
-            <li><strong>Moisture Content (MC):</strong> Keeping moisture below 20% to prevent wood warping and shrinkage.</li>
-            <li><strong>Straight Grain Fiber:</strong> Ensuring wood grains run parallel to the runner length. Slanted grains drastically reduce load limits.</li>
-            <li><strong>Knot Inspections:</strong> Excluding large structural knots in the center of the runners where tension stresses are highest.</li>
-          </ul>
-          <p class="text-sm text-gray-300 mt-3">
-            By sourcing premium timber and inspecting every runner before assembly, <strong>El Negma Pallets Factory</strong> guarantees highly dependable platforms. Contact us to order custom-sized timber components or assembled units.
-          </p>
-        </section>
-      </div>
-    `,
-  },
-  {
-    slug: "pallet-block-solid",
-    title: "Solid Deck Wooden Pallets (Sadd): Specifications & Industrial Applications",
-    description: "Your complete guide to solid deck wooden pallets (Sadd style with closed top) in Egypt. Technical specifications, comparisons with open-deck pallets, and applications in chemical & food logistics.",
-    date: "2026-07-10",
-    author: "",
-    readTime: "5 mins",
-    image: "/images/articles/pallet-block-solid.webp",
-    category: "Pallet Sizes & Specs",
-    categoryId: "sizes",
-    keywords: [
-      "solid deck pallet",
-      "sadd pallet",
-      "closed deck pallet",
-      "wooden pallets Egypt",
-      "solid pallet specifications",
-      "difference between solid and open deck pallets",
-      "chemical pallet Egypt"
-    ],
-    toc: [
-      { title: "What is a Solid Deck Pallet (Sadd)?", target: "#what-is-solid" },
-      { title: "Solid Deck vs. Open/Gapped Deck Pallets", target: "#solid-vs-gapped" },
-      { title: "Technical Components & Anatomy", target: "#solid-components" },
-      { title: "Industrial Applications in Egypt", target: "#sنوع الخشب المستخدم: تستخدم مصانع البالتات أخشاباً مثل خشب الموسكي، الخشب الأبيض السويدي، أو الأخشاب الصلبةzolid-applications" },
-      { title: "Pros and Cons of Solid Deck Pallets", target: "#solid-pros-cons" }
-    ],
-    content: `
-      <div class="space-y-6 text-left leading-relaxed text-gray-200">
-        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
-          <h2 id="what-is-solid" class="text-xl font-bold text-accent mb-2">1. What is a Solid Deck Pallet (Sadd)?</h2>
-          <p class="text-sm text-gray-300">
-            In the wooden pallet manufacturing trade in Egypt, a <strong>"Solid Deck Pallet"</strong> (referred to as "Sadd") is a platform designed with a <strong>completely closed top surface, leaving no gaps or spaces between the deck boards</strong>. The top boards are placed flush against one another to create a continuous, flat 100% solid surface area.
-          </p>
-          <p class="text-sm text-gray-300 mt-2">
-            A solid deck pallet can be built structurally using either a stringer (dokum) or block base, but its defining commercial characteristic is the <strong>fully closed top deck</strong> that protects sensitive goods from falling or sagging.
-          </p>
-        </section>
-
-        <section>
-          <h2 id="solid-vs-gapped" class="text-xl font-bold text-white border-b border-border pb-1">2. Solid Deck vs. Open/Gapped Deck Pallets</h2>
-          <p class="text-sm text-gray-300">Wooden platforms are divided into two main categories based on the top deck structure:</p>
-          <ul class="list-disc list-inside text-xs text-gray-300 space-y-3 mt-2 pl-2">
-            <li><strong>Solid Deck (Sadd):</strong> Zero gaps between boards. It offers maximum surface coverage, protects cargo from bottom dirt/moisture, and prevents small boxes or bag materials from slipping or tearing.</li>
-            <li><strong>Open/Gapped Deck (Sheesh):</strong> Features gaps between the deck boards (usually 2 to 8 cm wide). This is the standard design because it uses less wood, making it lighter and more economical, while allowing drainage and airflow.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 id="solid-components" class="text-xl font-bold text-white border-b border-border pb-1">3. Technical Components & Anatomy</h2>
-          <p class="text-sm text-gray-300">A solid deck pallet consists of:</p>
-          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
-            <li><strong>Top Solid Deck Boards:</strong> 8 to 12 timber boards (depending on pallet width) nailed tight side-by-side. Standard thicknesses range from 18 to 22 mm.</li>
-            <li><strong>Base Support Structure:</strong> Can be configured as a 3-stringer base (two-way entry) or a 9-block base (four-way entry) according to the operational requirements.</li>
-            <li><strong>Bottom Deck Boards:</strong> Support boards on the base that stabilize the unit for racking and stacking.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 id="solid-applications" class="text-xl font-bold text-white border-b border-border pb-1">4. Industrial Applications in Egypt</h2>
-          <p class="text-sm text-gray-300">Solid deck pallets are heavily requested in specific Egyptian industrial sectors:</p>
-          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
-            <li><strong>Chemicals & Powder Bags:</strong> Prevents industrial sacks and granules from tearing or falling through deck spacing.</li>
-            <li><strong>Food & Pharmaceutical Factories:</strong> Provides a clean barrier that prevents ground moisture, splinters, or dirt from making contact with primary packaging.</li>
-            <li><strong>Lightweight Cartons & Paper Goods:</strong> Distributes weight evenly across a flat surface, preventing box compression and crushing that typically occurs over open gaps.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 id="solid-pros-cons" class="text-xl font-bold text-white border-b border-border pb-1">5. Pros and Cons of Solid Deck Pallets</h2>
-          <div class="overflow-x-auto mt-3">
-            <table class="w-full text-xs text-gray-300 border border-border/40">
-              <thead class="bg-muted/30">
-                <tr>
-                  <th class="p-2 border border-border/40 text-left">Advantages</th>
-                  <th class="p-2 border border-border/40 text-left">Disadvantages / Challenges</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="p-2 border border-border/40">✅ Smooth, flat surface ideal for sensitive or bagged cargos.</td>
-                  <td class="p-2 border border-border/40">❌ Consumes 20% to 30% more timber, resulting in higher production costs.</td>
-                </tr>
-                <tr>
-                  <td class="p-2 border border-border/40">✅ Superior load distribution for custom or odd-shaped items.</td>
-                  <td class="p-2 border border-border/40">❌ Total empty weight is heavier, which can affect shipping calculations.</td>
-                </tr>
-                <tr>
-                  <td class="p-2 border border-border/40">✅ High barrier protection from ground moisture and forklift fork tips.</td>
-                  <td class="p-2 border border-border/40">❌ No water drainage or bottom airflow compared to open styles.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="text-sm text-gray-300 mt-4">
-            <strong>El Negma Pallets Factory</strong> manufactures custom and standard solid deck pallets (120×80 cm, 120×100 cm) using premium heat-treated Swedish pine and Musk wood. Contact our technical team today for a free consultation.
-          </p>
-        </section>
-      </div>
-    `,
-  },
-  {
     slug: "best-pallet-factory-egypt",
     title: "Best Wooden Pallet Factory in Egypt: How to Choose the Ideal Manufacturer",
     description: "Not all wooden pallet factories in Egypt are equal in quality. Choosing the wrong supplier means production delays and rejected customs. Read our 6 criteria checklist to choose the ideal manufacturer.",
@@ -1553,94 +1190,6 @@ const rawArticlesEn: Article[] = [
     `
   },
   {
-    slug: "pallets-potato-vegetables-export",
-    title: "Wooden Pallets for Potato & Vegetable Export from Egypt: Specs & Standards",
-    description: "A specialized guide to choosing the right wooden pallets for exporting Egyptian potatoes, onions, and fresh produce. Learn about approved sizes and ISPM-15 standards.",
-    date: "2026-07-12",
-    author: "",
-    readTime: "6 mins",
-    image: "/images/articles/exporting-citrus-agricultural-products.webp",
-    category: "Export & Logistics",
-    categoryId: "export",
-    keywords: [
-      "potato export pallets Egypt",
-      "vegetable export wooden pallets",
-      "fresh produce shipping pallets",
-      "agricultural export standards"
-    ],
-    toc: [
-      { title: "Importance of Pallets in Fresh Produce Export", target: "#importance" },
-      { title: "Standard Pallet Dimensions for Vegetables", target: "#sizes-for-vegetables" },
-      { title: "ISPM-15 Heat Treatment Rules by Destination Port", target: "#ht-requirements" },
-      { title: "Best Practices for Stacking Produce on Pallets", target: "#packing-tips" },
-      { title: "Produce Export Seasons and Pallet Supply Timing", target: "#export-seasons" }
-    ],
-    content: `
-      <div class="space-y-6 text-left leading-relaxed text-gray-200">
-        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
-          <h2 id="importance" class="text-xl font-bold text-accent mb-2">1. Importance of Pallets in Fresh Produce Export</h2>
-          <p class="text-sm text-gray-300">
-            Egypt is one of the largest exporters of fresh produce, shipping millions of tons of <strong>potatoes, onions, garlic, and citrus</strong> annually to Europe, Russia, and the Gulf. The success of these agricultural shipments heavily relies on the quality of the <strong>export wooden pallets</strong> supporting them.
-          </p>
-          <p class="text-sm text-gray-300 mt-2">
-            Using substandard pallets can lead to cargo collapse, moisture buildup, fungal decay, or customs rejection at destination ports for failing ISPM-15 compliance.
-          </p>
-        </section>
-
-        <section>
-          <h2 id="sizes-for-vegetables" class="text-xl font-bold text-white border-b border-border pb-1">2. Standard Pallet Dimensions for Vegetables</h2>
-          <p class="text-sm text-gray-300">
-            Pallet configurations vary based on vegetable type and shipping destination:
-          </p>
-          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
-            <li><strong>Industrial 120 × 100 cm Pallet:</strong> The most popular size for potatoes and onions. Fits 60×40 cm carton boxes and big bags perfectly, holding up to 1,200 kg of product.</li>
-            <li><strong>Euro 120 × 80 cm Pallet:</strong> The mandatory standard for European supermarket delivery. Ideal for high-value packed vegetables like green beans and spring onions.</li>
-            <li><strong>100 × 100 cm Pallet:</strong> Frequently used for shipping bulk onion bags to specific regional ports.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 id="ht-requirements" class="text-xl font-bold text-white border-b border-border pb-1">3. ISPM-15 Heat Treatment Rules by Destination Port</h2>
-          <p class="text-sm text-gray-300">
-            While all international ports enforce the <strong>ISPM-15 standard</strong>, some markets have specific regulations:
-          </p>
-          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
-            <li><strong>European Union:</strong> Enforces the IPPC logo with the HT mark. Methyl bromide chemical fumigation is banned since 2010.</li>
-            <li><strong>Gulf Cooperation Council (GCC):</strong> Accepts HT certified pallets; some ports require additional phytosanitary documents from the Ministry of Agriculture.</li>
-            <li><strong>Russian Federation:</strong> Demands clear ISPM-15 stamps and enforces strict inspection for wood borers and bark presence.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 id="packing-tips" class="text-xl font-bold text-white border-b border-border pb-1">4. Best Practices for Stacking Produce on Pallets</h2>
-          <p class="text-sm text-gray-300">
-            To ensure your agricultural cargo arrives in optimal condition:
-          </p>
-          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
-            <li><strong>Limit Height to 1.6 Meters:</strong> The optimal height to ensure vertical stack stability and prevent bottom box crushing.</li>
-            <li><strong>Install Corner Boards:</strong> Heavy-duty cardboard edge protectors prevent box collapse during transport.</li>
-            <li><strong>Allow Proper Airflow:</strong> Fresh vegetables require ventilation. Avoid wrapping pallets with airtight stretch wrap; instead, use perforated wrap or strap wrapping.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 id="export-seasons" class="text-xl font-bold text-white border-b border-border pb-1">5. Produce Export Seasons and Pallet Supply Timing</h2>
-          <p class="text-sm text-gray-300">
-            Plan your <strong>export wooden pallet orders</strong> in advance of agricultural peaks:
-          </p>
-          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
-            <li><strong>Potatoes:</strong> January - May (Main Season) & September - November (Nile Season)</li>
-            <li><strong>Onions:</strong> March - June</li>
-            <li><strong>Green Beans:</strong> October - March</li>
-          </ul>
-          <p class="text-sm text-gray-300 mt-3">
-            We advise signing seasonal supply contracts with <strong>El Negma Pallets</strong> at least one month before the harvest season to guarantee supply and lock in optimal timber rates. Contact us at <strong>+201080012261</strong> to reserve your seasonal supply.
-          </p>
-        </section>
-      </div>
-    `
-  },
-  {
     slug: "pallets-factories-warehouses",
     title: "Wooden Pallets for Factories & Warehouses: The Complete Guide",
     description: "Everything you need to know about choosing wooden pallets for industrial manufacturing and warehousing in Egypt. Learn about size compatibility, safety, and load capacities.",
@@ -1732,78 +1281,557 @@ const rawArticlesEn: Article[] = [
     `
   },
   {
-    slug: "methyl-bromide-fumigation-pallets",
-    title: "Methyl Bromide Fumigation for Wooden Pallets (MB): Uses & Regulations",
-    description: "A comprehensive guide on Methyl Bromide (MB) chemical fumigation for wooden packaging, compliance with quarantine codes, and environmental regulations.",
-    date: "2026-07-13",
+    slug: "heat-treatment-vs-methyl-bromide",
+    title: "Heat Treatment (HT) vs. Methyl Bromide (MB) Fumigation for Pallets",
+    description: "A comprehensive technical and environmental comparison between Heat Treatment (HT) and Methyl Bromide (MB) fumigation for securing wooden pallets.",
+    date: "2024-10-15",
     author: "",
-    readTime: "4 mins",
+    readTime: "4 minutes",
     image: "/images/articles/heat-treatment-vs-methyl-bromide.webp",
-    category: "Methyl Bromide (MB)",
+    category: "Treatment & Fumigation Comparison",
     categoryId: "compliance",
-    keywords: [
-      "methyl bromide fumigation",
-      "MB pallet treatment",
-      "chemical pallet sterilization",
-      "ISPM-15 MB stamp",
-      "customs quarantine pallets",
-      "fumigated wood packaging"
-    ],
+    keywords: ["Heat treatment HT", "Methyl Bromide MB", "Pallet fumigation", "Montreal Protocol", "Wood treatment kilns", "HT pallets in Egypt", "Fumigation chamber", "Treatment vs Fumigation"],
     toc: [
-      { title: "What is Methyl Bromide Fumigation (MB)?", target: "#what-is-mb" },
-      { title: "How Chemical Fumigation is Executed", target: "#how-mb-works" },
-      { title: "When is Methyl Bromide Fumigation Required?", target: "#when-to-use-mb" },
-      { title: "Environmental and Safety Controls", target: "#safety-precautions" }
+      { title: "Heat Treatment (HT)", target: "#heat-treatment" },
+      { title: "Methyl Bromide Fumigation (MB)", target: "#methyl-bromide" },
+      { title: "Technical & Environmental Comparison", target: "#comparison-table" }
     ],
     content: `
-      <div class="space-y-6 text-left leading-relaxed text-gray-200">
+      <div class="space-y-6 text-left leading-relaxed text-gray-200" dir="ltr">
         <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
-          <h2 id="what-is-mb" class="text-xl font-bold text-accent mb-2">What is Methyl Bromide Fumigation (MB)?</h2>
+          <h2 id="heat-treatment" class="text-xl font-bold text-accent mb-2">1. Heat Treatment (HT)</h2>
           <p class="text-sm text-gray-300">
-            <strong>Methyl Bromide Fumigation</strong>, represented by the <strong>MB</strong> stamp code, is a highly effective chemical treatment method for wood packaging. Methyl Bromide is an odorless, colorless gas that penetrates deep into solid timber, quickly eradicating wood-boring insects, nematodes, and fungi to comply with the ISPM-15 agricultural quarantine standards.
+            <strong>Heat Treatment (HT)</strong> relies on placing wooden pallets inside special industrial kilns and pumping hot air until the core temperature of the wood reaches at least <strong>56°C</strong> and maintaining it for <strong>30 minutes</strong>.
+          </p>
+          <p class="text-sm text-gray-300 mt-2">
+            <strong>Strategic Advantages:</strong> A process completely free of chemicals and toxic gases, 100% safe and compliant with food and pharmaceutical export standards, globally accepted without customs restrictions, and contributes to drying the wood to reduce moisture content and prevent mold and fungi growth during long sea voyages.
           </p>
         </section>
 
         <section>
-          <h2 id="how-mb-works" class="text-xl font-bold text-white border-b border-border pb-1">How Chemical Fumigation is Executed</h2>
+          <h2 id="methyl-bromide" class="text-xl font-bold text-white border-b border-border pb-1">2. Methyl Bromide (MB) Fumigation</h2>
           <p class="text-sm text-gray-300">
-            The chemical fumigation process follows strict protocols to ensure complete safety and pest eradication:
+            The treatment is carried out by isolating the wood and injecting toxic methyl bromide gas in specific doses under tarpaulins or in sealed containers for 24 to 48 hours.
+          </p>
+          <p class="text-sm text-gray-300 mt-2">
+            <strong>Decline and International Bans:</strong> This gas is classified as an ozone-depleting substance under the Montreal Protocol. The European Union has completely banned the use of methyl bromide since 2010, and customs in many countries and export destinations impose strict control and scrutiny on shipments treated with it due to occupational hazards and toxicity residues on the wood.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="comparison-table" class="text-xl font-bold text-white border-b border-border pb-1">3. Quick Comparison: HT vs. MB</h2>
+          <div class="overflow-x-auto border border-border rounded-xl mt-3">
+            <table class="w-full text-left text-xs text-gray-300">
+              <thead class="bg-primary/40 text-white border-b border-border">
+                <tr>
+                  <th class="px-4 py-2 font-bold">Difference</th>
+                  <th class="px-4 py-2 font-bold">Heat Treatment (HT)</th>
+                  <th class="px-4 py-2 font-bold">Methyl Bromide (MB)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-border/50">
+                <tr class="hover:bg-muted/30">
+                  <td class="px-4 py-2 font-bold text-accent">Eradication Mechanism</td>
+                  <td class="px-4 py-2">Natural heat (56°C in wood core)</td>
+                  <td class="px-4 py-2">Toxic, tissue-penetrating chemical gas</td>
+                </tr>
+                <tr class="hover:bg-muted/30">
+                  <td class="px-4 py-2 font-bold text-accent">Treatment Duration</td>
+                  <td class="px-4 py-2">30 - 60 minutes only</td>
+                  <td class="px-4 py-2">24 - 48 hours (including aeration)</td>
+                </tr>
+                <tr class="hover:bg-muted/30">
+                  <td class="px-4 py-2 font-bold text-accent">Environmental Impact</td>
+                  <td class="px-4 py-2">100% safe, clean, and sustainable</td>
+                  <td class="px-4 py-2">Ozone-depleting (internationally restricted)</td>
+                </tr>
+                <tr class="hover:bg-muted/30">
+                  <td class="px-4 py-2 font-bold text-accent">Customs Acceptance</td>
+                  <td class="px-4 py-2">Globally accepted without restrictions</td>
+                  <td class="px-4 py-2">Banned in EU and several other countries</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    `
+  },
+  {
+    slug: "methyl-bromide-fumigation-pallets",
+    title: "Methyl Bromide (MB) Fumigation for Pallets: Uses and Technical Requirements",
+    description: "A comprehensive explanation of the Methyl Bromide (MB) fumigation process for wooden pallets and packaging, agricultural quarantine and customs requirements, and safety precautions.",
+    date: "2024-11-20",
+    author: "",
+    readTime: "4 minutes",
+    image: "/images/articles/heat-treatment-vs-methyl-bromide.webp",
+    category: "Methyl Bromide Fumigation",
+    categoryId: "compliance",
+    keywords: [
+      "Methyl Bromide fumigation",
+      "Gas fumigation of pallets",
+      "MB gas",
+      "MB pallet stamp",
+      "Wood fumigation certificate",
+      "Agricultural quarantine requirements"
+    ],
+    toc: [
+      { title: "What is Methyl Bromide (MB) Fumigation?", target: "#what-is-mb" },
+      { title: "How Chemical Fumigation of Pallets is Executed", target: "#how-mb-works" },
+      { title: "When is Methyl Bromide Fumigation Preferred?", target: "#when-to-use-mb" },
+      { title: "Environmental and Health Safety Standards", target: "#safety-precautions" }
+    ],
+    content: `
+      <div class="space-y-6 text-left leading-relaxed text-gray-200" dir="ltr">
+        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
+          <h2 id="what-is-mb" class="text-xl font-bold text-accent mb-2">What is Methyl Bromide (MB) Fumigation?</h2>
+          <p class="text-sm text-gray-300">
+            <strong>Methyl Bromide (MB) fumigation</strong> is a highly powerful and effective chemical method for treating and fumigating wood and pallets. Methyl bromide is a colorless, odorless gas with superior ability to penetrate wood cells and rapidly eradicate all incubating insects, nematode worms, and fungi, making it officially approved under the international ISPM 15 agricultural quarantine standard.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="how-mb-works" class="text-xl font-bold text-white border-b border-border pb-1">How Chemical Fumigation of Pallets is Executed</h2>
+          <p class="text-sm text-gray-300">
+            The chemical fumigation process is carried out following precise steps to ensure complete eradication of pests:
           </p>
           <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
-            <li><strong>Enclosure & Sealing:</strong> The wood pallets are stacked and covered with gas-tight tarpaulins, completely sealed from the outside environment.</li>
-            <li><strong>Gas Injection:</strong> Methyl Bromide gas is injected at precise dosage levels determined by temperature and timber thickness.</li>
-            <li><strong>Exposure Period:</strong> The pallets remain exposed to the gas at a constant concentration for at least <strong>24 continuous hours</strong>.</li>
-            <li><strong>Aeration:</strong> The enclosure is carefully opened to let the gas dissipate safely before workers handle the wood.</li>
+            <li><strong>Isolation and Sealing:</strong> Wooden pallets are stacked, covered with extra-thick plastic tarps, and completely sealed off from the outside air to prevent gas leakage.</li>
+            <li><strong>Gas Injection and Concentration:</strong> Methyl bromide gas is injected in pre-determined doses (depending on ambient temperature and wood type) into the enclosed space.</li>
+            <li><strong>Continuous Exposure (Fumigation):</strong> The pallets remain exposed to the gas at a high, constant concentration for at least <strong>24 continuous hours</strong>.</li>
+            <li><strong>Aeration and Safe Disposal:</strong> After the duration ends, the tarps are carefully lifted and the pallets are aerated to completely eliminate gas residues, ensuring the safety of workers and importers.</li>
           </ul>
         </section>
 
         <section>
-          <h2 id="when-to-use-mb" class="text-xl font-bold text-white border-b border-border pb-1">When is Methyl Bromide Fumigation Required?</h2>
+          <h2 id="when-to-use-mb" class="text-xl font-bold text-white border-b border-border pb-1">When is Methyl Bromide Fumigation Preferred?</h2>
           <p class="text-sm text-gray-300">
-            Despite the global shift toward heat treatment, chemical MB fumigation is still required in certain scenarios:
+            Despite the growing global trend towards thermal alternatives, methyl bromide fumigation remains an essential and required option in certain cases:
           </p>
           <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
-            <li><strong>Destination Country Demands:</strong> Customs in certain international destinations and import hubs mandate MB fumigation for specific categories of goods to ensure maximum biological containment.</li>
-            <li><strong>Thick Timber Sections:</strong> The gas penetrates deep sections of heavy-duty timber packaging where heat might not distribute evenly.</li>
-            <li><strong>Lack of Heat Chambers:</strong> It provides a convenient localized quarantine solution in ports without kiln facilities.</li>
+            <li><strong>Requirements of Some Importing Countries:</strong> Customs in some international destinations require certain shipments to be specifically fumigated with methyl bromide to ensure the highest levels of biosecurity and combat endemic pests.</li>
+            <li><strong>Used Pallets and Very Thick Wood:</strong> The gas has a penetration power for large wood blocks that sometimes surpasses surface heat.</li>
+            <li><strong>Lack of Heat Treatment Kilns:</strong> Gas fumigation is an excellent logistical solution in ports and areas that lack certified HT kilns.</li>
           </ul>
         </section>
 
         <section>
-          <h2 id="safety-precautions" class="text-xl font-bold text-white border-b border-border pb-1">Environmental and Safety Controls</h2>
+          <h2 id="safety-precautions" class="text-xl font-bold text-white border-b border-border pb-1">Environmental and Health Safety Standards for Gas Fumigation</h2>
           <p class="text-sm text-gray-300">
-            Because Methyl Bromide is an ozone-depleting substance under the Montreal Protocol, its use is strictly regulated:
+            Since methyl bromide is an ozone-depleting gas listed under the Montreal Protocol, its use is strictly regulated:
           </p>
           <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
-            <li><strong>The MB Stamp:</strong> Pallets treated with gas must bear the <strong>MB</strong> symbol in their IPPC stamp.</li>
-            <li><strong>Authorized Providers:</strong> Fumigation must be performed only by certified quarantine agencies who issue the official phytosanitary certificate.</li>
+            <li><strong>Pallet Stamping:</strong> Gas-treated pallets are marked with the <strong>MB</strong> symbol as part of the international phytosanitary stamp.</li>
+            <li><strong>Authorization and Official Certification:</strong> The fumigation process can only be performed by licensed companies and under the direct supervision of agricultural quarantine engineers to issue the official fumigation certificate approved for export.</li>
           </ul>
           <p class="text-sm text-gray-300 mt-3">
-            At <strong>El Negma Pallets</strong>, we collaborate with certified agricultural quarantine providers to deliver compliant MB-treated pallets along with all official documentation, ensuring smooth customs clearance for your cargo.
+            It is recommended to obtain official certified fumigation certificates and apply Methyl Bromide (MB) fumigation according to the international specifications required by importing destinations, to secure the transit of shipments without any customs delays.
           </p>
         </section>
       </div>
     `
+  }
+,
+  {
+    slug: "exporting-ceramics-heavy-materials",
+    title: "Exporting Ceramics & Heavy Tiles: Stringer vs Block Pallets",
+    description:
+      "Logistics solutions for shipping heavy ceramics and marble on reinforced wooden pallets to prevent damage and handle weight.",
+    date: "2026-06-07",
+    author: "",
+    readTime: "3 mins",
+    image: "/images/articles/exporting-ceramics-heavy-materials.webp",
+    category: "Industrial Materials",
+    categoryId: "export",
+    keywords: [
+      "exporting ceramics pallets",
+      "marble wooden crates",
+      "heavy duty block pallets",
+      "industrial shipping crates",
+      "loading tiles safely",
+    ],
+    toc: [
+      { title: "Ceramics Weight Challenges", target: "#heavy-weight" },
+      { title: "Reinforced Block Pallets", target: "#block-pallets" },
+      { title: "Marble Packaging in Wooden Crates", target: "#marble-crates" },
+    ],
+    content: `
+      <div class="space-y-6 text-left leading-relaxed text-gray-200">
+        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
+          <h2 id="heavy-weight" class="text-xl font-bold text-accent mb-2">1. Heavyweight Ceramics Logistics</h2>
+          <p class="text-sm text-gray-300">
+            Ceramics and porcelain tiles are high-density materials. A single pallet stack can weigh over 1.5 to 2 tons. This extreme pressure requires solid foundation structures that won't flex or collapse under stack pressures in transit.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="block-pallets" class="text-xl font-bold text-white border-b border-border pb-1">2. Reinforced Heavy-Duty Block Pallets</h2>
+          <p class="text-sm text-gray-300">
+            For ceramics, we construct reinforced block pallets (منصات الدكم الثقيلة) using thick hardwood deck boards and dense composite or wood blocks. These provide 4-way forklift entry, making loading inside container cargo spaces extremely safe.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="marble-crates" class="text-xl font-bold text-white border-b border-border pb-1">3. Marble & Granite Packaging Crates</h2>
+          <p class="text-sm text-gray-300">
+            Polished marble slabs are packed vertically in thick wooden crates (A-Frames) lined with foam or rubber pads. This prevents scratching and balances the extreme weight along the center floor rails of the container.
+          </p>
+        </section>
+      </div>
+    `,
+  },
+  {
+    slug: "air-freight-fruit-export-pallets",
+    title: "Air Freight & Fruit Export Pallets: Complete Specification Guide for Agricultural Shipping",
+    description: "Engineering and logistics guide for Egyptian agricultural exporters. Learn about air freight pallets (99×119 cm), French specs (120×100 cm), and ISPM-15 phytosanitary treatment.",
+    date: "2024-10-18",
+    author: "",
+    readTime: "8 mins",
+    image: "/images/sections/international-standards.webp",
+    category: "Export & Shipping Logistics",
+    categoryId: "export",
+    keywords: [
+      "air freight fruit export pallets",
+      "grape export pallets",
+      "peach shipping pallets",
+      "French spec pallet 120x100",
+      "air cargo pallet 99x119",
+      "ISPM 15 heat treatment fruit export"
+    ],
+    toc: [
+      { title: "Agricultural Export Packaging Overview", target: "#introduction" },
+      { title: "1. Air Freight Pallets (99×119 cm)", target: "#air-freight" },
+      { title: "2. French Specification Pallets (120×100 cm)", target: "#french-spec" },
+      { title: "3. Middle East Standard Pallets for Sea Freight", target: "#middle-east-spec" },
+      { title: "4. ISPM-15 Phytosanitary Heat Treatment", target: "#phytosanitary" }
+    ],
+    content: `
+      <div class="space-y-6 text-left leading-relaxed text-gray-200">
+        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
+          <h2 id="introduction" class="text-xl font-bold text-accent mb-2">Agricultural Export Packaging Overview</h2>
+          <p class="text-sm text-gray-300">
+            Egypt is a premier global exporter of citrus, grapes, peaches, and fresh produce. Protecting these delicate crops requires selecting specialized <strong>air freight and maritime export wooden pallets</strong> designed to withstand transport stress while complying with international import regulations.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="air-freight" class="text-lg font-bold text-white mb-2">1. Air Freight Pallets (99×119 cm)</h2>
+          <p class="text-sm text-gray-300 mb-3">
+            Air cargo pallets measuring <strong>99 × 119 cm</strong> are engineered specifically for rapid air transport of high-value produce like fresh grapes and peaches destined for European distribution:
+          </p>
+          <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
+            <li><strong>Lightweight Design:</strong> Optimized timber thickness reduces tare weight to lower air freight fees.</li>
+            <li><strong>Load Capacity:</strong> 750 kg dynamic load for air transit, extendable to 1,250 kg for fast reefer shipping.</li>
+            <li><strong>Cooling Airflow:</strong> Precision slat spacing enables cold air circulation inside cargo bays.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="french-spec" class="text-lg font-bold text-white mb-2">2. French Specification Pallets (120×100 cm)</h2>
+          <p class="text-sm text-gray-300 mb-3">
+            The <strong>French spec pallet (120 × 100 cm)</strong> is the industry standard for shipping produce to French retail chains and European distribution hubs:
+          </p>
+          <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
+            <li><strong>Truck Compatibility:</strong> Fits reefer trailers perfectly with zero wasted cargo space.</li>
+            <li><strong>High Load Rating:</strong> Supports up to 1,250 kg dynamic load and 3,000 kg static racking load.</li>
+            <li><strong>Moisture Resistance:</strong> Constructed from seasoned timber resistant to condensation during cold storage.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="phytosanitary" class="text-lg font-bold text-white mb-2">3. ISPM-15 Phytosanitary Heat Treatment</h2>
+          <p class="text-sm text-gray-300">
+            We provide ISPM-15 compliant heat-treated (HT) wooden pallets ready for direct export, certified with official stamps for hassle-free customs clearance worldwide.
+          </p>
+        </section>
+      </div>
+    `
+  },
+  {
+    slug: "pallets-potato-vegetables-export",
+    title: "Wooden Pallets for Potato & Vegetable Export from Egypt: Specs & Standards",
+    description: "A specialized guide to choosing the right wooden pallets for exporting Egyptian potatoes, onions, and fresh produce. Learn about approved sizes and ISPM-15 standards.",
+    date: "2026-07-12",
+    author: "",
+    readTime: "6 mins",
+    image: "/images/articles/exporting-citrus-agricultural-products.webp",
+    category: "Export & Logistics",
+    categoryId: "export",
+    keywords: [
+      "potato export pallets Egypt",
+      "vegetable export wooden pallets",
+      "fresh produce shipping pallets",
+      "agricultural export standards"
+    ],
+    toc: [
+      { title: "Importance of Pallets in Fresh Produce Export", target: "#importance" },
+      { title: "Standard Pallet Dimensions for Vegetables", target: "#sizes-for-vegetables" },
+      { title: "ISPM-15 Heat Treatment Rules by Destination Port", target: "#ht-requirements" },
+      { title: "Best Practices for Stacking Produce on Pallets", target: "#packing-tips" },
+      { title: "Produce Export Seasons and Pallet Supply Timing", target: "#export-seasons" }
+    ],
+    content: `
+      <div class="space-y-6 text-left leading-relaxed text-gray-200">
+        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
+          <h2 id="importance" class="text-xl font-bold text-accent mb-2">1. Importance of Pallets in Fresh Produce Export</h2>
+          <p class="text-sm text-gray-300">
+            Egypt is one of the largest exporters of fresh produce, shipping millions of tons of <strong>potatoes, onions, garlic, and citrus</strong> annually to Europe, Russia, and the Gulf. The success of these agricultural shipments heavily relies on the quality of the <strong>export wooden pallets</strong> supporting them.
+          </p>
+          <p class="text-sm text-gray-300 mt-2">
+            Using substandard pallets can lead to cargo collapse, moisture buildup, fungal decay, or customs rejection at destination ports for failing ISPM-15 compliance.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="sizes-for-vegetables" class="text-xl font-bold text-white border-b border-border pb-1">2. Standard Pallet Dimensions for Vegetables</h2>
+          <p class="text-sm text-gray-300">
+            Pallet configurations vary based on vegetable type and shipping destination:
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Industrial 120 × 100 cm Pallet:</strong> The most popular size for potatoes and onions. Fits 60×40 cm carton boxes and big bags perfectly, holding up to 1,200 kg of product.</li>
+            <li><strong>Euro 120 × 80 cm Pallet:</strong> The mandatory standard for European supermarket delivery. Ideal for high-value packed vegetables like green beans and spring onions.</li>
+            <li><strong>100 × 100 cm Pallet:</strong> Frequently used for shipping bulk onion bags to specific regional ports.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="ht-requirements" class="text-xl font-bold text-white border-b border-border pb-1">3. ISPM-15 Heat Treatment Rules by Destination Port</h2>
+          <p class="text-sm text-gray-300">
+            While all international ports enforce the <strong>ISPM-15 standard</strong>, some markets have specific regulations:
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>European Union:</strong> Enforces the IPPC logo with the HT mark. Methyl bromide chemical fumigation is banned since 2010.</li>
+            <li><strong>Gulf Cooperation Council (GCC):</strong> Accepts HT certified pallets; some ports require additional phytosanitary documents from the Ministry of Agriculture.</li>
+            <li><strong>Russian Federation:</strong> Demands clear ISPM-15 stamps and enforces strict inspection for wood borers and bark presence.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="packing-tips" class="text-xl font-bold text-white border-b border-border pb-1">4. Best Practices for Stacking Produce on Pallets</h2>
+          <p class="text-sm text-gray-300">
+            To ensure your agricultural cargo arrives in optimal condition:
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Limit Height to 1.6 Meters:</strong> The optimal height to ensure vertical stack stability and prevent bottom box crushing.</li>
+            <li><strong>Install Corner Boards:</strong> Heavy-duty cardboard edge protectors prevent box collapse during transport.</li>
+            <li><strong>Allow Proper Airflow:</strong> Fresh vegetables require ventilation. Avoid wrapping pallets with airtight stretch wrap; instead, use perforated wrap or strap wrapping.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="export-seasons" class="text-xl font-bold text-white border-b border-border pb-1">5. Produce Export Seasons and Pallet Supply Timing</h2>
+          <p class="text-sm text-gray-300">
+            Plan your <strong>export wooden pallet orders</strong> in advance of agricultural peaks:
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Potatoes:</strong> January - May (Main Season) & September - November (Nile Season)</li>
+            <li><strong>Onions:</strong> March - June</li>
+            <li><strong>Green Beans:</strong> October - March</li>
+          </ul>
+          <p class="text-sm text-gray-300 mt-3">
+            We advise signing seasonal supply contracts with <strong>El Negma Pallets</strong> at least one month before the harvest season to guarantee supply and lock in optimal timber rates. Contact us at <strong>+201080012261</strong> to reserve your seasonal supply.
+          </p>
+        </section>
+      </div>
+    `
+  },
+  {
+    slug: "pallet-runners-marain",
+    title: "Wooden Runners (Marain): The Backbone of Pallet Structural Strength",
+    description: "Understand the crucial role of wooden runners (Stringers/Marain) in pallet manufacturing. Discover standard sizes, wood species, and how they determine the load capacity of wooden platforms.",
+    date: "2026-07-10",
+    author: "",
+    readTime: "5 mins",
+    image: "/images/articles/pallet-runners-marain.webp",
+    category: "Pallet Sizes & Specs",
+    categoryId: "sizes",
+    keywords: [
+      "wooden runners",
+      "marain khashab",
+      "pallet runners",
+      "stringers wood",
+      "pallet components",
+      "musk runners",
+      "wooden pallet manufacturing",
+      "runners Egypt"
+    ],
+    toc: [
+      { title: "What are Wooden Runners (Marain)?", target: "#what-are-runners" },
+      { title: "Types & Designs of Pallet Runners", target: "#runner-types" },
+      { title: "Technical Dimensions & Specifications", target: "#runner-dimensions" },
+      { title: "Best Timber Species for Runners", target: "#runner-timber" },
+      { title: "Runner Quality & Pallet Safety", target: "#runner-safety" }
+    ],
+    content: `
+      <div class="space-y-6 text-left leading-relaxed text-gray-200">
+        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
+          <h2 id="what-are-runners" class="text-xl font-bold text-accent mb-2">1. What are Wooden Runners (Marain)?</h2>
+          <p class="text-sm text-gray-300">
+            <strong>Wooden runners</strong> (known in the Egyptian industry as \"Marain\") are the thick structural timber boards running along the length of a pallet. They act as the primary load-bearing beams to which deck boards are nailed. The density, thickness, and layout of these runners dictate how much weight a pallet can safely carry without bowing or fracturing.
+          </p>
+          <p class="text-sm text-gray-300 mt-2">
+            In standard shipping platforms, a configuration of <strong>3 parallel runners</strong> is standard (one on each edge, and one centered). For wider platforms or extra heavy industrial loads, 4 or more runners are utilized.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="runner-types" class="text-xl font-bold text-white border-b border-border pb-1">2. Types & Designs of Pallet Runners</h2>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-3 mt-2 pl-2">
+            <li><strong>Solid Runners:</strong> Continuous solid wood beams. They are strong and easy to manufacture, but limit forklift entry to 2-way access.</li>
+            <li><strong>Notched Runners:</strong> Solid runners featuring pre-cut rectangular openings (notches) on the bottom edge. These notches allow forklift forks to slide through, turning a two-way layout into a partial four-way access configuration.</li>
+            <li><strong>Double/Multi-Runners:</strong> Doubling up two runners side-by-side to support extreme payloads exceeding 2,000 kg.</li>
+            <li><strong>LVL (Laminated Veneer Lumber) Runners:</strong> Engineered composite wood made of pressed wood layers. Extremely strong, highly consistent, but more expensive.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="runner-dimensions" class="text-xl font-bold text-white border-b border-border pb-1">3. Technical Dimensions & Specifications</h2>
+          <p class="text-sm text-gray-300">Standard runner sizes cut at El Negma sawmills:</p>
+          <div class="overflow-x-auto mt-3">
+            <table class="w-full text-xs text-gray-300 border border-border/40">
+              <thead class="bg-muted/30">
+                <tr>
+                  <th class="p-2 border border-border/40 text-left">Runner Length</th>
+                  <th class="p-2 border border-border/40 text-left">Height (Thickness)</th>
+                  <th class="p-2 border border-border/40 text-left">Width</th>
+                  <th class="p-2 border border-border/40 text-left">Target Pallet Style</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="p-2 border border-border/40">80 cm</td><td class="p-2 border border-border/40">70-90 mm</td><td class="p-2 border border-border/40">35-50 mm</td><td class="p-2 border border-border/40">Euro Pallet 120×80 cm</td></tr>
+                <tr><td class="p-2 border border-border/40">100 cm</td><td class="p-2 border border-border/40">70-100 mm</td><td class="p-2 border border-border/40">35-50 mm</td><td class="p-2 border border-border/40">Citrus/Industrial 120×100 cm</td></tr>
+                <tr><td class="p-2 border border-border/40">110 cm</td><td class="p-2 border border-border/40">80-100 mm</td><td class="p-2 border border-border/40">40-50 mm</td><td class="p-2 border border-border/40">Chemical CP Square Pallets</td></tr>
+                <tr><td class="p-2 border border-border/40">120 cm</td><td class="p-2 border border-border/40">70-90 mm</td><td class="p-2 border border-border/40">35-45 mm</td><td class="p-2 border border-border/40">Standard GMA/US Pallets</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2 id="runner-timber" class="text-xl font-bold text-white border-b border-border pb-1">4. Best Timber Species for Runners</h2>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-3 mt-2 pl-2">
+            <li><strong>Swedish Pine / Spruce (Softwood):</strong> The most cost-effective and common choice. Offers an excellent strength-to-weight ratio and reacts perfectly to ISPM-15 heat treatment.</li>
+            <li><strong>Beechwood (Hardwood):</strong> 30-40% stronger than pine. Excellent for multi-use industrial pallets handling heavy machinery parts. Higher price point.</li>
+            <li><strong>Musk Pine (Moski):</strong> Highly popular locally in Egypt. Slightly softer than Swedish pine, best suited for local standard pallets or single-use export shipments.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="runner-safety" class="text-xl font-bold text-white border-b border-border pb-1">5. Runner Quality & Pallet Safety</h2>
+          <p class="text-sm text-gray-300">
+            Because runners carry the main bending moment, a single failure can lead to catastrophic cargo drops. El Negma ensures quality by checking:
+          </p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Moisture Content (MC):</strong> Keeping moisture below 20% to prevent wood warping and shrinkage.</li>
+            <li><strong>Straight Grain Fiber:</strong> Ensuring wood grains run parallel to the runner length. Slanted grains drastically reduce load limits.</li>
+            <li><strong>Knot Inspections:</strong> Excluding large structural knots in the center of the runners where tension stresses are highest.</li>
+          </ul>
+          <p class="text-sm text-gray-300 mt-3">
+            By sourcing premium timber and inspecting every runner before assembly, <strong>El Negma Pallets Factory</strong> guarantees highly dependable platforms. Contact us to order custom-sized timber components or assembled units.
+          </p>
+        </section>
+      </div>
+    `,
+  },
+  {
+    slug: "pallet-block-solid",
+    title: "Solid Deck Wooden Pallets (Sadd): Specifications & Industrial Applications",
+    description: "Your complete guide to solid deck wooden pallets (Sadd style with closed top) in Egypt. Technical specifications, comparisons with open-deck pallets, and applications in chemical & food logistics.",
+    date: "2026-07-10",
+    author: "",
+    readTime: "5 mins",
+    image: "/images/articles/pallet-block-solid.webp",
+    category: "Pallet Sizes & Specs",
+    categoryId: "sizes",
+    keywords: [
+      "solid deck pallet",
+      "sadd pallet",
+      "closed deck pallet",
+      "wooden pallets Egypt",
+      "solid pallet specifications",
+      "difference between solid and open deck pallets",
+      "chemical pallet Egypt"
+    ],
+    toc: [
+      { title: "What is a Solid Deck Pallet (Sadd)?", target: "#what-is-solid" },
+      { title: "Solid Deck vs. Open/Gapped Deck Pallets", target: "#solid-vs-gapped" },
+      { title: "Technical Components & Anatomy", target: "#solid-components" },
+      { title: "Industrial Applications in Egypt", target: "#sنوع الخشب المستخدم: تستخدم مصانع البالتات أخشاباً مثل خشب الموسكي، الخشب الأبيض السويدي، أو الأخشاب الصلبةzolid-applications" },
+      { title: "Pros and Cons of Solid Deck Pallets", target: "#solid-pros-cons" }
+    ],
+    content: `
+      <div class="space-y-6 text-left leading-relaxed text-gray-200">
+        <section class="border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg">
+          <h2 id="what-is-solid" class="text-xl font-bold text-accent mb-2">1. What is a Solid Deck Pallet (Sadd)?</h2>
+          <p class="text-sm text-gray-300">
+            In the wooden pallet manufacturing trade in Egypt, a <strong>"Solid Deck Pallet"</strong> (referred to as "Sadd") is a platform designed with a <strong>completely closed top surface, leaving no gaps or spaces between the deck boards</strong>. The top boards are placed flush against one another to create a continuous, flat 100% solid surface area.
+          </p>
+          <p class="text-sm text-gray-300 mt-2">
+            A solid deck pallet can be built structurally using either a stringer (dokum) or block base, but its defining commercial characteristic is the <strong>fully closed top deck</strong> that protects sensitive goods from falling or sagging.
+          </p>
+        </section>
+
+        <section>
+          <h2 id="solid-vs-gapped" class="text-xl font-bold text-white border-b border-border pb-1">2. Solid Deck vs. Open/Gapped Deck Pallets</h2>
+          <p class="text-sm text-gray-300">Wooden platforms are divided into two main categories based on the top deck structure:</p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-3 mt-2 pl-2">
+            <li><strong>Solid Deck (Sadd):</strong> Zero gaps between boards. It offers maximum surface coverage, protects cargo from bottom dirt/moisture, and prevents small boxes or bag materials from slipping or tearing.</li>
+            <li><strong>Open/Gapped Deck (Sheesh):</strong> Features gaps between the deck boards (usually 2 to 8 cm wide). This is the standard design because it uses less wood, making it lighter and more economical, while allowing drainage and airflow.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="solid-components" class="text-xl font-bold text-white border-b border-border pb-1">3. Technical Components & Anatomy</h2>
+          <p class="text-sm text-gray-300">A solid deck pallet consists of:</p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Top Solid Deck Boards:</strong> 8 to 12 timber boards (depending on pallet width) nailed tight side-by-side. Standard thicknesses range from 18 to 22 mm.</li>
+            <li><strong>Base Support Structure:</strong> Can be configured as a 3-stringer base (two-way entry) or a 9-block base (four-way entry) according to the operational requirements.</li>
+            <li><strong>Bottom Deck Boards:</strong> Support boards on the base that stabilize the unit for racking and stacking.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="solid-applications" class="text-xl font-bold text-white border-b border-border pb-1">4. Industrial Applications in Egypt</h2>
+          <p class="text-sm text-gray-300">Solid deck pallets are heavily requested in specific Egyptian industrial sectors:</p>
+          <ul class="list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2">
+            <li><strong>Chemicals & Powder Bags:</strong> Prevents industrial sacks and granules from tearing or falling through deck spacing.</li>
+            <li><strong>Food & Pharmaceutical Factories:</strong> Provides a clean barrier that prevents ground moisture, splinters, or dirt from making contact with primary packaging.</li>
+            <li><strong>Lightweight Cartons & Paper Goods:</strong> Distributes weight evenly across a flat surface, preventing box compression and crushing that typically occurs over open gaps.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="solid-pros-cons" class="text-xl font-bold text-white border-b border-border pb-1">5. Pros and Cons of Solid Deck Pallets</h2>
+          <div class="overflow-x-auto mt-3">
+            <table class="w-full text-xs text-gray-300 border border-border/40">
+              <thead class="bg-muted/30">
+                <tr>
+                  <th class="p-2 border border-border/40 text-left">Advantages</th>
+                  <th class="p-2 border border-border/40 text-left">Disadvantages / Challenges</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="p-2 border border-border/40">✅ Smooth, flat surface ideal for sensitive or bagged cargos.</td>
+                  <td class="p-2 border border-border/40">❌ Consumes 20% to 30% more timber, resulting in higher production costs.</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border border-border/40">✅ Superior load distribution for custom or odd-shaped items.</td>
+                  <td class="p-2 border border-border/40">❌ Total empty weight is heavier, which can affect shipping calculations.</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border border-border/40">✅ High barrier protection from ground moisture and forklift fork tips.</td>
+                  <td class="p-2 border border-border/40">❌ No water drainage or bottom airflow compared to open styles.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-sm text-gray-300 mt-4">
+            <strong>El Negma Pallets Factory</strong> manufactures custom and standard solid deck pallets (120×80 cm, 120×100 cm) using premium heat-treated Swedish pine and Musk wood. Contact our technical team today for a free consultation.
+          </p>
+        </section>
+      </div>
+    `,
   },
   {
     slug: "wholesale-pallets-10th-ramadan",
@@ -2174,9 +2202,7 @@ const rawArticlesEn: Article[] = [
     }
   ],
   "content": "\n      <div class=\"space-y-6 text-left leading-relaxed text-gray-200\">\n        <section class=\"border-l-4 border-secondary pl-4 bg-muted/20 p-4 rounded-r-lg\">\n          <h2 id=\"heavy-industry-challenges\" class=\"text-xl font-bold text-accent mb-2\">Logistical Challenges in Shipping Heavy & Chemical Freight</h2>\n          <p class=\"text-sm text-gray-300\">\n            Chemicals, fertilizers, cement, and metal ores are typically packed in massive Jumbo Bags or industrial drums. This heavy weight exerts massive concentrated loads on supporting structures. Any mechanical failure risks hazardous material spills and severe workplace accidents, necessitating specialized heavy-duty design standards.\n          </p>\n        </section>\n\n        <section>\n          <h2 id=\"chemical-pallets-standards\" class=\"text-xl font-bold text-white border-b border-border pb-1\">The Standardized Chemical Pallet Series (CP Pallets)</h2>\n          <p class=\"text-sm text-gray-300 mt-2\">\n            The European Chemical Industry Association developed the CP series (CP1 to CP9) specifically for chemical freight. The most widely used models in Egyptian industrial hubs include:\n          </p>\n          <ul class=\"list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2\">\n            <li><strong>CP1 (1000 x 1200 mm):</strong> Ideal for boxed chemicals, featuring tightly spaced top decks.</li>\n            <li><strong>CP3 (1140 x 1140 mm):</strong> A square platform designed to fit shipping containers perfectly without lateral gaps, widely used for raw plastics and polymer grains in big bags.</li>\n            <li><strong>CP9 (1140 x 1140 mm):</strong> Reinforced with a full bottom perimeter (double-deck layout), supporting vertical stacking and heavy steel drums.</li>\n          </ul>\n        </section>\n\n        <section>\n          <h2 id=\"heavy-duty-specs\" class=\"text-xl font-bold text-white border-b border-border pb-1\">Engineering Specifications for Heavy-Duty Platforms</h2>\n          <p class=\"text-sm text-gray-300 mt-2\">\n            Heavy-duty pallets rely on precise lumber selection and assembly specifications:\n          </p>\n          <ul class=\"list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2\">\n            <li><strong>Timber Thickness:</strong> Top deck boards have a thickness of 22 mm to 25 mm to withstand high bending moments.</li>\n            <li><strong>High-Density Lumber:</strong> Constructed using solid, knot-free beech wood or dense structural softwoods.</li>\n            <li><strong>Cross-Nailing Protocols:</strong> 90 mm galvanized ring-shank nails are driven in cross patterns to prevent joint loosening from container transport vibrations.</li>\n          </ul>\n        </section>\n\n        <section>\n          <h2 id=\"safety-standards\" class=\"text-xl font-bold text-white border-b border-border pb-1\">Safety Factors and Load-Bearing Capacity</h2>\n          <p class=\"text-sm text-gray-300 mt-2\">\n            In chemical logistics, structural integrity is directly linked to workplace safety:\n          </p>\n          <ul class=\"list-disc list-inside text-xs text-gray-300 space-y-2 mt-2 pl-2\">\n            <li><strong>Reduced Slatted Gaps:</strong> Gaps between top boards are kept below 4 cm to prevent flexible bag materials from sagging or tearing.</li>\n            <li><strong>Rounded Edge Bevels:</strong> Boards are planed and rounded to prevent sharp corners from puncturing polymer bags.</li>\n            <li><strong>Recessed Fasteners:</strong> All nails are driven completely flush or below the surface to protect drums from punctures.</li>\n          </ul>\n        </section>\n      </div>\n    "
-},
-
-];
+},];
 
 function getDeterministicOldDate(slug: string): string {
   let hash = 0;

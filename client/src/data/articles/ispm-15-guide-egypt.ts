@@ -18,7 +18,11 @@ export const ispm15GuideEgyptArticle: Article = {
     "متطلبات التصدير الحجر الزراعي",
     "معيار الصحة النباتية الدولي",
     "تصدير بالتات خشبية من مصر",
-    "ISPM 15 compliant pallets Egypt"
+    "ISPM 15 compliant pallets Egypt",
+    "مقارنة المعالجة الحرارية وبروميد الميثيل",
+    "تبخير البالتات بالغاز",
+    "غاز بروميد الميثيل للبالتات",
+    "بدائل بروميد الميثيل"
   ],
   toc: [
     { title: "ما هو معيار ISPM-15 ولماذا فُرض دولياً؟", target: "#what-is-ispm15" },

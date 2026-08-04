@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Home, BookOpen, Ruler, Phone, Search } from "lucide-react";
+import { Home, BookOpen, Ruler, Phone } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 export default function NotFound() {
@@ -19,7 +19,6 @@ export default function NotFound() {
     articlesPath: "/en/articles",
     contactLabel: "Contact Us",
     contactPath: "/en#contact-section",
-    searchHint: "Or try searching using Ctrl + K",
   } : {
     title: "الصفحة غير موجودة",
     subtitle: "404",
@@ -31,7 +30,6 @@ export default function NotFound() {
     articlesPath: "/articles",
     contactLabel: "تواصل معنا",
     contactPath: "/#contact-section",
-    searchHint: "أو جرّب البحث باستخدام Ctrl + K",
   };
 
   return (
@@ -42,11 +40,7 @@ export default function NotFound() {
           <span className="text-[120px] sm:text-[160px] font-black leading-none text-primary/10 select-none">
             {content.subtitle}
           </span>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-              <Search className="w-8 h-8 text-primary" />
-            </div>
-          </div>
+
         </div>
 
         <h1 className="text-2xl sm:text-3xl font-black text-foreground mb-3">
@@ -92,9 +86,7 @@ export default function NotFound() {
           </div>
         </div>
 
-        <p className="text-xs text-muted-foreground/60">
-          {content.searchHint}
-        </p>
+
       </div>
     </div>
   );
