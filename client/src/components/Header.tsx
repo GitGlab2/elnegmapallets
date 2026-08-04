@@ -1,18 +1,21 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, Globe, Search, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, Globe, ChevronDown, Package, Layers, Box, TestTube, Weight, Truck, Sliders, Calculator, Info, Award, Briefcase, Image } from "lucide-react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { getNavData, getLayoutContent } from "@/data/navigation";
 
 interface HeaderProps {
   lang: "ar" | "en";
-  onOpenSearch: () => void;
   onNavClick: (e: React.MouseEvent<HTMLAnchorElement>, path: string, isAnchor: boolean) => void;
 }
 
-export function Header({ lang, onOpenSearch, onNavClick }: HeaderProps) {
+const iconMap: Record<string, React.ElementType> = {
+  Package, Layers, Box, TestTube, Weight, Truck, Sliders, Calculator, Info, Award, Briefcase, Image
+};
+
+export function Header({ lang, onNavClick }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openMobileCat, setOpenMobileCat] = useState<string | null>(null);
   const pathname = usePathname();
@@ -75,39 +78,47 @@ export function Header({ lang, onOpenSearch, onNavClick }: HeaderProps) {
               <div
                 className={`absolute top-[calc(100%+4px)] ${
                   isEn ? "left-0" : "right-0"
-                } w-64 bg-[#181b24] backdrop-blur-xl border border-border/60 rounded-xl shadow-2xl shadow-black/40 opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:visible group-focus-within:pointer-events-auto transition-all duration-200 z-[60] overflow-hidden py-2`}
+                } w-[360px] md:w-[480px] bg-[#181b24] border border-border/50 rounded-2xl shadow-2xl shadow-black/50 opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto transition-all duration-300 z-[60] p-4 before:absolute before:-top-6 before:left-0 before:w-full before:h-6 before:content-['']`}
                 role="menu"
               >
-                {cat.items.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.path}
-                    role="menuitem"
-                    onClick={(e) => onNavClick(e, item.path, !!item.isAnchor)}
-                    className={`block px-4 py-2.5 text-xs md:text-sm font-semibold text-gray-300 hover:text-white hover:bg-secondary/20 transition-colors ${
-                      isEn ? "text-left" : "text-right"
-                    }`}
-                  >
-                    {item.name}
-                  </a>
-                ))}
+                <div className={`grid gap-2 ${cat.items.length > 2 ? 'grid-cols-2' : 'grid-cols-1'}`}>
+                  {cat.items.map((item) => {
+                    const Icon = item.icon ? iconMap[item.icon] : null;
+                    return (
+                      <a
+                        key={item.name}
+                        href={item.path}
+                        role="menuitem"
+                        onClick={(e) => onNavClick(e, item.path, !!item.isAnchor)}
+                        className={`group/item flex items-start gap-3 p-3 rounded-xl hover:bg-secondary/10 transition-colors ${
+                          isEn ? "text-left" : "text-right"
+                        }`}
+                      >
+                        {Icon && (
+                          <div className="shrink-0 mt-0.5 p-2 bg-secondary/10 text-secondary rounded-lg group-hover/item:bg-secondary group-hover/item:text-white transition-colors">
+                            <Icon className="w-5 h-5" />
+                          </div>
+                        )}
+                        <div>
+                          <div className="font-bold text-gray-200 group-hover/item:text-white transition-colors text-sm">
+                            {item.name}
+                          </div>
+                          {item.description && (
+                            <div className="text-xs text-muted-foreground mt-1 leading-relaxed">
+                              {item.description}
+                            </div>
+                          )}
+                        </div>
+                      </a>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           ))}
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
-          <button
-            onClick={onOpenSearch}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-border/60 bg-muted/30 hover:bg-muted text-xs font-semibold text-muted-foreground hover:text-white transition-all cursor-pointer mr-1"
-            aria-label="Search site"
-          >
-            <Search className="w-3.5 h-3.5 text-secondary" />
-            <span>{isEn ? "Search..." : "بحث..."}</span>
-            <kbd className="hidden lg:inline-block px-1.5 py-0.5 text-[10px] font-mono font-bold bg-background/80 rounded border border-border text-muted-foreground">
-              Ctrl K
-            </kbd>
-          </button>
 
           <a 
             href={toggleLangPath()} 
@@ -126,13 +137,6 @@ export function Header({ lang, onOpenSearch, onNavClick }: HeaderProps) {
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
-          <button
-            onClick={onOpenSearch}
-            className="p-2 text-muted-foreground hover:text-white rounded-lg hover:bg-muted"
-            aria-label="Search"
-          >
-            <Search className="w-5 h-5" />
-          </button>
           <a 
             href={toggleLangPath()} 
             className="flex items-center gap-1 px-2.5 py-1.5 rounded-full border border-border hover:bg-muted text-xs font-bold text-muted-foreground transition-all duration-300"
@@ -177,20 +181,31 @@ export function Header({ lang, onOpenSearch, onNavClick }: HeaderProps) {
                 </button>
 
                 {isOpen && (
-                  <div className="mt-1 flex flex-col gap-1 pr-4 border-r border-border/50">
-                    {cat.items.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.path}
-                        onClick={(e) => {
-                          setIsMenuOpen(false);
-                          onNavClick(e, item.path, !!item.isAnchor);
-                        }}
-                        className="block min-h-[40px] px-3 py-2 text-sm font-semibold text-muted-foreground/90 hover:text-white rounded-md hover:bg-muted/60 transition-colors"
-                      >
-                        {item.name}
-                      </a>
-                    ))}
+                  <div className="mt-1 flex flex-col gap-2 pr-4 pl-4 py-2 border-r border-l border-border/20 bg-black/10 rounded-lg">
+                    {cat.items.map((item) => {
+                      const Icon = item.icon ? iconMap[item.icon] : null;
+                      return (
+                        <a
+                          key={item.name}
+                          href={item.path}
+                          onClick={(e) => {
+                            setIsMenuOpen(false);
+                            onNavClick(e, item.path, !!item.isAnchor);
+                          }}
+                          className="flex items-center gap-3 p-2 rounded-md hover:bg-muted transition-colors group"
+                        >
+                          {Icon && (
+                            <div className="text-muted-foreground group-hover:text-secondary transition-colors">
+                              <Icon className="w-4 h-4" />
+                            </div>
+                          )}
+                          <div className="flex flex-col">
+                            <span className="text-sm font-bold text-gray-300 group-hover:text-white transition-colors">{item.name}</span>
+                            {item.description && <span className="text-[10px] text-muted-foreground">{item.description}</span>}
+                          </div>
+                        </a>
+                      );
+                    })}
                   </div>
                 )}
               </div>

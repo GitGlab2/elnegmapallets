@@ -2,28 +2,15 @@
 
 import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { SearchModal } from "./SearchModal";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { getLayoutContent } from "@/data/navigation";
 
 export default function Layout({ children, lang = "ar" }: { children: React.ReactNode; lang?: "ar" | "en" }) {
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
   const isEn = lang === "en";
   const content = getLayoutContent(lang);
-
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if ((e.ctrlKey || e.metaKey) && e.key === "k") {
-        e.preventDefault();
-        setIsSearchOpen((prev) => !prev);
-      }
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
 
   useEffect(() => {
     const hash = window.location.hash || sessionStorage.getItem('scrollTargetHash');
@@ -88,7 +75,6 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
     <div className={`min-h-screen flex flex-col bg-background text-foreground antialiased selection:bg-secondary selection:text-white ${content.fontClass}`} dir={content.direction}>
       <Header 
         lang={lang} 
-        onOpenSearch={() => setIsSearchOpen(true)} 
         onNavClick={handleNavClick} 
       />
 
@@ -101,11 +87,6 @@ export default function Layout({ children, lang = "ar" }: { children: React.Reac
         onNavClick={handleNavClick} 
       />
 
-      <SearchModal 
-        isOpen={isSearchOpen} 
-        onClose={() => setIsSearchOpen(false)} 
-        lang={lang} 
-      />
     </div>
   );
 }

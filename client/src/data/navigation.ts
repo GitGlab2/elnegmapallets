@@ -2,6 +2,8 @@ export interface NavItem {
   name: string;
   path: string;
   isAnchor?: boolean;
+  description?: string;
+  icon?: string;
 }
 
 export interface NavCategory {
@@ -19,28 +21,34 @@ export const getNavData = (lang: "ar" | "en" = "ar") => {
           id: "products",
           title: "المنتجات",
           items: [
-            { name: "كتالوج المنتجات", path: "/products/" },
-            { name: "بالتة اليورو EUR 1 (120 × 80)", path: "/products/120x80-euro-pallet/" },
-            { name: "البالتة الصناعية / الموالح (120 × 100)", path: "/products/120x100-industrial-pallet/" },
-            { name: "بالتة الكيماويات CP9 (114 × 114)", path: "/products/114x114-chemical-pallet/" },
-            { name: "البالتة المربعة الثقيلة (120 × 120)", path: "/products/120x120-heavy-pallet/" },
-            { name: "البالتة الأمريكية GMA (48 × 40)", path: "/products/121x101-gma-pallet/" },
+            { name: "كتالوج المنتجات", path: "/products/", icon: "Package", description: "استعرض كافة أنواع البالتات الخشبية القياسية والمخصصة." },
+            { name: "بالتة اليورو EUR 1", path: "/products/120x80-euro-pallet/", icon: "Layers", description: "بالتة (120 × 80 سم) المعتمدة أوروبياً للتبادل اللوجستي." },
+            { name: "البالتة الصناعية", path: "/products/120x100-industrial-pallet/", icon: "Box", description: "بالتة (120 × 100 سم) شديدة التحمل للأغراض الصناعية." },
+            { name: "بالتة الكيماويات CP9", path: "/products/114x114-chemical-pallet/", icon: "TestTube", description: "بالتة (114 × 114 سم) مصممة خصيصاً للصناعات الكيماوية." },
+            { name: "البالتة المربعة الثقيلة", path: "/products/120x120-heavy-pallet/", icon: "Weight", description: "بالتة (120 × 120 سم) للأحمال الجامبو والصناعات الثقيلة." },
+            { name: "البالتة الأمريكية GMA", path: "/products/121x101-gma-pallet/", icon: "Truck", description: "بالتة (48 × 40 بوصة) القياسية للتصدير لأمريكا الشمالية." },
           ]
         },
         {
           id: "tools",
           title: "الأدوات",
           items: [
-            { name: "مخصص البالتات الهندسية", path: "/articles/tools/pallet-customizer/" },
-            { name: "حاسبة استيعاب الحاويات", path: "/articles/tools/container-calculator/" },
+            { name: "مخصص البالتات الهندسية", path: "/articles/tools/pallet-customizer/", icon: "Sliders", description: "أداة تفاعلية لتحديد المواصفات الفنية للبالتات." },
+            { name: "حاسبة استيعاب الحاويات", path: "/articles/tools/container-calculator/", icon: "Calculator", description: "احسب كفاءة رص البالتات في حاويات الشحن." },
+          ]
+        },
+        {
+          id: "company",
+          title: "الشركة",
+          items: [
+            { name: "من نحن", path: "/about/", icon: "Info", description: "تعرف على تاريخ مصنع النجمة ورؤيتنا في صناعة البالتات." },
+            { name: "الشهادات والاعتمادات", path: "/certificates/", icon: "Award", description: "اعتمادات الجودة الدولية وشهادات المعالجة الحرارية." },
+            { name: "عملائنا", path: "/clients/", icon: "Briefcase", description: "شركاء النجاح من كبرى الشركات والمصانع." },
+            { name: "معرض الصور", path: "/gallery/", icon: "Image", description: "جولة مصورة داخل خطوط الإنتاج بالمصنع." },
           ]
         },
       ] as NavCategory[],
       mainLinks: [
-        { name: "من نحن", path: "/about/" },
-        { name: "الشهادات والاعتمادات", path: "/certificates/" },
-        { name: "معرض الصور", path: "/gallery/" },
-        { name: "عملائنا", path: "/clients/" },
         { name: "المدونة", path: "/articles/" },
       ] as NavItem[]
     },
@@ -51,28 +59,34 @@ export const getNavData = (lang: "ar" | "en" = "ar") => {
           id: "products",
           title: "Products",
           items: [
-            { name: "Products Catalog", path: "/en/products/" },
-            { name: "Euro Pallet EUR 1 (120 x 80)", path: "/en/products/120x80-euro-pallet/" },
-            { name: "Industrial / Citrus Pallet (120 x 100)", path: "/en/products/120x100-industrial-pallet/" },
-            { name: "Chemical Pallet CP9 (114 x 114)", path: "/en/products/114x114-chemical-pallet/" },
-            { name: "Heavy Square Pallet (120 x 120)", path: "/en/products/120x120-heavy-pallet/" },
-            { name: "GMA American Pallet (48 x 40)", path: "/en/products/121x101-gma-pallet/" },
+            { name: "Products Catalog", path: "/en/products/", icon: "Package", description: "Browse all standard and custom wooden pallets." },
+            { name: "Euro Pallet EUR 1", path: "/en/products/120x80-euro-pallet/", icon: "Layers", description: "Certified (120 x 80 cm) pallet for EU logistics." },
+            { name: "Industrial Pallet", path: "/en/products/120x100-industrial-pallet/", icon: "Box", description: "Heavy-duty (120 x 100 cm) block pallet." },
+            { name: "Chemical Pallet CP9", path: "/en/products/114x114-chemical-pallet/", icon: "TestTube", description: "Specialized (114 x 114 cm) pallet for chemical sector." },
+            { name: "Heavy Square Pallet", path: "/en/products/120x120-heavy-pallet/", icon: "Weight", description: "Jumbo (120 x 120 cm) pallet for heavy equipment." },
+            { name: "GMA American Pallet", path: "/en/products/121x101-gma-pallet/", icon: "Truck", description: "Standard (48 x 40 in) pallet for North American export." },
           ]
         },
         {
           id: "tools",
           title: "Tools",
           items: [
-            { name: "Pallet Customizer", path: "/en/articles/tools/pallet-customizer/" },
-            { name: "Container Calculator", path: "/en/articles/tools/container-calculator/" },
+            { name: "Pallet Customizer", path: "/en/articles/tools/pallet-customizer/", icon: "Sliders", description: "Interactive tool to specify technical pallet needs." },
+            { name: "Container Calculator", path: "/en/articles/tools/container-calculator/", icon: "Calculator", description: "Calculate optimal pallet loading for shipping." },
+          ]
+        },
+        {
+          id: "company",
+          title: "Company",
+          items: [
+            { name: "About Us", path: "/en/about/", icon: "Info", description: "Learn about El Negma's history and vision in pallet manufacturing." },
+            { name: "Certifications", path: "/en/certificates/", icon: "Award", description: "International quality certifications and heat treatment." },
+            { name: "Our Clients", path: "/en/clients/", icon: "Briefcase", description: "Success partners from major industrial enterprises." },
+            { name: "Gallery", path: "/en/gallery/", icon: "Image", description: "A visual tour inside our factory production lines." },
           ]
         },
       ] as NavCategory[],
       mainLinks: [
-        { name: "About Us", path: "/en/about/" },
-        { name: "Certifications", path: "/en/certificates/" },
-        { name: "Gallery", path: "/en/gallery/" },
-        { name: "Our Clients", path: "/en/clients/" },
         { name: "Blog", path: "/en/articles/" },
       ] as NavItem[]
     }
