@@ -9,6 +9,8 @@ import { ContainerForm } from "./tools/container-calculator/ContainerForm";
 import { ContainerResults } from "./tools/container-calculator/ContainerResults";
 
 export default function ContainerCalculator({ lang = "ar" }: { lang?: "ar" | "en" }) {
+  const isEn = lang === "en";
+
   const [config, setConfig] = useState<ContainerConfig>({
     containerKey: "40ft_hc",
     selectedSizeIndex: 0,
@@ -74,20 +76,20 @@ export default function ContainerCalculator({ lang = "ar" }: { lang?: "ar" | "en
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/15 border border-secondary/30 text-secondary text-xs font-bold mb-2">
             <Calculator className="w-4 h-4" />
-            <span>حاسبة كفاءة التصدير والشحن</span>
+            <span>{isEn ? "Shipping & Export Efficiency Calculator" : "حاسبة كفاءة التصدير والشحن"}</span>
           </div>
-          <h3 className="text-2xl md:text-3xl font-black text-white">حاسبة استيعاب الحاويات للبالتات الخشبية</h3>
+          <h3 className="text-2xl md:text-3xl font-black text-white">{isEn ? "Wooden Pallet Container Calculator" : "حاسبة استيعاب الحاويات للبالتات الخشبية"}</h3>
           <p className="text-muted-foreground text-xs md:text-sm mt-1">
-            احسب عدد البالتات الأمثل لحاويات الشحن والتصدير وفق المقاسات الفنية والهندسية المعتمَدة.
+            {isEn ? "Calculate the optimal number of pallets for shipping containers based on approved technical dimensions." : "احسب عدد البالتات الأمثل لحاويات الشحن والتصدير وفق المقاسات الفنية والهندسية المعتمَدة."}
           </p>
         </div>
         <div className="bg-[#202430] border border-border/40 px-4 py-2.5 rounded-2xl text-accent text-xs flex items-center gap-2 self-start md:self-auto">
           <Info className="w-4 h-4 shrink-0 text-secondary" />
-          <span>حساب هندسي دقيق لمسؤولي اللوجستيات والمشتريات</span>
+          <span>{isEn ? "Accurate engineering calculation for logistics & procurement" : "حساب هندسي دقيق لمسؤولي اللوجستيات والمشتريات"}</span>
         </div>
       </div>
 
-      <ContainerForm config={config} updateConfig={updateConfig} />
+      <ContainerForm config={config} updateConfig={updateConfig} lang={lang} />
       
       <ContainerResults 
         floorCapacity={floorCapacity}
@@ -96,6 +98,7 @@ export default function ContainerCalculator({ lang = "ar" }: { lang?: "ar" | "en
         estimatedCargoWeightKg={estimatedCargoWeightKg}
         stackTiers={config.stackTiers}
         handleWhatsAppInquiry={handleWhatsAppInquiry}
+        lang={lang}
       />
     </div>
   );

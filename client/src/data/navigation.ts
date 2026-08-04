@@ -17,18 +17,7 @@ export const getNavData = (lang: "ar" | "en" = "ar") => {
     ar: {
       callBtn: "تواصل معنا",
       menuCategories: [
-        {
-          id: "products",
-          title: "المنتجات",
-          items: [
-            { name: "كتالوج المنتجات", path: "/products/", icon: "Package", description: "استعرض كافة أنواع البالتات الخشبية القياسية والمخصصة." },
-            { name: "بالتة اليورو EUR 1", path: "/products/120x80-euro-pallet/", icon: "Layers", description: "بالتة (120 × 80 سم) المعتمدة أوروبياً للتبادل اللوجستي." },
-            { name: "البالتة الصناعية", path: "/products/120x100-industrial-pallet/", icon: "Box", description: "بالتة (120 × 100 سم) شديدة التحمل للأغراض الصناعية." },
-            { name: "بالتة الكيماويات CP9", path: "/products/114x114-chemical-pallet/", icon: "TestTube", description: "بالتة (114 × 114 سم) مصممة خصيصاً للصناعات الكيماوية." },
-            { name: "البالتة المربعة الثقيلة", path: "/products/120x120-heavy-pallet/", icon: "Weight", description: "بالتة (120 × 120 سم) للأحمال الجامبو والصناعات الثقيلة." },
-            { name: "البالتة الأمريكية GMA", path: "/products/121x101-gma-pallet/", icon: "Truck", description: "بالتة (48 × 40 بوصة) القياسية للتصدير لأمريكا الشمالية." },
-          ]
-        },
+
         {
           id: "tools",
           title: "الأدوات",
@@ -49,24 +38,15 @@ export const getNavData = (lang: "ar" | "en" = "ar") => {
         },
       ] as NavCategory[],
       mainLinks: [
+        { name: "الرئيسية", path: "/" },
+        { name: "المنتجات", path: "/products/" },
         { name: "المدونة", path: "/articles/" },
       ] as NavItem[]
     },
     en: {
       callBtn: "Contact Us",
       menuCategories: [
-        {
-          id: "products",
-          title: "Products",
-          items: [
-            { name: "Products Catalog", path: "/en/products/", icon: "Package", description: "Browse all standard and custom wooden pallets." },
-            { name: "Euro Pallet EUR 1", path: "/en/products/120x80-euro-pallet/", icon: "Layers", description: "Certified (120 x 80 cm) pallet for EU logistics." },
-            { name: "Industrial Pallet", path: "/en/products/120x100-industrial-pallet/", icon: "Box", description: "Heavy-duty (120 x 100 cm) block pallet." },
-            { name: "Chemical Pallet CP9", path: "/en/products/114x114-chemical-pallet/", icon: "TestTube", description: "Specialized (114 x 114 cm) pallet for chemical sector." },
-            { name: "Heavy Square Pallet", path: "/en/products/120x120-heavy-pallet/", icon: "Weight", description: "Jumbo (120 x 120 cm) pallet for heavy equipment." },
-            { name: "GMA American Pallet", path: "/en/products/121x101-gma-pallet/", icon: "Truck", description: "Standard (48 x 40 in) pallet for North American export." },
-          ]
-        },
+
         {
           id: "tools",
           title: "Tools",
@@ -87,6 +67,8 @@ export const getNavData = (lang: "ar" | "en" = "ar") => {
         },
       ] as NavCategory[],
       mainLinks: [
+        { name: "Home", path: "/en/" },
+        { name: "Products", path: "/en/products/" },
         { name: "Blog", path: "/en/articles/" },
       ] as NavItem[]
     }

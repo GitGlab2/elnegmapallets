@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { CheckCircle2, AlertCircle } from "lucide-react";
+import { CheckCircle2, AlertCircle, Plus, Minus } from "lucide-react";
 import { PalletConfig } from "./types";
 
 interface PalletFormProps {
@@ -12,6 +12,7 @@ interface PalletFormProps {
   loadOptions: { id: string; label: string }[];
   treatmentOptions: { id: string; name: string; desc: string }[];
   industries: { id: string; name: string }[];
+  lang?: "ar" | "en";
 }
 
 export function PalletForm({
@@ -22,14 +23,17 @@ export function PalletForm({
   loadOptions,
   treatmentOptions,
   industries,
+  lang = "ar",
 }: PalletFormProps) {
+  const isEn = lang === "en";
+
   return (
     <div className="lg:col-span-2 space-y-6">
       {/* Step 1: Pallet Type */}
       <div className="space-y-3">
         <label className="text-xs font-bold text-gray-200 flex items-center gap-2">
           <span className="w-5 h-5 rounded-full bg-secondary/20 text-secondary text-xs flex items-center justify-center font-bold">1</span>
-          اختر نوع وهيكل البالتة الخشبية
+          {isEn ? "Select Pallet Type & Structure" : "اختر نوع وهيكل البالتة الخشبية"}
         </label>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {palletTypes.map((item) => (
@@ -57,12 +61,12 @@ export function PalletForm({
         <div className="space-y-3">
           <label className="text-xs font-bold text-gray-200 flex items-center gap-2">
             <span className="w-5 h-5 rounded-full bg-secondary/20 text-secondary text-xs flex items-center justify-center font-bold">2</span>
-            الأبعاد والمقاسات (مم)
+            {isEn ? "Dimensions & Sizes (mm)" : "الأبعاد والمقاسات (مم)"}
           </label>
           <select
             value={config.dimensions}
             onChange={(e) => updateConfig("dimensions", e.target.value)}
-            className="w-full bg-[#181b24] border border-border/50 rounded-xl p-3 text-xs md:text-sm text-white focus:outline-none focus:border-secondary"
+            className="w-full bg-[#181b24] border border-border/50 rounded-xl p-3 text-xs md:text-sm text-white focus:outline-none focus:border-secondary font-sans"
           >
             {dimensionOptions.map((dim) => (
               <option key={dim.id} value={dim.id}>
@@ -74,10 +78,13 @@ export function PalletForm({
           {config.dimensions === "custom" && (
             <input
               type="text"
-              placeholder="أدخل المقاس بالمليمتر (مثال: 1140×1140×145)"
+              dir="ltr"
+              lang="en"
+              style={{ fontFamily: "system-ui, sans-serif" }}
+              placeholder={isEn ? "Enter size in mm (e.g. 1140x1140x145)" : "أدخل المقاس بالمليمتر (مثال: 1140×1140×145)"}
               value={config.customDimensions}
               onChange={(e) => updateConfig("customDimensions", e.target.value)}
-              className="w-full bg-[#181b24] border border-border/50 rounded-xl p-3 text-xs text-white focus:outline-none focus:border-secondary"
+              className="w-full bg-[#181b24] border border-border/50 rounded-xl p-3 text-xs text-white focus:outline-none focus:border-secondary font-sans"
             />
           )}
         </div>
@@ -85,12 +92,12 @@ export function PalletForm({
         <div className="space-y-3">
           <label className="text-xs font-bold text-gray-200 flex items-center gap-2">
             <span className="w-5 h-5 rounded-full bg-secondary/20 text-secondary text-xs flex items-center justify-center font-bold">3</span>
-            سعة الحمولة المطلوبة
+            {isEn ? "Required Load Capacity" : "سعة الحمولة المطلوبة"}
           </label>
           <select
             value={config.loadCapacity}
             onChange={(e) => updateConfig("loadCapacity", e.target.value)}
-            className="w-full bg-[#181b24] border border-border/50 rounded-xl p-3 text-xs md:text-sm text-white focus:outline-none focus:border-secondary"
+            className="w-full bg-[#181b24] border border-border/50 rounded-xl p-3 text-xs md:text-sm text-white focus:outline-none focus:border-secondary font-sans"
           >
             {loadOptions.map((ld) => (
               <option key={ld.id} value={ld.id}>
@@ -105,7 +112,7 @@ export function PalletForm({
       <div className="space-y-3 pt-2">
         <label className="text-xs font-bold text-gray-200 flex items-center gap-2">
           <span className="w-5 h-5 rounded-full bg-secondary/20 text-secondary text-xs flex items-center justify-center font-bold">4</span>
-          اشتراطات المعالجة والتعقيم لغايات التصدير
+          {isEn ? "Treatment & Sterilization for Export" : "اشتراطات المعالجة والتعقيم لغايات التصدير"}
         </label>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           {treatmentOptions.map((tr) => (
@@ -133,12 +140,12 @@ export function PalletForm({
         <div className="space-y-3">
           <label className="text-xs font-bold text-gray-200 flex items-center gap-2">
             <span className="w-5 h-5 rounded-full bg-secondary/20 text-secondary text-xs flex items-center justify-center font-bold">5</span>
-            القطاع والتطبيق الصناعي
+            {isEn ? "Industry & Application Sector" : "القطاع والتطبيق الصناعي"}
           </label>
           <select
             value={config.industry}
             onChange={(e) => updateConfig("industry", e.target.value)}
-            className="w-full bg-[#181b24] border border-border/50 rounded-xl p-3 text-xs md:text-sm text-white focus:outline-none focus:border-secondary"
+            className="w-full bg-[#181b24] border border-border/50 rounded-xl p-3 text-xs md:text-sm text-white focus:outline-none focus:border-secondary font-sans"
           >
             {industries.map((ind) => (
               <option key={ind.id} value={ind.id}>
@@ -151,20 +158,37 @@ export function PalletForm({
         <div className="space-y-3">
           <label className="text-xs font-bold text-gray-200 flex items-center gap-2">
             <span className="w-5 h-5 rounded-full bg-secondary/20 text-secondary text-xs flex items-center justify-center font-bold">6</span>
-            الكمية المطلوبة (طلبيات كبيرة)
+            {isEn ? "Required Quantity (Bulk)" : "الكمية المطلوبة (طلبيات كبيرة)"}
           </label>
-          <input
-            type="number"
-            min={500}
-            step={100}
-            value={config.quantity}
-            onChange={(e) => updateConfig("quantity", Math.max(500, Number(e.target.value)))}
-            className="w-full bg-[#181b24] border border-border/50 rounded-xl p-3 text-xs md:text-sm text-white focus:outline-none focus:border-secondary"
-          />
-          <span className="text-[11px] text-accent flex items-center gap-1 mt-1">
-            <AlertCircle className="w-3.5 h-3.5 shrink-0" />
-            الحد الأدنى للطلبيات والتصنيع الفوري: 500 بالتة
-          </span>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => updateConfig("quantity", Math.max(500, config.quantity - 100))}
+              className="w-12 h-12 flex items-center justify-center bg-[#181b24] border border-border/50 rounded-xl text-white hover:bg-secondary/20 hover:border-secondary transition-colors"
+            >
+              <Minus className="w-4 h-4" />
+            </button>
+            <input
+              type="text"
+              dir="ltr"
+              lang="en"
+              style={{ fontFamily: "system-ui, sans-serif" }}
+              value={config.quantity}
+              onChange={(e) => {
+                const enStr = e.target.value.replace(/[٠-٩]/g, d => '0123456789'[d.charCodeAt(0) - 1632]);
+                const val = enStr.replace(/\D/g, "");
+                if (val) updateConfig("quantity", parseInt(val, 10));
+                else updateConfig("quantity", 0);
+              }}
+              onBlur={() => updateConfig("quantity", Math.max(500, config.quantity))}
+              className="w-full text-center bg-[#181b24] border border-border/50 rounded-xl p-3 text-sm font-bold text-white focus:outline-none focus:border-secondary font-sans"
+            />
+            <button
+              onClick={() => updateConfig("quantity", config.quantity + 100)}
+              className="w-12 h-12 flex items-center justify-center bg-[#181b24] border border-border/50 rounded-xl text-white hover:bg-secondary/20 hover:border-secondary transition-colors"
+            >
+              <Plus className="w-4 h-4" />
+            </button>
+          </div>
         </div>
       </div>
     </div>

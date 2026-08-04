@@ -18,6 +18,7 @@ const iconMap: Record<string, React.ElementType> = {
 export function Header({ lang, onNavClick }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openMobileCat, setOpenMobileCat] = useState<string | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const pathname = usePathname();
   const isEn = lang === "en";
 
@@ -65,53 +66,72 @@ export function Header({ lang, onNavClick }: HeaderProps) {
             </a>
           ))}
           {navData.menuCategories.map((cat) => (
-            <div key={cat.id} className="relative group">
+            <div 
+              key={cat.id} 
+              className="relative"
+              onMouseEnter={() => setActiveDropdown(cat.id)}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
               <button
-                className="flex items-center gap-1.5 text-sm font-bold text-muted-foreground hover:text-white transition-colors cursor-pointer py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-md"
+                className={`flex items-center gap-1.5 text-sm font-bold transition-colors cursor-pointer py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-md ${
+                  activeDropdown === cat.id ? "text-white" : "text-muted-foreground hover:text-white"
+                }`}
                 aria-haspopup="true"
-                aria-expanded="false"
+                aria-expanded={activeDropdown === cat.id}
+                onClick={() => setActiveDropdown(activeDropdown === cat.id ? null : cat.id)}
               >
                 <span>{cat.title}</span>
-                <ChevronDown className="w-3.5 h-3.5 text-muted-foreground group-hover:text-secondary group-hover:rotate-180 transition-transform duration-200" />
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                  activeDropdown === cat.id ? "text-secondary rotate-180" : "text-muted-foreground"
+                }`} />
               </button>
 
               <div
-                className={`absolute top-[calc(100%+4px)] ${
+                className={`absolute top-full pt-4 ${
                   isEn ? "left-0" : "right-0"
-                } w-[360px] md:w-[480px] bg-[#181b24] border border-border/50 rounded-2xl shadow-2xl shadow-black/50 opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto transition-all duration-300 z-[60] p-4 before:absolute before:-top-6 before:left-0 before:w-full before:h-6 before:content-['']`}
+                } w-[360px] md:w-[480px] z-[60] transition-all duration-300 ${
+                  activeDropdown === cat.id 
+                    ? "opacity-100 visible translate-y-0" 
+                    : "opacity-0 invisible translate-y-2 pointer-events-none"
+                }`}
                 role="menu"
               >
-                <div className={`grid gap-2 ${cat.items.length > 2 ? 'grid-cols-2' : 'grid-cols-1'}`}>
-                  {cat.items.map((item) => {
-                    const Icon = item.icon ? iconMap[item.icon] : null;
-                    return (
-                      <a
-                        key={item.name}
-                        href={item.path}
-                        role="menuitem"
-                        onClick={(e) => onNavClick(e, item.path, !!item.isAnchor)}
-                        className={`group/item flex items-start gap-3 p-3 rounded-xl hover:bg-secondary/10 transition-colors ${
-                          isEn ? "text-left" : "text-right"
-                        }`}
-                      >
-                        {Icon && (
-                          <div className="shrink-0 mt-0.5 p-2 bg-secondary/10 text-secondary rounded-lg group-hover/item:bg-secondary group-hover/item:text-white transition-colors">
-                            <Icon className="w-5 h-5" />
-                          </div>
-                        )}
-                        <div>
-                          <div className="font-bold text-gray-200 group-hover/item:text-white transition-colors text-sm">
-                            {item.name}
-                          </div>
-                          {item.description && (
-                            <div className="text-xs text-muted-foreground mt-1 leading-relaxed">
-                              {item.description}
+                <div className="bg-[#181b24] border border-border/50 rounded-2xl shadow-2xl shadow-black/50 p-4">
+                  <div className={`grid gap-2 ${cat.items.length > 2 ? 'grid-cols-2' : 'grid-cols-1'}`}>
+                    {cat.items.map((item) => {
+                      const Icon = item.icon ? iconMap[item.icon] : null;
+                      return (
+                        <a
+                          key={item.name}
+                          href={item.path}
+                          role="menuitem"
+                          onClick={(e) => {
+                            setActiveDropdown(null);
+                            onNavClick(e, item.path, !!item.isAnchor);
+                          }}
+                          className={`group/item flex items-start gap-3 p-3 rounded-xl hover:bg-secondary/10 transition-colors ${
+                            isEn ? "text-left" : "text-right"
+                          }`}
+                        >
+                          {Icon && (
+                            <div className="shrink-0 mt-0.5 p-2 bg-secondary/10 text-secondary rounded-lg group-hover/item:bg-secondary group-hover/item:text-white transition-colors">
+                              <Icon className="w-5 h-5" />
                             </div>
                           )}
-                        </div>
-                      </a>
-                    );
-                  })}
+                          <div>
+                            <div className="font-bold text-gray-200 group-hover/item:text-white transition-colors text-sm">
+                              {item.name}
+                            </div>
+                            {item.description && (
+                              <div className="text-xs text-muted-foreground mt-1 leading-relaxed">
+                                {item.description}
+                              </div>
+                            )}
+                          </div>
+                        </a>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </div>

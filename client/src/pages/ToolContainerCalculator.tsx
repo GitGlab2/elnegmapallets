@@ -38,19 +38,7 @@ export default function ToolContainerCalculator({ lang = "ar" }: { lang?: "ar" |
           className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#202534] via-[#1c1f2a] to-[#202534] p-8 md:p-12 text-center border border-border/30 shadow-2xl"
         >
           <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center gap-4">
-            <div className="flex flex-wrap items-center justify-center gap-3">
-              <a
-                href={isEn ? "/en/articles/tools/" : "/articles/tools/"}
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-gray-300 text-xs font-bold hover:bg-white/10 hover:border-secondary/50 transition-all"
-              >
-                <Wrench className="w-3.5 h-3.5 text-secondary" />
-                <span>{content.backToTools}</span>
-              </a>
-              <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-secondary/15 border border-secondary/30 text-secondary text-xs font-bold shadow-sm">
-                <Calculator className="w-3.5 h-3.5 text-secondary" />
-                <span>{content.badge}</span>
-              </div>
-            </div>
+
 
             <h1 className="text-3xl md:text-5xl font-black leading-tight text-white tracking-tight">
               {content.title}
@@ -80,10 +68,12 @@ export default function ToolContainerCalculator({ lang = "ar" }: { lang?: "ar" |
           <div className="space-y-1 text-center md:text-right">
             <h4 className="text-lg font-bold text-accent flex items-center justify-center md:justify-start gap-2">
               <ShieldCheck className="w-5 h-5 text-secondary" />
-              <span>مطابقة كاملة لمعايير التصدير والجودة</span>
+              <span>{isEn ? "Full Compliance with Export & Quality Standards" : "مطابقة كاملة لمعايير التصدير والجودة"}</span>
             </h4>
             <p className="text-xs text-muted-foreground">
-              تلتزم شركة النجمة بتوفير بالتات معقمة ومعالجة حرارياً (HT) ومعتمدة بالكامل لغايات التصدير لجميع أنحاء العالم.
+              {isEn 
+                ? "El Negma is committed to providing sterilized and heat-treated (HT) pallets fully certified for worldwide export."
+                : "تلتزم شركة النجمة بتوفير بالتات معقمة ومعالجة حرارياً (HT) ومعتمدة بالكامل لغايات التصدير لجميع أنحاء العالم."}
             </p>
           </div>
 
